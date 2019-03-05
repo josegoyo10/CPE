@@ -1,0 +1,112 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	function validar_form(){
+		if( validar_obligatorio( nueva_cotizacion_01.clie_nombre, "Nombre es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_01.clie_paterno, "Apellido Paterno es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_01.clie_materno, "Apellido Materno es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_01.dire_direccion, "Direccion es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_01.clie_telefonocasa, "Teléfono casa es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_01.clie_telcontacto1, "Teléfono contacto es un Campo obligatorio" ))
+			return false;
+		document.nueva_cotizacion_01.submit();
+	}
+	//-->
+	</SCRIPT>
+<script language="JavaScript" src="../checkfield.js"></script>
+<body  onload="document.nueva_cotizacion_01.clie_nombre.focus();"> 
+<!--menu---!>
+
+<!-- template 2 -->
+
+<!-- template 3 -->
+<FORM NAME="nueva_cotizacion_01" METHOD="POST" ACTION="nueva_cotizacion_01.php" onSubmit="return validar_form(this);">
+<table width="780" height="76%" border="0" cellpadding="0" cellspacing="0">
+<input type="hidden" name="accion" value="update">
+<input type="hidden" name="clie_rut" value="{clie_rut}">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="31%" valign="top">
+            <table width="512" border="0" align="center" cellpadding="0" cellspacing="0" class="textonormal">
+              <tr>
+                <td>{TEXT_CAMPO_1}&nbsp;(*)</td>
+                <td>{TEXT_CAMPO_2}&nbsp;(*)</td>
+                <td>{TEXT_CAMPO_3}&nbsp;(*)</td>
+                <td>{TEXT_CAMPO_4}&nbsp;(*)</td>
+              </tr>
+              <tr>
+                <td width="98"><input name="clie_rut" type="text" disabled value="{clie_rut}-{digito}"></td>
+                <td width="96"><input name="clie_nombre" type="text" value="{clie_nombre}" maxlength="20"></td>
+                <td width="96"><input name="clie_paterno" type="text" value="{clie_paterno}" maxlength="20"></td>
+                <td width="96"><input name="clie_materno" type="text" value="{clie_materno}" maxlength="20"></td>
+              </tr>
+            </table>
+            <br>
+            <table border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+              <tr>
+                <td><div align="left">{TEXT_CAMPO_5}&nbsp;(*)</div></td>
+                <td><input name="dire_direccion" type="text" value="{dire_direccion}" size="60" maxlength="100"></td>
+              </tr>
+                <tr>
+                <td><div align="left">{TEXT_CAMPO_6}&nbsp;(*)</div></td>
+
+				<td><select name="select_comuna">
+				<!-- BEGIN Comunas -->
+				<option value="{id_comuna}" {selected}>{comu_nombre}</option>
+				<!-- END Comunas -->
+		        </select></td>
+             </tr>
+              <tr>
+                <td><div align="left">{TEXT_CAMPO_7} &nbsp;(*)</div></td>
+                <td><input name="clie_telefonocasa" type="text" value="{clie_telefonocasa}" maxlength="20"></td>
+              </tr>
+              <tr>
+                <td><div align="left">Teléfono Contacto 1&nbsp;(*)</div></td>
+                <td><input name="clie_telcontacto1" type="text" value="{clie_telcontacto1}" maxlength="20"></td>
+              </tr>
+              <tr>
+                <td><div align="left">Teléfono Contacto 2 </div></td>
+                <td><input name="clie_telcontacto2" type="text" value="{clie_telcontacto2}" maxlength="20"></td>
+              </tr>
+              <tr>
+                <td><div align="left">{TEXT_CAMPO_10}</div></td>
+                <td><textarea name="dire_observacion" wrap="VIRTUAL">{dire_observacion}</textarea></td>
+              </tr>
+          </table></td>
+        </tr>
+		</FORM>
+<script LANGUAGE="javascript">
+	window.document.nueva_cotizacion_01.dire_direccion.onkeypress = KeyIsTexto;
+	window.document.nueva_cotizacion_01.clie_nombre.onkeypress = KeyIsLetra ;
+	window.document.nueva_cotizacion_01.clie_paterno.onkeypress = KeyIsLetra ;
+	window.document.nueva_cotizacion_01.clie_materno.onkeypress = KeyIsLetra ;
+	window.document.nueva_cotizacion_01.clie_telefonocasa.onkeypress = KeyIsTelefono;
+	window.document.nueva_cotizacion_01.clie_telcontacto1.onkeypress = KeyIsTelefono;
+	window.document.nueva_cotizacion_01.clie_telcontacto2.onkeypress = KeyIsTelefono;
+	window.document.nueva_cotizacion_01.dire_observacion.onkeypress = KeyIsTexto;
+</script>
+
+    </td>
+  </tr>
+</table>
+<tr>
+<!-- template 3 -->
+
+
+<!-- template 4 -->
+       
+
+
+
+
+<!-- InstanceEndEditable -->
+<!-- foter identificado--!>
+<!-- InstanceEnd -->

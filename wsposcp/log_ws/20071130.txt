@@ -1,0 +1,2316 @@
+30112007 093341  => crea instancia soap_server .....wspoccp_os
+30112007 093342  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+30112007 093342  => busqueda_prec : Se verifica local ->E502
+30112007 093345  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+30112007 093345  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 093423  => crea instancia soap_server .....wspoccp_os
+30112007 093423  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>CHAPA</texto>
+</req>
+30112007 093423  => busqueda_prec : Se verifica local ->E502
+30112007 093424  => busqueda_prec : Trae codigos ean para producto descripcion->CHAPA
+30112007 093424  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CUBIERTA MESA CHAPA EUCA 60CM DIAM 15CM</desc>
+<codigo>
+<ean>2000002220206</ean>
+<precio>6100</precio>
+</codigo>
+</producto>
+<producto><desc>CUBIERTA MESA CHAPA EUCA 100CM DIAM 18CM</desc>
+<codigo>
+<ean>2000002220237</ean>
+<precio>19990</precio>
+</codigo>
+</producto>
+<producto><desc>CAJON 40X17(4) BAST CHAPA MANIO</desc>
+<codigo>
+<ean>7806427469726</ean>
+<precio>8990</precio>
+</codigo>
+</producto>
+<producto><desc>CAJON 40X17(4) BAST CHAPA EUCA CAL</desc>
+<codigo>
+<ean>7806427468224</ean>
+<precio>7990</precio>
+</codigo>
+</producto>
+<producto><desc>CABALLETE CONTRACHAPADO ECONOMICO</desc>
+<codigo>
+<ean>2000002079224</ean>
+<precio>3290</precio>
+</codigo>
+</producto>
+<producto><desc>BROCA P/CHAPA  30.0 MM. ALPEN</desc>
+<codigo>
+<ean>9002740351306</ean>
+<precio>9190</precio>
+</codigo>
+</producto>
+<producto><desc>BROCA CHAPA MADERA 38.0MM ALPEN</desc>
+<codigo>
+<ean>9002740351481</ean>
+<precio>5595</precio>
+</codigo>
+</producto>
+<producto><desc>BROCA P/CHAPA MAD 25.0MM ALPEN</desc>
+<codigo>
+<ean>9002740351412</ean>
+<precio>10700</precio>
+</codigo>
+</producto>
+<producto><desc>TORNILLO P.CHAPA CAB CIRC DIN 7 6880335</desc>
+<codigo>
+<ean>4032526061315</ean>
+<precio>600</precio>
+</codigo>
+</producto>
+<producto><desc>ARANDELA CHAPA ZINC AMARILLA 3036717</desc>
+<codigo>
+<ean>4004575981241</ean>
+<precio>360</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 093511  => crea instancia soap_server .....wspoccp_os
+30112007 093511  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>MADERA</texto>
+</req>
+30112007 093511  => busqueda_prec : Se verifica local ->E502
+30112007 093511  => busqueda_prec : Trae codigos ean para producto descripcion->MADERA
+30112007 093511  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>ADORNO NAV COLG MADERA 4CM SURTIDO 9UNID</desc>
+<codigo>
+<ean>612962005773</ean>
+<precio>2390</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO NAV COLG MADERA 3CM SURTIDO 12UNI</desc>
+<codigo>
+<ean>612962005735</ean>
+<precio>1060</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO NAVIDAD ANGELES DE MADERA 12UN</desc>
+<codigo>
+<ean>2082000315894</ean>
+<precio>3290</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO NAVIDAD ANGELES DE MADERA 12UN</desc>
+<codigo>
+<ean>200000112295</ean>
+<precio>3290</precio>
+</codigo>
+</producto>
+<producto><desc>ACONDICIONADOR MADERA 1/8 GL MINWAX</desc>
+<codigo>
+<ean>27426415003</ean>
+<precio>3190</precio>
+</codigo>
+</producto>
+<producto><desc>ACONDICIONADOR MADERA 1/4 GL MINWAX</desc>
+<codigo>
+<ean>27426615007</ean>
+<precio>4690</precio>
+</codigo>
+</producto>
+<producto><desc>MARTILLO MANGO MADERA TIPO 16 OZ FINA</desc>
+<codigo>
+<ean>2000002284499</ean>
+<precio>1890</precio>
+</codigo>
+</producto>
+<producto><desc>MAQ.MADERA MULTIPLE 10P 392 B</desc>
+<codigo>
+<ean>2000000959924</ean>
+<precio>870423</precio>
+</codigo>
+</producto>
+<producto><desc>SET 2 MAMADERAS AVENT 260 ML</desc>
+<codigo>
+<ean>2082001182013</ean>
+<precio>5665</precio>
+</codigo>
+</producto>
+<producto><desc>SET REGALO HOMBRE CAJA MADERA</desc>
+<codigo>
+<ean>76812126009</ean>
+<precio>11890</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 093549  => crea instancia soap_server .....wspoccp_os
+30112007 093549  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>BARNIZ</texto>
+</req>
+30112007 093549  => busqueda_prec : Se verifica local ->E502
+30112007 093549  => busqueda_prec : Trae codigos ean para producto descripcion->BARNIZ
+30112007 093549  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>BARNIZ MARINO SOQUINA LADRILLO 1/4 GALON</desc>
+<codigo>
+<ean>2082000030797</ean>
+<precio>1485</precio>
+</codigo>
+</producto>
+<producto><desc>BARNIZ MARINO SOQUINA CAOBA 1 GALON</desc>
+<codigo>
+<ean>7805201492035</ean>
+<precio>4829</precio>
+</codigo>
+</producto>
+<producto><desc>BARNIZ EXTERIOR CABOT PINO 1/4 GALON</desc>
+<codigo>
+<ean>7805206952831</ean>
+<precio>5190</precio>
+</codigo>
+</producto>
+<producto><desc>BARNIZ EXTERIOR CABOT PINO 1/4 GALON</desc>
+<codigo>
+<ean>2082000031862</ean>
+<precio>5190</precio>
+</codigo>
+</producto>
+<producto><desc>BALAUSTRO P.OREGON BARNIZ 51X51X800MM</desc>
+<codigo>
+<ean>7804612850106</ean>
+<precio>1990</precio>
+</codigo>
+</producto>
+<producto><desc>BALAUSTRO ULMO BARNIZ 51X51X800MM</desc>
+<codigo>
+<ean>7804612850052</ean>
+<precio>2890</precio>
+</codigo>
+</producto>
+<producto><desc>BALAUSTRO PINO BARNIZ 51X51X800MM</desc>
+<codigo>
+<ean>7804612850007</ean>
+<precio>1790</precio>
+</codigo>
+</producto>
+<producto><desc>APOYO MURAL BARNIZADO</desc>
+<codigo>
+<ean>2000000263991</ean>
+<precio>5195</precio>
+</codigo>
+</producto>
+<producto><desc>ALAMBRE P/ATAR BARNIZADO 6146053</desc>
+<codigo>
+<ean>4004575144356</ean>
+<precio>625</precio>
+</codigo>
+</producto>
+<producto><desc>ACRYLICS PAINT BARNIZ.SPRAY</desc>
+<codigo>
+<ean>83266022771</ean>
+<precio>5290</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 093614  => crea instancia soap_server .....wspoccp_os
+30112007 093614  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PERNO</texto>
+</req>
+30112007 093614  => busqueda_prec : Se verifica local ->E502
+30112007 093614  => busqueda_prec : Trae codigos ean para producto descripcion->PERNO
+30112007 093614  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>DESAGUE LAVATORIO 11/4 C/PERNO NIBSA</desc>
+<codigo>
+<ean>2050000222405</ean>
+<precio>2690</precio>
+</codigo>
+</producto>
+<producto><desc>CORTA PERNOS 760 TV GS</desc>
+<codigo>
+<ean>4004575140594</ean>
+<precio>21200</precio>
+</codigo>
+</producto>
+<producto><desc>CORTA PERNO 600 TUV GS</desc>
+<codigo>
+<ean>4004575151972</ean>
+<precio>18690</precio>
+</codigo>
+</producto>
+<producto><desc>CORTA PERNO 460 TV GS</desc>
+<codigo>
+<ean>4004575140532</ean>
+<precio>16490</precio>
+</codigo>
+</producto>
+<producto><desc>CORTA PERNOS 200 TV</desc>
+<codigo>
+<ean>4004575152085</ean>
+<precio>4678</precio>
+</codigo>
+</producto>
+<producto><desc>NAPOLEON CORTA PERNO 18" 14318-T</desc>
+<codigo>
+<ean>747752143189</ean>
+<precio>22650</precio>
+</codigo>
+</producto>
+<producto><desc>NAPOLEON CORTA PERNO 18" 14318-T</desc>
+<codigo>
+<ean>2050000253218</ean>
+<precio>22650</precio>
+</codigo>
+</producto>
+<producto><desc>NAPOLEON CORTA PERNO 8"</desc>
+<codigo>
+<ean>747752143080</ean>
+<precio>6990</precio>
+</codigo>
+</producto>
+<producto><desc>CAJA 12 UNIDADES PERNO COC. 5/32</desc>
+<codigo>
+<ean>2000000251639</ean>
+<precio>350</precio>
+</codigo>
+</producto>
+<producto><desc>C.PLASTICA 8 DIV  PERNOS C/TUERC Y GOL</desc>
+<codigo>
+<ean>7809831094874</ean>
+<precio>1356</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 093643  => crea instancia soap_server .....wspoccp_os
+30112007 093643  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>TRUPAN</texto>
+</req>
+30112007 093643  => busqueda_prec : Se verifica local ->E502
+30112007 093644  => busqueda_prec : Trae codigos ean para producto descripcion->TRUPAN
+30112007 093644  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>TRUPAN MELAMINA COIGE 15X2440X1520 MM</desc>
+<codigo>
+<ean>2082000512231</ean>
+<precio>17850</precio>
+</codigo>
+</producto>
+<producto><desc>TRUPAN MELAMINA CEREZO 18X2440X1520MM</desc>
+<codigo>
+<ean>2082000512262</ean>
+<precio>19042</precio>
+</codigo>
+</producto>
+<producto><desc>TRUPAN MELAMINA CEREZO 15X2440X1520MM</desc>
+<codigo>
+<ean>2082000512095</ean>
+<precio>14079</precio>
+</codigo>
+</producto>
+<producto><desc>TRUPAN MELAMINA BCO 2C 9X2440X1520MM</desc>
+<codigo>
+<ean>2082000512330</ean>
+<precio>13579</precio>
+</codigo>
+</producto>
+<producto><desc>TRUPAN MELAMINA BCO 2C 18X2440X1520MM</desc>
+<codigo>
+<ean>2082000512385</ean>
+<precio>16890</precio>
+</codigo>
+</producto>
+<producto><desc>TRUPAN MELAMINA BCO 2C 15X2440X1520MM</desc>
+<codigo>
+<ean>2082000512316</ean>
+<precio>16840</precio>
+</codigo>
+</producto>
+<producto><desc>TRUPAN MELAMINA BCO 1C 9X2440X1520MM</desc>
+<codigo>
+<ean>2082000512378</ean>
+<precio>11642</precio>
+</codigo>
+</producto>
+<producto><desc>TRUPAN MELAMINA BCO 1C 18X2440X1520MM</desc>
+<codigo>
+<ean>2082000512347</ean>
+<precio>15539</precio>
+</codigo>
+</producto>
+<producto><desc>TRUPAN MELAMINA BCO 1C 15X2440X1520MM</desc>
+<codigo>
+<ean>2082000512354</ean>
+<precio>13990</precio>
+</codigo>
+</producto>
+<producto><desc>CLAVO TRUPAN 2"X14 X 1/2 KG</desc>
+<codigo>
+<ean>7809801123702</ean>
+<precio>1030</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 093709  => crea instancia soap_server .....wspoccp_os
+30112007 093709  => Cons_SAP Ingresa XML -><req>
+  <sap>2000829</sap>
+</req>
+30112007 093709  => Cons_SAP : el numero sap buscado cumple con los parametros->2000829
+30112007 093710  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 2000829</desc></resp>
+30112007 093735  => crea instancia soap_server .....wspoccp_os
+30112007 093735  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 093735  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 093735  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 093735  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 093735  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 093746  => crea instancia soap_server .....wspoccp_os
+30112007 093746  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 093746  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 093746  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 093746  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 093746  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 093842  => crea instancia soap_server .....wspoccp_os
+30112007 093842  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 093842  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 093842  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 093842  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 093842  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 093853  => crea instancia soap_server .....wspoccp_os
+30112007 093853  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>TERMO</texto>
+</req>
+30112007 093853  => busqueda_prec : Se verifica local ->E502
+30112007 093854  => busqueda_prec : Trae codigos ean para producto descripcion->TERMO
+30112007 093854  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAJA ESTANCA 150X150X80 EN TERMOPLAS</desc>
+<codigo>
+<ean>7807354065388</ean>
+<precio>2990</precio>
+</codigo>
+</producto>
+<producto><desc>CAJA ESTANCA 100X100X60 EN TERMOPLAS</desc>
+<codigo>
+<ean>7807354065371</ean>
+<precio>1097</precio>
+</codigo>
+</producto>
+<producto><desc>BRUJULA TERMOMETRO DOITE</desc>
+<codigo>
+<ean>56389097407</ean>
+<precio>5990</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA TERMOFUNDENTES 6UN 07T FULLER</desc>
+<codigo>
+<ean>7805620213006</ean>
+<precio>495</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA TERMOFUNDENTES 6UN 07T FULLER</desc>
+<codigo>
+<ean>2082000238544</ean>
+<precio>495</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA TERMOFUNDENTES 6UN 130B FULLER</desc>
+<codigo>
+<ean>2082000238551</ean>
+<precio>695</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA TERMOFUNDENTES 6UN 130B FULLER</desc>
+<codigo>
+<ean>19106111107</ean>
+<precio>695</precio>
+</codigo>
+</producto>
+<producto><desc>A PE SIST AUTOMAT Y A PE TERMORREG</desc>
+<codigo>
+<ean>2082001007736</ean>
+<precio>4315500</precio>
+</codigo>
+</producto>
+<producto><desc>TERMOVENTILADOR VERT. GRADUS 520 2000W.</desc>
+<codigo>
+<ean>8007403430207</ean>
+<precio>16990</precio>
+</codigo>
+</producto>
+<producto><desc>TERMO PLASTICO C/MANGO 0.75 LT 8613</desc>
+<codigo>
+<ean>7891691086137</ean>
+<precio>2990</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 093909  => crea instancia soap_server .....wspoccp_os
+30112007 093909  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>CLOSET</texto>
+</req>
+30112007 093909  => busqueda_prec : Se verifica local ->E502
+30112007 093909  => busqueda_prec : Trae codigos ean para producto descripcion->CLOSET
+30112007 093909  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>BARRA CLOSET OVALADA DORADA 1.80MTS.</desc>
+<codigo>
+<ean>2082000488680</ean>
+<precio>5490</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA CLOSET ECONOMICA 1.50MT CAFE</desc>
+<codigo>
+<ean>7809890005866</ean>
+<precio>1890</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA CLOSET ECONOMICA 1.50MT CAFE</desc>
+<codigo>
+<ean>2082000488727</ean>
+<precio>1890</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA CLOSET ECONOMICA 1.50MT BLANCO</desc>
+<codigo>
+<ean>7809890005859</ean>
+<precio>1890</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA CLOSET ECONOMICA 1.50MT BLANCO</desc>
+<codigo>
+<ean>2082000488710</ean>
+<precio>1890</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA CLOSET OVALADA DORADA 1.20MTS.</desc>
+<codigo>
+<ean>2082000488734</ean>
+<precio>3690</precio>
+</codigo>
+</producto>
+<producto><desc>ASA EMBUT CLOSET 200MM</desc>
+<codigo>
+<ean>7809818910432</ean>
+<precio>1990</precio>
+</codigo>
+</producto>
+<producto><desc>ASA EMBUT CLOSET 200MM</desc>
+<codigo>
+<ean>2082000124946</ean>
+<precio>1990</precio>
+</codigo>
+</producto>
+<producto><desc>ACCESORIO MULTIUSO INSTA CLOSET</desc>
+<codigo>
+<ean>7703450100032</ean>
+<precio>605</precio>
+</codigo>
+</producto>
+<producto><desc>ACCESORIOS MULTI TAPA 2UNID INSTA CLOSET</desc>
+<codigo>
+<ean>7703450100049</ean>
+<precio>605</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 093933  => crea instancia soap_server .....wspoccp_os
+30112007 093933  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>MANIO</texto>
+</req>
+30112007 093933  => busqueda_prec : Se verifica local ->E502
+30112007 093933  => busqueda_prec : Trae codigos ean para producto descripcion->MANIO
+30112007 093933  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>RUEDA MANIOBRA</desc>
+<codigo>
+<ean>2082000291082</ean>
+<precio>80390</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 093951  => crea instancia soap_server .....wspoccp_os
+30112007 093951  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>COIGUE</texto>
+</req>
+30112007 093951  => busqueda_prec : Se verifica local ->E502
+30112007 093951  => busqueda_prec : Trae codigos ean para producto descripcion->COIGUE
+30112007 093951  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>1/4 PL MELAMINA COIGUE 18MM</desc>
+<codigo>
+<ean>2082000202828</ean>
+<precio>5485</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MELAMINA COIGUE 18MM</desc>
+<codigo>
+<ean>2000002097242</ean>
+<precio>5485</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL AGL MEL COIGUE 15X1520X2420MM</desc>
+<codigo>
+<ean>2082000202842</ean>
+<precio>4797</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL AGL MEL COIGUE 15X1520X2420MM</desc>
+<codigo>
+<ean>2000002097235</ean>
+<precio>4797</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MASISA COIGUE 18MM</desc>
+<codigo>
+<ean>2082000203849</ean>
+<precio>0</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MASISA COIGUE 18MM</desc>
+<codigo>
+<ean>2000002096702</ean>
+<precio>0</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MASISA ENCH.COIGUE 15X1500X2400MM</desc>
+<codigo>
+<ean>2082000203757</ean>
+<precio>6405</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MASISA ENCH.COIGUE 15X1500X2400MM</desc>
+<codigo>
+<ean>2000002096696</ean>
+<precio>6405</precio>
+</codigo>
+</producto>
+<producto><desc>* 3/4 PL MASISA COIGUE 18MM</desc>
+<codigo>
+<ean>2082000204747</ean>
+<precio>15562</precio>
+</codigo>
+</producto>
+<producto><desc>* 3/4 PL MASISA COIGUE 18MM</desc>
+<codigo>
+<ean>2000002093282</ean>
+<precio>15562</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 094016  => crea instancia soap_server .....wspoccp_os
+30112007 094016  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>COIGUE</texto>
+</req>
+30112007 094016  => busqueda_prec : Se verifica local ->E502
+30112007 094016  => busqueda_prec : Trae codigos ean para producto descripcion->COIGUE
+30112007 094016  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>1/4 PL MELAMINA COIGUE 18MM</desc>
+<codigo>
+<ean>2082000202828</ean>
+<precio>5485</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MELAMINA COIGUE 18MM</desc>
+<codigo>
+<ean>2000002097242</ean>
+<precio>5485</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL AGL MEL COIGUE 15X1520X2420MM</desc>
+<codigo>
+<ean>2082000202842</ean>
+<precio>4797</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL AGL MEL COIGUE 15X1520X2420MM</desc>
+<codigo>
+<ean>2000002097235</ean>
+<precio>4797</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MASISA COIGUE 18MM</desc>
+<codigo>
+<ean>2082000203849</ean>
+<precio>0</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MASISA COIGUE 18MM</desc>
+<codigo>
+<ean>2000002096702</ean>
+<precio>0</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MASISA ENCH.COIGUE 15X1500X2400MM</desc>
+<codigo>
+<ean>2082000203757</ean>
+<precio>6405</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MASISA ENCH.COIGUE 15X1500X2400MM</desc>
+<codigo>
+<ean>2000002096696</ean>
+<precio>6405</precio>
+</codigo>
+</producto>
+<producto><desc>* 3/4 PL MASISA COIGUE 18MM</desc>
+<codigo>
+<ean>2082000204747</ean>
+<precio>15562</precio>
+</codigo>
+</producto>
+<producto><desc>* 3/4 PL MASISA COIGUE 18MM</desc>
+<codigo>
+<ean>2000002093282</ean>
+<precio>15562</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 094218  => crea instancia soap_server .....wspoccp_os
+30112007 094218  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000235</precio>
+    <cantidad>0000000001.00</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+</req>
+30112007 094218  => Graba_OS : Existe Local y rut
+30112007 094218  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 094218  => Graba_OS : Se verifica local ->42
+30112007 094218  => Verifica_rut -> Largo de rut correcto 8
+30112007 094218  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 094218  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 094221  => Graba_OS :No se verifica ean ->0000001185263 en CPE 
+30112007 094221  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001185263 en CPE </desc></resp>
+30112007 094644  => crea instancia soap_server .....wspoccp_os
+30112007 094644  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 094644  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 094644  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 094644  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 094644  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 095029  => crea instancia soap_server .....wspoccp_os
+30112007 095029  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 095029  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 095029  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 095029  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 095029  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 095044  => crea instancia soap_server .....wspoccp_os
+30112007 095044  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 095044  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 095044  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 095044  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 095044  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 095125  => crea instancia soap_server .....wspoccp_os
+30112007 095125  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>00002290</precio>
+    <cantidad>0000000001.00</cantidad>
+    <ean>7805560001084</ean>
+  </detalle>
+</req>
+30112007 095125  => Graba_OS : Existe Local y rut
+30112007 095125  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 095125  => Graba_OS : Se verifica local ->42
+30112007 095125  => Verifica_rut -> Largo de rut correcto 8
+30112007 095125  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 095125  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 095125  => verifica_cantidad -> la cantidad es largo mayor 13
+30112007 095125  => Graba_OS :No se verifica cantidad ->0000000001.00
+30112007 095125  => ERROR(19) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>19-No se verifica cantidad =0000000001.00</desc></resp>
+30112007 100645  => crea instancia soap_server .....wspoccp_os
+30112007 100852  => crea instancia soap_server .....wspoccp_os
+30112007 100852  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>3500</precio>
+    <cantidad>10001.00</cantidad>
+    <ean>2082001013966</ean>
+  </detalle>
+</req>
+30112007 100852  => Graba_OS : Existe Local y rut
+30112007 100852  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 100852  => Graba_OS : Se verifica local ->42
+30112007 100852  => Verifica_rut -> Largo de rut correcto 8
+30112007 100852  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 100852  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 100854  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42500  
+30112007 100854  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42500</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 101142  => crea instancia soap_server .....wspoccp_os
+30112007 101142  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>3500</precio>
+    <cantidad>10000001.00</cantidad>
+    <ean>2082001013966</ean>
+  </detalle>
+</req>
+30112007 101142  => Graba_OS : Existe Local y rut
+30112007 101142  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 101142  => Graba_OS : Se verifica local ->42
+30112007 101142  => Verifica_rut -> Largo de rut correcto 8
+30112007 101142  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 101142  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 101142  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42501  
+30112007 101142  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42501</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 102918  => crea instancia soap_server .....wspoccp_os
+30112007 102918  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 102918  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 102918  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 102918  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 102918  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 102949  => crea instancia soap_server .....wspoccp_os
+30112007 102949  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>00002290</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805560001084</ean>
+  </detalle>
+</req>
+30112007 102949  => ERROR(02) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>02-tag LOCAL vacio en xml</desc></resp>
+30112007 103324  => crea instancia soap_server .....wspoccp_os
+30112007 103324  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E999</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>00002290</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805560001084</ean>
+  </detalle>
+</req>
+30112007 103324  => Graba_OS : Existe Local y rut
+30112007 103324  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 103324  => verifica_local -> No existe local para  E999
+30112007 103324  => Graba_OS :No se verifica local
+30112007 103324  => ERROR(13) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>13-No se verifica local para local E999</desc></resp>
+30112007 103537  => crea instancia soap_server .....wspoccp_os
+30112007 103537  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>00002290</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805560001084</ean>
+  </detalle>
+</req>
+30112007 103537  => Graba_OS : Existe Local y rut
+30112007 103537  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 103537  => Graba_OS : Se verifica local ->42
+30112007 103537  => Verifica_rut -> Largo de rut correcto 8
+30112007 103537  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 103537  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 103537  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42502  
+30112007 103537  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42502</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 103849  => crea instancia soap_server .....wspoccp_os
+30112007 103849  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 103849  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 103849  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 103849  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 103849  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 103906  => crea instancia soap_server .....wspoccp_os
+30112007 103906  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>00002290</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805560001084</ean>
+  </detalle>
+</req>
+30112007 103906  => Graba_OS : Existe Local y rut
+30112007 103906  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 103906  => Graba_OS : Se verifica local ->42
+30112007 103906  => Verifica_rut -> Largo de rut correcto 8
+30112007 103906  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 103906  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 103906  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42503  
+30112007 103906  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42503</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 104025  => crea instancia soap_server .....wspoccp_os
+30112007 104025  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>00005725</precio>
+    <cantidad>00000250</cantidad>
+    <ean>7805560001084</ean>
+  </detalle>
+</req>
+30112007 104025  => Graba_OS : Existe Local y rut
+30112007 104025  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 104025  => Graba_OS : Se verifica local ->42
+30112007 104025  => Verifica_rut -> Largo de rut correcto 8
+30112007 104025  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 104025  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 104025  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42504  
+30112007 104025  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42504</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 105117  => crea instancia soap_server .....wspoccp_os
+30112007 105117  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>3500</precio>
+    <cantidad>10000001.00</cantidad>
+    <ean>2082001013966</ean>
+  </detalle>
+</req>
+30112007 105117  => Graba_OS : Existe Local y rut
+30112007 105117  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 105117  => Graba_OS : Se verifica local ->42
+30112007 105117  => Verifica_rut -> Largo de rut correcto 8
+30112007 105117  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 105117  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 105117  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42505  
+30112007 105117  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42505</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 105205  => crea instancia soap_server .....wspoccp_os
+30112007 105205  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>3500</precio>
+    <cantidad>10000001.12</cantidad>
+    <ean>2082001013966</ean>
+  </detalle>
+</req>
+30112007 105205  => Graba_OS : Existe Local y rut
+30112007 105205  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 105205  => Graba_OS : Se verifica local ->42
+30112007 105205  => Verifica_rut -> Largo de rut correcto 8
+30112007 105205  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 105205  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 105205  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42506  
+30112007 105206  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42506</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 105244  => crea instancia soap_server .....wspoccp_os
+30112007 105244  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>3500</precio>
+    <cantidad>12345678.12</cantidad>
+    <ean>2082001013966</ean>
+  </detalle>
+</req>
+30112007 105244  => Graba_OS : Existe Local y rut
+30112007 105244  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 105244  => Graba_OS : Se verifica local ->42
+30112007 105244  => Verifica_rut -> Largo de rut correcto 8
+30112007 105244  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 105244  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 105244  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42507  
+30112007 105244  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42507</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 105445  => crea instancia soap_server .....wspoccp_os
+30112007 105445  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00000001</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004100</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001191141</ean>
+  </detalle>
+</req>
+30112007 105445  => Graba_OS : Existe Local y rut
+30112007 105445  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 105445  => Graba_OS : Se verifica local ->42
+30112007 105445  => Verifica_rut -> Largo de rut correcto 8
+30112007 105445  => Graba_OS : Se verifica Rut, rut correcto ->00000001
+30112007 105445  => Graba_OS : Se obtiene Rut Cliente ->1
+30112007 105446  => Graba_OS :No se verifica ean ->0000001191141 en CPE 
+30112007 105446  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001191141 en CPE </desc></resp>
+30112007 105712  => crea instancia soap_server .....wspoccp_os
+30112007 105712  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00000001</rut>
+  </encabezado>
+  <detalle>
+    <precio>00002290</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805560001084</ean>
+  </detalle>
+</req>
+30112007 105712  => Graba_OS : Existe Local y rut
+30112007 105712  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 105712  => Graba_OS : Se verifica local ->42
+30112007 105712  => Verifica_rut -> Largo de rut correcto 8
+30112007 105712  => Graba_OS : Se verifica Rut, rut correcto ->00000001
+30112007 105712  => Graba_OS : Se obtiene Rut Cliente ->1
+30112007 105713  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42508  
+30112007 105713  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42508</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 105901  => crea instancia soap_server .....wspoccp_os
+30112007 105901  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>GUANTE</texto>
+</req>
+30112007 105901  => busqueda_prec : Se verifica local ->E502
+30112007 105901  => busqueda_prec : Trae codigos ean para producto descripcion->GUANTE
+30112007 105901  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>DELANTAL + TOMA OLLA + GUANTE</desc>
+<codigo>
+<ean>7501008872291</ean>
+<precio>3990</precio>
+</codigo>
+</producto>
+<producto><desc>DELANTAL + TOMA OLLA + GUANTE</desc>
+<codigo>
+<ean>2082001218132</ean>
+<precio>3990</precio>
+</codigo>
+</producto>
+<producto><desc>DEDO CEPILLO LIMPIA DIENTES PET C/GUANTE</desc>
+<codigo>
+<ean>75691004453</ean>
+<precio>790</precio>
+</codigo>
+</producto>
+<producto><desc>DEDO CEPILLO LIMPIA DIENTES PET C/GUANTE</desc>
+<codigo>
+<ean>2082000312749</ean>
+<precio>790</precio>
+</codigo>
+</producto>
+<producto><desc>BOLSA GUANTE TEJ.STANDARD PIGMEN.1 CARA</desc>
+<codigo>
+<ean>7805886001126</ean>
+<precio>607</precio>
+</codigo>
+</producto>
+<producto><desc>AROMATICO SPORT GUANTES BOX</desc>
+<codigo>
+<ean>4892603045689</ean>
+<precio>2390</precio>
+</codigo>
+</producto>
+<producto><desc>GUANTE JARDIN ESTAMPADO ALGODON</desc>
+<codigo>
+<ean>3219510100309</ean>
+<precio>490</precio>
+</codigo>
+</producto>
+<producto><desc>GUANTE JARDIN CABALLERO</desc>
+<codigo>
+<ean>4023069033617</ean>
+<precio>495</precio>
+</codigo>
+</producto>
+<producto><desc>GUANTE DESCARNE CHANCHO SIN FORRO</desc>
+<codigo>
+<ean>7809827960718</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>GUANTE DAMA</desc>
+<codigo>
+<ean>2000000675527</ean>
+<precio>1890</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 105922  => crea instancia soap_server .....wspoccp_os
+30112007 105922  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PINO</texto>
+</req>
+30112007 105922  => busqueda_prec : Se verifica local ->E502
+30112007 105922  => busqueda_prec : Trae codigos ean para producto descripcion->PINO
+30112007 105922  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>1/4 RODON PINO CR1 15X15X3000MM</desc>
+<codigo>
+<ean>2000002018544</ean>
+<precio>830</precio>
+</codigo>
+</producto>
+<producto><desc>MEDIA CANA PINO OREGON 1X1 2.4M</desc>
+<codigo>
+<ean>2000002216070</ean>
+<precio>1990</precio>
+</codigo>
+</producto>
+<producto><desc>1/2 PL MASISA ENCHAP PINO 15X1500X2400MM</desc>
+<codigo>
+<ean>2082000918125</ean>
+<precio>9352</precio>
+</codigo>
+</producto>
+<producto><desc>1/2 DUROLAC LISO PINO NATURAL 3X1520X244</desc>
+<codigo>
+<ean>2082001025884</ean>
+<precio>3761</precio>
+</codigo>
+</producto>
+<producto><desc>1/2 DUROLAC ENT PINO NATURAL 3X1520X2440</desc>
+<codigo>
+<ean>2082001025709</ean>
+<precio>3295</precio>
+</codigo>
+</producto>
+<producto><desc>1/2 MASISA ENCHAP PINO 18X1500X2400MM</desc>
+<codigo>
+<ean>2082001025488</ean>
+<precio>11660</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 PL MASISA ENCHAP PINO 15X1500X2400MM</desc>
+<codigo>
+<ean>2082000918118</ean>
+<precio>4880</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 DUROLAC ENT PINO NATURAL 3X1520X2440</desc>
+<codigo>
+<ean>2082001024849</ean>
+<precio>1720</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 DUROLAC LISO PINO NATURAL 3X1520X244</desc>
+<codigo>
+<ean>2082001025020</ean>
+<precio>1962</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 MASISA ENCHAP PINO 18X1500X2400MM</desc>
+<codigo>
+<ean>2082001024627</ean>
+<precio>6084</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 105946  => crea instancia soap_server .....wspoccp_os
+30112007 105946  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>ADORNO</texto>
+</req>
+30112007 105946  => busqueda_prec : Se verifica local ->E502
+30112007 105946  => busqueda_prec : Trae codigos ean para producto descripcion->ADORNO
+30112007 105946  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>ADORNO NAVIDAD ST.PETERSBURG SP 3 8CM-G</desc>
+<codigo>
+<ean>2082000287634</ean>
+<precio>750</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO NAVIDAD ST.PETERSBURG SP 3 8CM-G</desc>
+<codigo>
+<ean>2000000032184</ean>
+<precio>750</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO NAVIDAD HANGER HEART BALL 3 8CM-G</desc>
+<codigo>
+<ean>612962132165</ean>
+<precio>750</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO NAVIDAD HANGER HEART BALL 3 8CM-G</desc>
+<codigo>
+<ean>2082000287610</ean>
+<precio>750</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO NAVIDAD HANGER HEART BALL 4 10CM-</desc>
+<codigo>
+<ean>2082000287627</ean>
+<precio>750</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO NAVIDAD HANGER HEART BALL 4 10CM-</desc>
+<codigo>
+<ean>2000000032177</ean>
+<precio>750</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO NAVIDAD ANGELES DE MADERA 12UN</desc>
+<codigo>
+<ean>2082000315894</ean>
+<precio>3290</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO NAVIDAD ANGELES DE MADERA 12UN</desc>
+<codigo>
+<ean>200000112295</ean>
+<precio>3290</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO METALICO C/GLITTER NAV 9CM DISP.</desc>
+<codigo>
+<ean>2082000315825</ean>
+<precio>390</precio>
+</codigo>
+</producto>
+<producto><desc>ADORNO METALICO C/GLITTER NAV 9CM DISP.</desc>
+<codigo>
+<ean>200000112264</ean>
+<precio>390</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 110015  => crea instancia soap_server .....wspoccp_os
+30112007 110015  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PISINA</texto>
+</req>
+30112007 110015  => busqueda_prec : Se verifica local ->E502
+30112007 110015  => Error (verifica_codprec) No hay respuesta para este texto 
+30112007 110015  => ERROR(07) : <?xml version="1.0" ?><resp><producto/>
+		<estado>0 </estado>
+		<desc>07-No se verifica en CPE el texto PISINA</desc></resp>
+30112007 110044  => crea instancia soap_server .....wspoccp_os
+30112007 110044  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PISINA</texto>
+</req>
+30112007 110044  => busqueda_prec : Se verifica local ->E502
+30112007 110044  => Error (verifica_codprec) No hay respuesta para este texto 
+30112007 110044  => ERROR(07) : <?xml version="1.0" ?><resp><producto/>
+		<estado>0 </estado>
+		<desc>07-No se verifica en CPE el texto PISINA</desc></resp>
+30112007 110107  => crea instancia soap_server .....wspoccp_os
+30112007 110107  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PATA</texto>
+</req>
+30112007 110107  => busqueda_prec : Se verifica local ->E502
+30112007 110108  => busqueda_prec : Trae codigos ean para producto descripcion->PATA
+30112007 110108  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>BAHUINA PATA DE VACA M19 ALT.25CM</desc>
+<codigo>
+<ean>2000002273806</ean>
+<precio>3200</precio>
+</codigo>
+</producto>
+<producto><desc>SEDA ARBUSTO ARCE PATA DE GALLO</desc>
+<codigo>
+<ean>6907515002656</ean>
+<precio>2190</precio>
+</codigo>
+</producto>
+<producto><desc>AEROSOL PULGAS Y GARRAPATAS 400CC</desc>
+<codigo>
+<ean>7805505001742</ean>
+<precio>2990</precio>
+</codigo>
+</producto>
+<producto><desc>ADAPTADOR PATAS PLANA 10A NG</desc>
+<codigo>
+<ean>7807325012922</ean>
+<precio>280</precio>
+</codigo>
+</producto>
+<producto><desc>ADAPTADOR PATAS PLANA 10A NG</desc>
+<codigo>
+<ean>2082000171834</ean>
+<precio>280</precio>
+</codigo>
+</producto>
+<producto><desc>ADAPTADOR PATAS PLANA 10A MARFIL</desc>
+<codigo>
+<ean>7807325112929</ean>
+<precio>280</precio>
+</codigo>
+</producto>
+<producto><desc>ADAPTADOR PATAS PLANA 10A MARFIL</desc>
+<codigo>
+<ean>2082000171773</ean>
+<precio>280</precio>
+</codigo>
+</producto>
+<producto><desc>CLAVO P.PATA SILLA NIQUEL</desc>
+<codigo>
+<ean>4004575981418</ean>
+<precio>150</precio>
+</codigo>
+</producto>
+<producto><desc>PATA RAULI 47CM SET 4UN</desc>
+<codigo>
+<ean>2082000226794</ean>
+<precio>7276</precio>
+</codigo>
+</producto>
+<producto><desc>PATA RAULI 37CM SET 4UN</desc>
+<codigo>
+<ean>2082000226787</ean>
+<precio>6778</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 110134  => crea instancia soap_server .....wspoccp_os
+30112007 110134  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>AUDIFONO</texto>
+</req>
+30112007 110134  => busqueda_prec : Se verifica local ->E502
+30112007 110134  => busqueda_prec : Trae codigos ean para producto descripcion->AUDIFONO
+30112007 110134  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>AUDIFONO COBY P/PERSONAL</desc>
+<codigo>
+<ean>2082000515270</ean>
+<precio>1100</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO COBY AURICULAR GRANDE</desc>
+<codigo>
+<ean>2082000515300</ean>
+<precio>5900</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO COBY CON ARCO LIVIANO</desc>
+<codigo>
+<ean>2082000515287</ean>
+<precio>3890</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO COBY CON ARCO</desc>
+<codigo>
+<ean>2082000515294</ean>
+<precio>1290</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO C/MICROFONO/CONTROL VEL</desc>
+<codigo>
+<ean>2082000515744</ean>
+<precio>10590</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO SONY CON ARCO LIVIANO</desc>
+<codigo>
+<ean>27242545168</ean>
+<precio>13940</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO PERSONAL C/EXTENCION 90CM</desc>
+<codigo>
+<ean>78477861189</ean>
+<precio>850</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO PERSONAL C/EXTENCION 90CM</desc>
+<codigo>
+<ean>2082000085759</ean>
+<precio>850</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO ECONOMICO C/ENCHUFE</desc>
+<codigo>
+<ean>78477865453</ean>
+<precio>3045</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO ECONOMICO C/ENCHUFE</desc>
+<codigo>
+<ean>2082000085964</ean>
+<precio>3045</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 110249  => crea instancia soap_server .....wspoccp_os
+30112007 110249  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>AUDIFONO</texto>
+</req>
+30112007 110249  => busqueda_prec : Se verifica local ->E502
+30112007 110249  => busqueda_prec : Trae codigos ean para producto descripcion->AUDIFONO
+30112007 110249  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>AUDIFONO COBY P/PERSONAL</desc>
+<codigo>
+<ean>2082000515270</ean>
+<precio>1100</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO COBY AURICULAR GRANDE</desc>
+<codigo>
+<ean>2082000515300</ean>
+<precio>5900</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO COBY CON ARCO LIVIANO</desc>
+<codigo>
+<ean>2082000515287</ean>
+<precio>3890</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO COBY CON ARCO</desc>
+<codigo>
+<ean>2082000515294</ean>
+<precio>1290</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO C/MICROFONO/CONTROL VEL</desc>
+<codigo>
+<ean>2082000515744</ean>
+<precio>10590</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO SONY CON ARCO LIVIANO</desc>
+<codigo>
+<ean>27242545168</ean>
+<precio>13940</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO PERSONAL C/EXTENCION 90CM</desc>
+<codigo>
+<ean>78477861189</ean>
+<precio>850</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO PERSONAL C/EXTENCION 90CM</desc>
+<codigo>
+<ean>2082000085759</ean>
+<precio>850</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO ECONOMICO C/ENCHUFE</desc>
+<codigo>
+<ean>78477865453</ean>
+<precio>3045</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO ECONOMICO C/ENCHUFE</desc>
+<codigo>
+<ean>2082000085964</ean>
+<precio>3045</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 110349  => crea instancia soap_server .....wspoccp_os
+30112007 110349  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>AUDIFONO SONY</texto>
+</req>
+30112007 110349  => busqueda_prec : Se verifica local ->E502
+30112007 110349  => busqueda_prec : Trae codigos ean para producto descripcion->AUDIFONO SONY
+30112007 110349  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>AUDIFONO SONY C/CINTILLO STEREO</desc>
+<codigo>
+<ean>4901780318650</ean>
+<precio>5995</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO SONY C/CINTILLO STEREO</desc>
+<codigo>
+<ean>27242491472</ean>
+<precio>5995</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO SONY C/CINTILLO STEREO</desc>
+<codigo>
+<ean>2082000086060</ean>
+<precio>5995</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO SONY C/CINTILLO STEREO</desc>
+<codigo>
+<ean>2000000597126</ean>
+<precio>5995</precio>
+</codigo>
+</producto>
+<producto><desc>AUDIFONO SONY CON ARCO LIVIANO</desc>
+<codigo>
+<ean>27242545168</ean>
+<precio>13940</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 110435  => crea instancia soap_server .....wspoccp_os
+30112007 110435  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>JARRO</texto>
+</req>
+30112007 110435  => busqueda_prec : Se verifica local ->E502
+30112007 110435  => busqueda_prec : Trae codigos ean para producto descripcion->JARRO
+30112007 110435  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>JARRO 0.50LT PICHET</desc>
+<codigo>
+<ean>26102593196</ean>
+<precio>1990</precio>
+</codigo>
+</producto>
+<producto><desc>JARRO 0.50LT PICHET</desc>
+<codigo>
+<ean>2082000064587</ean>
+<precio>1990</precio>
+</codigo>
+</producto>
+<producto><desc>JARRO 0.50LT PICHET</desc>
+<codigo>
+<ean>2000000516554</ean>
+<precio>1990</precio>
+</codigo>
+</producto>
+<producto><desc>PACK JARRO + 6 VASOS TOLEDO</desc>
+<codigo>
+<ean>7806740015389</ean>
+<precio>1790</precio>
+</codigo>
+</producto>
+<producto><desc>JARRO 1.3LT VIDRIO N9</desc>
+<codigo>
+<ean>2000000983721</ean>
+<precio>1690</precio>
+</codigo>
+</producto>
+<producto><desc>JARRO MEDIDOR 8 TAZAS VIDRIO</desc>
+<codigo>
+<ean>71160010727</ean>
+<precio>6990</precio>
+</codigo>
+</producto>
+<producto><desc>DISENO JARRON ARTISTICO</desc>
+<codigo>
+<ean>2000000200446</ean>
+<precio>10990</precio>
+</codigo>
+</producto>
+<producto><desc>COMBO NEVERA 52LT. 5.6LT JARRO 2LT THERM</desc>
+<codigo>
+<ean>7730909730076</ean>
+<precio>34990</precio>
+</codigo>
+</producto>
+<producto><desc>COMBO NEVERA 34LT. 5.6LT JARRO 2LT THERM</desc>
+<codigo>
+<ean>5010576102904</ean>
+<precio>19990</precio>
+</codigo>
+</producto>
+<producto><desc>JARRO MARINEX GRADUADO 1/2LT CV</desc>
+<codigo>
+<ean>49932651690</ean>
+<precio>2890</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 110525  => crea instancia soap_server .....wspoccp_os
+30112007 110525  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>REFRIGERADOR</texto>
+</req>
+30112007 110525  => busqueda_prec : Se verifica local ->E502
+30112007 110525  => busqueda_prec : Trae codigos ean para producto descripcion->REFRIGERADOR
+30112007 110525  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>INTERRUPTOR P/REFRIGERADOR USOS VARIOS</desc>
+<codigo>
+<ean>2082000178093</ean>
+<precio>420</precio>
+</codigo>
+</producto>
+<producto><desc>INTERRUPTOR P/REFRIGERADOR USOS VARIOS</desc>
+<codigo>
+<ean>2082000178093</ean>
+<precio>420</precio>
+</codigo>
+</producto>
+<producto><desc>AMP. PARA  REFRIGERADOR 25W E14</desc>
+<codigo>
+<ean>4050300309637</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>AMP. PARA  REFRIGERADOR 15W E14</desc>
+<codigo>
+<ean>4050300310282</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>AMP P/REFRIGERADOR 25W E14</desc>
+<codigo>
+<ean>5994102285548</ean>
+<precio>769</precio>
+</codigo>
+</producto>
+<producto><desc>AMP P/REFRIGERADOR 25W E14</desc>
+<codigo>
+<ean>2082000156091</ean>
+<precio>769</precio>
+</codigo>
+</producto>
+<producto><desc>A PE REFRIGERADOR TROTTER</desc>
+<codigo>
+<ean>2082000956363</ean>
+<precio>0</precio>
+</codigo>
+</producto>
+<producto><desc>A PE REFRIGERADOR  FDV</desc>
+<codigo>
+<ean>2082000956264</ean>
+<precio>0</precio>
+</codigo>
+</producto>
+<producto><desc>A PE REFRIGERADOR INOX MOD 1FC-48 PIED</desc>
+<codigo>
+<ean>8413880103310</ean>
+<precio>713881</precio>
+</codigo>
+</producto>
+<producto><desc>A PE REFRIGERADOR INOX MOD 1FC-48 PIED</desc>
+<codigo>
+<ean>2082000950170</ean>
+<precio>713881</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 110601  => crea instancia soap_server .....wspoccp_os
+30112007 110601  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+30112007 110601  => busqueda_prec : Se verifica local ->E502
+30112007 110601  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+30112007 110601  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 110617  => crea instancia soap_server .....wspoccp_os
+30112007 110617  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>LIMA</texto>
+</req>
+30112007 110617  => busqueda_prec : Se verifica local ->E502
+30112007 110617  => busqueda_prec : Trae codigos ean para producto descripcion->LIMA
+30112007 110617  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>BOTA NAVIDADA LIMA 27X47CM</desc>
+<codigo>
+<ean>2082001189845</ean>
+<precio>7990</precio>
+</codigo>
+</producto>
+<producto><desc>BOLA CAPIZ 11CM LIMA</desc>
+<codigo>
+<ean>2082001164552</ean>
+<precio>1490</precio>
+</codigo>
+</producto>
+<producto><desc>BAJADA CAMA CHINDI T/T 60X90, VER LIMA</desc>
+<codigo>
+<ean>2082001182112</ean>
+<precio>3990</precio>
+</codigo>
+</producto>
+<producto><desc>ALICATE + LIMA PERRO</desc>
+<codigo>
+<ean>32700857714</ean>
+<precio>5190</precio>
+</codigo>
+</producto>
+<producto><desc>ALICATE + LIMA PERRO</desc>
+<codigo>
+<ean>2082000316945</ean>
+<precio>5190</precio>
+</codigo>
+</producto>
+<producto><desc>SET 3 LIMAS MOTOSIERRA 8PX3/16 BAHCO</desc>
+<codigo>
+<ean>7311518152451</ean>
+<precio>2090</precio>
+</codigo>
+</producto>
+<producto><desc>SET 3 LIMAS MOTOSIERRA 8PX3/16 BAHCO</desc>
+<codigo>
+<ean>2082000074579</ean>
+<precio>2090</precio>
+</codigo>
+</producto>
+<producto><desc>SET 3 LIMAS MOTOSIERRA 8PX3/16 BAHCO</desc>
+<codigo>
+<ean>2050000264740</ean>
+<precio>2090</precio>
+</codigo>
+</producto>
+<producto><desc>SET 3 LIMAS MOTOSIERRAS 8PX1/4 BAHCO</desc>
+<codigo>
+<ean>7311518152482</ean>
+<precio>2090</precio>
+</codigo>
+</producto>
+<producto><desc>SET 3 LIMAS MOTOSIERRAS 8PX1/4 BAHCO</desc>
+<codigo>
+<ean>2082000074395</ean>
+<precio>2090</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 112015  => crea instancia soap_server .....wspoccp_os
+30112007 112015  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 112015  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 112015  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 112015  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 112015  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 112022  => crea instancia soap_server .....wspoccp_os
+30112007 112022  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>CHAÒA</texto>
+</req>
+30112007 112022  => busqueda_prec : Se verifica local ->E502
+30112007 112022  => Error (verifica_codprec) No hay respuesta para este texto 
+30112007 112022  => ERROR(07) : <?xml version="1.0" ?><resp><producto/>
+		<estado>0 </estado>
+		<desc>07-No se verifica en CPE el texto CHAÒA</desc></resp>
+30112007 112217  => crea instancia soap_server .....wspoccp_os
+30112007 112217  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 112217  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 112217  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 112217  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 112217  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 112227  => crea instancia soap_server .....wspoccp_os
+30112007 112227  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>CHAPA</texto>
+</req>
+30112007 112227  => busqueda_prec : Se verifica local ->E502
+30112007 112227  => busqueda_prec : Trae codigos ean para producto descripcion->CHAPA
+30112007 112227  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CUBIERTA MESA CHAPA EUCA 60CM DIAM 15CM</desc>
+<codigo>
+<ean>2000002220206</ean>
+<precio>6100</precio>
+</codigo>
+</producto>
+<producto><desc>CUBIERTA MESA CHAPA EUCA 100CM DIAM 18CM</desc>
+<codigo>
+<ean>2000002220237</ean>
+<precio>19990</precio>
+</codigo>
+</producto>
+<producto><desc>CAJON 40X17(4) BAST CHAPA MANIO</desc>
+<codigo>
+<ean>7806427469726</ean>
+<precio>8990</precio>
+</codigo>
+</producto>
+<producto><desc>CAJON 40X17(4) BAST CHAPA EUCA CAL</desc>
+<codigo>
+<ean>7806427468224</ean>
+<precio>7990</precio>
+</codigo>
+</producto>
+<producto><desc>CABALLETE CONTRACHAPADO ECONOMICO</desc>
+<codigo>
+<ean>2000002079224</ean>
+<precio>3290</precio>
+</codigo>
+</producto>
+<producto><desc>BROCA P/CHAPA  30.0 MM. ALPEN</desc>
+<codigo>
+<ean>9002740351306</ean>
+<precio>9190</precio>
+</codigo>
+</producto>
+<producto><desc>BROCA CHAPA MADERA 38.0MM ALPEN</desc>
+<codigo>
+<ean>9002740351481</ean>
+<precio>5595</precio>
+</codigo>
+</producto>
+<producto><desc>BROCA P/CHAPA MAD 25.0MM ALPEN</desc>
+<codigo>
+<ean>9002740351412</ean>
+<precio>10700</precio>
+</codigo>
+</producto>
+<producto><desc>TORNILLO P.CHAPA CAB CIRC DIN 7 6880335</desc>
+<codigo>
+<ean>4032526061315</ean>
+<precio>600</precio>
+</codigo>
+</producto>
+<producto><desc>ARANDELA CHAPA ZINC AMARILLA 3036717</desc>
+<codigo>
+<ean>4004575981241</ean>
+<precio>360</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 112332  => crea instancia soap_server .....wspoccp_os
+30112007 112332  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>77104350</rut>
+  </encabezado>
+  <detalle>
+    <precio>3500</precio>
+    <cantidad>12345678.12</cantidad>
+    <ean>2082001013966</ean>
+  </detalle>
+</req>
+30112007 112332  => Graba_OS : Existe Local y rut
+30112007 112332  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+30112007 112332  => Graba_OS : Se verifica local ->42
+30112007 112332  => Verifica_rut -> Largo de rut correcto 8
+30112007 112332  => Graba_OS : Se verifica Rut, rut correcto ->77104350
+30112007 112332  => Graba_OS : Se obtiene Rut Cliente ->77104350
+30112007 112332  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42509  
+30112007 112332  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42509</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 115137  => crea instancia soap_server .....wspoccp_os
+30112007 115137  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+30112007 115137  => busqueda_prec : Se verifica local ->E502
+30112007 115137  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+30112007 115137  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 115149  => crea instancia soap_server .....wspoccp_os
+30112007 115149  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+30112007 115149  => busqueda_prec : Se verifica local ->E502
+30112007 115149  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+30112007 115149  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+30112007 115237  => crea instancia soap_server .....wspoccp_os
+30112007 115237  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 115237  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 115237  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 115237  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 115237  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+30112007 115246  => crea instancia soap_server .....wspoccp_os
+30112007 115246  => Cons_SAP Ingresa XML -><req>
+  <sap>2000829</sap>
+</req>
+30112007 115246  => Cons_SAP : el numero sap buscado cumple con los parametros->2000829
+30112007 115246  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 2000829</desc></resp>
+30112007 115253  => crea instancia soap_server .....wspoccp_os
+30112007 115253  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+30112007 115253  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+30112007 115253  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+30112007 115253  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+30112007 115253  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>

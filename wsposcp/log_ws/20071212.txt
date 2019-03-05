@@ -1,0 +1,332 @@
+12122007 164922  => crea instancia soap_server .....wspoccp_os
+12122007 164922  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00003053</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001187441</ean>
+  </detalle>
+</req>
+12122007 164922  => Graba_OS : Existe Local y rut
+12122007 164922  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+12122007 164922  => Graba_OS : Se verifica local ->42
+12122007 164922  => Verifica_rut -> Largo de rut correcto 8
+12122007 164922  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+12122007 164922  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+12122007 164922  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+12122007 164922  => Graba_OS : Se obtiene Rut Cliente ->13924695
+12122007 164926  => Graba_OS :No se verifica ean ->0000001187441 en CPE 
+12122007 164926  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001187441 en CPE </desc></resp>
+12122007 165115  => crea instancia soap_server .....wspoccp_os
+12122007 165115  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00003053</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001187441</ean>
+  </detalle>
+</req>
+12122007 165115  => Graba_OS : Existe Local y rut
+12122007 165115  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+12122007 165115  => Graba_OS : Se verifica local ->42
+12122007 165115  => Verifica_rut -> Largo de rut correcto 8
+12122007 165115  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+12122007 165115  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+12122007 165115  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+12122007 165115  => Graba_OS : Se obtiene Rut Cliente ->13924695
+12122007 165115  => Graba_OS :No se verifica ean ->0000001187441 en CPE 
+12122007 165115  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001187441 en CPE </desc></resp>
+12122007 165858  => crea instancia soap_server .....wspoccp_os
+12122007 165858  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+12122007 165858  => busqueda_prec : Se verifica local ->E502
+12122007 165859  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+12122007 165859  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+12122007 165941  => crea instancia soap_server .....wspoccp_os
+12122007 165941  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+12122007 165941  => busqueda_prec : Se verifica local ->E502
+12122007 165941  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+12122007 165941  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+12122007 170832  => crea instancia soap_server .....wspoccp_os
+12122007 170832  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+12122007 170832  => busqueda_prec : Se verifica local ->E502
+12122007 170832  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+12122007 170832  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+12122007 170848  => crea instancia soap_server .....wspoccp_os
+12122007 170848  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>1</texto>
+</req>
+12122007 170848  => busqueda_prec : Se verifica local ->E502
+12122007 170849  => busqueda_prec : Trae codigos ean para producto descripcion->1
+12122007 170849  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>TAPACANTO PVC GRIS 19X0,4MM 10MT</desc>
+<codigo>
+<ean>2082000242060</ean>
+<precio>1120</precio>
+</codigo>
+</producto>
+<producto><desc>TAPACANTO PVC GRIS 19X0,4MM 10MT</desc>
+<codigo>
+<ean>2000002292166</ean>
+<precio>1120</precio>
+</codigo>
+</producto>
+<producto><desc>LENA A GRANEL 1KGS.</desc>
+<codigo>
+<ean>2082000223182</ean>
+<precio>59</precio>
+</codigo>
+</producto>
+<producto><desc>LENA A GRANEL 1KGS.</desc>
+<codigo>
+<ean>2000002045175</ean>
+<precio>59</precio>
+</codigo>
+</producto>
+<producto><desc>AISLANTE LANA MIN 1C 50X500X1200MM</desc>
+<codigo>
+<ean>786754320402</ean>
+<precio>23990</precio>
+</codigo>
+</producto>
+<producto><desc>AISLANTE LANA MIN 1C 50X500X1200MM</desc>
+<codigo>
+<ean>2000002013945</ean>
+<precio>23990</precio>
+</codigo>
+</producto>
+<producto><desc>AISLANTE LANA MIN 2C 50X500X1200MM</desc>
+<codigo>
+<ean>7806754335404</ean>
+<precio>25990</precio>
+</codigo>
+</producto>
+<producto><desc>AISLANTE LANA MIN 2C 50X500X1200MM</desc>
+<codigo>
+<ean>2000002013952</ean>
+<precio>25990</precio>
+</codigo>
+</producto>
+<producto><desc>1 PL ERACLIT 25X500X2000 MM (NULO)</desc>
+<codigo>
+<ean>2082000296612</ean>
+<precio>1906</precio>
+</codigo>
+</producto>
+<producto><desc>1 PL ERACLIT 25X500X2000 MM (NULO)</desc>
+<codigo>
+<ean>2082000010386</ean>
+<precio>1906</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>

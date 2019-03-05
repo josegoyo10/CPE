@@ -1,0 +1,3 @@
+1cll 65 a # 71 f 16FABIOLA M02109507813011001000019193046342000falsefalsefalse1CONTRERAS SAAVEDRA Cliente consultado exitósamenteBOGOTABOGOTAfalsefalseA170
+      <IdTypeCustomer>1</IdTypeCustomer>
+    Array

@@ -1,0 +1,113 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript">
+<!--
+function validar_novacio(){
+		if( validar_obligatorio( forma1.precio, "Precio es un Campo obligatorio" ))
+			return false;
+
+		if (forma1.precio.value.length>0 && forma1.costo.value.length>0 && parseInt(forma1.precio.value) < parseInt(forma1.costo.value)) {
+			if (confirm('El costo es mayor al precio. ¿Desea continuar de todas maneras?')){
+				document.forma1.submit();
+			}
+
+		}
+		else
+			document.forma1.submit();
+	}
+
+function calculamargen() {
+	if (forma1.precio.value.length>0 && forma1.costo.value.length>0 && parseInt(forma1.precio.value)>0) {
+		forma1.margen.value = parseInt(((parseInt(forma1.precio.value) - parseInt(forma1.costo.value))/parseInt(forma1.precio.value))*100);
+	}
+	else {
+		forma1.margen.value = 0 ;
+	}
+}
+
+-->
+</script>
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Monitor PE con Precio Pendiente <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" height="85%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+		<FORM NAME="forma1" METHOD="POST" ACTION="index.php">
+		<input type="hidden" name="req" value="upd">
+		<input type="hidden" name="idosde" value="{idosde}">
+		<input type="hidden" name="id_os" value="{id_os}">
+		<input type="hidden" name="precioant" value="{precio}">
+		<tr>
+          <td width="31%" valign="top">
+              <table width="466" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+            <tr>
+              <td width="63">N&deg; OS </td>
+              <td width="311" class="userinput">{id_os}&nbsp;</td>
+              </tr>
+            <tr>
+              <td>Tienda</td>
+              <td class="userinput">{local}&nbsp;</td>
+              </tr>
+            <tr>
+              <td>Fecha Creaci&oacute;n </td>
+              <td class="userinput">{os_fechacreacion}&nbsp;</td>
+              </tr>
+            <tr>
+              <td>Cod SAP</td>
+              <td class="userinput">{cod_sap}</td>
+              </tr>
+            <tr>
+              <td>Cod Barra</td>
+              <td class="userinput">{codbarra}</td>
+              </tr>
+            <tr>
+              <td>Producto</td>
+              <td class="userinput">{desc_prod}&nbsp;</td>
+            </tr>
+            <tr>
+              <td>Especificaci&oacute;n</td>
+              <td class="userinput">{especificacion}</td>
+            </tr>
+            <tr>
+            <tr>
+              <td>Costo + Iva Proovedor</td>
+              <td class="userinput"><input name="costo" type="text" value="{costo}" size="10" maxlength=8 onChange="calculamargen()"></td>
+              </tr>
+            <tr>
+              <td>Precio PVP + Iva</td>
+              <td class="userinput"><input name="precio" type="text" value="{precio}" size="10" maxlength=8 onChange="calculamargen()"></td>
+              </tr>
+            <tr>
+              <td>Margen</td>
+              <td class="userinput"><input name="margen" type="text" value="" size="5" disabled> %</td>
+              </tr>
+            <tr>
+              <td>Observaci&oacute;n</td>
+              <td class="userinput"><textarea name="obs" cols="60" rows="5" wrap="VIRTUAL" class="textonormal">{obs}</textarea></td>
+              </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><input type="button" name="submit1" value="Grabar" onClick="validar_novacio()">
+                <input type="button" name="button2" value="Cancelar" onClick="location.href='index.php'"></td>
+              </tr>
+		  </form>
+          </table></td>
+        </tr>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+
+<script LANGUAGE="javascript">
+
+	calculamargen();
+
+	window.document.forma1.costo.onkeypress = KeyIsNumber;
+	window.document.forma1.precio.onkeypress = KeyIsNumber;
+	window.document.forma1.obs.onkeypress = KeyIsTexto;
+</script>

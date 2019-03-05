@@ -1,0 +1,2896 @@
+19102005 173035 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 173035 => Conectado ...
+19102005 173035 => carga libreria NUSOAP ...
+19102005 173035 => crea instancia soap_server ...
+19102005 173035 => configura instancia para WDSL ...
+19102005 173035 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 173035 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 173035 => Entrega el resultado ...
+19102005 174527 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 174527 => Conectado ...
+19102005 174527 => carga libreria NUSOAP ...
+19102005 174527 => crea instancia soap_server ...
+19102005 174527 => configura instancia para WDSL ...
+19102005 174527 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 174527 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 174527 => Entrega el resultado ...
+19102005 174538 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 174538 => Conectado ...
+19102005 174538 => carga libreria NUSOAP ...
+19102005 174538 => crea instancia soap_server ...
+19102005 174538 => configura instancia para WDSL ...
+19102005 174538 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 174538 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 174538 => Entrega el resultado ...
+19102005 174626 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 174626 => Conectado ...
+19102005 174626 => carga libreria NUSOAP ...
+19102005 174626 => crea instancia soap_server ...
+19102005 174626 => configura instancia para WDSL ...
+19102005 174626 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 174626 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 174626 => Entrega el resultado ...
+19102005 174637 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 174637 => Conectado ...
+19102005 174637 => carga libreria NUSOAP ...
+19102005 174637 => crea instancia soap_server ...
+19102005 174637 => configura instancia para WDSL ...
+19102005 174637 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 174637 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 174637 => Entrega el resultado ...
+19102005 174643 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 174643 => Conectado ...
+19102005 174643 => carga libreria NUSOAP ...
+19102005 174643 => crea instancia soap_server ...
+19102005 174643 => configura instancia para WDSL ...
+19102005 174643 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 174643 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 174643 => Entrega el resultado ...
+19102005 174712 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 174712 => Conectado ...
+19102005 174712 => carga libreria NUSOAP ...
+19102005 174712 => crea instancia soap_server ...
+19102005 174712 => configura instancia para WDSL ...
+19102005 174712 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 174712 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 174712 => Entrega el resultado ...
+19102005 174756 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 174756 => Conectado ...
+19102005 174756 => carga libreria NUSOAP ...
+19102005 174756 => crea instancia soap_server ...
+19102005 174756 => configura instancia para WDSL ...
+19102005 174756 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 174756 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 174756 => Entrega el resultado ...
+19102005 174756 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:43</time></header><data><barcode>123</barcode></data></main>
+19102005 174756 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:43</time></header><data><barcode>123</barcode></data></main>
+19102005 174756 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:43</time></header><data><barcode>123</barcode></data>
+19102005 174756 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:43</time>
+19102005 174756 => header - trx: detalle_producto
+19102005 174756 => header - type: req
+19102005 174756 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:43</time>
+19102005 174756 => header - local: E501
+19102005 174756 => header - pos: TPS22
+19102005 174756 => ERROR(PH5) : tag OPERATOR en el header, vacio
+19102005 175152 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 175152 => Conectado ...
+19102005 175152 => carga libreria NUSOAP ...
+19102005 175152 => crea instancia soap_server ...
+19102005 175152 => configura instancia para WDSL ...
+19102005 175152 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 175152 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 175152 => Entrega el resultado ...
+19102005 175152 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 175152 => Conectado ...
+19102005 175152 => carga libreria NUSOAP ...
+19102005 175152 => crea instancia soap_server ...
+19102005 175152 => configura instancia para WDSL ...
+19102005 175152 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 175152 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 175152 => Entrega el resultado ...
+19102005 175152 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time></header><data><barcode>2082000035044</barcode></data></main>
+19102005 175152 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time></header><data><barcode>2082000035044</barcode></data></main>
+19102005 175152 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time></header><data><barcode>2082000035044</barcode></data>
+19102005 175152 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time>
+19102005 175152 => header - trx: detalle_producto
+19102005 175152 => header - type: req
+19102005 175152 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time>
+19102005 175152 => header - local: E510
+19102005 175152 => header - pos: TPS22
+19102005 175152 => header - operator: OP12
+19102005 175152 => header - date: 2005-08-31
+19102005 175152 => header - time: 12:30
+19102005 175152 => parsea data : <barcode>2082000035044</barcode>
+19102005 175152 => data - barcode : 2082000035044
+19102005 175152 => consulta con cod_barra='2082000035044' y local='E510'
+19102005 175152 => obtiene_producto : MYSQL qry:   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E510')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='2082000035044' AND  cb.estadoactivo='C'
+19102005 175152 => QUERY   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E510')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='2082000035044' AND  cb.estadoactivo='C'
+19102005 175152 => RESULT | Resource id #32 | 
+19102005 175152 => obtiene_producto : Numero de filas1
+19102005 175152 => cod_barra:2082000035044
+19102005 175152 => cod_prod1:103942
+19102005 175152 => des_corta:GDA COC&BAÑ 26910
+19102005 175152 => des_larga:GUARDA COCINA&BAÑO 26910 AMARILLO
+19102005 175152 => cod_local:E510
+19102005 175152 => prec_valor:3390
+19102005 175152 => obtiene_producto : XML del producto : <product><barcode>2082000035044</barcode><codsap>103942</codsap><desc1>GDA COC&BAÑ 26910</desc1><desc2>GUARDA COCINA&BAÑO 26910 AMARILLO</desc2><price>3390</price><unit>unidad</unit><stock></stock></product>
+19102005 175152 => producto :<product><barcode>2082000035044</barcode><codsap>103942</codsap><desc1>GDA COC&BAÑ 26910</desc1><desc2>GUARDA COCINA&BAÑO 26910 AMARILLO</desc2><price>3390</price><unit>unidad</unit><stock></stock></product>
+19102005 175325 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 175325 => Conectado ...
+19102005 175325 => carga libreria NUSOAP ...
+19102005 175325 => crea instancia soap_server ...
+19102005 175325 => configura instancia para WDSL ...
+19102005 175325 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 175325 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 175325 => Entrega el resultado ...
+19102005 175325 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:49</time></header><data><barcode>123</barcode></data></main>
+19102005 175325 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:49</time></header><data><barcode>123</barcode></data></main>
+19102005 175325 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:49</time></header><data><barcode>123</barcode></data>
+19102005 175325 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:49</time>
+19102005 175325 => header - trx: detalle_producto
+19102005 175325 => header - type: req
+19102005 175325 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:49</time>
+19102005 175325 => header - local: E501
+19102005 175325 => header - pos: TPS22
+19102005 175325 => ERROR(PH5) : tag OPERATOR en el header, vacio
+19102005 175824 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 175824 => Conectado ...
+19102005 175824 => carga libreria NUSOAP ...
+19102005 175824 => crea instancia soap_server ...
+19102005 175824 => configura instancia para WDSL ...
+19102005 175824 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 175824 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 175824 => Entrega el resultado ...
+19102005 180103 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 180103 => Conectado ...
+19102005 180103 => carga libreria NUSOAP ...
+19102005 180103 => crea instancia soap_server ...
+19102005 180103 => configura instancia para WDSL ...
+19102005 180103 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 180103 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 180103 => Entrega el resultado ...
+19102005 180103 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:56</time></header><data><barcode>8855556</barcode></data></main>
+19102005 180103 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:56</time></header><data><barcode>8855556</barcode></data></main>
+19102005 180103 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:56</time></header><data><barcode>8855556</barcode></data>
+19102005 180103 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:56</time>
+19102005 180103 => header - trx: detalle_producto
+19102005 180103 => header - type: req
+19102005 180103 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>17:56</time>
+19102005 180103 => header - local: E501
+19102005 180103 => header - pos: TPS22
+19102005 180103 => ERROR(PH5) : tag OPERATOR en el header, vacio
+19102005 180324 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 180324 => Conectado ...
+19102005 180324 => carga libreria NUSOAP ...
+19102005 180324 => crea instancia soap_server ...
+19102005 180324 => configura instancia para WDSL ...
+19102005 180324 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 180324 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 180324 => Entrega el resultado ...
+19102005 180353 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 180353 => Conectado ...
+19102005 180353 => carga libreria NUSOAP ...
+19102005 180353 => crea instancia soap_server ...
+19102005 180353 => configura instancia para WDSL ...
+19102005 180353 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 180353 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 180353 => Entrega el resultado ...
+19102005 180458 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 180458 => Conectado ...
+19102005 180458 => carga libreria NUSOAP ...
+19102005 180458 => crea instancia soap_server ...
+19102005 180458 => configura instancia para WDSL ...
+19102005 180458 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 180458 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 180458 => Entrega el resultado ...
+19102005 180510 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 180510 => Conectado ...
+19102005 180510 => carga libreria NUSOAP ...
+19102005 180510 => crea instancia soap_server ...
+19102005 180510 => configura instancia para WDSL ...
+19102005 180510 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 180510 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 180510 => Entrega el resultado ...
+19102005 180604 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 180604 => Conectado ...
+19102005 180604 => carga libreria NUSOAP ...
+19102005 180604 => crea instancia soap_server ...
+19102005 180604 => configura instancia para WDSL ...
+19102005 180604 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 180604 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 180604 => Entrega el resultado ...
+19102005 180604 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:01</time></header><data><barcode>896554</barcode></data></main>
+19102005 180604 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:01</time></header><data><barcode>896554</barcode></data></main>
+19102005 180604 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:01</time></header><data><barcode>896554</barcode></data>
+19102005 180604 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:01</time>
+19102005 180604 => header - trx: detalle_producto
+19102005 180604 => header - type: req
+19102005 180604 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:01</time>
+19102005 180604 => header - local: E501
+19102005 180604 => header - pos: TPS22
+19102005 180604 => ERROR(PH5) : tag OPERATOR en el header, vacio
+19102005 180725 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 180725 => Conectado ...
+19102005 180725 => carga libreria NUSOAP ...
+19102005 180725 => crea instancia soap_server ...
+19102005 180725 => configura instancia para WDSL ...
+19102005 180725 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 180725 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 180725 => Entrega el resultado ...
+19102005 180725 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:03</time></header><data><barcode>12345</barcode></data></main>
+19102005 180725 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:03</time></header><data><barcode>12345</barcode></data></main>
+19102005 180725 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:03</time></header><data><barcode>12345</barcode></data>
+19102005 180725 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:03</time>
+19102005 180725 => header - trx: detalle_producto
+19102005 180725 => header - type: req
+19102005 180725 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:03</time>
+19102005 180725 => header - local: E501
+19102005 180725 => header - pos: TPS22
+19102005 180725 => ERROR(PH5) : tag OPERATOR en el header, vacio
+19102005 180757 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 180757 => Conectado ...
+19102005 180757 => carga libreria NUSOAP ...
+19102005 180757 => crea instancia soap_server ...
+19102005 180757 => configura instancia para WDSL ...
+19102005 180757 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 180757 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 180757 => Entrega el resultado ...
+19102005 180757 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:03</time></header><data><barcode>12345</barcode></data></main>
+19102005 180757 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:03</time></header><data><barcode>12345</barcode></data></main>
+19102005 180757 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:03</time></header><data><barcode>12345</barcode></data>
+19102005 180757 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:03</time>
+19102005 180757 => header - trx: detalle_producto
+19102005 180757 => header - type: req
+19102005 180757 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E501</local><pos>TPS22</pos><vendor>OP01</vendor><date>2005-10-19</date><time>18:03</time>
+19102005 180757 => header - local: E501
+19102005 180757 => header - pos: TPS22
+19102005 180757 => ERROR(PH5) : tag OPERATOR en el header, vacio
+19102005 181511 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 181511 => Conectado ...
+19102005 181511 => carga libreria NUSOAP ...
+19102005 181511 => crea instancia soap_server ...
+19102005 181511 => configura instancia para WDSL ...
+19102005 181511 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 181511 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 181511 => Entrega el resultado ...
+19102005 181511 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:10</time></header><data><barcode>1236</barcode></data></main>
+19102005 181511 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:10</time></header><data><barcode>1236</barcode></data></main>
+19102005 181511 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:10</time></header><data><barcode>1236</barcode></data>
+19102005 181511 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:10</time>
+19102005 181511 => header - trx: detalle_producto
+19102005 181511 => header - type: req
+19102005 181511 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E501</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:10</time>
+19102005 181511 => header - local: E501
+19102005 181511 => header - pos: TPS22
+19102005 181511 => header - operator: OP11
+19102005 181511 => header - date: 2005-10-19
+19102005 181511 => header - time: 18:10
+19102005 181511 => parsea data : <barcode>1236</barcode>
+19102005 181511 => data - barcode : 1236
+19102005 181511 => consulta con cod_barra='1236' y local='E501'
+19102005 181511 => obtiene_producto : MYSQL qry:   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E501')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='1236' AND  cb.estadoactivo='C'
+19102005 181511 => QUERY   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E501')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='1236' AND  cb.estadoactivo='C'
+19102005 181511 => RESULT | Resource id #32 | 
+19102005 181511 => obtiene_producto : Numero de filas0
+19102005 181511 => obtiene_producto : Termina sin producto
+19102005 181511 => ERROR(P01) : El producto no existe en la base de datos
+19102005 181612 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 181612 => Conectado ...
+19102005 181612 => carga libreria NUSOAP ...
+19102005 181612 => crea instancia soap_server ...
+19102005 181612 => configura instancia para WDSL ...
+19102005 181612 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 181612 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 181612 => Entrega el resultado ...
+19102005 181612 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:11</time></header><data><barcode>20370657</barcode></data></main>
+19102005 181612 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:11</time></header><data><barcode>20370657</barcode></data></main>
+19102005 181612 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:11</time></header><data><barcode>20370657</barcode></data>
+19102005 181612 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E501</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:11</time>
+19102005 181612 => header - trx: detalle_producto
+19102005 181612 => header - type: req
+19102005 181612 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E501</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:11</time>
+19102005 181612 => header - local: E501
+19102005 181612 => header - pos: TPS22
+19102005 181612 => header - operator: OP11
+19102005 181612 => header - date: 2005-10-19
+19102005 181612 => header - time: 18:11
+19102005 181612 => parsea data : <barcode>20370657</barcode>
+19102005 181612 => data - barcode : 20370657
+19102005 181612 => consulta con cod_barra='20370657' y local='E501'
+19102005 181612 => obtiene_producto : MYSQL qry:   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E501')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370657' AND  cb.estadoactivo='C'
+19102005 181612 => QUERY   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E501')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370657' AND  cb.estadoactivo='C'
+19102005 181612 => RESULT | Resource id #32 | 
+19102005 181612 => obtiene_producto : Numero de filas0
+19102005 181612 => obtiene_producto : Termina sin producto
+19102005 181612 => ERROR(P01) : El producto no existe en la base de datos
+19102005 182424 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 182424 => Conectado ...
+19102005 182424 => carga libreria NUSOAP ...
+19102005 182424 => crea instancia soap_server ...
+19102005 182424 => configura instancia para WDSL ...
+19102005 182424 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 182424 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 182424 => Entrega el resultado ...
+19102005 182424 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:20</time></header><data><barcode>20370657</barcode></data></main>
+19102005 182424 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:20</time></header><data><barcode>20370657</barcode></data></main>
+19102005 182424 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:20</time></header><data><barcode>20370657</barcode></data>
+19102005 182424 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:20</time>
+19102005 182424 => header - trx: detalle_producto
+19102005 182424 => header - type: req
+19102005 182424 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:20</time>
+19102005 182424 => header - local: E502
+19102005 182424 => header - pos: TPS22
+19102005 182424 => header - operator: OP11
+19102005 182424 => header - date: 2005-10-19
+19102005 182424 => header - time: 18:20
+19102005 182424 => parsea data : <barcode>20370657</barcode>
+19102005 182424 => data - barcode : 20370657
+19102005 182424 => consulta con cod_barra='20370657' y local='E502'
+19102005 182424 => obtiene_producto : MYSQL qry:   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370657' AND  cb.estadoactivo='C'
+19102005 182424 => QUERY   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370657' AND  cb.estadoactivo='C'
+19102005 182424 => RESULT | Resource id #32 | 
+19102005 182424 => obtiene_producto : Numero de filas1
+19102005 182424 => cod_barra:20370657
+19102005 182424 => cod_prod1:102517
+19102005 182424 => des_corta:PRES M&S TECA 1 GL
+19102005 182424 => des_larga:PRESERVANTE MAD MAD&SON TECA 1 GALON
+19102005 182424 => cod_local:E502
+19102005 182424 => prec_valor:13890
+19102005 182424 => obtiene_producto : XML del producto : <product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product>
+19102005 182424 => producto :<product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product>
+19102005 182712 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 182712 => Conectado ...
+19102005 182712 => carga libreria NUSOAP ...
+19102005 182712 => crea instancia soap_server ...
+19102005 182712 => configura instancia para WDSL ...
+19102005 182712 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 182712 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 182712 => Entrega el resultado ...
+19102005 182712 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 182712 => Conectado ...
+19102005 182712 => carga libreria NUSOAP ...
+19102005 182712 => crea instancia soap_server ...
+19102005 182712 => configura instancia para WDSL ...
+19102005 182712 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 182712 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 182712 => Entrega el resultado ...
+19102005 182712 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time></header><data><barcode>2082000035044</barcode></data></main>
+19102005 182712 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time></header><data><barcode>2082000035044</barcode></data></main>
+19102005 182712 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time></header><data><barcode>2082000035044</barcode></data>
+19102005 182712 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time>
+19102005 182712 => header - trx: detalle_producto
+19102005 182712 => header - type: req
+19102005 182712 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time>
+19102005 182712 => header - local: E510
+19102005 182712 => header - pos: TPS22
+19102005 182712 => header - operator: OP12
+19102005 182712 => header - date: 2005-08-31
+19102005 182712 => header - time: 12:30
+19102005 182712 => parsea data : <barcode>2082000035044</barcode>
+19102005 182712 => data - barcode : 2082000035044
+19102005 182712 => consulta con cod_barra='2082000035044' y local='E510'
+19102005 182712 => obtiene_producto : MYSQL qry:   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E510')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='2082000035044' AND  cb.estadoactivo='C'
+19102005 182712 => QUERY   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E510')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='2082000035044' AND  cb.estadoactivo='C'
+19102005 182712 => RESULT | Resource id #32 | 
+19102005 182712 => obtiene_producto : Numero de filas1
+19102005 182712 => cod_barra:2082000035044
+19102005 182712 => cod_prod1:103942
+19102005 182712 => des_corta:GDA COC&BAÑ 26910
+19102005 182712 => des_larga:GUARDA COCINA&BAÑO 26910 AMARILLO
+19102005 182712 => cod_local:E510
+19102005 182712 => prec_valor:3390
+19102005 182712 => obtiene_producto : XML del producto : <product><barcode>2082000035044</barcode><codsap>103942</codsap><desc1>GDA COC&BAÑ 26910</desc1><desc2>GUARDA COCINA&BAÑO 26910 AMARILLO</desc2><price>3390</price><unit>unidad</unit><stock></stock></product>
+19102005 182712 => producto :<product><barcode>2082000035044</barcode><codsap>103942</codsap><desc1>GDA COC&BAÑ 26910</desc1><desc2>GUARDA COCINA&BAÑO 26910 AMARILLO</desc2><price>3390</price><unit>unidad</unit><stock></stock></product>
+19102005 182712 => respuesta enviada: <?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>resp</type><local>E510</local><pos>TPS22</pos><operator>OP12</operator><date>2005-08-31</date><time>12:30</time></header><data><product><barcode>2082000035044</barcode><codsap>103942</codsap><desc1>GDA COC&BAÑ 26910</desc1><desc2>GUARDA COCINA&BAÑO 26910 AMARILLO</desc2><price>3390</price><unit>unidad</unit><stock></stock></product></data></main>
+19102005 183744 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 183744 => Conectado ...
+19102005 183744 => carga libreria NUSOAP ...
+19102005 183744 => crea instancia soap_server ...
+19102005 183744 => configura instancia para WDSL ...
+19102005 183744 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 183745 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 183745 => Entrega el resultado ...
+19102005 183948 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 183948 => Conectado ...
+19102005 183948 => carga libreria NUSOAP ...
+19102005 183948 => crea instancia soap_server ...
+19102005 183948 => configura instancia para WDSL ...
+19102005 183948 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 183948 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 183948 => Entrega el resultado ...
+19102005 183948 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:31</time></header><data><barcode>20370657</barcode></data></main>
+19102005 183948 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:31</time></header><data><barcode>20370657</barcode></data></main>
+19102005 183948 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:31</time></header><data><barcode>20370657</barcode></data>
+19102005 183948 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:31</time>
+19102005 183948 => header - trx: detalle_producto
+19102005 183948 => header - type: req
+19102005 183948 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:31</time>
+19102005 183948 => header - local: E502
+19102005 183948 => header - pos: TPS22
+19102005 183948 => header - operator: OP11
+19102005 183948 => header - date: 2005-10-19
+19102005 183948 => header - time: 19:31
+19102005 183948 => parsea data : <barcode>20370657</barcode>
+19102005 183948 => data - barcode : 20370657
+19102005 183948 => consulta con cod_barra='20370657' y local='E502'
+19102005 183948 => obtiene_producto : MYSQL qry:   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370657' AND  cb.estadoactivo='C'
+19102005 183948 => QUERY   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370657' AND  cb.estadoactivo='C'
+19102005 183948 => RESULT | Resource id #32 | 
+19102005 183948 => obtiene_producto : Numero de filas1
+19102005 183948 => cod_barra:20370657
+19102005 183948 => cod_prod1:102517
+19102005 183948 => des_corta:PRES M&S TECA 1 GL
+19102005 183948 => des_larga:PRESERVANTE MAD MAD&SON TECA 1 GALON
+19102005 183948 => cod_local:E502
+19102005 183948 => prec_valor:13890
+19102005 183948 => obtiene_producto : XML del producto : <product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product>
+19102005 183948 => producto :<product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product>
+19102005 183948 => respuesta enviada: <?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:31</time></header><data><product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product></data></main>
+19102005 184525 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 184525 => Conectado ...
+19102005 184525 => carga libreria NUSOAP ...
+19102005 184525 => crea instancia soap_server ...
+19102005 184525 => configura instancia para WDSL ...
+19102005 184525 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 184525 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 184525 => Entrega el resultado ...
+19102005 184525 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:41</time></header><data><barcode>20370343</barcode></data></main>
+19102005 184525 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:41</time></header><data><barcode>20370343</barcode></data></main>
+19102005 184525 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:41</time></header><data><barcode>20370343</barcode></data>
+19102005 184525 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:41</time>
+19102005 184525 => header - trx: detalle_producto
+19102005 184525 => header - type: req
+19102005 184525 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:41</time>
+19102005 184525 => header - local: E502
+19102005 184525 => header - pos: TPS22
+19102005 184525 => header - operator: OP11
+19102005 184525 => header - date: 2005-10-19
+19102005 184525 => header - time: 18:41
+19102005 184525 => parsea data : <barcode>20370343</barcode>
+19102005 184525 => data - barcode : 20370343
+19102005 184525 => consulta con cod_barra='20370343' y local='E502'
+19102005 184525 => obtiene_producto : MYSQL qry:   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370343' AND  cb.estadoactivo='C'
+19102005 184525 => QUERY   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370343' AND  cb.estadoactivo='C'
+19102005 184525 => RESULT | Resource id #32 | 
+19102005 184525 => obtiene_producto : Numero de filas1
+19102005 184525 => cod_barra:20370343
+19102005 184525 => cod_prod1:102511
+19102005 184525 => des_corta:PRES M&S CASTA 1GL
+19102005 184525 => des_larga:PRESERVANTE MAD MAD&SON CASTAÑO 1 GALON
+19102005 184525 => cod_local:E502
+19102005 184525 => prec_valor:13890
+19102005 184525 => obtiene_producto : XML del producto : <product><barcode>20370343</barcode><codsap>102511</codsap><desc1>PRES M&S CASTA 1GL</desc1><desc2>PRESERVANTE MAD MAD&SON CASTAÑO 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product>
+19102005 184525 => producto :<product><barcode>20370343</barcode><codsap>102511</codsap><desc1>PRES M&S CASTA 1GL</desc1><desc2>PRESERVANTE MAD MAD&SON CASTAÑO 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product>
+19102005 184525 => respuesta enviada: <?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:41</time></header><data><product><barcode>20370343</barcode><codsap>102511</codsap><desc1>PRES M&S CASTA 1GL</desc1><desc2>PRESERVANTE MAD MAD&SON CASTAÑO 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product></data></main>
+19102005 184933 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 184933 => Conectado ...
+19102005 184933 => carga libreria NUSOAP ...
+19102005 184933 => crea instancia soap_server ...
+19102005 184933 => configura instancia para WDSL ...
+19102005 184933 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 184933 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 184933 => Entrega el resultado ...
+19102005 184933 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:41</time></header><data><barcode>20370657</barcode></data></main>
+19102005 184933 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:41</time></header><data><barcode>20370657</barcode></data></main>
+19102005 184933 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:41</time></header><data><barcode>20370657</barcode></data>
+19102005 184933 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:41</time>
+19102005 184933 => header - trx: detalle_producto
+19102005 184933 => header - type: req
+19102005 184933 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:41</time>
+19102005 184933 => header - local: E502
+19102005 184933 => header - pos: TPS22
+19102005 184933 => header - operator: OP11
+19102005 184933 => header - date: 2005-10-19
+19102005 184933 => header - time: 19:41
+19102005 184933 => parsea data : <barcode>20370657</barcode>
+19102005 184933 => data - barcode : 20370657
+19102005 184933 => consulta con cod_barra='20370657' y local='E502'
+19102005 184933 => obtiene_producto : MYSQL qry:   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370657' AND  cb.estadoactivo='C'
+19102005 184933 => QUERY   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370657' AND  cb.estadoactivo='C'
+19102005 184933 => RESULT | Resource id #32 | 
+19102005 184933 => obtiene_producto : Numero de filas1
+19102005 184933 => cod_barra:20370657
+19102005 184933 => cod_prod1:102517
+19102005 184933 => des_corta:PRES M&S TECA 1 GL
+19102005 184933 => des_larga:PRESERVANTE MAD MAD&SON TECA 1 GALON
+19102005 184933 => cod_local:E502
+19102005 184933 => prec_valor:13890
+19102005 184933 => obtiene_producto : XML del producto : <product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product>
+19102005 184933 => producto :<product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product>
+19102005 184933 => respuesta enviada: <?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>19:41</time></header><data><product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product></data></main>
+19102005 185402 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185402 => Conectado ...
+19102005 185402 => carga libreria NUSOAP ...
+19102005 185402 => crea instancia soap_server ...
+19102005 185402 => configura instancia para WDSL ...
+19102005 185402 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185402 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185402 => Entrega el resultado ...
+19102005 185405 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185405 => Conectado ...
+19102005 185405 => carga libreria NUSOAP ...
+19102005 185405 => crea instancia soap_server ...
+19102005 185405 => configura instancia para WDSL ...
+19102005 185405 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185405 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185405 => Entrega el resultado ...
+19102005 185416 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185416 => Conectado ...
+19102005 185416 => carga libreria NUSOAP ...
+19102005 185416 => crea instancia soap_server ...
+19102005 185416 => configura instancia para WDSL ...
+19102005 185416 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185416 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185416 => Entrega el resultado ...
+19102005 185426 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185426 => Conectado ...
+19102005 185426 => carga libreria NUSOAP ...
+19102005 185426 => crea instancia soap_server ...
+19102005 185426 => configura instancia para WDSL ...
+19102005 185426 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185426 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185426 => Entrega el resultado ...
+19102005 185427 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185427 => Conectado ...
+19102005 185427 => carga libreria NUSOAP ...
+19102005 185427 => crea instancia soap_server ...
+19102005 185427 => configura instancia para WDSL ...
+19102005 185427 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185427 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185427 => Entrega el resultado ...
+19102005 185441 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185441 => Conectado ...
+19102005 185441 => carga libreria NUSOAP ...
+19102005 185441 => crea instancia soap_server ...
+19102005 185441 => configura instancia para WDSL ...
+19102005 185441 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185441 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185441 => Entrega el resultado ...
+19102005 185517 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185517 => Conectado ...
+19102005 185517 => carga libreria NUSOAP ...
+19102005 185517 => crea instancia soap_server ...
+19102005 185517 => configura instancia para WDSL ...
+19102005 185517 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185517 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185517 => Entrega el resultado ...
+19102005 185742 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185742 => Conectado ...
+19102005 185742 => carga libreria NUSOAP ...
+19102005 185742 => crea instancia soap_server ...
+19102005 185742 => configura instancia para WDSL ...
+19102005 185742 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185742 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185742 => Entrega el resultado ...
+19102005 185742 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185742 => Conectado ...
+19102005 185742 => carga libreria NUSOAP ...
+19102005 185742 => crea instancia soap_server ...
+19102005 185742 => configura instancia para WDSL ...
+19102005 185742 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185742 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185742 => Entrega el resultado ...
+19102005 185742 => nueva_cotizacion : cons:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 185742 => nueva_cotizacion : genera objeto:xmlObj:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 185742 => nueva_cotizacion : parsea main : 
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+
+19102005 185742 => nueva_cotizacion : parsea header : 
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 185742 => header - trx: nueva_cotizacion
+19102005 185742 => header - type: req
+19102005 185742 => header para la respuesta: 
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 185742 => nueva_cotizacion : header - local: E502
+19102005 185742 => nueva_cotizacion : header - pos: TP23
+19102005 185742 => nueva_cotizacion : header - operator: Rodrigo Bola8
+19102005 185742 => nueva_cotizacion : header - date: 2005-08-31
+19102005 185742 => nueva_cotizacion : header - time: 12:00
+19102005 185742 => nueva_cotizacion : parsea data : 
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	
+19102005 185742 => nueva_cotizacion : parsea product 1 : 
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		
+19102005 185742 => nueva_cotizacion : product - barcode: 2000000821511
+19102005 185742 => nueva_cotizacion : product - qty: 2
+19102005 185742 => nueva_cotizacion : product - price: 1200
+19102005 185742 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2000000821511' AND cb.estadoactivo='C')
+19102005 185742 => RESULT | Resource id #33 | 
+19102005 185742 => nueva_cotizacion :PRODUCTO 0 : id_producto[102] - barcode[2000000821511] - cod_prod1[102572] - qty[2] - price[1200] - des_corta[ESM AG BAR ROS 1/4]
+19102005 185742 => nueva_cotizacion : parsea product 2 : 
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		
+19102005 185742 => nueva_cotizacion : product - barcode: 2082000030193
+19102005 185742 => nueva_cotizacion : product - qty: 5
+19102005 185742 => nueva_cotizacion : product - price: 3000
+19102005 185742 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030193' AND cb.estadoactivo='C')
+19102005 185742 => RESULT | Resource id #41 | 
+19102005 185742 => nueva_cotizacion :PRODUCTO 1 : id_producto[110] - barcode[2082000030193] - cod_prod1[102580] - qty[5] - price[3000] - des_corta[LATEX AZUL CIE 1LT]
+19102005 185742 => nueva_cotizacion : parsea product 3 : 
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		
+19102005 185742 => nueva_cotizacion : product - barcode: 2082000030094
+19102005 185742 => nueva_cotizacion : product - qty: 7
+19102005 185742 => nueva_cotizacion : product - price: 1000
+19102005 185742 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030094' AND cb.estadoactivo='C')
+19102005 185742 => RESULT | Resource id #49 | 
+19102005 185742 => nueva_cotizacion :PRODUCTO 2 : id_producto[118] - barcode[2082000030094] - cod_prod1[102588] - qty[7] - price[1000] - des_corta[LATEX CAFE TIE 1LT]
+19102005 185742 => nueva_cotizacion : parsea product 4 : 
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		
+19102005 185742 => nueva_cotizacion : product - barcode: 2082000030407
+19102005 185742 => nueva_cotizacion : product - qty: 1
+19102005 185742 => nueva_cotizacion : product - price: 500
+19102005 185742 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030407' AND cb.estadoactivo='C')
+19102005 185742 => RESULT | Resource id #57 | 
+19102005 185742 => nueva_cotizacion :PRODUCTO 3 : id_producto[121] - barcode[2082000030407] - cod_prod1[102591] - qty[1] - price[500] - des_corta[LATEX ROJO MED 1GL]
+19102005 185742 => QUERY SELECT id_local FROM locales WHERE cod_local='E502'
+19102005 185742 => RESULT | Resource id #61 | 
+19102005 185742 => busca_id_local : local encontradoa para el cod_local[E502]= [42]
+19102005 185742 => QUERY INSERT INTO os (id_os, id_estado, id_proyecto, id_local, id_direccion, clie_rut, os_fechacreacion, os_fechacotizacion, 
+            os_fechaestimada, os_comentarios, os_numboleta, os_fechaboleta, os_descripcion, usuario, USR_ID, os_fechaestimacion, origen) 
+			VALUES ( null,'SE',1,42,1,1,now(),now(),now(),'',null,null,'Venta Patio TPS','Rodrigo Bola8',0,'',
+				'P')
+19102005 185742 => RESULT | 1 | 
+19102005 185742 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,201,'PS','PS',0,1200,2,0,0,'102572','','ESM AG BAR ROS 1/4',102,'2000000821511',null,null,null)
+19102005 185742 => RESULT | 1 | 
+19102005 185742 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,201,'PS','PS',0,3000,5,0,0,'102580','','LATEX AZUL CIE 1LT',110,'2082000030193',null,null,null)
+19102005 185742 => RESULT | 1 | 
+19102005 185742 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,201,'PS','PS',0,1000,7,0,0,'102588','','LATEX CAFE TIE 1LT',118,'2082000030094',null,null,null)
+19102005 185742 => RESULT | 1 | 
+19102005 185742 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,201,'PS','PS',0,500,1,0,0,'102591','','LATEX ROJO MED 1GL',121,'2082000030407',null,null,null)
+19102005 185742 => RESULT | 1 | 
+19102005 185742 => nueva_cotizacion : Finaliza con <?xml version="1.0"?>
+	<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<cotz>
+			<num_cotz>201</num_cotz>
+			<tot_cotz>24900</tot_cotz>
+			<qty_prod>4</qty_prod>
+			<date_cotz>2005-10-19</date_cotz>
+			<comments>Venta Patio TPS</comments>			
+		</cotz>
+	</data>
+	</main>
+19102005 185756 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185756 => Conectado ...
+19102005 185756 => carga libreria NUSOAP ...
+19102005 185756 => crea instancia soap_server ...
+19102005 185756 => configura instancia para WDSL ...
+19102005 185756 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185756 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185756 => Entrega el resultado ...
+19102005 185756 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:53</time></header><data><barcode>20370657</barcode></data></main>
+19102005 185756 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:53</time></header><data><barcode>20370657</barcode></data></main>
+19102005 185756 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:53</time></header><data><barcode>20370657</barcode></data>
+19102005 185756 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:53</time>
+19102005 185756 => header - trx: detalle_producto
+19102005 185756 => header - type: req
+19102005 185756 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:53</time>
+19102005 185756 => header - local: E502
+19102005 185756 => header - pos: TPS22
+19102005 185756 => header - operator: OP11
+19102005 185756 => header - date: 2005-10-19
+19102005 185756 => header - time: 18:53
+19102005 185756 => parsea data : <barcode>20370657</barcode>
+19102005 185756 => data - barcode : 20370657
+19102005 185756 => consulta con cod_barra='20370657' y local='E502'
+19102005 185756 => obtiene_producto : MYSQL qry:   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370657' AND  cb.estadoactivo='C'
+19102005 185756 => QUERY   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20370657' AND  cb.estadoactivo='C'
+19102005 185756 => RESULT | Resource id #32 | 
+19102005 185756 => obtiene_producto : Numero de filas1
+19102005 185756 => cod_barra:20370657
+19102005 185756 => cod_prod1:102517
+19102005 185756 => des_corta:PRES M&S TECA 1 GL
+19102005 185756 => des_larga:PRESERVANTE MAD MAD&SON TECA 1 GALON
+19102005 185756 => cod_local:E502
+19102005 185756 => prec_valor:13890
+19102005 185756 => obtiene_producto : XML del producto : <product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product>
+19102005 185756 => producto :<product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product>
+19102005 185756 => respuesta enviada: <?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:53</time></header><data><product><barcode>20370657</barcode><codsap>102517</codsap><desc1>PRES M&S TECA 1 GL</desc1><desc2>PRESERVANTE MAD MAD&SON TECA 1 GALON</desc2><price>13890</price><unit>unidad</unit><stock></stock></product></data></main>
+19102005 185758 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185758 => Conectado ...
+19102005 185758 => carga libreria NUSOAP ...
+19102005 185758 => crea instancia soap_server ...
+19102005 185758 => configura instancia para WDSL ...
+19102005 185758 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185758 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185758 => Entrega el resultado ...
+19102005 185758 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185758 => Conectado ...
+19102005 185758 => carga libreria NUSOAP ...
+19102005 185758 => crea instancia soap_server ...
+19102005 185758 => configura instancia para WDSL ...
+19102005 185758 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185758 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185758 => Entrega el resultado ...
+19102005 185758 => nueva_cotizacion : cons:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 185758 => nueva_cotizacion : genera objeto:xmlObj:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 185758 => nueva_cotizacion : parsea main : 
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+
+19102005 185758 => nueva_cotizacion : parsea header : 
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 185758 => header - trx: nueva_cotizacion
+19102005 185758 => header - type: req
+19102005 185758 => header para la respuesta: 
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 185758 => nueva_cotizacion : header - local: E502
+19102005 185758 => nueva_cotizacion : header - pos: TP23
+19102005 185758 => nueva_cotizacion : header - operator: Rodrigo Bola8
+19102005 185758 => nueva_cotizacion : header - date: 2005-08-31
+19102005 185758 => nueva_cotizacion : header - time: 12:00
+19102005 185758 => nueva_cotizacion : parsea data : 
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	
+19102005 185758 => nueva_cotizacion : parsea product 1 : 
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		
+19102005 185758 => nueva_cotizacion : product - barcode: 2000000821511
+19102005 185758 => nueva_cotizacion : product - qty: 2
+19102005 185758 => nueva_cotizacion : product - price: 1200
+19102005 185758 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2000000821511' AND cb.estadoactivo='C')
+19102005 185758 => RESULT | Resource id #33 | 
+19102005 185758 => nueva_cotizacion :PRODUCTO 0 : id_producto[102] - barcode[2000000821511] - cod_prod1[102572] - qty[2] - price[1200] - des_corta[ESM AG BAR ROS 1/4]
+19102005 185758 => nueva_cotizacion : parsea product 2 : 
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		
+19102005 185758 => nueva_cotizacion : product - barcode: 2082000030193
+19102005 185758 => nueva_cotizacion : product - qty: 5
+19102005 185758 => nueva_cotizacion : product - price: 3000
+19102005 185758 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030193' AND cb.estadoactivo='C')
+19102005 185758 => RESULT | Resource id #41 | 
+19102005 185758 => nueva_cotizacion :PRODUCTO 1 : id_producto[110] - barcode[2082000030193] - cod_prod1[102580] - qty[5] - price[3000] - des_corta[LATEX AZUL CIE 1LT]
+19102005 185758 => nueva_cotizacion : parsea product 3 : 
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		
+19102005 185758 => nueva_cotizacion : product - barcode: 2082000030094
+19102005 185758 => nueva_cotizacion : product - qty: 7
+19102005 185758 => nueva_cotizacion : product - price: 1000
+19102005 185758 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030094' AND cb.estadoactivo='C')
+19102005 185758 => RESULT | Resource id #49 | 
+19102005 185758 => nueva_cotizacion :PRODUCTO 2 : id_producto[118] - barcode[2082000030094] - cod_prod1[102588] - qty[7] - price[1000] - des_corta[LATEX CAFE TIE 1LT]
+19102005 185758 => nueva_cotizacion : parsea product 4 : 
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		
+19102005 185758 => nueva_cotizacion : product - barcode: 2082000030407
+19102005 185758 => nueva_cotizacion : product - qty: 1
+19102005 185758 => nueva_cotizacion : product - price: 500
+19102005 185758 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030407' AND cb.estadoactivo='C')
+19102005 185758 => RESULT | Resource id #57 | 
+19102005 185758 => nueva_cotizacion :PRODUCTO 3 : id_producto[121] - barcode[2082000030407] - cod_prod1[102591] - qty[1] - price[500] - des_corta[LATEX ROJO MED 1GL]
+19102005 185758 => QUERY SELECT id_local FROM locales WHERE cod_local='E502'
+19102005 185758 => RESULT | Resource id #61 | 
+19102005 185758 => busca_id_local : local encontradoa para el cod_local[E502]= [42]
+19102005 185758 => QUERY INSERT INTO os (id_os, id_estado, id_proyecto, id_local, id_direccion, clie_rut, os_fechacreacion, os_fechacotizacion, 
+            os_fechaestimada, os_comentarios, os_numboleta, os_fechaboleta, os_descripcion, usuario, USR_ID, os_fechaestimacion, origen) 
+			VALUES ( null,'SE',1,42,1,1,now(),now(),now(),'',null,null,'Venta Patio TPS','Rodrigo Bola8',0,'',
+				'P')
+19102005 185758 => RESULT | 1 | 
+19102005 185758 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,202,'PS','PS',0,1200,2,0,0,'102572','','ESM AG BAR ROS 1/4',102,'2000000821511',null,null,null)
+19102005 185758 => RESULT | 1 | 
+19102005 185758 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,202,'PS','PS',0,3000,5,0,0,'102580','','LATEX AZUL CIE 1LT',110,'2082000030193',null,null,null)
+19102005 185758 => RESULT | 1 | 
+19102005 185758 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,202,'PS','PS',0,1000,7,0,0,'102588','','LATEX CAFE TIE 1LT',118,'2082000030094',null,null,null)
+19102005 185758 => RESULT | 1 | 
+19102005 185758 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,202,'PS','PS',0,500,1,0,0,'102591','','LATEX ROJO MED 1GL',121,'2082000030407',null,null,null)
+19102005 185758 => RESULT | 1 | 
+19102005 185758 => nueva_cotizacion : Finaliza con <?xml version="1.0"?>
+	<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<cotz>
+			<num_cotz>202</num_cotz>
+			<tot_cotz>24900</tot_cotz>
+			<qty_prod>4</qty_prod>
+			<date_cotz>2005-10-19</date_cotz>
+			<comments>Venta Patio TPS</comments>			
+		</cotz>
+	</data>
+	</main>
+19102005 185800 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185800 => Conectado ...
+19102005 185800 => carga libreria NUSOAP ...
+19102005 185800 => crea instancia soap_server ...
+19102005 185800 => configura instancia para WDSL ...
+19102005 185800 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185800 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185800 => Entrega el resultado ...
+19102005 185800 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185800 => Conectado ...
+19102005 185800 => carga libreria NUSOAP ...
+19102005 185800 => crea instancia soap_server ...
+19102005 185800 => configura instancia para WDSL ...
+19102005 185800 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185800 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185800 => Entrega el resultado ...
+19102005 185800 => nueva_cotizacion : cons:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 185800 => nueva_cotizacion : genera objeto:xmlObj:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 185800 => nueva_cotizacion : parsea main : 
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+
+19102005 185800 => nueva_cotizacion : parsea header : 
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 185800 => header - trx: nueva_cotizacion
+19102005 185800 => header - type: req
+19102005 185800 => header para la respuesta: 
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 185800 => nueva_cotizacion : header - local: E502
+19102005 185800 => nueva_cotizacion : header - pos: TP23
+19102005 185800 => nueva_cotizacion : header - operator: Rodrigo Bola8
+19102005 185800 => nueva_cotizacion : header - date: 2005-08-31
+19102005 185800 => nueva_cotizacion : header - time: 12:00
+19102005 185800 => nueva_cotizacion : parsea data : 
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	
+19102005 185800 => nueva_cotizacion : parsea product 1 : 
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		
+19102005 185800 => nueva_cotizacion : product - barcode: 2000000821511
+19102005 185800 => nueva_cotizacion : product - qty: 2
+19102005 185800 => nueva_cotizacion : product - price: 1200
+19102005 185800 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2000000821511' AND cb.estadoactivo='C')
+19102005 185800 => RESULT | Resource id #33 | 
+19102005 185800 => nueva_cotizacion :PRODUCTO 0 : id_producto[102] - barcode[2000000821511] - cod_prod1[102572] - qty[2] - price[1200] - des_corta[ESM AG BAR ROS 1/4]
+19102005 185800 => nueva_cotizacion : parsea product 2 : 
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		
+19102005 185800 => nueva_cotizacion : product - barcode: 2082000030193
+19102005 185800 => nueva_cotizacion : product - qty: 5
+19102005 185800 => nueva_cotizacion : product - price: 3000
+19102005 185800 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030193' AND cb.estadoactivo='C')
+19102005 185800 => RESULT | Resource id #41 | 
+19102005 185800 => nueva_cotizacion :PRODUCTO 1 : id_producto[110] - barcode[2082000030193] - cod_prod1[102580] - qty[5] - price[3000] - des_corta[LATEX AZUL CIE 1LT]
+19102005 185800 => nueva_cotizacion : parsea product 3 : 
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		
+19102005 185800 => nueva_cotizacion : product - barcode: 2082000030094
+19102005 185800 => nueva_cotizacion : product - qty: 7
+19102005 185800 => nueva_cotizacion : product - price: 1000
+19102005 185800 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030094' AND cb.estadoactivo='C')
+19102005 185800 => RESULT | Resource id #49 | 
+19102005 185800 => nueva_cotizacion :PRODUCTO 2 : id_producto[118] - barcode[2082000030094] - cod_prod1[102588] - qty[7] - price[1000] - des_corta[LATEX CAFE TIE 1LT]
+19102005 185800 => nueva_cotizacion : parsea product 4 : 
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		
+19102005 185800 => nueva_cotizacion : product - barcode: 2082000030407
+19102005 185800 => nueva_cotizacion : product - qty: 1
+19102005 185800 => nueva_cotizacion : product - price: 500
+19102005 185800 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030407' AND cb.estadoactivo='C')
+19102005 185800 => RESULT | Resource id #57 | 
+19102005 185800 => nueva_cotizacion :PRODUCTO 3 : id_producto[121] - barcode[2082000030407] - cod_prod1[102591] - qty[1] - price[500] - des_corta[LATEX ROJO MED 1GL]
+19102005 185800 => QUERY SELECT id_local FROM locales WHERE cod_local='E502'
+19102005 185800 => RESULT | Resource id #61 | 
+19102005 185800 => busca_id_local : local encontradoa para el cod_local[E502]= [42]
+19102005 185800 => QUERY INSERT INTO os (id_os, id_estado, id_proyecto, id_local, id_direccion, clie_rut, os_fechacreacion, os_fechacotizacion, 
+            os_fechaestimada, os_comentarios, os_numboleta, os_fechaboleta, os_descripcion, usuario, USR_ID, os_fechaestimacion, origen) 
+			VALUES ( null,'SE',1,42,1,1,now(),now(),now(),'',null,null,'Venta Patio TPS','Rodrigo Bola8',0,'',
+				'P')
+19102005 185800 => RESULT | 1 | 
+19102005 185800 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,203,'PS','PS',0,1200,2,0,0,'102572','','ESM AG BAR ROS 1/4',102,'2000000821511',null,null,null)
+19102005 185800 => RESULT | 1 | 
+19102005 185800 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,203,'PS','PS',0,3000,5,0,0,'102580','','LATEX AZUL CIE 1LT',110,'2082000030193',null,null,null)
+19102005 185800 => RESULT | 1 | 
+19102005 185800 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,203,'PS','PS',0,1000,7,0,0,'102588','','LATEX CAFE TIE 1LT',118,'2082000030094',null,null,null)
+19102005 185800 => RESULT | 1 | 
+19102005 185800 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,203,'PS','PS',0,500,1,0,0,'102591','','LATEX ROJO MED 1GL',121,'2082000030407',null,null,null)
+19102005 185800 => RESULT | 1 | 
+19102005 185800 => nueva_cotizacion : Finaliza con <?xml version="1.0"?>
+	<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<cotz>
+			<num_cotz>203</num_cotz>
+			<tot_cotz>24900</tot_cotz>
+			<qty_prod>4</qty_prod>
+			<date_cotz>2005-10-19</date_cotz>
+			<comments>Venta Patio TPS</comments>			
+		</cotz>
+	</data>
+	</main>
+19102005 185801 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185801 => Conectado ...
+19102005 185801 => carga libreria NUSOAP ...
+19102005 185801 => crea instancia soap_server ...
+19102005 185801 => configura instancia para WDSL ...
+19102005 185801 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185801 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185801 => Entrega el resultado ...
+19102005 185801 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185801 => Conectado ...
+19102005 185801 => carga libreria NUSOAP ...
+19102005 185801 => crea instancia soap_server ...
+19102005 185801 => configura instancia para WDSL ...
+19102005 185801 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185801 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185801 => Entrega el resultado ...
+19102005 185801 => nueva_cotizacion : cons:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 185801 => nueva_cotizacion : genera objeto:xmlObj:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 185801 => nueva_cotizacion : parsea main : 
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+
+19102005 185801 => nueva_cotizacion : parsea header : 
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 185801 => header - trx: nueva_cotizacion
+19102005 185801 => header - type: req
+19102005 185801 => header para la respuesta: 
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 185801 => nueva_cotizacion : header - local: E502
+19102005 185801 => nueva_cotizacion : header - pos: TP23
+19102005 185801 => nueva_cotizacion : header - operator: Rodrigo Bola8
+19102005 185801 => nueva_cotizacion : header - date: 2005-08-31
+19102005 185801 => nueva_cotizacion : header - time: 12:00
+19102005 185801 => nueva_cotizacion : parsea data : 
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	
+19102005 185801 => nueva_cotizacion : parsea product 1 : 
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		
+19102005 185801 => nueva_cotizacion : product - barcode: 2000000821511
+19102005 185801 => nueva_cotizacion : product - qty: 2
+19102005 185801 => nueva_cotizacion : product - price: 1200
+19102005 185801 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2000000821511' AND cb.estadoactivo='C')
+19102005 185801 => RESULT | Resource id #33 | 
+19102005 185801 => nueva_cotizacion :PRODUCTO 0 : id_producto[102] - barcode[2000000821511] - cod_prod1[102572] - qty[2] - price[1200] - des_corta[ESM AG BAR ROS 1/4]
+19102005 185801 => nueva_cotizacion : parsea product 2 : 
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		
+19102005 185801 => nueva_cotizacion : product - barcode: 2082000030193
+19102005 185801 => nueva_cotizacion : product - qty: 5
+19102005 185801 => nueva_cotizacion : product - price: 3000
+19102005 185801 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030193' AND cb.estadoactivo='C')
+19102005 185801 => RESULT | Resource id #41 | 
+19102005 185801 => nueva_cotizacion :PRODUCTO 1 : id_producto[110] - barcode[2082000030193] - cod_prod1[102580] - qty[5] - price[3000] - des_corta[LATEX AZUL CIE 1LT]
+19102005 185801 => nueva_cotizacion : parsea product 3 : 
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		
+19102005 185801 => nueva_cotizacion : product - barcode: 2082000030094
+19102005 185801 => nueva_cotizacion : product - qty: 7
+19102005 185801 => nueva_cotizacion : product - price: 1000
+19102005 185801 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030094' AND cb.estadoactivo='C')
+19102005 185801 => RESULT | Resource id #49 | 
+19102005 185801 => nueva_cotizacion :PRODUCTO 2 : id_producto[118] - barcode[2082000030094] - cod_prod1[102588] - qty[7] - price[1000] - des_corta[LATEX CAFE TIE 1LT]
+19102005 185801 => nueva_cotizacion : parsea product 4 : 
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		
+19102005 185801 => nueva_cotizacion : product - barcode: 2082000030407
+19102005 185801 => nueva_cotizacion : product - qty: 1
+19102005 185801 => nueva_cotizacion : product - price: 500
+19102005 185801 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030407' AND cb.estadoactivo='C')
+19102005 185801 => RESULT | Resource id #57 | 
+19102005 185801 => nueva_cotizacion :PRODUCTO 3 : id_producto[121] - barcode[2082000030407] - cod_prod1[102591] - qty[1] - price[500] - des_corta[LATEX ROJO MED 1GL]
+19102005 185801 => QUERY SELECT id_local FROM locales WHERE cod_local='E502'
+19102005 185801 => RESULT | Resource id #61 | 
+19102005 185801 => busca_id_local : local encontradoa para el cod_local[E502]= [42]
+19102005 185801 => QUERY INSERT INTO os (id_os, id_estado, id_proyecto, id_local, id_direccion, clie_rut, os_fechacreacion, os_fechacotizacion, 
+            os_fechaestimada, os_comentarios, os_numboleta, os_fechaboleta, os_descripcion, usuario, USR_ID, os_fechaestimacion, origen) 
+			VALUES ( null,'SE',1,42,1,1,now(),now(),now(),'',null,null,'Venta Patio TPS','Rodrigo Bola8',0,'',
+				'P')
+19102005 185801 => RESULT | 1 | 
+19102005 185801 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,204,'PS','PS',0,1200,2,0,0,'102572','','ESM AG BAR ROS 1/4',102,'2000000821511',null,null,null)
+19102005 185801 => RESULT | 1 | 
+19102005 185801 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,204,'PS','PS',0,3000,5,0,0,'102580','','LATEX AZUL CIE 1LT',110,'2082000030193',null,null,null)
+19102005 185801 => RESULT | 1 | 
+19102005 185801 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,204,'PS','PS',0,1000,7,0,0,'102588','','LATEX CAFE TIE 1LT',118,'2082000030094',null,null,null)
+19102005 185801 => RESULT | 1 | 
+19102005 185801 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,204,'PS','PS',0,500,1,0,0,'102591','','LATEX ROJO MED 1GL',121,'2082000030407',null,null,null)
+19102005 185801 => RESULT | 1 | 
+19102005 185801 => nueva_cotizacion : Finaliza con <?xml version="1.0"?>
+	<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<cotz>
+			<num_cotz>204</num_cotz>
+			<tot_cotz>24900</tot_cotz>
+			<qty_prod>4</qty_prod>
+			<date_cotz>2005-10-19</date_cotz>
+			<comments>Venta Patio TPS</comments>			
+		</cotz>
+	</data>
+	</main>
+19102005 185908 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 185908 => Conectado ...
+19102005 185908 => carga libreria NUSOAP ...
+19102005 185908 => crea instancia soap_server ...
+19102005 185908 => configura instancia para WDSL ...
+19102005 185908 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 185908 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 185908 => Entrega el resultado ...
+19102005 185908 => detalle_producto:cons:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:54</time></header><data><barcode>20369996</barcode></data></main>
+19102005 185908 => genera objeto:xmlObj:<?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:54</time></header><data><barcode>20369996</barcode></data></main>
+19102005 185908 => parsea main : <header><trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:54</time></header><data><barcode>20369996</barcode></data>
+19102005 185908 => parsea header : <trx>detalle_producto</trx><type>req</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:54</time>
+19102005 185908 => header - trx: detalle_producto
+19102005 185908 => header - type: req
+19102005 185908 => header para la respuesta: <trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:54</time>
+19102005 185908 => header - local: E502
+19102005 185908 => header - pos: TPS22
+19102005 185908 => header - operator: OP11
+19102005 185908 => header - date: 2005-10-19
+19102005 185908 => header - time: 18:54
+19102005 185908 => parsea data : <barcode>20369996</barcode>
+19102005 185908 => data - barcode : 20369996
+19102005 185908 => consulta con cod_barra='20369996' y local='E502'
+19102005 185908 => obtiene_producto : MYSQL qry:   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20369996' AND  cb.estadoactivo='C'
+19102005 185908 => QUERY   SELECT cb.cod_barra cod_barra ,
+						p.cod_prod1 cod_prod1,
+						p.des_corta des_corta,
+						p.des_larga des_larga,
+						pr.cod_local cod_local,
+						pr.prec_valor pvalor
+				FROM codbarra cb 
+				JOIN precios pr ON (pr.id_producto = cb.id_producto AND pr.cod_local ='E502')
+				JOIN productos p ON (cb.id_producto = p.id_producto)
+				WHERE cb.cod_barra='20369996' AND  cb.estadoactivo='C'
+19102005 185908 => RESULT | Resource id #32 | 
+19102005 185908 => obtiene_producto : Numero de filas1
+19102005 185908 => cod_barra:20369996
+19102005 185908 => cod_prod1:102514
+19102005 185908 => des_corta:PRES M&S INC 1/4GL
+19102005 185908 => des_larga:PRESERVANTE MAD MAD&SON INCOLORO 1/4 GL
+19102005 185908 => cod_local:E502
+19102005 185908 => prec_valor:2990
+19102005 185908 => obtiene_producto : XML del producto : <product><barcode>20369996</barcode><codsap>102514</codsap><desc1>PRES M&S INC 1/4GL</desc1><desc2>PRESERVANTE MAD MAD&SON INCOLORO 1/4 GL</desc2><price>2990</price><unit>unidad</unit><stock></stock></product>
+19102005 185908 => producto :<product><barcode>20369996</barcode><codsap>102514</codsap><desc1>PRES M&S INC 1/4GL</desc1><desc2>PRESERVANTE MAD MAD&SON INCOLORO 1/4 GL</desc2><price>2990</price><unit>unidad</unit><stock></stock></product>
+19102005 185908 => respuesta enviada: <?xml version="1.0"?><main><header><trx>detalle_producto</trx><type>resp</type><local>E502</local><pos>TPS22</pos><operator>OP11</operator><vendor>OP01</vendor><date>2005-10-19</date><time>18:54</time></header><data><product><barcode>20369996</barcode><codsap>102514</codsap><desc1>PRES M&S INC 1/4GL</desc1><desc2>PRESERVANTE MAD MAD&SON INCOLORO 1/4 GL</desc2><price>2990</price><unit>unidad</unit><stock></stock></product></data></main>
+19102005 190103 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 190103 => Conectado ...
+19102005 190103 => carga libreria NUSOAP ...
+19102005 190103 => crea instancia soap_server ...
+19102005 190103 => configura instancia para WDSL ...
+19102005 190103 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 190103 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 190103 => Entrega el resultado ...
+19102005 190103 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 190103 => Conectado ...
+19102005 190103 => carga libreria NUSOAP ...
+19102005 190103 => crea instancia soap_server ...
+19102005 190103 => configura instancia para WDSL ...
+19102005 190103 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 190103 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 190103 => Entrega el resultado ...
+19102005 190103 => nueva_cotizacion : cons:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 190103 => nueva_cotizacion : genera objeto:xmlObj:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 190103 => nueva_cotizacion : parsea main : 
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+
+19102005 190103 => nueva_cotizacion : parsea header : 
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 190103 => header - trx: nueva_cotizacion
+19102005 190103 => header - type: req
+19102005 190103 => header para la respuesta: 
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 190103 => nueva_cotizacion : header - local: E502
+19102005 190103 => nueva_cotizacion : header - pos: TP23
+19102005 190103 => nueva_cotizacion : header - operator: Rodrigo Bola8
+19102005 190103 => nueva_cotizacion : header - date: 2005-08-31
+19102005 190103 => nueva_cotizacion : header - time: 12:00
+19102005 190103 => nueva_cotizacion : parsea data : 
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	
+19102005 190103 => nueva_cotizacion : parsea product 1 : 
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		
+19102005 190103 => nueva_cotizacion : product - barcode: 2000000821511
+19102005 190103 => nueva_cotizacion : product - qty: 2
+19102005 190103 => nueva_cotizacion : product - price: 1200
+19102005 190103 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2000000821511' AND cb.estadoactivo='C')
+19102005 190103 => RESULT | Resource id #33 | 
+19102005 190103 => nueva_cotizacion :PRODUCTO 0 : id_producto[102] - barcode[2000000821511] - cod_prod1[102572] - qty[2] - price[1200] - des_corta[ESM AG BAR ROS 1/4]
+19102005 190103 => nueva_cotizacion : parsea product 2 : 
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		
+19102005 190103 => nueva_cotizacion : product - barcode: 2082000030193
+19102005 190103 => nueva_cotizacion : product - qty: 5
+19102005 190103 => nueva_cotizacion : product - price: 3000
+19102005 190103 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030193' AND cb.estadoactivo='C')
+19102005 190103 => RESULT | Resource id #41 | 
+19102005 190103 => nueva_cotizacion :PRODUCTO 1 : id_producto[110] - barcode[2082000030193] - cod_prod1[102580] - qty[5] - price[3000] - des_corta[LATEX AZUL CIE 1LT]
+19102005 190103 => nueva_cotizacion : parsea product 3 : 
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		
+19102005 190103 => nueva_cotizacion : product - barcode: 2082000030094
+19102005 190103 => nueva_cotizacion : product - qty: 7
+19102005 190103 => nueva_cotizacion : product - price: 1000
+19102005 190103 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030094' AND cb.estadoactivo='C')
+19102005 190103 => RESULT | Resource id #49 | 
+19102005 190103 => nueva_cotizacion :PRODUCTO 2 : id_producto[118] - barcode[2082000030094] - cod_prod1[102588] - qty[7] - price[1000] - des_corta[LATEX CAFE TIE 1LT]
+19102005 190103 => nueva_cotizacion : parsea product 4 : 
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		
+19102005 190103 => nueva_cotizacion : product - barcode: 2082000030407
+19102005 190103 => nueva_cotizacion : product - qty: 1
+19102005 190103 => nueva_cotizacion : product - price: 500
+19102005 190103 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030407' AND cb.estadoactivo='C')
+19102005 190103 => RESULT | Resource id #57 | 
+19102005 190103 => nueva_cotizacion :PRODUCTO 3 : id_producto[121] - barcode[2082000030407] - cod_prod1[102591] - qty[1] - price[500] - des_corta[LATEX ROJO MED 1GL]
+19102005 190103 => QUERY SELECT id_local FROM locales WHERE cod_local='E502'
+19102005 190103 => RESULT | Resource id #61 | 
+19102005 190103 => busca_id_local : local encontradoa para el cod_local[E502]= [42]
+19102005 190103 => QUERY INSERT INTO os (id_os, id_estado, id_proyecto, id_local, id_direccion, clie_rut, os_fechacreacion, os_fechacotizacion, 
+            os_fechaestimada, os_comentarios, os_numboleta, os_fechaboleta, os_descripcion, usuario, USR_ID, os_fechaestimacion, origen) 
+			VALUES ( null,'SE',1,42,1,1,now(),now(),now(),'',null,null,'Venta Patio TPS','Rodrigo Bola8',0,'',
+				'P')
+19102005 190103 => RESULT | 1 | 
+19102005 190103 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,205,'PS','PS',0,1200,2,0,0,'102572','','ESM AG BAR ROS 1/4',102,'2000000821511',null,null,null)
+19102005 190103 => RESULT | 1 | 
+19102005 190103 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,205,'PS','PS',0,3000,5,0,0,'102580','','LATEX AZUL CIE 1LT',110,'2082000030193',null,null,null)
+19102005 190103 => RESULT | 1 | 
+19102005 190103 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,205,'PS','PS',0,1000,7,0,0,'102588','','LATEX CAFE TIE 1LT',118,'2082000030094',null,null,null)
+19102005 190103 => RESULT | 1 | 
+19102005 190103 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,205,'PS','PS',0,500,1,0,0,'102591','','LATEX ROJO MED 1GL',121,'2082000030407',null,null,null)
+19102005 190103 => RESULT | 1 | 
+19102005 190103 => nueva_cotizacion : Finaliza con <?xml version="1.0"?>
+	<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<cotz>
+			<num_cotz>205</num_cotz>
+			<tot_cotz>24900</tot_cotz>
+			<qty_prod>4</qty_prod>
+			<date_cotz>2005-10-19</date_cotz>
+			<comments>Venta Patio TPS</comments>			
+		</cotz>
+	</data>
+	</main>
+19102005 190108 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 190108 => Conectado ...
+19102005 190108 => carga libreria NUSOAP ...
+19102005 190108 => crea instancia soap_server ...
+19102005 190108 => configura instancia para WDSL ...
+19102005 190108 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 190108 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 190108 => Entrega el resultado ...
+19102005 190108 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 190108 => Conectado ...
+19102005 190108 => carga libreria NUSOAP ...
+19102005 190108 => crea instancia soap_server ...
+19102005 190108 => configura instancia para WDSL ...
+19102005 190108 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 190108 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 190108 => Entrega el resultado ...
+19102005 190108 => nueva_cotizacion : cons:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 190108 => nueva_cotizacion : genera objeto:xmlObj:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 190108 => nueva_cotizacion : parsea main : 
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+
+19102005 190108 => nueva_cotizacion : parsea header : 
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 190108 => header - trx: nueva_cotizacion
+19102005 190108 => header - type: req
+19102005 190108 => header para la respuesta: 
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 190108 => nueva_cotizacion : header - local: E502
+19102005 190108 => nueva_cotizacion : header - pos: TP23
+19102005 190108 => nueva_cotizacion : header - operator: Rodrigo Bola8
+19102005 190108 => nueva_cotizacion : header - date: 2005-08-31
+19102005 190108 => nueva_cotizacion : header - time: 12:00
+19102005 190108 => nueva_cotizacion : parsea data : 
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	
+19102005 190108 => nueva_cotizacion : parsea product 1 : 
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		
+19102005 190108 => nueva_cotizacion : product - barcode: 2000000821511
+19102005 190108 => nueva_cotizacion : product - qty: 2
+19102005 190108 => nueva_cotizacion : product - price: 1200
+19102005 190108 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2000000821511' AND cb.estadoactivo='C')
+19102005 190108 => RESULT | Resource id #33 | 
+19102005 190108 => nueva_cotizacion :PRODUCTO 0 : id_producto[102] - barcode[2000000821511] - cod_prod1[102572] - qty[2] - price[1200] - des_corta[ESM AG BAR ROS 1/4]
+19102005 190108 => nueva_cotizacion : parsea product 2 : 
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		
+19102005 190108 => nueva_cotizacion : product - barcode: 2082000030193
+19102005 190108 => nueva_cotizacion : product - qty: 5
+19102005 190108 => nueva_cotizacion : product - price: 3000
+19102005 190108 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030193' AND cb.estadoactivo='C')
+19102005 190108 => RESULT | Resource id #41 | 
+19102005 190108 => nueva_cotizacion :PRODUCTO 1 : id_producto[110] - barcode[2082000030193] - cod_prod1[102580] - qty[5] - price[3000] - des_corta[LATEX AZUL CIE 1LT]
+19102005 190108 => nueva_cotizacion : parsea product 3 : 
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		
+19102005 190108 => nueva_cotizacion : product - barcode: 2082000030094
+19102005 190108 => nueva_cotizacion : product - qty: 7
+19102005 190108 => nueva_cotizacion : product - price: 1000
+19102005 190108 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030094' AND cb.estadoactivo='C')
+19102005 190108 => RESULT | Resource id #49 | 
+19102005 190108 => nueva_cotizacion :PRODUCTO 2 : id_producto[118] - barcode[2082000030094] - cod_prod1[102588] - qty[7] - price[1000] - des_corta[LATEX CAFE TIE 1LT]
+19102005 190108 => nueva_cotizacion : parsea product 4 : 
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		
+19102005 190108 => nueva_cotizacion : product - barcode: 2082000030407
+19102005 190108 => nueva_cotizacion : product - qty: 1
+19102005 190108 => nueva_cotizacion : product - price: 500
+19102005 190108 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030407' AND cb.estadoactivo='C')
+19102005 190108 => RESULT | Resource id #57 | 
+19102005 190108 => nueva_cotizacion :PRODUCTO 3 : id_producto[121] - barcode[2082000030407] - cod_prod1[102591] - qty[1] - price[500] - des_corta[LATEX ROJO MED 1GL]
+19102005 190108 => QUERY SELECT id_local FROM locales WHERE cod_local='E502'
+19102005 190108 => RESULT | Resource id #61 | 
+19102005 190108 => busca_id_local : local encontradoa para el cod_local[E502]= [42]
+19102005 190108 => QUERY INSERT INTO os (id_os, id_estado, id_proyecto, id_local, id_direccion, clie_rut, os_fechacreacion, os_fechacotizacion, 
+            os_fechaestimada, os_comentarios, os_numboleta, os_fechaboleta, os_descripcion, usuario, USR_ID, os_fechaestimacion, origen) 
+			VALUES ( null,'SE',1,42,1,1,now(),now(),now(),'',null,null,'Venta Patio TPS','Rodrigo Bola8',0,'',
+				'P')
+19102005 190108 => RESULT | 1 | 
+19102005 190108 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,206,'PS','PS',0,1200,2,0,0,'102572','','ESM AG BAR ROS 1/4',102,'2000000821511',null,null,null)
+19102005 190108 => RESULT | 1 | 
+19102005 190108 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,206,'PS','PS',0,3000,5,0,0,'102580','','LATEX AZUL CIE 1LT',110,'2082000030193',null,null,null)
+19102005 190108 => RESULT | 1 | 
+19102005 190108 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,206,'PS','PS',0,1000,7,0,0,'102588','','LATEX CAFE TIE 1LT',118,'2082000030094',null,null,null)
+19102005 190108 => RESULT | 1 | 
+19102005 190108 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,206,'PS','PS',0,500,1,0,0,'102591','','LATEX ROJO MED 1GL',121,'2082000030407',null,null,null)
+19102005 190108 => RESULT | 1 | 
+19102005 190108 => nueva_cotizacion : Finaliza con <?xml version="1.0"?>
+	<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<cotz>
+			<num_cotz>206</num_cotz>
+			<tot_cotz>24900</tot_cotz>
+			<qty_prod>4</qty_prod>
+			<date_cotz>2005-10-19</date_cotz>
+			<comments>Venta Patio TPS</comments>			
+		</cotz>
+	</data>
+	</main>
+19102005 190110 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 190110 => Conectado ...
+19102005 190110 => carga libreria NUSOAP ...
+19102005 190110 => crea instancia soap_server ...
+19102005 190110 => configura instancia para WDSL ...
+19102005 190110 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 190110 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 190110 => Entrega el resultado ...
+19102005 190110 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 190110 => Conectado ...
+19102005 190110 => carga libreria NUSOAP ...
+19102005 190110 => crea instancia soap_server ...
+19102005 190110 => configura instancia para WDSL ...
+19102005 190110 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 190110 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 190110 => Entrega el resultado ...
+19102005 190110 => nueva_cotizacion : cons:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 190110 => nueva_cotizacion : genera objeto:xmlObj:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+</main>
+
+19102005 190110 => nueva_cotizacion : parsea main : 
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	</data>
+
+19102005 190110 => nueva_cotizacion : parsea header : 
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 190110 => header - trx: nueva_cotizacion
+19102005 190110 => header - type: req
+19102005 190110 => header para la respuesta: 
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 190110 => nueva_cotizacion : header - local: E502
+19102005 190110 => nueva_cotizacion : header - pos: TP23
+19102005 190110 => nueva_cotizacion : header - operator: Rodrigo Bola8
+19102005 190110 => nueva_cotizacion : header - date: 2005-08-31
+19102005 190110 => nueva_cotizacion : header - time: 12:00
+19102005 190110 => nueva_cotizacion : parsea data : 
+		<product>
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		</product>
+		<product>
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		</product>
+		<product>
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		</product>
+		<product>
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		</product>
+	
+19102005 190110 => nueva_cotizacion : parsea product 1 : 
+			<barcode>2000000821511</barcode>
+			<qty>2</qty> 
+			<price>1200</price>
+		
+19102005 190110 => nueva_cotizacion : product - barcode: 2000000821511
+19102005 190110 => nueva_cotizacion : product - qty: 2
+19102005 190110 => nueva_cotizacion : product - price: 1200
+19102005 190110 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2000000821511' AND cb.estadoactivo='C')
+19102005 190110 => RESULT | Resource id #33 | 
+19102005 190110 => nueva_cotizacion :PRODUCTO 0 : id_producto[102] - barcode[2000000821511] - cod_prod1[102572] - qty[2] - price[1200] - des_corta[ESM AG BAR ROS 1/4]
+19102005 190110 => nueva_cotizacion : parsea product 2 : 
+			<barcode>2082000030193</barcode>
+			<qty>5</qty> 
+			<price>3000</price>
+		
+19102005 190110 => nueva_cotizacion : product - barcode: 2082000030193
+19102005 190110 => nueva_cotizacion : product - qty: 5
+19102005 190110 => nueva_cotizacion : product - price: 3000
+19102005 190110 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030193' AND cb.estadoactivo='C')
+19102005 190110 => RESULT | Resource id #41 | 
+19102005 190110 => nueva_cotizacion :PRODUCTO 1 : id_producto[110] - barcode[2082000030193] - cod_prod1[102580] - qty[5] - price[3000] - des_corta[LATEX AZUL CIE 1LT]
+19102005 190110 => nueva_cotizacion : parsea product 3 : 
+			<barcode>2082000030094</barcode>
+			<qty>7</qty> 
+			<price>1000</price>
+		
+19102005 190110 => nueva_cotizacion : product - barcode: 2082000030094
+19102005 190110 => nueva_cotizacion : product - qty: 7
+19102005 190110 => nueva_cotizacion : product - price: 1000
+19102005 190110 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030094' AND cb.estadoactivo='C')
+19102005 190110 => RESULT | Resource id #49 | 
+19102005 190110 => nueva_cotizacion :PRODUCTO 2 : id_producto[118] - barcode[2082000030094] - cod_prod1[102588] - qty[7] - price[1000] - des_corta[LATEX CAFE TIE 1LT]
+19102005 190110 => nueva_cotizacion : parsea product 4 : 
+			<barcode>2082000030407</barcode>
+			<qty>1</qty> 
+			<price>500</price>
+		
+19102005 190110 => nueva_cotizacion : product - barcode: 2082000030407
+19102005 190110 => nueva_cotizacion : product - qty: 1
+19102005 190110 => nueva_cotizacion : product - price: 500
+19102005 190110 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '2082000030407' AND cb.estadoactivo='C')
+19102005 190110 => RESULT | Resource id #57 | 
+19102005 190110 => nueva_cotizacion :PRODUCTO 3 : id_producto[121] - barcode[2082000030407] - cod_prod1[102591] - qty[1] - price[500] - des_corta[LATEX ROJO MED 1GL]
+19102005 190110 => QUERY SELECT id_local FROM locales WHERE cod_local='E502'
+19102005 190110 => RESULT | Resource id #61 | 
+19102005 190110 => busca_id_local : local encontradoa para el cod_local[E502]= [42]
+19102005 190110 => QUERY INSERT INTO os (id_os, id_estado, id_proyecto, id_local, id_direccion, clie_rut, os_fechacreacion, os_fechacotizacion, 
+            os_fechaestimada, os_comentarios, os_numboleta, os_fechaboleta, os_descripcion, usuario, USR_ID, os_fechaestimacion, origen) 
+			VALUES ( null,'SE',1,42,1,1,now(),now(),now(),'',null,null,'Venta Patio TPS','Rodrigo Bola8',0,'',
+				'P')
+19102005 190110 => RESULT | 1 | 
+19102005 190110 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,207,'PS','PS',0,1200,2,0,0,'102572','','ESM AG BAR ROS 1/4',102,'2000000821511',null,null,null)
+19102005 190110 => RESULT | 1 | 
+19102005 190110 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,207,'PS','PS',0,3000,5,0,0,'102580','','LATEX AZUL CIE 1LT',110,'2082000030193',null,null,null)
+19102005 190110 => RESULT | 1 | 
+19102005 190110 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,207,'PS','PS',0,1000,7,0,0,'102588','','LATEX CAFE TIE 1LT',118,'2082000030094',null,null,null)
+19102005 190110 => RESULT | 1 | 
+19102005 190110 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,207,'PS','PS',0,500,1,0,0,'102591','','LATEX ROJO MED 1GL',121,'2082000030407',null,null,null)
+19102005 190110 => RESULT | 1 | 
+19102005 190110 => nueva_cotizacion : Finaliza con <?xml version="1.0"?>
+	<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<cotz>
+			<num_cotz>207</num_cotz>
+			<tot_cotz>24900</tot_cotz>
+			<qty_prod>4</qty_prod>
+			<date_cotz>2005-10-19</date_cotz>
+			<comments>Venta Patio TPS</comments>			
+		</cotz>
+	</data>
+	</main>
+19102005 190845 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 190845 => Conectado ...
+19102005 190845 => carga libreria NUSOAP ...
+19102005 190845 => crea instancia soap_server ...
+19102005 190845 => configura instancia para WDSL ...
+19102005 190845 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 190845 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 190845 => Entrega el resultado ...
+19102005 190845 => Conectando a MYSQL server=localhost user=cproy pass=arkanodb=CPROYV2C
+19102005 190845 => Conectado ...
+19102005 190845 => carga libreria NUSOAP ...
+19102005 190845 => crea instancia soap_server ...
+19102005 190845 => configura instancia para WDSL ...
+19102005 190845 => registra funcion DETALLE_PRODUCTO para instancia WDSL ...
+19102005 190845 => registra funcion NUEVA_COTIZACION para instancia WDSL ...
+19102005 190845 => Entrega el resultado ...
+19102005 190845 => nueva_cotizacion : cons:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>7798054473033</barcode>
+			<qty>2</qty> 
+			<price>14980</price>
+		</product>
+		<product>
+			<barcode>7798054473026</barcode>
+			<qty>5</qty> 
+			<price>14980</price>
+		</product>
+		<product>
+			<barcode>7798054471404</barcode>
+			<qty>7</qty> 
+			<price>21980</price>
+		</product>
+		<product>
+			<barcode>7798054471305</barcode>
+			<qty>1</qty> 
+			<price>21980</price>
+		</product>
+	</data>
+</main>
+
+19102005 190845 => nueva_cotizacion : genera objeto:xmlObj:
+<?xml version="1.0"?>
+<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>7798054473033</barcode>
+			<qty>2</qty> 
+			<price>14980</price>
+		</product>
+		<product>
+			<barcode>7798054473026</barcode>
+			<qty>5</qty> 
+			<price>14980</price>
+		</product>
+		<product>
+			<barcode>7798054471404</barcode>
+			<qty>7</qty> 
+			<price>21980</price>
+		</product>
+		<product>
+			<barcode>7798054471305</barcode>
+			<qty>1</qty> 
+			<price>21980</price>
+		</product>
+	</data>
+</main>
+
+19102005 190845 => nueva_cotizacion : parsea main : 
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<product>
+			<barcode>7798054473033</barcode>
+			<qty>2</qty> 
+			<price>14980</price>
+		</product>
+		<product>
+			<barcode>7798054473026</barcode>
+			<qty>5</qty> 
+			<price>14980</price>
+		</product>
+		<product>
+			<barcode>7798054471404</barcode>
+			<qty>7</qty> 
+			<price>21980</price>
+		</product>
+		<product>
+			<barcode>7798054471305</barcode>
+			<qty>1</qty> 
+			<price>21980</price>
+		</product>
+	</data>
+
+19102005 190845 => nueva_cotizacion : parsea header : 
+		<trx>nueva_cotizacion</trx>
+		<type>req</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 190845 => header - trx: nueva_cotizacion
+19102005 190845 => header - type: req
+19102005 190845 => header para la respuesta: 
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	
+19102005 190845 => nueva_cotizacion : header - local: E502
+19102005 190845 => nueva_cotizacion : header - pos: TP23
+19102005 190845 => nueva_cotizacion : header - operator: Rodrigo Bola8
+19102005 190845 => nueva_cotizacion : header - date: 2005-08-31
+19102005 190845 => nueva_cotizacion : header - time: 12:00
+19102005 190845 => nueva_cotizacion : parsea data : 
+		<product>
+			<barcode>7798054473033</barcode>
+			<qty>2</qty> 
+			<price>14980</price>
+		</product>
+		<product>
+			<barcode>7798054473026</barcode>
+			<qty>5</qty> 
+			<price>14980</price>
+		</product>
+		<product>
+			<barcode>7798054471404</barcode>
+			<qty>7</qty> 
+			<price>21980</price>
+		</product>
+		<product>
+			<barcode>7798054471305</barcode>
+			<qty>1</qty> 
+			<price>21980</price>
+		</product>
+	
+19102005 190845 => nueva_cotizacion : parsea product 1 : 
+			<barcode>7798054473033</barcode>
+			<qty>2</qty> 
+			<price>14980</price>
+		
+19102005 190845 => nueva_cotizacion : product - barcode: 7798054473033
+19102005 190845 => nueva_cotizacion : product - qty: 2
+19102005 190845 => nueva_cotizacion : product - price: 14980
+19102005 190845 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '7798054473033' AND cb.estadoactivo='C')
+19102005 190845 => RESULT | Resource id #33 | 
+19102005 190845 => nueva_cotizacion :PRODUCTO 0 : id_producto[19] - barcode[7798054473033] - cod_prod1[101502001] - qty[2] - price[14980] - des_corta[ABS AC HG28 35 BEI]
+19102005 190845 => nueva_cotizacion : parsea product 2 : 
+			<barcode>7798054473026</barcode>
+			<qty>5</qty> 
+			<price>14980</price>
+		
+19102005 190845 => nueva_cotizacion : product - barcode: 7798054473026
+19102005 190845 => nueva_cotizacion : product - qty: 5
+19102005 190845 => nueva_cotizacion : product - price: 14980
+19102005 190845 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '7798054473026' AND cb.estadoactivo='C')
+19102005 190845 => RESULT | Resource id #41 | 
+19102005 190845 => nueva_cotizacion :PRODUCTO 1 : id_producto[20] - barcode[7798054473026] - cod_prod1[101502002] - qty[5] - price[14980] - des_corta[ABS AC HG28 35 GRI]
+19102005 190845 => nueva_cotizacion : parsea product 3 : 
+			<barcode>7798054471404</barcode>
+			<qty>7</qty> 
+			<price>21980</price>
+		
+19102005 190845 => nueva_cotizacion : product - barcode: 7798054471404
+19102005 190845 => nueva_cotizacion : product - qty: 7
+19102005 190845 => nueva_cotizacion : product - price: 21980
+19102005 190845 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '7798054471404' AND cb.estadoactivo='C')
+19102005 190845 => RESULT | Resource id #49 | 
+19102005 190845 => nueva_cotizacion :PRODUCTO 2 : id_producto[22] - barcode[7798054471404] - cod_prod1[101503001] - qty[7] - price[21980] - des_corta[ABS AC HG32 35 BEI]
+19102005 190845 => nueva_cotizacion : parsea product 4 : 
+			<barcode>7798054471305</barcode>
+			<qty>1</qty> 
+			<price>21980</price>
+		
+19102005 190845 => nueva_cotizacion : product - barcode: 7798054471305
+19102005 190845 => nueva_cotizacion : product - qty: 1
+19102005 190845 => nueva_cotizacion : product - price: 21980
+19102005 190845 => QUERY SELECT p.id_producto id_producto, p.cod_prod1 cod_prod1, p.des_corta des_corta, CURDATE() as hoy
+		FROM productos p
+		JOIN codbarra cb ON (p.id_producto = cb.id_producto AND cb.cod_barra = '7798054471305' AND cb.estadoactivo='C')
+19102005 190845 => RESULT | Resource id #57 | 
+19102005 190845 => nueva_cotizacion :PRODUCTO 3 : id_producto[23] - barcode[7798054471305] - cod_prod1[101503002] - qty[1] - price[21980] - des_corta[ABS AC HG32 35 GRI]
+19102005 190845 => QUERY SELECT id_local FROM locales WHERE cod_local='E502'
+19102005 190845 => RESULT | Resource id #61 | 
+19102005 190845 => busca_id_local : local encontradoa para el cod_local[E502]= [42]
+19102005 190845 => QUERY INSERT INTO os (id_os, id_estado, id_proyecto, id_local, id_direccion, clie_rut, os_fechacreacion, os_fechacotizacion, 
+            os_fechaestimada, os_comentarios, os_numboleta, os_fechaboleta, os_descripcion, usuario, USR_ID, os_fechaestimacion, origen) 
+			VALUES ( null,'SE',1,42,1,1,now(),now(),now(),'',null,null,'Venta Patio TPS','Rodrigo Bola8',0,'',
+				'P')
+19102005 190845 => RESULT | 1 | 
+19102005 190845 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,208,'PS','PS',0,14980,2,0,0,'101502001','','ABS AC HG28 35 BEI',19,'7798054473033',null,null,null)
+19102005 190845 => RESULT | 1 | 
+19102005 190845 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,208,'PS','PS',0,14980,5,0,0,'101502002','','ABS AC HG28 35 GRI',20,'7798054473026',null,null,null)
+19102005 190845 => RESULT | 1 | 
+19102005 190845 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,208,'PS','PS',0,21980,7,0,0,'101503001','','ABS AC HG32 35 BEI',22,'7798054471404',null,null,null)
+19102005 190845 => RESULT | 1 | 
+19102005 190845 => QUERY INSERT INTO os_detalle (id_os_detalle,ot_id,id_origen,id_tipodespacho,id_os,osde_tipoprod,osde_subtipoprod,osde_instalacion,osde_precio,osde_cantidad,osde_descuento,osde_preciocosto,cod_sap,osde_especificacion,osde_descripcion,id_producto,cod_barra,usrnomaut,usrpassaut,observacion) VALUES(
+            null,null,5,1,208,'PS','PS',0,21980,1,0,0,'101503002','','ABS AC HG32 35 GRI',23,'7798054471305',null,null,null)
+19102005 190845 => RESULT | 1 | 
+19102005 190845 => nueva_cotizacion : Finaliza con <?xml version="1.0"?>
+	<main>
+	<header>
+		<trx>nueva_cotizacion</trx>
+		<type>resp</type>
+		<local>E502</local>
+		<pos>TP23</pos>
+		<operator>Rodrigo Bola8</operator>
+		<date>2005-08-31</date>
+		<time>12:00</time>
+	</header>
+	<data>
+		<cotz>
+			<num_cotz>208</num_cotz>
+			<tot_cotz>280700</tot_cotz>
+			<qty_prod>4</qty_prod>
+			<date_cotz>2005-10-19</date_cotz>
+			<comments>Venta Patio TPS</comments>			
+		</cotz>
+	</data>
+	</main>

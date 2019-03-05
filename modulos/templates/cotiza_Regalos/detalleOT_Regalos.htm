@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>{PAGETITLE}</title>
+</head>
+<script language="javascript" src="../../includes/popup.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<script type="text/javascript">
+	function print_OT(){
+		if({NumImp} > 0){
+			if(confirm("La OT N°.{ot_idList} ya fue impresa. \n    Desea reimprimirla?")){
+				popUpWindowMod('../lista_Regalos/valida_subAdmin.php?accion=Imp&idLista={ot_idList}&clie_rut=OT',300,300,300,170);
+			}
+		}
+		else{
+			popUpWindowMod('../cotiza_Regalos/print_OT.php?id_OT={ot_idList}',300,300,300,170);
+			window.location.reload();
+		}
+	}
+	
+	function Accion_flecha_ant(){
+		location.href='monitor_Picking.php';
+	}
+	
+	// Valida el ingreso de solo datos númericos
+	function onlyNumbers(evt)
+	{
+	   	var keyPressed = (evt.which) ? evt.which : event.keyCode
+	   	return !(keyPressed > 31 && (keyPressed < 48 || keyPressed > 57));
+	}
+
+	// Obtiene y calcula las cantidades de productos ingresadas
+	function calculaCant(id){
+		id = id.id;
+		idVal = id.split("_");
+		idVal = idVal['1'];
+		
+		cantidad = 'cantidad_'+idVal;
+		cantpickeada = 'cantpickeada_'+idVal;
+
+		v_com = document.getElementById(cantidad).value;
+		v_reg = document.getElementById(cantpickeada).value;
+		
+		nva_cant = (v_com - v_reg);
+		if ( v_com == 0){
+			document.getElementById(cantpickeada).readonly='readonly';
+		}
+		else if (nva_cant < 0){
+			alert("¡ La cantidad a Pickear debe ser menor o igual a la cantidad Disponible !");;
+			document.getElementById(cantpickeada).value = '0';
+		}
+		else{
+			document.getElementById(cantpickeada).value = v_reg;
+			document.getElementById(cantidad).value = nva_cant;
+		}
+	}
+
+	var in_dices = new Array(); 
+	var i=0;
+	function cerrarPicking(){
+		var inputs = document.getElementById("monitorOT").lista;
+		var total = 0;
+		var reg1 = ''
+
+		for (var x=0; x < inputs.length; x++){
+			valor = inputs[x].value;
+			valor = parseFloat(valor);
+			total = total + valor;
+			
+			cant = inputs[x].value;
+			id = inputs[x].id;
+		
+			idVal = id.split("_");
+			idVal = idVal['1'];
+			
+			reg = idVal+'_'+cant;
+			reg1 = reg+','+reg1;
+		}	
+		document.getElementById("monitorOT").totalPick.value = total;
+		document.getElementById("monitorOT").actCant.value = inputs.length;
+		document.getElementById("monitorOT").actPick.value = reg1.substring(0,reg1.length-1);
+	
+		if(total == 0)
+			total = inputs.value;
+
+		if (total == {Total}){
+			document.getElementById("monitorOT").accion.value = 'cerrar';
+			monitorOT.submit();
+			}
+		else{
+			alert("No se Puede cerrar la OT. \n Debe Pickear todas los Productos.");
+		}
+	}
+	
+	function transferirPicking(){
+		popUpWindowModal('../lista_monitor_ot_pe/transferirCompra.php?id_ot={ot_idList}&OTtipo=PS', 100, 100, 400, 300);
+		location.href('monitor_Picking.php');
+	}
+	
+	function dividirPicking(){
+		var inputs = document.getElementById("monitorOT").lista;
+		var total = 0;
+		var reg1 = ''
+		for (var x=0; x < inputs.length; x++){
+			valor = inputs[x].value;
+			valor = parseFloat(valor);
+			total = total + valor;
+			
+			cant = inputs[x].value;
+			id = inputs[x].id;
+		
+			idVal = id.split("_");
+			idVal = idVal['1'];
+			
+			reg = idVal+'_'+cant;
+			reg1 = reg+','+reg1;
+		}	
+		document.getElementById("monitorOT").totalPick.value = total;
+		document.getElementById("monitorOT").actCant.value = inputs.length;
+		document.getElementById("monitorOT").actPick.value = reg1.substring(0,reg1.length-1);
+
+		if (total != 0){
+			document.getElementById("monitorOT").accion.value = 'dividir';
+			monitorOT.submit();
+		}
+		else{
+			alert("Debe seleccionar un Producto para Dividir la OT.");
+		}
+	}
+</script>
+<body>
+<div align="left" style="margin-top: 5;" class="titulonormal">{TEXT_TITULO}</div>
+<form name="monitorOT" action="detalleOT_Regalos.php">
+<table border="0" align="center" style="width: 780; margin-top: -10;">
+	<tr>
+		<td>
+			<table border="0" align="center" style="width: 700;">
+				<tr>
+				  	<td colspan="3">
+				  		<table border="0" align="center" style="width: 700; margin-top: 0;">
+				  			<tr>
+								<td align="left" style="width: 150"><img src="../img/logo3.gif" border="0" style="width:95; height: 55;"></td>
+								<td>
+									<table width="550">
+									  <tr>
+									    <td class="subtitulonormal">{TEXT_CAMPO_1}  {ot_idList}</td>
+									  </tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_4}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_5}</td>
+								<td style="width: 250;" class="userinput">{ot_idList}</td>
+								<td style="width: 120;" class="textonormal">{TEXT_CAMPO_9}</td>
+								<td style="width: 150;" class="userinput">{idLista_OS}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_6}</td>
+								<td style="width: 250;" class="userinput">{ot_listFeccrea}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_10}</td>
+								<td style="width: 150;" class="userinput">{fec_Evento}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_7}</td>
+								<td style="width: 250;" class="userinput">{tipoOT}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_11}</td>
+								<td style="width: 150;" class="titulonormal">{estado}</td>
+							</tr>
+							<tr>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_8}</td>
+								<td style="width: 150;" class="userinput">{local}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_35}</td>
+								<td style="width: 150;" class="userinput">{idLista}</td>
+							</tr>
+						</table>
+						</fieldset>
+					</td>			
+				</tr>
+				<tr>
+					<td colspan="3">
+						<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_12}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_13}</td>
+								<td style="width: 250;" class="userinput">{festejado}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_17}</td>
+								<td style="width: 150;" class="userinput">{telefono}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_14}</td>
+								<td style="width: 250;" class="userinput">{direccion}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_18}</td>
+								<td style="width: 150;" class="userinput">{barrio}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_15}</td>
+								<td style="width: 250;" class="userinput">{tipDespacho}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_19}</td>
+								<td style="width: 150;" class="userinput">{ciudad}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_16}</td>
+								<td style="width: 250;" class="userinput">{dir_observacion}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_20}</td>
+								<td style="width: 150;" class="userinput">{departamento}<br>{localidad}</td>
+							</tr>
+						</table>
+						</fieldset>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+					<div style="width:780; height:215; overflow:auto;">
+						<table class="tabla1">
+							<tr>
+								<th style="width: 140;">{TEXT_CAMPO_21}</th>
+								<th style="width: 320;">{TEXT_CAMPO_22}</th>
+								<th style="width: 110;">{TEXT_CAMPO_23}</th>
+								<th style="width: 90;">{TEXT_CAMPO_24}</th>
+								<th style="width: 90;">{TEXT_CAMPO_25}</th>
+							</tr>
+							<input id="accion" name="accion" type="hidden" value="{accion}"/>
+							<input id="ot_idList" name="ot_idList" type="hidden" value="{ot_idList}"/>
+							<input id="actCant" name="actCant" type="hidden" value=""/>
+							<input id="actPick" name="actPick" type="hidden" value=""/>
+							<!-- BEGIN Productos -->
+							<tr>
+								<td style="width: 120;">{cod_ean}<br>({cod_Easy})</td>
+								<td style="width: 350;">{descripcion}</td>
+								<td style="width: 120;" align="right">{list_precio}</td>
+								<td style="width: 70;" align="right">
+									<input id="cantidad_{idLista_OS_det}" name="cantidad_{idLista_OS_det}" type="text" class="userinput" style="width:40; height:20; text-align: right;" readonly="readonly" value="{cantidad}"/>
+								</td>
+								<td style="width: 50;" align="center">
+									<input id="cantpickeada_{idLista_OS_det}" name="lista" type="text" value="{OS_cantPick}" size="6" maxlength="4" class="userinput" style="text-align: right;" {readonly} onkeypress="return onlyNumbers(event)" onchange="calculaCant(this)"/>
+								</td>
+							</tr>
+							<!-- END Productos -->
+							<tr>
+								<td colspan="2"></td>
+								<th style="width: 120;" align="right">{TEXT_CAMPO_26}</th>
+								<th style="width: 70;" align="right">{Total}</th>
+								<th style="width: 70;" align="right">
+									<input id="totalPick" name="totalPick" type="text" value="{ToalPick}" size="6" maxlength="4" class="userinput" style="text-align: right;" readonly="readonly"/>
+								</th>
+							</tr>
+						</table>
+					</td>
+					</div>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<table border="0" align="center" style="width: 400; margin-top: 15;">
+				<tr>
+					<td>
+						<table style="width: 400;" class="tabla1">
+							<tr>
+								<th colspan="4" align="center">{TEXT_CAMPO_31}</th>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<table style="width: 400;">
+							<tr>
+								<td align="center" class="textonormal">
+									<a href="#" id="hidAciones2" onclick="Accion_flecha_ant()">{TEXT_CAMPO_30}</a>
+								</td>
+								<td align="center" class="textonormal">
+									<div id="hidAciones"><a href="#" onclick="{cerrar}">{TEXT_CAMPO_33}</a></div>
+								</td>
+								<td align="center" class="textonormal">
+									<div id="hidAciones1"><a href="#" onclick="{transf}">{TEXT_CAMPO_34}</a></div>
+								</td>
+								<td align="center" class="textonormal">
+									<div id="hidAciones3"><a href="#" onclick="{imprimir}">{TEXT_CAMPO_32}</a></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</form>
+
+<script type="text/javascript">
+	function hiddenAciones(){
+		if('{estado}' == 'Por Despachar' || '{estado}' == 'En Despachos'){
+			document.getElementById("hidAciones").innerHTML = " ";
+			document.getElementById("hidAciones1").innerHTML = " ";
+			}
+		if('{estado}' == 'Por Transferir'){
+			document.getElementById("hidAciones3").innerHTML = " ";
+			document.getElementById("hidAciones").innerHTML = " ";
+			}
+		if('{estado}' == 'Por Pickear'){
+			document.getElementById("hidAciones1").innerHTML = " ";
+			}
+	}
+	
+	hiddenAciones();
+</script>
+</body>
+</html>

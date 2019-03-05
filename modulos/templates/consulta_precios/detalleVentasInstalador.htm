@@ -1,0 +1,74 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0" background="../img/bg_pattern_002.jpg">
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Detalle de Ventas Instalador. <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<!--  Función que realiza la operación de Exportar a Excel -->
+<!-- Si se genera error en la ejecucion de este JavaScript, por favor habilite la ejecucion de controles ActiveX
+     en su navegador, (Menú - Herramientas - Opciones de Internet - Seguridad) -->
+<script LANGUAGE=javascript>
+function exportToXL(eSrc) {
+var oExcel;
+var oExcelSheet;
+var oWkBooks;
+var cols;
+oExcel = new ActiveXObject('Excel.Application');
+oWkBooks = oExcel.Workbooks.Add;
+oExcelSheet = oWkBooks.Worksheets(1);
+oExcelSheet.Activate();
+if (eSrc.tagName != 'TABLE') {
+alert('No ha sido posible exportar la tabla a excell');
+return false;
+}
+cols = Math.ceil(eSrc.cells.length / eSrc.rows.length);
+for (var i = 0; i < eSrc.cells.length; i ++)
+{
+var c, r;
+r = Math.ceil((i+1) / cols);
+c = (i+1)-((r-1)*cols)
+if (eSrc.cells(i).tagName == 'TH') {
+oExcel.ActiveSheet.Cells(r,c).Font.Bold = true;
+oExcel.ActiveSheet.Cells(r,c).Interior.Color = 14474460;
+}
+if (eSrc.cells(i).childNodes.length > 0 && eSrc.cells(i).childNodes(0).tagName == "B")
+oExcel.ActiveSheet.Cells(r,c).Font.Bold = true;
+oExcel.ActiveSheet.Cells(r,c).Value = eSrc.cells(i).innerText;
+}
+oExcelSheet.Application.Visible = true;
+}
+</script>
+
+			
+<table id=idTable width="100%" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+    <tr>
+	<th>N°</td>
+	<th>N°.OT</td>
+	<th>Fecha Creación</td>
+	<th>Id Producto</td>
+	<th>Precio</td>
+	<th>Descripción Producto</td>
+	<th>Fecha de Instalación</td>
+   </tr>
+<!-- BEGIN Bloque_Resultados -->
+   <tr>
+       <td align="center">{num}</td>			
+       <td align="center">{id}</td>		
+	<td align="center">{fechacreacion}</td>		
+	<td align="center">{producto}</td>	
+	<td align="right">{precio}</td>
+	<td align="left">{descripcion}</td>
+	<td align="center">{fecha_visita}</td>
+</tr>
+<!-- END Bloque_Resultados -->
+</table>
+<!-- END Grilla -->
+
+</body>
+<!-- InstanceEnd -->
+</html>

@@ -1,0 +1,300 @@
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="menu/menu.css">
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function validar_rut(){
+    crut = '';
+    mcrut= form_search4.bus_rut.value;
+    for(i=0; i<mcrut.length; ++i)
+        if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-')
+        {
+        crut = crut + mcrut.charAt(i);
+        }
+    largo = crut.length;
+    if ( largo < 2 )
+    {
+        alert("Debe ingresar la Cédula completa.");
+        document.form_search4.bus_rut.focus();
+        document.form_search4.bus_rut.select();
+        return false;
+    }
+    
+    if ( largo > 2 )
+        rut = crut.substring(0, largo - 1);
+    else
+        rut = crut.charAt(0);
+    dv = crut.charAt(largo-1);
+    
+    //checkCDV( dv );
+    if ( rut == null || dv == null )
+    return 0;
+    var dvr = '0';
+    suma = 0;
+    mul  = 2;
+    
+    for (i= rut.length -1 ; i >= 0; i--)
+    {
+    suma = suma + rut.charAt(i) * mul;
+        if (mul == 7)
+                mul = 2;
+        else
+                mul++;
+    }
+    res = suma % 11;
+    if (res==1)
+        dvr = 'k';
+    else if (res==0)
+        dvr = '0';
+    else
+    {
+        dvi = 11-res;
+        dvr = dvi + "";
+    }
+    
+    /* Validación digito de verificación
+    if ( dvr != dv.toLowerCase() )
+    {
+        alert("EL rut es incorrecto.");
+        document.form_search4.bus_rut.focus();
+        document.form_search4.bus_rut.select();
+        return false;
+    }
+    */
+    
+    document.form_search4.bus_rut.value = mcrut; 
+    digito=crut.substr(crut.length-1, 1).toUpperCase();
+    document.form_search4.submit();
+  return true;
+}
+function validar_OS(){
+    var valor;
+    if( validar_obligatorio( document.form_search3.bus_os, "Campo Obligatorio" ))
+        return false;
+    
+    for (i=0;i<document.form_search3.rad_selec.length;i++){ 
+       if (document.form_search3.rad_selec[i].checked){ 
+          valor = document.form_search3.rad_selec[i].value;
+          break;
+       }
+    } 
+    if ( valor == 1 ){            
+        if ( validar_numero( document.form_search3.bus_os , "La OS debe ser numérica" ) ){
+            return false;
+        }
+    }
+}
+//-->
+</SCRIPT>
+
+<body  onload="document.form_search3.bus_os.focus();">    
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->{SUBTITULO1}<!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --><!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" height="95%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top">
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="31%" valign="top">
+              <table border="0" align="center" cellpadding="0" cellspacing="4" class="textonormal">
+                <tr>
+                  <form NAME="form_search1" METHOD="POST" ACTION="monitor_cotizaciones_00.php">
+                  <td valign="top">
+                  <input type="hidden" name="accion" value="search">
+                  <input type="hidden" name="select_estado" value="{select_estado}">
+                   <input type="hidden" name="select_local" value="{select_local}">
+				  <fieldset>
+                    <legend>{TEXT_CAMPO_7}</legend>
+                    <table  border="0" cellspacing="0" cellpadding="0">
+						<tr>
+						  <td colspan=2 height="20">&nbsp;</td>
+						</tr>
+                      <tr>
+                        <td><span class="userinput">
+                          <select name="select_estado">
+                            <option value="0">{TEXT_SELECT}</option>
+                            <!-- BEGIN Estados -->
+                            <option value="{id_estado}" {selected}>{estado}</option>
+                            <!-- END Estados -->
+                          </select>
+                        </span></td>
+                        <td>&nbsp;<input type="submit" value="Filtrar"></td>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                  </form>
+                  <form NAME="form_search2" METHOD="POST" ACTION="monitor_cotizaciones_00.php">
+                  <td valign="top"><p class="userinput">
+					  <input type="hidden" name="accion" value="search">
+                      <input type="hidden" name="select_estado" value="{select_estado}">
+                      <input type="hidden" name="select_local" value="{select_local}">
+					  <input type="hidden" name="bus_os" value="{bus_os}">
+                      <fieldset>
+                      <legend>{TEXT_CAMPO_9}</legend>
+                      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+						<tr>
+						  <td colspan=2 height="20">&nbsp;</td>
+						</tr>
+                        <tr>
+                          <td><span class="userinput">
+                        <select name="select_local">
+							{ALL}
+						<!-- BEGIN Locales -->
+                            <option value="{id_local}" {selected}>{nom_local}</option>
+                            <!-- END Locales -->
+                            </select></span></td>
+                        <td>&nbsp;<input type="submit" value="Filtrar"></td>
+                        </tr>
+                      </table>
+                      </fieldset>
+                  </td>
+                  </form>
+				  <form NAME="form_search4" METHOD="POST" ACTION="monitor_cotizaciones_00.php" onSubmit="return validar_rut(this);">
+                  <td valign="top"><p class="userinput">
+                  <input type="hidden" name="accion" value="search">
+                  <input type="hidden" name="select_estado" value="{select_estado}">
+                  <input type="hidden" name="select_local" value="{select_local}">
+				  <input type="hidden" name="bus_os" value="{bus_os}">
+                      <fieldset>
+                      <legend>{TEXT_CAMPO_4} </legend>
+                      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+						<tr>
+						  <td colspan=2 height="20">&nbsp;</td>
+						</tr>
+                        <tr>
+                          <td><span class="userinput">
+                            <input name="bus_rut" value='{bus_rut}' type="text" size="10" maxlength='12'></span></td>
+                          <td>&nbsp;<input type="submit" value="Filtrar"></td>
+                        </tr>
+                      </table>
+                      </fieldset></td>
+                  </form>
+                  <form NAME="form_search3" METHOD="POST" ACTION="monitor_cotizaciones_00.php" onSubmit="return validar_OS(this);">
+                  <td valign="top"><p class="userinput">
+                  <input type="hidden" name="accion" value="search">
+                  <input type="hidden" name="select_estado" value="{select_estado}">
+                   <input type="hidden" name="select_local" value="{select_local}">
+                      <fieldset>
+                      <legend>{TEXT_CAMPO_1} </legend>
+                      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td><span class="userinput">
+                            <input name="rad_selec" value='1' type="radio" {checkr1}>OS
+                            <input name="rad_selec" value='2' type="radio" {checkr2}>Nombre
+                            <input name="rad_selec" value='3' type="radio" {checkr3}>Apellido
+                          </span></td>
+                          </tr>
+                          <tr>
+                        <td><span class="userinput">
+                            <input name="bus_os" value='{bus_os}' type="text" size="20" maxlength='40'>
+                            </span>
+                            <input type="submit" value="Filtrar"></td>
+                        </tr>
+                      </table>
+                      </fieldset></td>
+                  </form>
+                </tr>
+              </table>  
+			  
+		<table BORDER="0" cellspacing="0" cellpadding="0" align="center">
+		<tr>
+		  <td>
+              <table align="left" width="750" border="0" bordercolor="#000000"  cellpadding="2" cellspacing="0" class="tabla2">
+                <tr>
+                    <th width="70" >{TEXT_CAMPO_1} <a href="monitor_cotizaciones_00.php?filtro=os&orden={orden}&select_estado={select_estado}&select_local={select_local}&bus_os={bus_os}&bus_rut={bus_rut}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+                    <th width="150">{TEXT_CAMPO_2}</th>
+                    <th width="100">{TEXT_CAMPO_3} <a href="monitor_cotizaciones_00.php?filtro=fc&orden={orden}&select_estado={select_estado}&select_local={select_local}&bus_os={bus_os}&bus_rut={bus_rut}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+                    <th width="60" >{TEXT_CAMPO_4}</th>
+                    <th width="150">{TEXT_CAMPO_5}</th>
+                    <th width="80" >{TEXT_CAMPO_6}</th>
+                    <th width="80" >Estado</th>
+                    <th width="60" >{TEXT_CAMPO_8}</th>
+                </tr>
+			  </table>
+			</td>
+		  </tr>
+		<tr>
+		  <td>
+			<!--div style="width: 770px; height: 330px; left: 100px; top: 353px; overflow: auto;"-->    
+				<table width="750" border="0" cellpadding="1" cellspacing="0" align="left" class="tabla2">
+                <!-- BEGIN Modulos -->
+                <tr>
+                    <td width="70" align="center">{id_os}&nbsp;</td>
+                    <td width="150">{os_comentarios}&nbsp;</td>
+                    <td width="80"><div align="center">{os_fechacreacion}&nbsp;</div></td>
+                    <td width="80" >{clie_rut}</td>
+                    <td width="150">{clie_nombre}&nbsp;{clie_paterno}</td>
+                    <td width="80" ><div align="left">{clie_telcontacto2}&nbsp;</div></td>
+                    <td width="80" ><div align="center">{esta_nombre}&nbsp;</div></td>
+                    <td width="60" ><div align="center">
+					<a href="../nueva_cotizacion/nueva_cotizacion_sumario_01.php?clie_rut={clie_rut}&id_os={id_os}"  class="link1">{TEXT_BOTON}</a></td>
+                </tr>
+                <!-- END Modulos -->
+			</table>
+			<!--/div-->	 
+		  
+		  </td>
+		  </tr>
+			
+
+		</table>	  
+		  
+		  </td>
+        </tr>
+      </table>
+
+	</td>
+  </tr>
+ <!--paginacion-->
+				<form NAME="form_paginas" METHOD="POST" ACTION="monitor_cotizaciones_00.php">
+                  <input type="hidden" name="select_estado" value="{select_estado}">
+                  <input type="hidden" name="select_local" value="{select_local}">
+				  <input type="hidden" name="bus_rut" value="{bus_rut}">
+				  <input type="hidden" name="bus_os" value="{bus_os}">
+				  <input type="hidden" name="checkr1" value="{checkr1}">		
+				  <input type="hidden" name="checkr2" value="{checkr2}">		
+				  <input type="hidden" name="checkr3" value="{checkr3}">		
+				  <input type="hidden" name="rad_selec" value="{rad_selec}">	
+			{inicio}
+			<tr><td>
+			<table BORDER="0" cellspacing="0" cellpadding="0" align="right">
+			<tr>
+			<td>&nbsp;&nbsp;</td>
+			<td>&nbsp;&nbsp;</td>
+			</tr>
+			<tr>
+
+				<td align="right" class="textonormal">N&uacute;mero de página &nbsp;</td>
+				<td align="right">
+				<span class="userinput">
+				<select name="select_pag" Onchange="submit();">
+				   <!-- BEGIN Paginas -->
+					 <option value="{pag}" {selected}>{pag}&nbsp;</option>
+				   <!-- END Paginas -->
+				{inicio}</select>
+				</span>
+				</td>
+			</tr>
+			</form>
+			</tr>
+			</table>
+			</td>
+			</tr>
+			{fin}
+	</td>
+  </tr>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//document.form_search3.bus_os.onkeypress = NumberIsKey;
+//document.form_search4.bus_rut.onkeypress = RutIsKey ;
+-->
+</script>

@@ -1,0 +1,106 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function checkDV( ){
+	
+	
+	if( validar_obligatorio( form_1.nit, "Cédula o Nit es obligatorio" ))return false;	
+	if( validar_obligatorio( form_1.descripcion, "Nombre es obligatorio" ))return false;
+	if( validar_obligatorio( form_1.telefono, "Teléfono Uno es obligatorio" ))return false;
+	if( validar_obligatorio( form_1.direccion, "La Dirección es obligatoria" ))return false;
+	
+	
+	  crut = '';
+	  mcrut= form_1.nit.value;
+	  for(i=0; i<mcrut.length; ++i)
+		if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-'){
+		 crut = crut + mcrut.charAt(i);
+		}
+	  largo = crut.length;
+	  if ( largo < 5 ){
+		alert("Debe ingresar la Cédula o Nit completo.");
+		document.form_1.nit.focus();
+		document.form_1.nit.select();
+		return false;
+	  }
+	  
+	  
+	  window.document.form_1.nit.onkeypress = KeyIsEnter ;
+	  document.form_1.submit();
+	  return true;
+ 
+}
+//-->
+</SCRIPT>
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript" src="../includes/funciones.js"></script>
+
+{OUT_BARRA}
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Administración de Empresas Instaladoras <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" -->
+      <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" height="500" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="500" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                <tr>
+                  <form NAME="form_1" METHOD="POST" ACTION="adm_emp_instal.php" OnSubmit="return validar_form1(this);">
+				  <input type="hidden" name="req" value="{req}">
+				  <input type="hidden" name="inst_id" value="{inst_id}">
+				  <td><fieldset>
+                    <legend>Datos de la Empresa Instaladora</legend>
+                    <table width="435" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="136">Cédula o Nit (*)</td>
+                        <td width="240" class="userinput"><input name="nit" value='{nit}' type="text" size="12" maxlength='12'></td>
+                      </tr>
+                      <tr>
+                        <td width="136">Nombre (*)</td>
+                        <td width="240" class="userinput"><input name="descripcion" value='{descripcion}' type="text" size="40" maxlength='40'></td>
+                      </tr>
+                     
+                      <tr>
+                        <td width="136">Teléfono (*)</td>
+                        <td width="240" class="userinput"><input name="telefono" value='{telefono}' type="text" size="30" maxlength='30'></td>
+                      </tr>
+                      
+					  <tr>
+                        <td width="136">Dirección (*) </td>
+                        <td width="240" class="userinput"><input name="direccion" value='{direccion}' type="text" size="40" maxlength='40'></td>
+                      </tr>
+                      <tr>
+                        <td width="136">&nbsp;</td>
+                        <td width="240" class="userinput">                        
+                        <td width="43">
+                      </tr>
+                      <tr>
+                        <td colspan=3 align="center"><input type="button" onClick="checkDV()" value="Guardar Datos"></td>
+                      </tr>
+                      <tr>
+                        <td colspan=3 align="right">(*) Datos obligatorios.</td>
+                      </tr>
+                    </table>
+                  </fieldset>
+				  </td>
+				  </form>
+                </tr>
+              </table>
+              <br>
+              
+			</td>
+        </tr>
+      </table>
+      <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</div>
+<script LANGUAGE="javascript">
+	window.document.form_1.nit.onkeypress = KeyIsNumberDv;
+</script>

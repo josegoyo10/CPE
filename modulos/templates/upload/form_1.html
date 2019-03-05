@@ -1,0 +1,41 @@
+<SPAN class=titulo>{TEXT_TITULO}</SPAN>
+<br>
+
+<form action="upload.php" enctype="multipart/form-data" method="post" name="form_1">
+<INPUT TYPE="hidden" name="action" value="up">
+
+<p align=center class="error">{TEXT_ERROR}</p>
+
+  <table border="0" align="center" cellpadding="5" cellspacing="0">
+    <tr>
+      <td>{TEXT_CAMPO_1}</td>
+      <td>:</td>
+      <td>
+<INPUT TYPE="file" NAME="userfile" size="20" maxlength="100">
+     {TEXT_CAMPO_3}</td>
+    </tr>
+    <tr>
+      <td>{TEXT_CAMPO_2}</td>
+      <td><p>:</p></td>
+      <td><select name="tabla">
+		  <!-- BEGIN Tablas -->
+          <option value="{tabla}">{tabla}</option>
+		  <!-- END Tablas -->
+        </select>
+    </td>
+    </tr>
+    <tr>
+      <td colspan="3"><center>
+          
+          <input name="imageField" type="image" src="../img/checkin.jpg" width="25" height="25" border="0">
+        </center></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p> <br>
+ : 
+    <br>
+
+    
+  </p>
+</form>

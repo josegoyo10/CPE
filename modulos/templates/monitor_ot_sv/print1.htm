@@ -1,0 +1,191 @@
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+</head>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+</head>
+
+<table width="600" height="403" border="1" cellpadding="0" cellspacing="0" style="border: 2px solid #ffffff;">
+  <tr>
+    <td height="69" valign="top">
+    <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td width="15%" height="49"><img src="../img/logo3.gif" width="95" height="55"></td>
+        <td width="79%" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" --> Orden de Trabajo N&ordm; {id_ot} <!-- InstanceEndEditable --></td>
+        <td width="6%"><!--img src="../img/banner1.gif" width="100" height="41"--></td>
+      </tr>
+    </table>
+    </td>
+  </tr>  
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos OT </legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <div width="150"><td width="240">N&ordm; OT </td>
+                        </div>
+                        <div width="500"><td width="601" class="userinput">{id_ot}</td>
+                        </div>
+                        <div width="180"><td width="315">Fecha de Generaci&oacute;n</td>
+                        </div>
+                        <div width="713"><td width="387" class="userinput">{ot_fechacreacion}</td>
+                        </div>
+                      </tr>
+                      <tr>
+                        <div width="150"><td height="26">Tipo OT </td>
+                        </div>
+                        <div width="500"><td width="601" class="userinput">SV - Servicio </td>
+                        </div>
+                        <div width="180"><td width="315">Estado</td>
+                        </div>
+                        <div width="713"><td width="387" class="userinput"> {estado} </td>
+                        </div>
+                      </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos Cotizaci&oacute;n</legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                         <div width="150"><td width="180">N&ordm; Cotizaci&oacute;n</td>
+                         </div>
+                         <div width="500"><td width="616" class="userinput">{id_os}</td>
+                         </div>
+                         <div width="180"><td width="360">Fecha de Cotizaci&oacute;n </td>
+                         </div>
+                         <div width="713"><td width="387" class="userinput">{os_fechacotizacion}</td>
+                         </div>
+                      </tr>
+                      <tr>
+                        <td width="180">Estado</td>
+                        <td width="616" class="userinput"> {esta_nombre}</td>
+                        <td width="360">Atendido Por </td>
+                        <td width="387" class="userinput">{atendido}</td>
+                      </tr>
+                      <tr>
+                        <td width="180">Tienda</td>
+                        <td width="616" class="userinput">{nom_local}</td>
+                          <td width="360">Válido hasta </td>
+                          <td width="387" class="userinput">{os_fechaestimacion}</td>
+                      </tr>
+                      <tr>
+                        <div width="150"><td width="180">Descripci&oacute;n OS </td>
+                        </div>
+                        <div width="500"><td width="616" class="userinput">{os_descripcion} </td>
+                        </div>
+                        <div width="180"><td width="360">Proyecto</td>
+                        </div>
+                        <div width="713"><td width="387" class="userinput">{proy_nombre}</td>
+                        </div>
+                      </tr>
+                      <tr>
+                        <td width="180">Comentarios</td>
+                        <td colspan="3" class="userinput">{os_comentarios}</td>
+                      </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos Cliente</legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="220">C&eacute;dula</td>
+                        <td width="757" class="userinput">{clie_rut}</td>
+                        <td width="86">Nombre</td>
+                        <td width="480" class="userinput">{clie_nombre}&nbsp;{clie_paterno}&nbsp;{clie_materno}</td>
+                      </tr>
+                      <tr>
+                        <td>Direcci&oacute;n</td>
+                        <td width="757" class="userinput">{dire_direccion} </td>
+                        <td width="86">Barrio</td>
+                        <td width="480" class="userinput">{comu_nombre}</td>
+                      </tr>
+                      <tr>
+                        <td height="26">Tel&eacute;fono</td>
+                        <td width="757" class="userinput">{clie_telefonocasa}</td>
+                        <td width="86">{empresa}</td>
+						<td width="480" class="userinput">{clie_razonsocial}</td>
+                      </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Direcci&oacute;n de Servicio (Despacho , Instalaciones) </legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="212">Tel&eacute;fono</td>
+                        <td width="652" class="userinput">{dire_telefono_des}</td>
+                        <td width="115">Departamento</td>
+                        <td width="564" class="userinput">{departamento_des}</td>
+                      </tr>
+                      <tr>
+                        <td width="212">Direcci&oacute;n</td>
+                        <td width="652" class="userinput">{dire_direccion_des}</td>
+                        <td width="115">Ciudad</td>
+                        <td width="564" class="userinput">{ciudad_des}</td>
+                      </tr>
+                      <tr>
+                        <td width="212" height="26">Indicaci&oacute;n</td>
+                        <td width="652" class="userinput">{dire_observacion_des} </td>
+                        <td width="115">&nbsp;Barrio</td>
+                        <td width="564" class="userinput">&nbsp;{comu_nombre_des}</td>
+                      </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+            </table>
+              <br>
+      <!---include de os-detalle!-->
+              <table width="600" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+            <tr>
+              <th width="55">UPC/(SKU)</th>
+              <th width="38">Tipo</th>
+              <th width="277">Descripci&oacute;n</th>
+              <th width="69">Despacho</th>
+              <th width="66">Instalaci&oacute;n</th>
+              <th width="39">Cant</th>
+			  <th width="65">Precio</th>
+              <th width="61">Total</th>
+            </tr>
+		 <!-- BEGIN Precio_Total -->
+		   <tr valign="top">
+                <td height="48" align="center">{cod_barra}<br>
+              ({cod_sap})</td>
+			    <td><div align="center">{osde_tipoprod}</div></td>
+                <td>{osde_descripcion}{especificacion}{osde_especificacion}</td>
+                <td>{tipo_nombre}</td>
+	            <td><div align="center">{osde_instalacion}</div></td>
+                <td><div align="right">{osde_cantidad}</div></td>
+				<td><div align="right">{precioVacio}{osde_precio}</div></td>
+				<td><div align="right">{totalVacio}{Total}</div></td>
+		 <!-- END Precio_Total -->
+          </table>  
+      
+		  </td>
+        </tr>
+      </table>
+    

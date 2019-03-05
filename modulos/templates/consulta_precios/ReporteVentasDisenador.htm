@@ -1,0 +1,178 @@
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<!-- para el calendario --->
+<SCRIPT LANGUAGE="JavaScript">
+	var cal1 = new CalendarPopup("testdiv1");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = 20;										
+	cal1.offsetY = 0;
+</SCRIPT>  
+<SCRIPT LANGUAGE="JavaScript">
+/*evalua las fechas*/
+	function EvaluaFechas(fi,ft){
+		var fecha1=new Date()
+		var fecha2=new Date()
+		var str1 = fi;
+		var str2 = ft;
+		
+		fechaArr1 = new Array;
+		fechaArr2 = new Array;
+		 
+		fechaArr1 = str1.split("/");
+		fechaArr2 = str2.split("/");
+		/* convierte la fecha a número comparable*/
+		fecha1.setFullYear(fechaArr1[2],fechaArr1[1]-1,fechaArr1[0])
+		fecha2.setFullYear(fechaArr2[2],fechaArr2[1]-1,fechaArr2[0])
+		 
+		if (fecha1>fecha2){
+		  return false;
+		}
+		if (fecha1 == fecha2){
+		  return true;
+		}
+		if (fecha1 < fecha2){
+		  return true;
+		}
+	}
+	/************/
+	function DetalleDiseno(sel_local,usr){
+		document.jump.accion.value = 'VerReporte';
+		document.jump.numero_local.value = sel_local;
+		document.jump.usuario.value = usr;
+		document.jump.fechaIni.value = document.disenador.fecha_inicio.value;
+		document.jump.fechaTer.value = document.disenador.fecha_termino.value;
+		document.jump.submit();	
+	}
+
+	function Ver_Reporte(accion){
+		var select_local,fecha_inicio,fecha_termino;
+		var valor=true;
+		select_local =document.disenador.select_local[document.disenador.select_local.selectedIndex].value;
+		fecha_inicio =document.disenador.fecha_inicio.value;
+		fecha_termino=document.disenador.fecha_termino.value;
+		valor=EvaluaFechas(fecha_inicio,fecha_termino);
+		if(valor==false){
+			alert('Fecha de inicio mayor que fecha de término');
+			document.disenador.fecha_inicio.select();
+			return false;
+		}
+		document.disenador.accion.value = accion;
+		if (accion=='VerReporte'){
+			document.disenador.submit();
+		}
+		if (accion=='Imprimir'){
+			popUpWindowModal('printframe_D.php?select_local='+select_local+'&fecha_inicio='+fecha_inicio+'&fecha_termino='+fecha_termino+'&accion='+accion, 100, 100, 710, 500);
+		}
+		if (accion=='Exportar'){
+			document.disenador.submit();
+		}
+	}
+
+</SCRIPT> 
+<table width="780" height="30" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">Resumen Ventas Por Dise&ntilde;ador</td>
+    <td width="390" class="titulonormal"></td>
+  </tr>
+</table>
+<table width="700" height="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<FORM NAME="disenador" METHOD="POST" ACTION="reporte_disenador.php" onSubmit="">
+<input type="hidden" name="accion" value="">
+  <tr>
+    <td valign="top">
+	 <table width="90%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="320">
+			<table border="0" align="center" cellpadding="0" cellspacing="0" class="textonormal">
+                <tr>
+                  <td valign="top"><p class="userinput">
+                      <fieldset>
+                      <legend>Local</legend>
+                      <table width="150"  border="0" cellspacing="1" cellpadding="1">
+                        <tr>
+                          <td><span class="userinput">
+	                        <select name="select_local" class="select1"  >
+                            <option value="0" >Todos</option>
+							<!-- BEGIN Locales -->
+                            <option value="{id_local}" {selected}>{nom_local}</option>
+                            <!-- END Locales -->
+							 </select></span></td>
+                        </tr>
+                      </table>
+                      </fieldset>
+					</td>
+					<!-- Elemento Estado -->
+					<td valign="top">
+						<fieldset>
+							<legend>Rango Fechas</legend>
+							<table width="300" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="textonormal">Inicio
+									<input name="fecha_inicio" id="fecha_inicio" type="text" size=10 maxlength="10" value="{fecha_inicio}" onClick="cal1.select(document.forms[0].fecha_inicio,'anchor1','dd/MM/yyyy'); return false;">
+									<a href="#" onClick="cal1.select(document.forms[0].fecha_inicio,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Inicio "></a>
+									 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+								  </td>
+									<td>
+										&nbsp;
+									</td>
+									<td class="textonormal" >Término
+									<input name="fecha_termino" id="fecha_termino" type="text" size=10 maxlength=10 value="{fecha_termino}" onClick="cal1.select(document.forms[0].fecha_termino,'anchor','dd/MM/yyyy'); return false;">
+									<a href="#" onClick="cal1.select(document.forms[0].fecha_termino,'anchor','dd/MM/yyyy'); return false;" name="anchor" id="anchor"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Término "></a>
+									 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+					</td>
+					<td valign="top"><p class="userinput">
+                      <fieldset>
+                      <legend>Cat. Cliente</legend>
+                      <table width="150"  border="0" cellspacing="1" cellpadding="1">
+                        <tr>
+                          <td><span class="userinput">
+	                        <select name="cat_cliente" id="cat_cliente" class="select1">
+						        <option value="">Todos</option>
+						        <!-- BEGIN cat_cliente -->
+						        <option value="{id_categoria}" {selected}>{nombre_categoria}</option>
+						        <!-- END cat_cliente -->
+						    </select></span>
+						  </td>                            
+                        </tr>
+                      </table>
+                      </fieldset>
+					</td>
+					<td>
+						
+					</td>
+					<td>
+						<table cellspacing="5" cellpadding="2">
+						<tr>
+							<td align="center"><input type="button" name="Button23" value="&nbsp;Ver Reporte&nbsp;&nbsp;" onClick="Ver_Reporte('VerReporte')"><td>
+						</tr>
+						<tr>
+							<td align="center"><input type="button" name="Button23" value="Exportar Excel" onClick="Ver_Reporte('Exportar')"><td>
+						</tr>
+						<tr>
+							<td align="center"><input type="button" name="Button23" value="&nbsp;&nbsp;&nbsp;Imprimir&nbsp;&nbsp;&nbsp;&nbsp;" onClick="Ver_Reporte('Imprimir')"><td>
+						</tr>
+						</table>					
+					</td>
+                </tr>
+              </table>
+    	  </td>
+	   </tr>
+</form>       
+  <tr>
+    <td valign="top">
+ {body}
+  </td>
+  </tr>
+   </table>
+
+  </td>
+  </tr>
+   </table>
+

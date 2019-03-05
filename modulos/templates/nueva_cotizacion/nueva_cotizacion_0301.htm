@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Temp</title>
+<SCRIPT LANGUAGE="JavaScript">
+	if (!'{des_corta}') {
+		//alert('codigo');
+		parent.addprod.textfield3.value='';
+		parent.addprod.textfield5.value='';
+		parent.addprod.textfield5_aux.value='';
+		parent.addprod.textfield6.value='';
+		parent.addprod.textfield2.focus();
+		parent.addprod.textfield2.select();
+	}
+	else {
+
+		parent.addprod.textfield2_aux.value='{cod_prod1}';
+		parent.addprod.textfield_codbarra.value='{cod_barra}';
+		parent.addprod.textfield3.value='{des_corta}';
+		parent.addprod.textfield3_aux.value='{des_corta}';
+		parent.addprod.textfield5.value='{prec_valor}';
+		parent.addprod.textfield5_aux.value='{prec_valor}';
+		parent.addprod.textfield_idprod.value='{id_producto}';
+		parent.addprod.textfield_tipoprod.value='{prod_tipo}';
+		parent.addprod.textfield_subtipoprod.value='{prod_subtipo}';
+		parent.addprod.textfield_preccosto.value='{prec_costo}';
+		parent.addprod.textfield_precio_req.value='{precio_req}';
+		parent.addprod.textfield_precio_mod.value='{precio_mod}';
+		parent.addprod.textfield_valid_stock.value='{valid_stock}';
+		parent.addprod.textfield_stock_prov.value='{stock_proveedor}';
+		parent.addprod.textfield4.value='1';
+		parent.addprod.textfield4.focus();
+		parent.addprod.textfield4.select();
+		if (parent.addprod.textfield5.value)
+			parent.addprod.textfield6.value=parseFloat(parent.addprod.textfield5.value)*parseFloat(parent.addprod.textfield4.value);
+		parent.addprod.textfield5.disabled = ('{precio_mod}' == '1')?false:true;
+		if ('{mult_cod_bar}') {
+			parent.show_mult_cod_bar('{mult_cod_bar}');
+			parent.text = '{mult_cod_bar}';
+		}
+	}
+</SCRIPT>
+</head>
+<body>
+ &nbsp;
+</body>
+</html>

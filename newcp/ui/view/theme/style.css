@@ -1,0 +1,351 @@
+/* 
+    Document   : style.css
+    Created on : Sep 12, 2008, 11:39:37 PM
+    Author     : Frank D. Martinez <mnesarco@gmail.com>
+    Description:
+        Main theme stylesheet.
+*/
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+}
+
+div {
+    margin: 0px;
+    padding: 0px;
+}
+
+body#mainBody {
+    background: url(images/bg_pattern_002.jpg);
+}
+
+div#appOuterBody {
+    border: 1px solid #000000;
+    background: #ffffff;
+    width: 840px;
+}
+
+div#appHeader {
+    background: #ee1b24;
+    height: 55px;
+}
+
+div#appHeader div.easy-logo {
+    background: url(images/logo3.gif) left top no-repeat;
+    height: 55px;
+}
+
+div#appHeader div.cp-logo {
+    background: url(images/logo5.jpg) right top no-repeat;
+    height: 55px;
+}
+
+div#appFooter {
+    background: #dedede;
+    border-top: 1px solid #ee1b24;
+    font-size: 12px;
+    padding: 3px;
+}
+
+div#appInnerBody {
+    padding: 5px;
+    background: #ffffff;
+    min-height: 400px;
+    height: auto !important;
+    height: 400px;
+}
+
+.output1 {
+    color: #434D67;
+}
+
+div#__debug {
+    border: 1px dashed orange;
+    padding: 10px;
+    background: #000000;
+    color: #e0e0e0;
+    margin: 10px;
+}
+
+div#__debug h1 {
+    margin: 3px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color: orange;
+    border-bottom: 1px solid orange;
+}
+
+div.flowStep {
+    width: 40px;
+    height: 40px;
+    background: url(images/flowStep.gif);
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 35px;
+    text-indent: 12px;
+}
+
+div.flowStepActive {
+    background: url(images/flowStepActive.gif) !important;
+    color: #ffffff !important;
+}
+
+div.flowStepArrow {
+    background: url(images/flowStepArrow.gif) !important;
+    width: 24px;
+    height: 20px;
+}
+
+td.flowStepTitle {
+    background: #ffffff;
+    color: #ee1b24;
+    font-size: 14px;
+}
+
+fieldset.formSection {
+    border: 1px solid #e0e0e0;
+    border-top: 1px solid #ee1b24 !important;
+    margin-bottom: 5px;
+    padding: 2px;
+}
+
+.simpleSection {
+    border: 1px solid #e0e0e0;
+    border-top: 1px solid #ee1b24 !important;
+    padding: 5px;
+}
+
+fieldset.formSection legend {
+    /*border: 1px solid #ee1b24;*/
+    padding: 2px 5px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 12px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: bold;
+}
+
+/** Form Styles */
+table.formLayout {
+    border-collapse: collapse;
+}
+
+table.formLayout td {
+    padding: 2px;
+}
+
+table.formLayout td label {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+table.formLayout td span.output-label {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #999999;
+}
+
+table.formLayout td input[type=text],
+table.formLayout td textarea {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    border: 1px inset;
+    padding: 2px;
+}
+
+table.formLayout2 {
+    border-collapse: collapse;
+}
+
+table.formLayout2 td {
+    padding: 1px;
+}
+
+table.formLayout2 td label {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+table.formLayout2 td span.output-label {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #999999;
+}
+
+table.formLayout2 td input[type=text],
+table.formLayout2 td textarea {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    border: 1px inset;
+    padding: 2px;
+}
+
+table.formLayout3 td {
+    padding: 5px;
+}
+
+input.focused-input {
+    background-color: #f5ffb9;
+}
+
+input.input-error {
+    background: #ffeeee url(images/validerr.gif) top right no-repeat;
+}
+
+select.input-error,
+textarea.input-error {
+    background: #ffc0c0;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+a.button {
+    background-color: #ffffff;
+    background-position: top left;
+    background-repeat: no-repeat;
+    display: inline-block;
+    border: 1px outset;
+    padding: 2px 5px 2px 5px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: left;
+    margin-right: 3px;
+    white-space: nowrap;
+}
+
+.next-button-icon {
+    text-indent: 28px;
+    background-image: url(images/flow-next.gif);
+    height: 23px;
+    line-height: 23px;
+    background-position: 2px 2px !important;
+    color: green;
+}
+
+.print-button-icon {
+    text-indent: 20px;
+    background-image: url(images/printer.png);
+    height: 18px;
+    line-height: 18px;
+    background-position: 2px 2px !important;
+}
+
+.prev-button-icon {
+    text-indent: 28px;
+    background-image: url(images/flow-prev.gif);
+    height: 23px;
+    line-height: 23px;
+    background-position: 2px 2px !important;
+    color: green;
+}
+
+.edit-button-icon {
+    text-indent: 20px;
+    background-image: url(images/edit.gif);
+    height: 18px;
+    line-height: 18px;
+    background-position: 2px 2px !important;
+}
+
+.freight-button-icon {
+    text-indent: 20px;
+    background-image: url(images/lorry.png);
+    height: 18px;
+    line-height: 18px;
+    background-position: 2px 2px !important;
+}
+
+.new-button-icon {
+    text-indent: 20px;
+    background-image: url(images/new.gif);
+    height: 18px;
+    line-height: 18px;
+    background-position: 2px 2px !important;
+    color: orange;
+}
+
+div.buttons-bar {
+    padding: 5px;
+    text-align: center;
+}
+
+.sep10x10 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.sep20x10 {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+}
+
+.cascade-loading {
+    background: transparent url("images/load.gif") no-repeat center;
+}
+
+div.messages {
+    border: 1px dashed #f00000;
+    background: #ffffb0;
+    padding: 4px;
+    font-size: 10px;    
+}
+
+div.messages ul, div.messages ol {
+    margin: 0px;
+}
+
+.outputText {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    border: 1px inset;
+    padding: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.outputText2 {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    border: 1px inset;
+    padding: 2px 4px 2px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.outputTextArea2 {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    border: 1px inset;
+    padding: 2px;
+    display: block;
+}
+
+form {
+    margin: 0px;
+    padding: 0px;
+}
+
+.flexigrid th {
+    font-size: 11px;
+}
+
+.loading {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(images/load.gif) no-repeat;
+    display: none;
+}

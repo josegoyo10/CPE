@@ -1,0 +1,173 @@
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<!-- para el calendario --->
+<SCRIPT LANGUAGE="JavaScript">
+	var cal1 = new CalendarPopup("testdiv1");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = 20;										
+	cal1.offsetY = 0;
+
+
+//Esta funcion javascript retorna la cantidad de dias entre 2 fechas
+ restaFechas = function(f1,f2)
+ {
+ var aFecha1 = f1.split('/');
+ var aFecha2 = f2.split('/');
+ var fFecha1 = Date.UTC(aFecha1[2],aFecha1[1]-1,aFecha1[0]);
+ var fFecha2 = Date.UTC(aFecha2[2],aFecha2[1]-1,aFecha2[0]);
+ var dif = fFecha2 - fFecha1;
+ var dias = Math.floor(dif / (1000 * 60 * 60 * 24));
+ return dias;
+ }
+
+
+/*evalua las fechas*/
+function EvaluaFechas(fi,ft){
+	var fecha1=new Date()
+	var fecha2=new Date()
+	var str1 = fi;
+	var str2 = ft;
+
+	
+	fechaArr1 = new Array;
+	fechaArr2 = new Array;
+	 
+	fechaArr1 = str1.split("/");
+	fechaArr2 = str2.split("/");
+	/* convierte la fecha a número comparable*/
+	fecha1.setFullYear(fechaArr1[2],fechaArr1[1]-1,fechaArr1[0])
+	fecha2.setFullYear(fechaArr2[2],fechaArr2[1]-1,fechaArr2[0])
+
+
+	if (fecha1>fecha2){
+	  return false;
+	}
+	if (fecha1 == fecha2){
+	  return true;
+	}
+	if (fecha1 < fecha2){
+	  return true;
+	}
+   
+}
+/*cambia la validacion del texto según el radio marcado*/
+
+
+/****ver imprimir reporte**/
+	function Ver_Reporte(accion){
+		var select_local,select_top,t_top,select_tipo,select_subtipo,va,texto_dato,i,v;
+		var valor=true;
+		var cambia=true;
+		var restar = '';
+		
+		fecha_inicio=document.producto.fecha_inicio.value;
+		fecha_termino=document.producto.fecha_termino.value;
+
+       if ((fecha_inicio == '') || (fecha_termino == '')) {
+           alert('Ingrese una Fecha de inicio y/o Fecha de t\u00E9rmino..');
+			document.producto.fecha_inicio.select();
+			return false;
+
+        } else {
+
+			valor=EvaluaFechas(fecha_inicio,fecha_termino);
+			if(valor==false){
+				alert('Fecha de inicio mayor que fecha de t\u00E9rmino');
+				document.producto.fecha_inicio.select();
+				return false;
+			 }
+			 
+			 restar = restaFechas(fecha_inicio,fecha_termino);
+           
+			   if (restar > 31) {
+			       
+			       alert("La cantidad de d\u00EDas entre la fecha inicio y fecha t\u00E9rmino debe ser menor o igual a 31 d\u00EDas..");
+			       return false;
+
+			   } else{
+    
+		
+				document.producto.accion.value = accion;
+				if (accion=='Exportar'){
+					document.producto.submit();
+				 }
+				
+		     }
+		
+		  }
+	}
+</SCRIPT>  
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">Pagos Manuales</td>
+    <td width="390" class="titulonormal"></td>
+  </tr>
+</table>
+
+<table width="99%" height="90%" align="center" border="0" cellpadding="0" cellspacing="0">
+<FORM NAME="producto" METHOD="POST" ACTION="reporte_pagos_manuales.php" onSubmit="">
+<input type="hidden" name="accion" value="">
+<input type="hidden" name="prod_subtipo" value="">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td valign="top">
+
+			<!--------------------------- COMIENZO BARRA FILTROS ------------------------>
+             
+			<table width="100%" border="0" align="center" cellpadding="0" cellspacing="3" class="textonormal">
+				<tr>
+
+             
+					<!-- Elemento Estado -->
+					<td valign="top" width="38%">
+						<fieldset>
+							<legend>Rango Fechas</legend>
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="textonormal">Inicio
+									<input name="fecha_inicio" id="fecha_inicio" type="text" size=10 maxlength="10" value="{fecha_inicio}" onClick="cal1.select(document.forms[0].fecha_inicio,'anchor1','dd/MM/yyyy'); return false;">
+									<a href="#" onClick="cal1.select(document.forms[0].fecha_inicio,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Inicio "></a>
+									 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+								  </td>
+									<td>
+										&nbsp;&nbsp;&nbsp;
+									</td>
+									<td class="textonormal" >T&eacute;rmino
+									<input name="fecha_termino" id="fecha_termino" type="text" size=10 maxlength=10 value="{fecha_termino}" onClick="cal1.select(document.forms[0].fecha_termino,'anchor','dd/MM/yyyy'); return false;">
+									<a href="#" onClick="cal1.select(document.forms[0].fecha_termino,'anchor','dd/MM/yyyy'); return false;" name="anchor" id="anchor"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Término "></a>
+									 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+					</td>
+
+					<!-- Elemento Bot&oacute;n B&uacute;squeda -->
+					<td  width="40%" rowspan="2" valign="top" align="right">
+						<table border="0"  cellspacing="0"   height="10" cellpadding="0">
+				
+						<tr>
+						<!-- Elemento Bot&oacute;n B&uacute;squeda -->
+						<td valign="bottom"  colspan="2" align="center" >
+							<input type="button" name="Button23" value="&nbsp;&nbsp;Exportar a Excel &nbsp;&nbsp;" onClick="Ver_Reporte('Exportar')">
+						</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+			</table>                          
+	
+		</form>
+		{body}
+		</td>
+        </tr>
+      </table>
+     <p>&nbsp;</p>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>

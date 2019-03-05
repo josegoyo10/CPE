@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bons1="http://datadefinition.CalculoFlete.easy.com.co" xmlns:tns="http://CalculoFleteMediation/intefaces/CalculoFleteMediationIF" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CalculoFleteMediationIF" targetNamespace="http://CalculoFleteMediation/intefaces/CalculoFleteMediationIF">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://CalculoFleteMediation/intefaces/CalculoFleteMediationIF" xmlns:bons1="http://datadefinition.CalculoFlete.easy.com.co" xmlns:tns="http://CalculoFleteMediation/intefaces/CalculoFleteMediationIF" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://datadefinition.CalculoFlete.easy.com.co" schemaLocation="../data/ResponseCalcFlete.xsd"/>
+      <xsd:import namespace="http://datadefinition.CalculoFlete.easy.com.co" schemaLocation="../data/RequestCalcFlete.xsd"/>
+      <xsd:element name="CalcularFlete">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" nillable="true" type="bons1:RequestCalcFlete"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CalcularFleteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="response" nillable="true" type="bons1:ResponseCalcFlete"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="CalcularFleteRequestMsg">
+    <wsdl:part element="tns:CalcularFlete" name="CalcularFleteParameters"/>
+  </wsdl:message>
+    <wsdl:message name="CalcularFleteResponseMsg">
+    <wsdl:part element="tns:CalcularFleteResponse" name="CalcularFleteResult"/>
+  </wsdl:message>
+    <wsdl:portType name="CalculoFleteMediationIF">
+    <wsdl:operation name="CalcularFlete">
+      <wsdl:input message="tns:CalcularFleteRequestMsg" name="CalcularFleteRequest"/>
+      <wsdl:output message="tns:CalcularFleteResponseMsg" name="CalcularFleteResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <!--  ********************************** -->
+    <wsdl:binding name="CalculoFleteMediationIFExport1_CalculoFleteMediationIFHttpBinding" type="tns:CalculoFleteMediationIF">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CalcularFlete">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="CalcularFleteRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CalcularFleteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculoFleteMediationIFExport1_CalculoFleteMediationIFHttpService">
+    <wsdl:port binding="tns:CalculoFleteMediationIFExport1_CalculoFleteMediationIFHttpBinding" name="CalculoFleteMediationIFExport1_CalculoFleteMediationIFHttpPort">
+      <soap:address location="http://192.168.0.11:9084/CalculoFleteMMWeb/sca/CalculoFleteMediationIFExport1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

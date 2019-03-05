@@ -1,0 +1,1 @@
+select distinct pemo_per_id from permisosxmodulo where pemo_per_id = 1 and pemo_tipo = 2

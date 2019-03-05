@@ -1,0 +1,85 @@
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<!-- para el calendario --->
+<SCRIPT LANGUAGE="JavaScript">
+	var cal1 = new CalendarPopup("testdiv1");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = 20;										
+	cal1.offsetY = -85;
+</SCRIPT>  
+<SCRIPT LANGUAGE="JavaScript">
+	function cambia_valor(){
+		document.disenador.submit();
+	}
+</SCRIPT> 
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">Resumen Ventas Por Dise&ntilde;ador</td>
+    <td width="390" class="titulonormal"></td>
+  </tr>
+</table>
+<div style="width:780; height:500; overflow:auto;">
+<table width="780" height="90%" border="3" cellpadding="0" cellspacing="0">
+<FORM NAME="disenador" METHOD="POST" ACTION="reporte_disenador.php" onSubmit="">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="41%" valign="top">
+              <table border="0" align="center" cellpadding="0" cellspacing="2" class="textonormal">
+                <tr>
+                  <td valign="top"><p class="userinput">
+                      <fieldset>
+                      <legend>Local</legend>
+                      <table width="80%"  border="0" cellspacing="1" cellpadding="1">
+                        <tr>
+                          <td><span class="userinput">
+	                        <select name="select_local" class="select1" Onchange="cambia_valor()" >
+                            <option value="0" >Todos</option>
+							<!-- BEGIN Locales -->
+                            <option value="{id_local}" {selected}>{nom_local}</option>
+                            <!-- END Locales -->
+							 </select></span></td>
+                        </tr>
+                      </table>
+                      </fieldset>
+					</td>
+					<!-- Elemento Estado -->
+					<td valign="top">
+						<fieldset>
+							<legend>Rango Fechas</legend>
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="textonormal">Inicio
+									<input name="fecha_inicio" id="fecha_inicio" type="text" size=10 maxlength="10" value="{fecha_inicio}" onClick="cal1.select(document.forms[0].fecha_inicio,'anchor1','dd/MM/yyyy'); return false;">
+									<a href="#" onClick="cal1.select(document.forms[0].fecha_inicio,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Inicio "></a>
+									 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+								  </td>
+									<td>
+										&nbsp;
+									</td>
+									<td class="textonormal" >Término
+									<input name="fecha_termino" id="fecha_termino" type="text" size=10 maxlength=10 value="{fecha_termino}" onClick="cal1.select(document.forms[0].fecha_termino,'anchor','dd/MM/yyyy'); return false;">
+									<a href="#" onClick="cal1.select(document.forms[0].fecha_termino,'anchor','dd/MM/yyyy'); return false;" name="anchor" id="anchor"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Término "></a>
+									 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+					</td>
+
+					<td>
+						<input type="button" name="Button23" value="&nbsp;Ver Reporte&nbsp;&nbsp;">
+					</td>
+					<td>
+						<input type="button" name="Button23" value="&nbsp;&nbsp;&nbsp;Imprimir&nbsp;&nbsp;&nbsp;&nbsp;">
+					</td>
+					<td>
+						<input type="button" name="Button23" value="Exportar Excel">
+					</td>
+                </tr>
+              </table>
+</form>

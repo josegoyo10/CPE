@@ -1,0 +1,126 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+
+<script type="text/javascript">
+function checkDV(){
+	var crut = '';
+	if( validar_obligatorio( cotiza_Regalos_00.clie_rut, "La Cédula es obligatoria" )){
+		return false;
+	  	crut = '';
+	  }
+	if(validar_numero( cotiza_Regalos_00.clie_rut, "La Cédula debe ser un Número" )){
+		return false;	
+		crut = '';
+	  }
+	  
+	 mcrut= cotiza_Regalos_00.clie_rut.value;
+	  for(i=0; i<mcrut.length; ++i)
+		if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-'){
+		 crut = crut + mcrut.charAt(i);
+		}
+		
+	  largo = crut.length;
+	  if ( largo < 6 ){
+		alert("Debe ingresar la Cédula completa.");
+		document.cotiza_Regalos_00.clie_rut.focus();
+		document.cotiza_Regalos_00.clie_rut.select();
+		return false;
+	  }
+	
+	window.document.cotiza_Regalos_00.clie_rut.onkeypress = KeyIsEnter ;	  
+	document.cotiza_Regalos_00.submit();
+	return true;
+}
+
+function Accion_flecha_ant(){
+	location.href='../lista_Regalos/nueva_lista_sumario_01.php?idLista={idLista}';
+}
+</script>
+
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><br>{NOMBRE_PAGINA}<br><br>Paso 1/3 - {TEXT_TITULO} </td>
+    <td width="390" class="titulonormal">
+      <table  border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="../img/1b.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/2a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/3a.gif" width="40" height="40"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<FORM NAME="cotiza_Regalos_00" METHOD="POST" ACTION="cotiza_Regalos_00.php" >
+<INPUT TYPE="hidden" NAME="tipo" VALUE="{tpcliente}">
+<INPUT TYPE="hidden" NAME="clie_tipo" VALUE="{clie_tipo}">
+
+<table width="780" height="76%" border="0" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td valign="top">
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2" style="background-position: center; background-repeat: no-repeat;" background="../img/FondoListaReg.jpg">
+        <tr>
+          <td width="31%" valign="top"> 
+		  <br>		
+              <table border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><input name="tpcliente" type="radio" value="persona" checked>
+            {TEXT_CAMPO_0} </td>
+                </tr>
+					
+				<tr>
+                  <td>&nbsp;</td>
+				  <td align="center">{TEXT_CAMPO_3}&nbsp;(*)</td>
+                  <td align="center"><input name="clie_rut" type="text" value="" size="15" maxlength="14">&nbsp;&nbsp;</td>
+  <td>Ej :&nbsp;</td>
+    <td>79906867</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><div align="center">&nbsp;</div></td>
+                  <td><input name="idLista" type="hidden" value="{idLista}"></td>
+                </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td><table width="250"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+            <tr>
+              <td width="40">
+			    <a href="#" onClick="Accion_flecha_ant()"><img src="../img/anterior.gif" alt="prueba" width="23" height="23" border="0" title="Regresar"></a>
+			  </td>
+			  <td width="70">
+                <div align="left">{TEXT_FLECHA_ANT} </div>
+              </td>
+			  <td width="70">
+                <div align="right">{TEXT_FLECHA_SIG} </div>
+              </td>
+              <td width="40">
+			    <a href="#" onClick="checkDV()"><img src="../img/siguiente.gif" alt="prueba" width="23" height="23" border="0" title="Siguiente" ></a>
+			  </td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td><table width="200"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+            <tr>
+              <td width="200">(*) Datos obligatorios.
+			  </td>
+            </tr>
+          </table>
+			  
+			  </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</FORM> 
+<script LANGUAGE="javascript">
+	window.document.cotiza_Regalos_00.clie_rut.onkeypress = KeyIsRut;
+	document.cotiza_Regalos_00.clie_rut.focus();
+</script>

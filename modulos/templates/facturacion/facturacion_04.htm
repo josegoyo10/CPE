@@ -1,0 +1,146 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Cuenta Corriente Instalador <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<form name="ingreso_facturas" method="post">
+<INPUT TYPE="hidden" name="accion">
+<INPUT TYPE="hidden" name="id_instalador" value="{id_instalador}">
+<table width="780" height="90%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+           <table width="443" border="0" align="center" cellpadding="0" cellspacing="2" class="textonormal">
+            <tr>
+              <td width="150" colspan="2" valign="top">C&eacute;dula Instalador </td>
+              <td width="287" valign="top"><input name="rut" type="text" value="{rutcd}">
+                <input type="button" name="Submit" value="Buscar" onClick="validabuscar()"></td>
+            </tr>
+            <tr>
+              <td colspan="2" valign="top">Nombre/Raz&oacute;n</td>
+              <td valign="top"><input name="textfield" type="text" value="{nombre}" class="select2" readonly size=50></td>
+            </tr>
+          </table>
+         </td>
+        </tr>
+        <tr>
+			<td width="90%" valign="top">
+				<table width="100%" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+					{ini_coment}
+					<tr>
+						<th width="50">Fecha</th>
+						<th width="35">Hora</th>
+						<th width="60">Cargo ($)</th>
+						<th width="60">Abono ($)</th>
+						<th width="360">Descripción</th>
+						<th width="60">Saldo</th>
+						<th width="60">Pre-Factura</th>
+					</tr>
+					{fin_coment}
+					<!-- BEGIN Cartola -->
+					<tr>
+						<td><div align="center">{fechac}</div></td>
+						<td><div align="center">{horac}</div></td>
+						<td><div align="right">{cargo}</div></td>
+						<td><div align="right">{abono}</div></td>
+						<td>{descripcion}</td>
+						<td><div align="right">{saldo}</div></td>
+						<td><div align="right">{prefact}</div></td>
+					</tr>
+					<!-- END Cartola -->
+					{ini_coment_nomov}
+					<tr>
+						<td colspan=7 align=center height=200 valign=middle class="titulonormal">No existen movimientos en la cuenta del instalador</td>
+					</tr>
+					{fin_coment_nomov}
+				</table>
+			</td>
+        </tr>
+      </table>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</form>
+
+<SCRIPT LANGUAGE="JavaScript">
+window.document.ingreso_facturas.rut.onkeypress = KeyIsRut;
+document.ingreso_facturas.rut.focus();
+
+function checkDV( maccion ){
+	if( validar_obligatorio( ingreso_facturas.rut, "Cédula es obligatoria" ))
+			return false;
+
+	  crut = '';
+	  mcrut= ingreso_facturas.rut.value;
+	  for(i=0; i<mcrut.length; ++i)
+		if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-'){
+		 crut = crut + mcrut.charAt(i);
+		}
+	  largo = crut.length;
+	  if ( largo < 2 ){
+		alert("Debe ingresar la Cédula completa.");
+		document.ingreso_facturas.rut.focus();
+		document.ingreso_facturas.rut.select();
+		return false;
+	  }
+
+	  if ( largo > 2 )
+		rut = crut.substring(0, largo - 1);
+	  else
+		rut = crut.charAt(0);
+
+		dv = crut.charAt(largo-1);
+
+	  //checkCDV( dv );
+	  if ( rut == null || dv == null )
+	   return 0;
+	   var dvr = '0';
+	   suma = 0;
+	   mul  = 2;
+
+	  for (i= rut.length -1 ; i >= 0; i--){
+	   suma = suma + rut.charAt(i) * mul;
+		if (mul == 7)
+			mul = 2;
+		else
+			mul++;
+	  }
+	  res = suma % 11;
+	  if (res==1)
+		dvr = 'k';
+	  else if (res==0)
+		dvr = '0';
+	  else{
+		dvi = 11-res;
+		dvr = dvi + "";
+	  }
+		/* Validación de digito de verificación
+	  if ( dvr != dv.toLowerCase() ){
+		alert("La Cédula ingresada es incorrecta.");
+		document.ingreso_facturas.rut.focus();
+		document.ingreso_facturas.rut.select();
+		return false;
+	  }
+		*/
+	  document.ingreso_facturas.rut.value = crut.substr(0, crut.length-1); 
+	  window.document.ingreso_facturas.rut.onkeypress = KeyIsEnter ;
+	  if (maccion == undefined )
+		  document.ingreso_facturas.accion.value = 'buscar';
+	  else
+		  document.ingreso_facturas.accion.value = maccion;
+	  document.ingreso_facturas.submit();
+	  return false;
+}
+
+function validabuscar() {
+	checkDV('buscar');
+}
+
+{mensaje} /* Mensaje mostrado en caso de alertas posteriores al proceso */
+
+</SCRIPT>

@@ -1,0 +1,79 @@
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+
+<style type="text/css" >
+
+.Estilo1 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-style:normal;
+}
+.Estilo2 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-style:normal;
+	font-weight:bold;
+}
+
+</style>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+     <div align="center" style="paddin">
+      <A HREF="#"  onClick="javascript:void(window.open('framed_imprimeAll_guiaDespacho.php','nombre','toolbar=no,width=650,height=auto'));"><img src="../img/ico_print.gif" width="34" height="34" border=0></A>
+      <div class="Estilo2" style="padding:1px;">Imprimir 1 a 1 </div>
+    </div>
+  <table width="630" height="auto" border="0" cellpadding="0" cellspacing="0" style="border: 2px solid #000000;">
+  <tr>
+    <td width="560" height="69" valign="top">
+    <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td width="15%" height="49"><img src="../img/logo2.jpg" width="49" height="45"></td>
+        <td width="84%" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" --> Listado de Guias al {fechaActual}<!-- InstanceEndEditable -->
+		<td width="6%">&nbsp;</td>
+      </tr>
+    </table>
+	</td>
+  </tr>  
+  <tr>
+    <td valign="top">
+  <table width="100%" border="0" align="left">
+    <tr>
+      <td><table width="100%" border="0" align="left">
+        <tr>
+          <td width="10%" height="24" bgcolor="#CCCCCC" class="Estilo2" align="center">OT No.</td>
+          <td width="15%" bgcolor="#CCCCCC" class="Estilo2" align="center">C&eacute;dula Numero</td>
+          <td width="30%" bgcolor="#CCCCCC" class="Estilo2" align="center">Nombre de Cliente</td>
+          <td width="25%" bgcolor="#CCCCCC" class="Estilo2" align="center">Direcci&oacute;n</td>
+          <td width="20%" bgcolor="#CCCCCC" class="Estilo2" align="center">Barrio</td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td><table width="100%" height="26" border="0" align="left" cellpadding="2" cellspacing="0" class="tabla2">
+        <!-- BEGIN Bloque_guias -->
+        <tr>
+          <td width="10%" align="center" class="textonormal">{ot_id}</td>
+          <td width="15%" align="left" class="textonormal">{clie_rut}</td>
+          <td width="30%" align="left" class="textonormal">{clie_nombre}</td>
+          <td width="25%" align="left" class="textonormal">{dire_direccion}</td>
+          <td width="20%" align="center" class="textonormal">{comu_nombre}</td>
+          <!-- END Bloque_guias -->
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+      <div align="center">    </div></td>
+  </tr>
+</table>
+</body>
+</html>

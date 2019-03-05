@@ -1,0 +1,118 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+
+<script type="text/javascript">
+function checkDV(){
+	var crut = '';
+	if( validar_obligatorio( nueva_lista_00.clie_rut, "La Cédula es obligatoria" )){
+		return false;
+	  	crut = '';
+	  }
+	if(validar_numero( nueva_lista_00.clie_rut, "La Cédula debe ser un Número" )){
+		return false;	
+		crut = '';
+	  }
+	  
+	 mcrut= nueva_lista_00.clie_rut.value;
+	  for(i=0; i<mcrut.length; ++i)
+		if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-'){
+		 crut = crut + mcrut.charAt(i);
+		}
+		
+	  largo = crut.length;
+	  if ( largo < 6 ){
+		alert("Debe ingresar la Cédula completa.");
+		document.nueva_lista_00.clie_rut.focus();
+		document.nueva_lista_00.clie_rut.select();
+		return false;
+	  }
+	
+	window.document.nueva_lista_00.clie_rut.onkeypress = KeyIsEnter ;	  
+	document.nueva_lista_00.submit();
+	return true;
+}
+</script>
+
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">Paso 1/5 - {TEXT_TITULO} </td>
+    <td width="390" class="titulonormal">
+      <table  border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="../img/1b.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/2a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/3a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/4a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/5a.gif" width="40" height="40"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<FORM NAME="nueva_lista_00" METHOD="POST" ACTION="nueva_lista_00.php" >
+<INPUT TYPE="hidden" NAME="tipo" VALUE="{tpcliente}">
+<INPUT TYPE="hidden" NAME="clie_tipo" VALUE="{clie_tipo}">
+
+<table width="780" height="76%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top">
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2" style="background-position: center; background-repeat: no-repeat;" background="../img/FondoListaReg.jpg">
+        <tr>
+          <td width="31%" valign="top"> 
+		  <br>		
+              <table border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><input name="tpcliente" type="radio" value="persona" checked>
+            {TEXT_CAMPO_0} </td>
+                </tr>
+					
+				<tr>
+                  <td>&nbsp;</td>
+				  <td align="center">{TEXT_CAMPO_3}&nbsp;(*)</td>
+                  <td align="center"><input name="clie_rut" type="text" value="" size="15" maxlength="14">&nbsp;&nbsp;</td>
+  <td>Ej :&nbsp;</td>
+    <td>79906867</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><div align="center">&nbsp;</div></td>
+                  <td>&nbsp; </td>
+                </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td><table width="115"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+            <tr>
+              <td width="70">
+                <div align="right">{TEXT_FLECHA_SIG} </div></td>
+              <td width="31">
+			  <a href="#" onClick="checkDV()"><img src="../img/siguiente.gif" alt="prueba" width="23" height="23" border="0" title="Siguiente" ></a></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td><table width="200"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+            <tr>
+              <td width="200">(*) Datos obligatorios.
+			  </td>
+            </tr>
+          </table>
+			  
+			  </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</FORM> 
+<script LANGUAGE="javascript">
+	window.document.nueva_lista_00.clie_rut.onkeypress = KeyIsRut;
+	document.nueva_lista_00.clie_rut.focus();
+</script>

@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Imprimir Guia Despacho</title>
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="JavaScript" src="../funciones.js"></script>
+<SCRIPT>
+	var ejecutar = '';
+	
+</SCRIPT>
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table width="580" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="534" class="titulonormal">Imprimir Gu&iacute;a de Despacho OT N&deg; {ot_id}  </td>
+    <td width="46" class="titulonormal"></td>
+  </tr>
+</table>
+<br>
+<table width="580" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top">
+      <table width="100%" border="0" cellpadding="1" cellspacing="1" class="textonormal">
+        <tr class="textonormal">
+          <td>
+		  <fieldset>
+		  <legend>Datos Despacho </legend>
+		  <table width="90%" border="0" align="center" cellpadding="1" cellspacing="1" class="textonormal">
+            <tr>
+              <td width="22%">N&deg; OD  : </td>
+              <td width="28%">{ot_id}</td>
+              <td width="22%">Centro Despacho : </td>
+              <td width="28%">{nombre_local} </td>
+            </tr>
+            <tr>
+              <td>Cant. Documentos : </td>
+              <td>{cant_doc}</td>
+              <td>Cant. Productos: </td>
+              <td>{cant_prod}</td>
+            </tr>
+		<form NAME="guia" METHOD="POST" action ="imprimir_guia.php" onSubmit="">
+		<input type="hidden" name="action" Value="">
+		<input type="hidden" name="ot_id" Value="">
+			<tr>
+              <td>Impresora : </td>
+              <td colspan="3"><input name="impresora" type="text" class="userinput"  disabled value="{impresora}" size="50"></td>
+              </tr>
+            
+          </table>
+		  </fieldset>
+            <br>
+<table width="90%" border="0" align="center" cellpadding="1" cellspacing="1" class="textonormal">
+ <tr class="textonormal">
+ <td valign="top">
+	<TABLE width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+	<TR>
+	<TD width="100%">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="tabla2">
+			  <tr>
+				<th width="9%" scope="col">OT Ref. </th>
+				<th width="12%" scope="col">C&eacute;dula Cliente </th>
+				<th width="24%" scope="col">Nombre Cliente </th>
+				<th width="20%" scope="col">Direcci&oacute;n</th>
+				<th width="12%" scope="col">Barrio</th>
+				<th width="12%" scope="col">Página</th>
+			  </tr>
+	</table>
+	</TD>
+	</TR>
+	<TR>
+	<TD width="100%">
+	<div align="left" style="height:150px; overflow:auto;">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" class="tabla2">
+		<!-- BEGIN Bloque_guias_applet -->
+			  <tr>
+				<td width="9%" ><div align="right" class="textonormal">{ot_id}</div></td>
+				<td width="12%"><div align="center" class="textonormal">{Crut_a}</div></td>
+				<td width="24%" align="center" >{Cnombre_a} </td>
+				<td width="20%" align="center" >{Cdireccion_a}</td>
+				<td width="12%" align="center" >{nombre_comuna_a}</td>
+				<td width="12%" align="center">{secuencia_a}</td>
+			  </tr>
+		<!-- END Bloque_guias_applet -->
+		</table>
+	</div>
+	</TD>
+	</TR>
+<TR>
+<TD><div align="left" class="textonormal">Applet:</div><br>
+<center>
+	<applet code="printWeb.class" name="printWeb" archive="../../applet/Print/impresion.jar" width=500 height=50 mayscript>
+	<param name="archivo" value="{URL_CPROY}/impresion/{archivo}">
+	<param name="impresora" value="{impresora}" >
+	</applet>
+</center>
+</TD>
+</TR>
+</table>
+</form>
+<p align="center">
+  <input type="submit" name="Submit22" value="Cerrar Ventana" onClick="window.close()"/>
+            </p></td></tr>
+      </table>
+      <center>
+      &nbsp;&nbsp;&nbsp;</center>      
+
+    </td>
+  </tr>
+</table>
+</body>
+</html>

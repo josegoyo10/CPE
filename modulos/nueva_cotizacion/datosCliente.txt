@@ -1,0 +1,42 @@
+Array
+(
+    [IdGroup] => 
+    [Address] => 
+    [AgeRange] => 
+    [Contact] => 
+    [Email] => 
+    [Fax] => 
+    [FirstName] => 
+    [Gender] => 
+    [IdCategory] => 0
+    [IdCustomer] => 0
+    [IdDoc] => 0
+    [IdTypeContribuyente] => 0
+    [Location] => 0
+    [Occupation] => 
+    [Phone] => 
+    [Phone2] => 
+    [Quota] => 0
+    [ReteFuente] => false
+    [ReteIca] => false
+    [ReteIva] => false
+    [State] => 0
+    [Surname1] => 
+    [Surname2] => 
+    [desc] => No se encontró el cliente con la identificación 14440244
+    [Department] => 
+    [Province] => 
+    [ExenIva] => false
+    [OtrIva] => false
+    [Status] => A
+    [Profession] => 
+    [RewardPoints] => 
+    [TypeCustomer] => 
+      <IdTypeCustomer>0</IdTypeCustomer>
+    
+    [0] => Array
+        (
+            [IdTypeCustomer] => 0
+        )
+
+)

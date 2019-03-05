@@ -1,0 +1,120 @@
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+
+<table width="660" height="" border="0" cellpadding="0" cellspacing="0" style="border: 2px solid #000000;">
+  <tr>
+    <td height="69" valign="top">
+		<table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td width="15%" height="49"><img src="../img/logo2.jpg" width="49" height="45"></td>
+			<td width="35%" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Especificaciones O/C<!-- InstanceEndEditable --></td>
+			<td width="50%" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" -->
+			  <!-- InstanceEndEditable --></td>
+		  </tr>
+		</table>
+    </td>
+  </tr>  
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+		<table width="100%" height="" border="0" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+			  <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+				<tr>
+				  <td width="100%" valign="top">
+					  <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+						<tr>
+						  <td><fieldset>
+							<legend>Datos OT </legend>
+							<table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+							  <tr>
+								<td width="15%">N&ordm; OT CP</td>
+								<td width="35%" class="userinput">{id_ot}</td>
+								<td width="15%">Fecha de Generaci&oacute;n</td>
+								<td width="35%" class="userinput">{ot_fechacreacion}</td>
+							  </tr>
+							  <tr>
+								<td>Tipo OT </td>
+								<td class="userinput">{ot_tipo} - {ot_tipo_nom} </td>
+								<td colspan=2>N&ordm; OC/SAP: ____________&nbsp;&nbsp;N&ordm; REC/SAP: ____________</td>
+							  </tr>
+							</table>
+						  </fieldset></td>
+						</tr>
+						<tr>
+						  <td><fieldset>
+							<legend>Datos OS </legend>
+							  <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+								<tr>
+								  <td width="15%">N&ordm; Cotizaci&oacute;n</td>
+								  <td  width="35%" class="userinput">{id_os}</td>
+								  <td width="15%">Fecha de Cotizaci&oacute;n </td>
+								  <td  width="35%" class="userinput">{fcotizacion}</td>
+								</tr>
+								<tr>
+								  <td>Estado</td>
+								  <td class="userinput">{estado_os}</td>
+								  <td>&nbsp;</td>
+								  <td class="userinput">&nbsp;</td>
+								</tr>
+								<tr>
+								  <td>Tienda</td>
+								  <td class="userinput">{tienda}</td>
+								  <td>Atendido Por </td>
+								  <td class="userinput">{usuario}</td>
+								</tr>
+								<tr>
+								  <td width="100">Descripci&oacute;n OS </td>
+								  <td width="239" class="userinput">{os_descripcion}</td>
+								  <td width="100">Proyecto</td>
+								  <td width="244" class="userinput">{proy_nombre}</td>
+								</tr>
+								<tr>
+								  <td>Comentarios</td>
+								  <td colspan="3" class="userinput">{os_comentarios}</td>
+								</tr>
+							  </table>
+						  </fieldset></td>
+						</tr>
+					  </table>
+					  <br>
+					  <table width="90%" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+					<tr>
+					  <th width="" align="center">Cod Barra / (SAP)</th>
+					  <th width="29">Tipo</th>
+					  <th width="371">Descripci&oacute;n</th>
+					  <th width="30">Cant</th>
+					  <th width="48">Precio Unit </th>
+					</tr>
+					<!-- BEGIN listado -->
+					<tr valign="top">
+					  <td align="center">{cod_barra}<br>({cod_sap})&nbsp;</td>
+					  <td><div align="center">{osde_tipoprod}&nbsp;</div></td>
+					  <td>{descripcion}&nbsp;{especificacion}</td>
+					  <td><div align="right">{cantidad}&nbsp;</div></td>
+					  <td><div align="right">{precio}&nbsp;</div></td>
+					</tr>
+					<!-- END listado -->
+				  </table>            </td>
+				</tr>
+			  </table>
+			  <!-- InstanceEndEditable --></td>
+		  </tr>
+		</table>
+    </td>
+  </tr> 
+  <tr>
+    <td height="40" valign="top">
+		<table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>&nbsp;</td>
+		  </tr>
+		</table>
+    </td>
+  </tr>  
+</table>

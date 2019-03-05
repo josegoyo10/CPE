@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Seleccionar Producto</title>
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+
+<script language="javascript" type="text/javascript">
+
+function KeyIsNumber(evt)
+{
+var isNav = (navigator.appName.indexOf("Netscape") != -1)
+var isIE = (navigator.appName.indexOf("Microsoft") != -1)
+	if (isNav) {
+		if ((evt.which >= 48 &&  evt.which <=57) )
+		return true;
+	return false;
+	}
+	else if (isIE)
+		{evt = window.event;
+		if ((evt.keyCode >= 48 && evt.keyCode <= 57) )
+			return true;
+		return false;
+		}
+	else {
+		alert("Su browser no es soportado por esta aplicación")
+	}
+	return false
+}
+
+function abrir_ventana()
+{
+popUpWindowMod('../nueva_cotizacion/seleccionar_prodPs_Pe.php', 50, 50, 820, 520);
+//window.open('../nueva_cotizacion/seleccionar_prodPs_Pe.php', '', 'toolbar=YES, directories=NO, status=YES, scrollbars=YES width=820 height=520');
+}
+
+function botonAccion(valor)
+{
+document.formulario.accion.value = valor;
+}
+
+function validacion()
+{
+	
+	if(document.formulario.codSap.value == '')
+	{
+	alert('Debe Primero selecionar un Producto Especial');
+	return false;
+	}
+	
+	if(document.formulario.numero_dias.value == '')
+	{
+	alert('El Número de Días es un Campo Requerido');
+	return false;
+	}
+	
+	if(document.formulario.valorMax.value == '')
+	{
+	alert('El Valor Máximo es un Campo Requerido');
+	return false;
+	}
+	
+	
+	
+	if(!(/^[0-9]+$/.test(document.formulario.numero_dias.value)))
+	{
+	alert('El Número de Días debe ser un Valor Numérico');
+	return false;
+	}
+	
+	if(!(/^[0-9]+$/.test(document.formulario.valorMax.value)))
+	{
+	alert('El Valor Máximo debe ser un Valor Numérico');
+	return false;
+	}
+	
+return true;
+}
+
+
+
+</script>
+
+</head>
+
+<body>
+<br>
+<p align="left" class="titulonormal"><strong>Insertar nueva Fecha de Entrega y Valor M&aacute;ximo Para un PS Como PE </strong></p>
+<form name="formulario" method="post" action="../nueva_cotizacion/adminPs_Pe.php" onSubmit="return validacion();" >
+  <table width="597" border="1" align="center" class="tabla1">
+    <tr>
+      <td width="112" class="textonormal"><div align="right">C&oacute;digoSap:</div></td>
+      <td width="97"><input readonly="true" name="codSap" type="text" id="codSap" size="21" maxlength="90"></td>
+      <td width="177" class="textonormal"><div align="right">Descripci&oacute;n Producto:</div></td>
+      <td width="183"><input readonly="true" name="descProd" type="text" id="descProd" size="32" maxlength="90"></td>
+    </tr>
+
+
+    <tr>
+      <td class="textonormal"><div align="right">Nombre Proveedor: </div></td>
+      <td><input readonly="true" name="nomProv" type="text" id="nomProv" size="21" maxlength="90"></td>
+      <td class="textonormal"><div align="right">Cantidad Venta x Volumen PE:</div></td>
+      <td><input name="valorMax" type="text" id="valorMax" size="21" maxlength="6"></td>
+    </tr>
+	
+	
+    <tr>
+      <td class="textonormal"><div align="right">C&oacute;digo proveedor:</div></td>
+      <td><input readonly="true" name="codProv" type="text" id="codProv" size="21" maxlength="90"></td>
+      <td class="textonormal"><div align="right">N&uacute;mero D&iacute;as:</div></td>
+      <td><input name="numero_dias" type="text" id="numero_dias" size="21" maxlength="3"></td>
+    </tr>
+    <tr>
+      <td class="textonormal"><input name="accion" type="hidden" id="accion" value="">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>
+	  <div align="left">        
+	  <input type="submit" name="botonElim" value="Eliminar" disabled onClick="botonAccion('Eliminar');"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <input type="submit" id="botonE" name="botonE" value="Insertar" >
+      </div>
+	  
+	  </td>
+      <td><input type="button" name="button" value="Buscar PS Como PE" onClick="abrir_ventana();"></td>     
+    </tr>
+  </table>
+  
+
+  
+</form>
+
+	<script LANGUAGE="javascript">			
+			window.document.formulario.numero_dias.onkeypress = KeyIsNumber;			
+	</script>
+
+</body>
+</html>
+

@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Consulta Cotizaciones</title>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+	var cal1 = new CalendarPopup("testdiv1");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = 20;										
+	cal1.offsetY = 0;
+</SCRIPT> 
+
+<script language="javascript" type="text/javascript">
+
+function KeyIsNumber(evt)
+{
+var isNav = (navigator.appName.indexOf("Netscape") != -1)
+var isIE = (navigator.appName.indexOf("Microsoft") != -1)
+	if (isNav) {
+		if ((evt.which >= 48 &&  evt.which <=57) )
+		return true;
+	return false;
+	}
+	else if (isIE)
+		{evt = window.event;
+		if ((evt.keyCode >= 48 && evt.keyCode <= 57) )
+			return true;
+		return false;
+		}
+	else {
+		alert("Su browser no es soportado por esta aplicación")
+	}
+	return false
+}
+
+
+
+function botonAccion(valor)
+{
+document.formulario.accion.value = valor;
+}
+
+function validacion()
+{
+
+var verdad = true;
+
+	if (document.formulario.fecha_inicio.value == '')
+	{
+	alert('La fecha Inicio no puede ser Vacia');
+	verdad = false;
+	}
+	
+	if (document.formulario.fecha_fin.value == '')
+	{
+	alert('La fecha Fin no puede ser Vacia');
+	verdad = false;
+	}
+	
+ 	
+	/*
+	if (document.formulario.fecha_inicio.value  > document.formulario.fecha_fin.value) 
+	{
+	alert('La fecha Inicio no puede ser Mayor a la Fecha Fin');
+	verdad = false;
+	}	
+	*/
+	
+return verdad;
+}
+
+
+function cambiar()
+{
+document.formulario.accion.value = 'Exportar';
+}
+
+function cambiar2()
+{
+document.formulario.accion.value = '';
+}
+
+
+</script>
+
+</head>
+
+<body>
+<br>
+<p align="left" class="titulonormal"><strong>Consulta de Cotizaciones </strong></p>
+<form name="formulario" method="post" action="../nueva_cotizacion/consulta_cotizaciones.php" >
+  <table width="683" border="0" align="center" class="tabla1" cellpadding="0px;" cellspacing="10px;">
+    <tr>
+      <td width="183" class="textonormal"><div align="right">Estado de la OT:</div></td>
+      <td width="170"><select name="estado" id="estado">
+	
+	<option value="TT">Todos</option>	
+	
+	<!-- BEGIN estado -->
+        <option value="{id_estado}" {selected}>{esta_nombre}</option> 
+	<!-- END estado -->
+	
+      </select></td>
+      <td width="133" class="textonormal"><div align="right">Tipo de Entrega: </div></td>
+      <td width="169"><select name="tipo_entrega" id="tipo_entrega">
+	  
+	  <option value="0">Todos</option>	  
+	<!-- BEGIN tipo_entrega -->
+        <option value="{id_tipodespacho}" {selected}>{nombre}</option> 
+	<!-- END tipo_entrega -->
+	
+      </select></td>
+    </tr>
+
+
+
+    <tr>
+      <td class="textonormal"><div align="right">No. OS:</div></td>
+      <td><input name="os" type="text" id="os" size="10"  value="{os}" ></td>
+      <td><div align="right" class="textonormal">No. OT:</div></td>
+      <td><input name="ot" type="text" id="ot" size="10"  value="{ot}" ></td>
+    </tr>
+    <tr>
+      <td class="textonormal"><div align="right">Fecha de Entrega Inicio: </div></td>
+      <td>
+	  		<input name="fecha_inicio" readonly id="fecha_inicio" type="text" size=10 maxlength="10" value="{fecha_inicio}" onClick="cal1.select(document.forms[0].fecha_inicio,'anchor1','dd/MM/yyyy'); return false;">
+			<a href="#" onClick="cal1.select(document.forms[0].fecha_inicio,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Inicio "></a>
+			<DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+      </td>
+	  <td><div align="right" class="textonormal">Fecha de Entrega Fin:</div></td>
+      <td><input name="fecha_fin" readonly id="fecha_fin" type="text" size=10 maxlength="10" value="{fecha_fin}" onClick="cal1.select(document.forms[0].fecha_fin,'anchor2','dd/MM/yyyy'); return false;">
+        <a href="#" onClick="cal1.select(document.forms[0].fecha_fin,'anchor2','dd/MM/yyyy'); return false;" name="anchor2" id="anchor2"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Fin "></a></td>
+    </tr>
+    <tr>
+      <td class="textonormal"><div align="right">Fecha de Pago Inicio:</div></td>
+      <td><input name="fecha_inicio2" readonly id="fecha_inicio2" type="text" size=10 maxlength="10" value="{fecha_inicio2}" onClick="cal1.select(document.forms[0].fecha_inicio2,'anchor3','dd/MM/yyyy'); return false;">
+        <a href="#" onClick="cal1.select(document.forms[0].fecha_inicio2,'anchor3','dd/MM/yyyy'); return false;" name="anchor3" id="anchor3"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Inicio "></a></td>
+      <td><div align="right">Fecha de Pago Fin:</div></td>
+      <td><input name="fecha_fin2" readonly id="fecha_fin2" type="text" size=10 maxlength="10" value="{fecha_fin2}" onClick="cal1.select(document.forms[0].fecha_fin2,'anchor4','dd/MM/yyyy'); return false;">
+        <a href="#" onClick="cal1.select(document.forms[0].fecha_fin2,'anchor4','dd/MM/yyyy'); return false;" name="anchor4" id="anchor4"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Fin "></a></td>
+    </tr>
+    <tr>
+      <td class="textonormal">
+  		<div align="right"><input name="accion" type="hidden" id="accion" value="">&nbsp;Tipo de OT: </div>
+	</td>
+      <td><select name="tipo_ot" id="tipo_ot">
+        <option value="PP">Todos</option>
+        <!-- BEGIN tipo_ot -->
+        <option value="{prod_tipo}" {selected}>{prod_tipo}</option>
+        <!-- END tipo_ot -->
+      </select></td>
+      <td><div align="right">&nbsp;Tienda: </div></td>
+      	<td>
+			<select name="idCentroDespacho" id="idCentroDespacho" class="select1">
+				<!-- BEGIN Bloque_centro_despacho -->
+					<option value="{id_local}" selected_local="">{nombre_local}</option>
+				<!-- END Bloque_centro_despacho -->
+			</select>
+		</td>
+    </tr>
+    <tr>
+    	<td class="textonormal">
+    		<div align="right">&nbsp;Categotia Cliente:
+    	</td>
+    	<td><select name="cat_cliente" id="cat_cliente">
+        <option value="">Todos</option>
+        <!-- BEGIN cat_cliente -->
+        <option value="{id_categoria}" {selected}>{nombre_categoria}</option>
+        <!-- END cat_cliente -->
+      </select></td>
+    	<td align="right"><input type="submit" id="botonE" name="botonE" value="Consultar" onclick="cambiar2();" style="width: 100px;"></td>
+    	<td align="left"><input type="submit" id="Expo" name="Expo" value="Exportar Excel" onclick="cambiar();" style="width: 100px;"></td>
+    </tr>
+  </table>
+
+ 
+</form>
+
+<table width="942" border="1"  align="left" class="tabla1" >
+  <tr class="textotitulo">
+    <th width="168">Nombre Cliente</th>
+    <th width="35">Tel&eacute;fono</th>
+	<th width="72">Tipo de Despacho</th>
+	<th width="151">Nombre Vendedor</th>
+	<th width="42">Tipo de OT</th>
+    <th width="42">No OS</th>
+    <th width="40">No OT</th>
+    <th width="99">Estado OT</th>
+    <th width="70">Fecha Entrega</th>
+    <th width="70">Fecha Pago</th>
+	<th width="70">Total</th>
+  </tr>
+        
+
+  <!-- BEGIN consulta -->
+		<tr>
+		<td>{clie_nombre} {clie_paterno} {clie_materno} &nbsp;</td>
+		<td>{clie_telefonocasa}&nbsp;</td>
+		<td>{nombre}&nbsp;</td>		
+		<td>{USR_NOMBRES} {USR_APELLIDOS}&nbsp;</td>		
+		<td>{ot_tipo}&nbsp;</td>
+		<td>{id_os}&nbsp;</td>
+		<td>{ot_id}&nbsp;</td>
+		<td>{esta_nombre}&nbsp;</td>
+		<td>{osde_fecha_entrega}&nbsp;</td>
+		<td>{os_fechaboleta}&nbsp;</td>
+		<td align="right">{Total}&nbsp;</td>
+		</tr>
+  <!-- END consulta --> 
+  
+</table>
+<p>
+  	
+</p>
+	
+</body>
+</html>
+

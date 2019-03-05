@@ -1,0 +1,129 @@
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+
+
+<table width="700" align="left" border="8" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+	<table width="700" align="left" height="30" border="0" cellpadding="0" cellspacing="0">
+	  <!--tr-->
+		<td class="titulonormal">Resumen Ventas Dise&ntilde;ador&nbsp;{disenador_nombre}</td>
+		<td class="titulonormal"></td>
+	  <!--/tr>
+	  <tr-->
+	    <td align=right >
+			<input type="button" name="Button23" value="&nbsp;Ver Reporte&nbsp;&nbsp;" onClick="Ver_Reporte_Detalle('VerReporte')">
+		</td>
+		<td align=right>
+			<input type="button" name="Button23" value="&nbsp;&nbsp;&nbsp;Imprimir&nbsp;&nbsp;&nbsp;&nbsp;" onClick="Ver_Reporte_Detalle('Imprimir')">
+		</td>
+		<td align=right>
+			<input type="button" name="Button23" value="Exportar Excel" onClick="Ver_Reporte_Detalle('Exportar')">
+		</td>
+	  <!--/tr-->
+	</table>
+</td>
+</tr>
+
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+<tr>
+<td>
+		<table width="700" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+				<tr>
+				  <th colspan=20>Ventas por {disenador_nombre} en {nom_local_titulo} &nbsp;{fecha_inicio_msg}&nbsp;{fecha_termino_msg}</th>
+				</tr>
+				<tr>
+				  <th rowspan=2>Proyectos Cotizados</th>
+				  <th rowspan=2>Proyectos Vendidos</th>
+				  <th rowspan=2>Proyectos Terminados</th>
+				  <th colspan=4 >Ventas Cant/Monto</th>
+				  <th rowspan=2>Total PS+PE+VI+IN</th>
+				</tr>
+				<tr>
+				  <th>PS</th>
+				  <th>PE</th>
+				  <th>VI</th>
+				  <th>IN</th>
+				</tr>
+
+		<!-- BEGIN detalle_dis -->            
+				{ini_normal}
+				<tr>
+				  <td align=right>{proycotizados}</td>
+				  <td align=right>{proyvendidos}</td>
+				  <td align=right>{proyterminados}</td>
+				  <td align=right>{cantPS} / {montoPS}</td>
+				  <td align=right>{cantPE} / {montoPE}</td>
+				  <td align=right>{cantVI} / {montoVI}</td>
+				  <td align=right>{cantIN} / {montoIN}</td>
+				  <td align=right>{total}</td>
+				</tr>
+					{fin_normal}
+		<!-- END detalle_dis --> 
+			</table>
+</td>
+</tr>
+</table>
+
+
+<tr>
+<td>
+<table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	  <td>{inicio_titulo}
+			<table width="700" align="left" height="30" border="0" cellpadding="0" cellspacing="0">
+			  <tr>
+				<td class="titulonormal">Resumen Ventas Dise&ntilde;ador&nbsp;{disenador_nombre}{accion}?</td>
+				<td class="titulonormal"></td>
+			  </tr>
+			</table>{fin_titulo}
+	  </td>
+	</tr>
+<tr>
+  <td>
+	  <table align="left" width="750" border="0" bordercolor="#000000"  cellpadding="2" cellspacing="0" class="tabla2">
+		<tr>
+			<th width="70" >Nº OS</th>
+			<th width="150">Detalle</th>
+			<th width="100">Fecha creación </th>
+			<th width="60" >C&eacute;dula cliente</th>
+			<th width="150">Nombre</th>
+			<th width="80" >teléfono</th>
+			<th width="80" >Estado</th>
+			<th width="60" >Accion</th>
+		</tr>
+	  </table>
+	</td>
+</tr>
+<tr>
+	<td>
+			<table width="750" border="0" cellpadding="1" cellspacing="0" align="left" class="tabla2">
+			<!-- BEGIN Modulo_Detalle -->
+			<tr>
+			<td width="70" align="center">{id_os}&nbsp;</td>
+			<td width="150">{os_comentarios}&nbsp;</td>
+			<td width="80"><div align="center">{os_fechacreacion}&nbsp;</div></td>
+			<td width="80" >{clie_rut}</td>
+			<td width="150">{clie_nombre}&nbsp;{clie_paterno}</td>
+			<td width="80" ><div align="left">{clie_telcontacto1}&nbsp;</div></td>
+			<td width="80" ><div align="center">{esta_nombre}&nbsp;</div></td>
+			<td width="60" ><div align="center">{inilink}&nbsp;&nbsp;<a href="{impre}" class="link1">Ver</a></div>{finlink}</td>
+			</tr>
+			<!-- END Modulo_Detalle -->
+			</table>
+	</td>
+</tr>
+</table>	  
+</td>
+</tr>
+

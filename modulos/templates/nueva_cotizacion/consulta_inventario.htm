@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function cambioRadio(tipo){
+
+	var codigo_sap;
+	var codigo_ean;
+	
+	if(tipo == 'cod_sap')
+	{
+		codigo_sap = document.getElementById(tipo);
+		codigo_ean = document.getElementById('cod_ean');
+	}
+	
+	if(tipo == 'cod_ean')
+	{
+		codigo_ean = document.getElementById(tipo);
+		codigo_sap = document.getElementById('cod_sap');
+		
+	}
+
+	if(tipo == 'cod_sap'){
+		codigo_sap.checked = true;
+		codigo_ean.checked = false;
+	}
+
+	if(tipo == 'cod_ean'){
+		codigo_ean.checked = true;
+		codigo_sap.checked = false;
+	}	
+	
+}
+
+
+function check(){
+	
+	if(validar_obligatorio( consulta.codigo, "Debe Digitar el Código SAP o el EAN del Producto" ))
+		return false;	
+	  
+	if(validar_numero( consulta.codigo, "El Código SAP / EAN debe ser un Número" ))
+		return false;
+
+	if(consulta.cod_sap.checked == false && consulta.cod_ean.checked == false){
+		alert("Debe Chequear el tipo de Código SAP o EAN ");
+		return false;
+	}
+	
+	  //window.document.consulta.codigo.onkeypress = KeyIsEnter;
+	  
+	  return true;
+
+}
+
+
+function cambiar(valor)
+{
+	document.consulta.accion.value = valor;
+}
+
+
+</SCRIPT>
+
+</head>
+
+<body>
+
+	<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td width="390" class="titulonormal"> Consulta de Inventario Real </td>     
+	  </tr>
+	</table>
+
+<FORM NAME="consulta" METHOD="POST" ACTION="consulta_inventario.php" onsubmit="return check();" >
+
+     
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="31%" valign="top"> 
+		  <br>		
+            
+            <table width="320" border="0" align="center" class="textonormal" cellpadding="0px;" cellspacing="4px;" >
+	          <tr>
+	              	<td width="120" align="right">Código SAP&nbsp;(*)</td>                	
+	              	<td width="40" align="left"> <input name="cod_sap" checked="checked" type="radio"  value="sap" id="cod_sap" onclick="cambioRadio('cod_sap')" > </td>
+	              	
+	              	<td width="120" align="right">Código EAN&nbsp;(*)</td>                	
+	              	<td width="40" align="left"> <input name="cod_ean" type="radio"  value="ean" id="cod_ean" onclick="cambioRadio('cod_ean')" > </td>	              	
+	          </tr>            
+            </table>
+            
+            <table width="560" border="0" align="center" class="textonormal" cellpadding="0px;" cellspacing="6px;" >
+               		
+                			
+			   	<tr>
+				  	<td width="100" align="right">Tienda&nbsp;</td>
+                  	<td width="160" align="center">
+                  	<select name="tienda" id="tienda">
+		  				<option value="">Todas</option>	  
+						<!-- BEGIN tiendas -->
+	        			<option value="{cod_local}" {selected}>{nom_local}</option> 
+						<!-- END tiendas -->
+	      				</select>&nbsp;&nbsp;</td>
+	      				{menu}
+  					<td width="160" align="right">Código SAP / EAN&nbsp;(*)</td>
+                  	<td width="60" align="center"><input name="codigo" type="text" value="" size="13" maxlength="13" id="codigo" onfocus="cambiar('Buscar');" >&nbsp;&nbsp;</td>
+  					
+                  	<td width="80" align="center"><input name="boton" type="submit" value="Buscar" onclick="cambiar('Buscar');" >&nbsp;&nbsp;</td>
+  				</tr>
+  			
+            </table>
+        
+       
+		<table width="200"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+	       	<tr>
+	       		<td width="200">(*) Datos obligatorios.</td>
+	      	</tr>
+	   	</table>
+		  <input name="accion" type="hidden" id="accion" value=""> 
+		
+    </table>
+  	
+  	<br>
+  	
+	<table  width="840" border="1"  align="center" class="tabla1">
+	  <tr class="textotitulo">
+	    <th width="300">Descripción Producto</th>
+	    <th width="80">Código SAP</th>
+	    <th width="160">Tienda</th>
+		<th width="100">Inventario Actual</th>
+		<th width="100">EAN</th>
+		<th width="100">Precio de Venta</th>
+	  </tr>
+	        
+	
+	
+	  <!-- BEGIN consulta_inv -->
+			<tr>
+			<td>{producto} &nbsp;</td>
+			<td>{cod_sap}&nbsp;</td>
+			<td>{tienda}&nbsp;</td>
+			<td>{inventario}&nbsp;</td>		
+	    	<td>{ean}&nbsp;</td> 
+			<td align="right">{precio}&nbsp;</td>			
+			</tr>
+	  <!-- END consulta_inv --> 
+	  
+	</table>
+	
+	<br>
+	
+		<table width="200"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+	       	<tr>
+	       		<td width="200">{mensaje}</td>
+	      	</tr>
+	   	</table>
+
+</FORM> 
+
+<script LANGUAGE="javascript">
+	window.document.consulta.codigo.onkeypress = KeyIsRut;	
+	document.consulta.codigo.focus();
+</script>
+
+	  
+</body>
+</html>

@@ -1,0 +1,170 @@
+<SCRIPT LANGUAGE="JavaScript">
+	function abre_Estado(){
+		if (popUpWindowModal('estado2.php?id_ot={id_ot}', 100, 100, 300, 200)=='refresh') 
+			window.location.reload();
+	}
+</SCRIPT>
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Orden de Trabajo N°{id_ot}<!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" -->
+      <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" height="500" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos OT </legend>
+                    <table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="102">N&ordm; OT </td>
+                        <td width="244" class="userinput">{id_ot}</td>
+                        <td width="109">Fecha de Generaci&oacute;n</td>
+                        <td width="244" class="userinput">{ot_fechacreacion}</td>
+                      </tr>
+                      <tr>
+                        <td>Tipo OT </td>
+                        <td class="userinput">{ot_tipo}</td>
+                        <td>Estado</td>
+                        <td class="userinput">{esta_nombre}</td>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                  <legend>Datos OS </legend>
+                      <table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                        <tr>
+						  <td width="100">N&ordm; Cotizaci&oacute;n</td>
+                          <td width="239" class="userinput">{id_os}</td>
+                          <td width="100">Fecha de Cotizaci&oacute;n </td>
+                          <td width="244" class="userinput">{fcotizacion}</td>
+                        </tr>
+                        <tr>
+                          <td>Estado</td>
+                          <td class="userinput">{estado_os}</td>
+                          <td>Atendido Por </td>
+                          <td class="userinput">{usuario}</td>
+                        </tr>
+                        <tr>
+                          <td>Tienda</td>
+                          <td class="userinput">{tienda}</td>
+                          <td>Proyecto</td>
+                          <td class="userinput">{proy_nombre}</td>
+                        </tr>
+                        <tr>
+                          <td>Descripci&oacute;n OS </td>
+                          <td colspan="3" class="userinput">{os_descripcion}</td>
+                        </tr>
+                        <tr>
+                          <td>Comentarios</td>
+                          <td colspan="3" class="userinput">{os_comentarios}</td>
+                        </tr>
+                      </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos Cliente</legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="100">C&eacute;dula</td>
+                        <td width="245" class="userinput">{clie_rut}</td>
+                        <td width="103">Nombre</td>
+                        <td width="251" class="userinput">{clie_nombre} {clie_paterno} {clie_materno}</td>
+                      </tr>
+                      <tr>
+                        <td>Direcci&oacute;n</td>
+                        <td class="userinput">{dirp_direccion} </td>
+                        <td>Barrio</td>
+                        <td class="userinput">{dirp_comuna}</td>
+                      </tr>
+                      <tr>
+                        <td>Tel&eacute;fono</td>
+                        <td class="userinput">{dirp_telefono}</td>
+                        <td>&nbsp;</td>
+                        <td class="userinput">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos de Servicio (Despacho, Instalaciones) </legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="100">Nombre</td>
+                        <td width="245" class="userinput">{dire_nombre}</td>
+                        <td width="103">Tel&eacute;fono</td>
+                        <td width="251" class="userinput">{dire_telefono}</td>
+                      </tr>
+                      <tr>
+                        <td>Direcci&oacute;n</td>
+                        <td class="userinput">{dire_direccion}</td>
+                        <td>Barrio</td>
+                        <td class="userinput">{dire_comuna}</td>
+                      </tr>
+                      <tr>
+                        <td>Indicaci&oacute;n</td>
+                        <td class="userinput">{dire_observacion}</td>
+                        <td>&nbsp;</td>
+                        <td class="userinput">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                </tr>
+              </table>
+              <br>
+              <table width="773" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+            <tr>
+              <th width="" align="center">Cod Barra / (SAP)</th>
+              <th width="29">Tipo</th>
+              <th width="371">Descripci&oacute;n</th>
+              <th width="30">Cant</th>
+              <th width="56">Despacho</th>
+              <th width="60">Instalaci&oacute;n</th>
+              <th width="36">Costo Unit </th>
+              <th width="48">Precio Unit </th>
+              <th width="44">Total</th>
+            </tr>
+			<!-- BEGIN listado -->
+			<tr valign="top">
+              <td align="center">{cod_barra}<br>({cod_sap})&nbsp;</td>
+              <td><div align="center">{osde_tipoprod}&nbsp;</div></td>
+              <td>{descripcion}&nbsp;{especificacion}</td>
+              <td><div align="right">{cantidad}&nbsp;</div></td>
+              <td>{tipodespacho}</td>
+              <td><div align="center">{osde_instalacion}</div></td>
+              <td><div align="right">{costo}&nbsp;</div></td>
+              <td><div align="right">{precio}&nbsp;</div></td>
+              <td><div align="right">{subtotal}&nbsp;</div></td>
+            </tr>
+			<!-- END listado -->
+          </table>            </td>
+        </tr>
+        <tr>
+          <td><table border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+            <tr>
+              <th colspan="3">Acciones sobre la OT </th>
+              </tr>
+            <script language="JavaScript" type="text/JavaScript" src="popup.js"></script>			  
+            <tr>
+              <td width="80"><div align="center"><a href="javascript:popUpWindowModal('printframe.php?id_ot={id_ot}', 100, 100, 710, 500);">Imprimir OT</a></div></td>
+              <td width="80"><div align="center"><a href="javascript:popUpWindowModal('printframe2.php?id_ot={id_ot}', 100, 100, 710, 500);">Imprimir OT para Proveedor</a></div></td>
+              <td width="80"><div align="center"><a href="#" onClick="abre_Estado();">Cambiar Estado</a></div></td>
+              <!--td width="80">&nbsp;</td-->
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <!-- InstanceEndEditable --></td>
+  </tr>
+</table>

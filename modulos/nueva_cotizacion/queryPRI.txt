@@ -1,0 +1,12 @@
+SELECT CONCAT(NE.DESCRIPTION, ' - ', LO.DESCRIPTION) AS comu_nombre_des,  DE.DESCRIPTION AS nombre_departamento, CI.DESCRIPTION AS nombre_ciudad,  OS.id_direccion, OS.clie_rut,D.id_direccion,D.dire_nombre AS dire_nombre2, D.dire_direccion AS dire_direccion_des, D.id_direccion ,D.dire_defecto ,  D.dire_telefono AS dire_telefono_des ,D.dire_observacion AS dire_observacion_des
+			FROM os OS INNER JOIN  direcciones D on (OS.id_direccion = D.id_direccion)
+			LEFT JOIN cu_department DE ON DE.ID = D.id_departamento AND DE.ID = ( SELECT id_departamento FROM direcciones WHERE id_direccion = ( SELECT id_direccion FROM os WHERE id_os = 1436026 ) )
+			LEFT JOIN cu_city CI ON CI.ID = D.id_ciudad AND CI.ID = ( SELECT id_ciudad FROM direcciones WHERE id_direccion = ( SELECT id_direccion FROM os WHERE id_os = 1436026 ) )
+			AND CI.ID_PROVINCE = ( SELECT id_provincia FROM direcciones WHERE id_direccion = ( SELECT id_direccion FROM os WHERE id_os = 1436026 ) )
+			AND CI.ID_DEPARTMENT = ( SELECT id_departamento FROM direcciones WHERE id_direccion = ( SELECT id_direccion FROM os WHERE id_os = 1436026 ) )
+			LEFT JOIN cu_locality LO ON  LO.ID =  D.id_localidad AND LO.ID_CITY = ( SELECT id_ciudad FROM direcciones WHERE id_direccion = ( SELECT id_direccion FROM os WHERE id_os = 1436026 ) )
+			AND LO.ID_PROVINCE = ( SELECT id_provincia FROM direcciones WHERE id_direccion = ( SELECT id_direccion FROM os WHERE id_os = 1436026 ) )
+			AND LO.ID_DEPARTMENT = ( SELECT id_departamento FROM direcciones WHERE id_direccion = ( SELECT id_direccion FROM os WHERE id_os = 1436026 ) )
+			LEFT JOIN cu_neighborhood NE ON NE.LOCATION = D.dire_localizacion AND NE.LOCATION = ( SELECT dire_localizacion FROM direcciones WHERE id_direccion = ( SELECT id_direccion FROM os WHERE id_os = 1436026 ) )
+			AND NE.LOCATION = D.dire_localizacion
+			WHERE OS.id_os = 1436026 AND D.id_direccion = ( SELECT id_direccion FROM os WHERE id_os = 1436026 ) 

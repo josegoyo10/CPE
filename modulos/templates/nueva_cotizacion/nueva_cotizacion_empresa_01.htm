@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/template3.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+
+<script language="javascript" src="../../includes/funciones.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	function validar_form(){
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_razonsocial, "Razón social es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_giro, "Giro de la empresa es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_rutcontacto, "Cédula de Contacto es obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_nombre, "Nombre del contacto es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_paterno, "Apellido Paterno del contacto es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_materno, "Apellido Materno del contacto es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.dire_direccion, "Direccion de Facturación  es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_telefonocasa, "Teléfono es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_telcontacto1, "Teléfono contacto es un Campo obligatorio" ))
+			return false;
+		clierutcontacto= checkDV(nueva_cotizacion_empresa_01.clie_rutcontacto);	
+		if (clierutcontacto)
+			document.nueva_cotizacion_empresa_01.submit();
+		
+	}
+
+	function checkDV( ){
+		  crut = '';
+		  mcrut= nueva_cotizacion_empresa_01.clie_rutcontacto.value;
+		  for(i=0; i<mcrut.length; ++i)
+			if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-'){
+			 crut = crut + mcrut.charAt(i);
+			}
+		  largo = crut.length;
+		  if ( largo < 2 ){
+			alert("Debe ingresar el Cédula completo.");
+			document.nueva_cotizacion_empresa_01.clie_rutcontacto.focus();
+			document.nueva_cotizacion_empresa_01.clie_rutcontacto.select();
+			return false;
+		  }
+
+		  if ( largo > 2 )
+			rut = crut.substring(0, largo - 1);
+		  else
+			rut = crut.charAt(0);
+
+			dv = crut.charAt(largo-1);
+
+		  //checkCDV( dv );
+		  if ( rut == null || dv == null )
+		   return 0;
+		   var dvr = '0';
+		   suma = 0;
+		   mul  = 2;
+
+		  for (i= rut.length -1 ; i >= 0; i--){
+		   suma = suma + rut.charAt(i) * mul;
+			if (mul == 7)
+				mul = 2;
+			else
+				mul++;
+		  }
+		  res = suma % 11;
+		  if (res==1)
+			dvr = 'k';
+		  else if (res==0)
+			dvr = '0';
+		  else{
+			dvi = 11-res;
+			dvr = dvi + "";
+		  }
+		  
+		  /* Validación Digito de verificación
+		  if ( dvr != dv.toLowerCase() ){
+			alert("Cédula de Contacto es incorrecta.");
+			document.nueva_cotizacion_empresa_01.clie_rutcontacto.focus();
+			document.nueva_cotizacion_empresa_01.clie_rutcontacto.select();
+			return false;
+		  }
+		  */
+		  
+		  document.nueva_cotizacion_empresa_01.clie_rutcontacto.value = crut.substr(0, crut.length-1); 
+		  digito=crut.substr(crut.length-1, 1).toUpperCase();
+		  document.nueva_cotizacion_empresa_01.submit();
+		  return true;
+	 
+	}
+//-->
+	</SCRIPT>
+
+
+
+<script language="JavaScript" src="../checkfield.js"></script>
+
+
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+

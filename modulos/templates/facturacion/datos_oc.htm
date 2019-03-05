@@ -1,0 +1,54 @@
+<SCRIPT LANGUAGE="JavaScript">window.name='oc';</SCRIPT>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<table width="250" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->&nbsp;Datos O/C para Lote {id_lote}<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<form name="ingreso_datos_oc" method="post" target="oc">
+<INPUT TYPE="hidden" name="accion" value="grabar">
+<INPUT TYPE="hidden" name="id_lote" value="{id_lote}">
+<table width="250" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td valign="top">
+              <table border="0" align="center" cellpadding="0" cellspacing="2" class="textonormal">
+				<tr>
+				  <td valign="bottom">Número 1&nbsp;&nbsp;&nbsp;</td>
+				  <td valign="top" class="userinput"><input name="numero1" type="text" value="{numero1}" maxlength=10 {disabled}></td>
+				</tr>
+				<tr>
+				  <td valign="bottom">Número 2&nbsp;&nbsp;&nbsp;</td>
+				  <td valign="top" class="userinput"><input name="numero2" type="text" value="{numero2}" maxlength=10 {disabled}></td>
+				</tr>
+				<tr>
+					<td valign="top" colspan=2><p class="userinput">
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" align=center colspan=2><p class="userinput">
+						<input type="button" name="button" value="Ingresar" onClick="validaingresar()" {disabled}>&nbsp;&nbsp;
+						<input type="button" name="button" value="Cancelar" onClick="window.close()">
+					</td>
+				</tr>
+          </table>
+            </td>
+        </tr>
+      </table>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</form>
+
+<SCRIPT LANGUAGE="JavaScript">
+	document.ingreso_datos_oc.numero1.onkeypress = KeyIsNumber;
+	document.ingreso_datos_oc.numero2.onkeypress = KeyIsNumber;
+
+	function validaingresar() {
+		document.ingreso_datos_oc.submit();
+	}
+</SCRIPT>

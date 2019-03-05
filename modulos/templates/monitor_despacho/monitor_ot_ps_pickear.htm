@@ -1,0 +1,422 @@
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+window.name="pick";
+var text_parse = "";
+var in_dices = new Array(); 
+var cantidad = new Array(); 
+var cant_pick = new Array();
+var descrip = new Array();
+var descripcion = new Array();
+var caja = new Array();
+var b=0, i=0,j=0,h=0,c=0;
+
+function valida_rango_mayor(){
+	sep='\n';
+	texto='';
+	for (i=0;i<in_dices.length;i++){
+		if (parseFloat(cant_pick[i].value) > parseFloat(cantidad[i].value)){
+			texto=texto+(descrip[i].value) + sep;
+		} 
+		if (parseFloat(cant_pick[i].value) == parseFloat(cantidad[i].value)){
+			cant_pick[i].disabled =false;
+			caja[i].checked =true;
+		}
+	}
+return texto;
+}
+
+function valida_rango_menor(){
+	sep='\n';
+	menor='';
+	for (i=0;i<in_dices.length;i++){
+	if (parseFloat(cant_pick[i].value) < parseFloat(cantidad[i].value)){
+			if((descrip.length>1)&&( !isNaN(descrip[i]) )){
+				menor='test '+ in_dices[i].value + sep;			
+			}else{
+				menor=menor+(descrip[i].value) + sep;
+			}
+		}
+	if (parseFloat(cant_pick[i].value) == parseFloat(cantidad[i].value)){
+			cant_pick[i].disabled=true;
+			caja[i].checked=true;
+		}
+	}
+return menor;
+}
+
+function actualizar_cantidades(){
+	f=document.cantidades;
+		if(tex=valida_rango_mayor()){
+			alert('La cantidad pickeada no es válida en los siguientes productos:\n'+tex);
+			return false; 
+		}
+	f.submit();
+}
+
+
+function acciones(boton,tipo_ot,des,ot,td,et,id_estado,f){ 
+
+var k=0,n=0,ci=0,texto='',menor='',transicion=boton;
+	if (transicion=='Cerrar Picking'){
+		for (i=0;i<in_dices.length;i++){
+			k++;
+			if (parseFloat(cant_pick[i].value)==0){
+				n++;
+			}
+			if (parseFloat(cant_pick[i].value)==parseFloat(cantidad[i].value)){
+				ci++;
+				//f.elements[i+j].disabled=true;
+				//f.elements[i].checked=true;
+			}
+		}// cierra el for
+		tex=valida_rango_mayor();
+		men=valida_rango_menor();
+		if (tex!=''){
+			alert('La cantidad pickeada no es válida en los siguientes productos: \n'+tex);
+			return false; 
+		}
+		if (men!=''){
+			if (k==n){
+				//alert('No se puede cerrar el proceso de picking puesto que todos los productos están sin pickear.');
+				alert('No se puede cerrar el proceso de picking puesto que aún hay productos sin pickear');
+				return false; 
+			}
+			if (n>0){
+				//alert('No se puede cerrar el proceso de picking puesto que aun hay productos sin pickear. Si desea hacer un cierre parcial, utilice la opcion Dividir OT.');
+				alert('No se puede cerrar el proceso de picking puesto que los siguientes productos están aún sin pickear:\n'+men+'Si desea hacer un cierre parcial, utilice la opción Dividir OT');
+				return false; 
+			}
+			//alert('La cantidad pickeada es menor en los productos:\n'+men);
+			alert('No se puede cerrar el proceso de picking puesto que los siguientes productos están aún sin pickear:\n'+men+'Si desea hacer un cierre parcial, utilice la opción Dividir OT');
+			return false; 
+		}
+		if ((k==ci)&&(tex=='')){
+		// si el despacho es rerira cliente no debe generar orden de despacho en Despacho
+			if(document.cantidades.id_tipodespacho.value!=3){
+				alert('Esta acción generará una Orden de Despacho en el sistema de Despacho para la tienda {nom_local}');
+				if (confirm('¿Está seguro que desea '+transicion+' OT número '+ot+' ?')) {
+					f.accion2.value='WS';
+					f.id_ot.value=ot;
+					f.submit();	
+				}
+			}else{
+				if (confirm('¿Está seguro que desea '+transicion+' OT número '+ot+' ?')) {
+					f.accion2.value='cerrarPick';
+					f.id_ot.value=ot;
+					f.submit();	
+				}
+			}
+		}
+
+		}//cierra si es pickn
+	/*si no es para cerrar picking*/
+	else{
+		if (confirm('¿Está seguro que desea "'+transicion+'" OT número '+ot+' ?')) {
+			document.jump.action = 'monitor_ot_ps_detalle.php?transicion='+transicion+'&destino='+des+'&id_ot='+ot+'&tipoDes='+td+'&esta_tipo='+et+'&id_estado='+id_estado+'&accion=cp&ot_tipo='+tipo_ot;
+			document.jump.submit();	
+		}
+	}
+return;
+}/* fin acciones*/
+
+function Dividir_OT(id_ot,tipoDes,esta_tipo,destino,id_estado){
+	var n=0,k=0,texto='',menor='',ig=0;
+	f=document.cantidades;
+		for (i=0;i<in_dices.length;i++){
+			k=k+1;
+			/* si la cant pick es mayor*/
+			if (parseFloat(cant_pick[i].value)!=parseFloat(cantidad[i].value)){
+				if (parseFloat(cant_pick[i].value)==0  || cant_pick[i].value == '')
+					n++;
+			}else{
+				ig=ig+1;
+				cant_pick[i].checked  =true;
+				cant_pick[i].disabled =true;
+			}
+
+		}/* cierra el for*/
+		/* si la cantidad de ceros es igual a la cantidad de lineas de la lista es por que todo esta en cero y no se debe dividir*/
+		if ((n==k)){
+			alert('No es posible Dividir la OT. Alguna de las OT resultantes no contendría productos');
+		}
+		/* rango mayor*/
+		if (texto=valida_rango_mayor()){
+			alert('La cantidad pickeada no es válida en los siguientes productos:\n'+texto);
+			return false;
+		}
+		if (k==ig){
+			alert('No es posible Dividir la OT. Alguna de las OT resultantes no contendría productos');
+			for (i=0;i<in_dices.length;i++){
+				cant_pick[i].disabled = true;
+				cant_pick[i].checked  = true;
+			}
+		return false;
+		}
+		if ((texto=='')&&(n!=k)){
+		//si es retira cliente
+		if(document.cantidades.id_tipodespacho.value!=3){
+			alert('Esta acción generará una Orden de Despacho en el sistema de Despacho para la tienda {nom_local}');
+		}
+			if (confirm('Se cerrará la OT ' + id_ot + ' con los productos pickeados y se creará una nueva OT con los productos pendientes.\n¿Desea continuar?')) {
+				f.accion2.value='Dividir';
+				f.esta_tipo.value=destino;
+				f.id_tipodespacho.value=document.cantidades.id_tipodespacho.value;
+				f.submit();	
+			}else{
+				texto=valida_rango_menor();
+			}
+		}
+return false; 
+}
+
+function checkCantidad(v){
+	for (i=0;i<in_dices.length;i++){
+		if (caja[i].type == 'checkbox' || caja[i].type == 'text'){
+			if((v)==(in_dices[i].value)){
+				cant_pick[i].disabled = false;
+				if ((caja[i].checked)==true){
+				//se debe dejar la cantidad en el pìck
+					cant_pick[i].value=cantidad[i].value;
+					cant_pick[i].disabled = true;
+				}
+			}
+		}
+	}
+}
+
+<!--- Funcion imprime las ordenes de Picking seleccionadas -->
+function PrintPickin(Id_ot){
+	if (Id_ot != 0){
+		popUpWindowModalPicking('printframe_Picking.php', Id_ot);
+		Id_ot = '';
+		//refrescar();
+	}else{
+		alert('Debe seleccionar al menos una OT del listado para impresion');
+	}
+}
+<!-- Fin de impresion de ordenes de Picking seleccionadas -->
+
+//-->
+</SCRIPT>
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<table width="780" height="15" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">OT de Despacho Local</td>
+    <td width="390" class="titulonormal"></td>
+  </tr>
+</table>
+<FORM NAME="jump" METHOD="POST" ACTION="" TARGET="">
+</FORM>
+<!--div style="width:780; height:470; overflow:auto;"-->
+<table width="780" height="85%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellpadding="2" cellspacing="2" class="textonormal">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos OT </legend>
+                    <table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="102">N&ordm; OT </td>
+                        <td width="244" class="userinput">{id_ot}</td>
+                        <td width="109">Fecha de Generaci&oacute;n</td>
+                        <td width="244" class="userinput">{ot_fechacreacion}</td>
+                      </tr>
+                      <tr>
+  						<td>Tipo OT </td>
+                        <td class="userinput">{ot_tipo}</td>
+                        <td>Estado</td>
+                        <td class="titulonormal">{esta_nombre} </td>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos Cliente</legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="100">C&eacute;dula</td>
+                        <td width="245" class="userinput">{clie_rut}</td>
+                        <td width="103">Nombre</td>
+                        <td width="251" class="userinput">{clie_nombre} {clie_paterno} {clie_materno}</td>
+                      </tr>
+                        <tr>
+                         <td>Direcci&oacute;n</td>
+                        <td class="userinput">{dirp_direccion}</td>
+                        <td>Barrio</td>
+                        <td class="userinput">{dirp_comuna}</td>
+                      </tr>
+                      <tr>
+                        <td>Tel&eacute;fono</td>
+                        <td class="userinput">{dirp_telefono}</td>
+                        <td>{empresa}</td>
+                        <td class="userinput">{clie_razonsocial}</td>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos de Servicio (Despacho, Instalaciones) </legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+					<tr>
+						<td width="100">Nombre</td>
+                        <td width="245" class="userinput">{diredes_nombre} </td>
+                        <td width="103">Tel&eacute;fono</td>
+                        <td width="251" class="userinput">{diredes_telefono}</td>
+                      </tr>
+                      <tr>
+                        <td>Direcci&oacute;n</td>
+                        <td class="userinput">{diredes_direccion} </td>
+                        <td>Barrio</td>
+                        <td class="userinput">{diredes_comuna} </td>
+                      </tr>
+                      <tr>
+                        <td>Indicaci&oacute;n</td>
+                        <td class="userinput">{diredes_observacion}</td>
+                        <td>Tipo Despacho </td>
+                        <td class="userinput"><span class="titulonormal">{tipodespacho}</span></td>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                </tr>
+              </table>
+<table BORDER="0" cellspacing="0" cellpadding="0" align="left">
+<form NAME="cantidades" METHOD="POST" action ="monitor_ot_ps_detalle.php" onSubmit="">
+<input type="hidden" name="id_estado" Value="{id_estado}"; >
+<input type="hidden" name="id_tipodespacho" Value="{id_tipodespacho}"; >
+<input type="hidden" name="id_ot" Value="{id_ot}"; >
+<input type="hidden" name="esta_tipo" Value="{esta_tipo}"; >
+<input type="hidden" name="accion2" Value=""; >
+<input type="hidden" name="accion" Value="upd"; >
+<tr>
+<td>
+              <table width="750" border="0" align="center" cellpadding="2" cellspacing="0" class="tabla2" >
+            <tr>
+              <th width="90">Cod UPC </th>
+              <th width="90">C&oacute;digo SAP </th>
+              <th width="350">Descripci&oacute;n</th>
+              <th width="50">Precio</th>
+              <th width="50">Cant Solicitada </th>
+              <th width="50">Completo</th>
+              <th width="50">Cant Pickeada </th>
+              </tr>
+			</table>
+</td>
+</tr>
+<tr>
+<td valign="top"  align="center" >
+<div style="width: 770px; height: 135px; left: 100px; top: 353px; overflow: auto;">    
+		<table width="750" border="0" cellpadding="1" cellspacing="0"class="tabla2">
+	<!-- BEGIN OSDETALLE -->
+    <tr valign="top">
+    		  <td width="10"></td>
+			  <td width="80"><div align="left">{cod_barra}</div></td>
+              <td width="90"><div align="left">{cod_sap}</div></td>
+              <td width="250"><div align="left">{osde_descripcion}</div><br></td>
+              <td width="50"><div align="right">{osde_precio}</div></td>
+              <td width="50"><div align="right">{osde_cantidad}</div></td>
+	    	  <td width="50">
+	    	 	<div align="center">
+                <input name="caja" id="caja_{id_os_detalle}" type="checkbox" {checked} value="{id_os_detalle}" onclick="checkCantidad({id_os_detalle})" >
+                </div>
+              </td>
+              <td width="50">
+              	<div align="right">
+                <input id="id_{id_os_detalle}" name="cantpickeada[]" type="text" value="{cant_pickeada}" size="6" {disabled} maxlength="4"> 
+              	
+              	
+              	
+              	</div>
+              </td>
+              </tr>
+	<input id="indices_{id_os_detalle}" type="hidden" name="indices[]" value="{id_os_detalle}" >
+	<input id="cantidad_{osde_cantidad}" type="hidden" name="cantidad[]" value="{osde_cantidad}" >
+	<input id="id_{id_os_detalle}" type="hidden" name="CP[]" value="{cant_pickeada}" >
+	<input id="des_{osde_descripcion}" type="hidden" name="descripcion[]" value="{osde_descripcion}" >
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+		in_dices[i++]	=document.getElementById('indices_{id_os_detalle}');
+		cantidad[j++]	=document.getElementById('cantidad_{osde_cantidad}');
+		cant_pick[h++]	=document.getElementById('id_{id_os_detalle}');
+		descrip[b++]	=document.getElementById('des_{osde_descripcion}');
+		caja[c++]		=document.getElementById('caja_{id_os_detalle}');
+		text_parse += "parsePorcentDec(document.getElementById('id_{id_os_detalle}'));";
+	//-->
+   </SCRIPT>
+	<!-- END OSDETALLE --> 
+     </table></td></tr>
+</div>
+    <td><div align="center">
+            <table width="679"  border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="679"><div align="right">
+                  <input name="Button" value="Actualizar Cantidades Pickeadas" type="Button" name="Button"  onClick="actualizar_cantidades()" >
+                </div></td>
+              </tr>
+            </table>
+			</form>
+          </div></td>
+        </tr>
+        <tr>
+          <td><table width="350" border="0" align="center" cellpadding="5" cellspacing="5" class="tabla1">
+            <tr>
+              <th colspan="9">Acciones Disponibles </th>
+            </tr>
+            <script language="JavaScript" type="text/JavaScript" src="popup.js"></script>			  
+           		<form NAME="botones" METHOD="POST" ACTION="monitor_ot_ps_detalle.php">
+				<input type="hidden" name="id_estado" value="{id_estado}">
+				<input type="hidden" name="id_ot" value="{id_ot}">
+				<input type="hidden" name="esta_tipo" value="{esta_tipo}">
+				<input type="hidden" name="tipoDes" value="{tipoDes}">
+				<tr>
+                  <td width="101">                    <div align="center">
+                    <input type="button" name="Button" value="    Volver    " onClick="location.href='monitor_despacho.php'">
+                  </div></td>
+             <!--
+              <td width="80"><div align="center"> 
+                    Se deshabilita la Opcion de Imprimir OT 
+                   <input type="button" name="Button" value="Imprimir OT" onClick="javascript:popUpWindowModal('printframe_ot.php?id_ot={id_ot}&id_estado={id_estado}&tipoDes={tipoDes}', 100, 100, 710, 500);" style="color:#0000FF ">  
+              </div></td>
+              -->
+              <td width="89"><div align="center">
+                <input type="button" name="Button" value="Dividir OT" style="color:#FF0000" onClick="Dividir_OT('{id_ot}',{tipoDes},'{esta_tipo}','{destino}','{id_estado}')">
+              </div></td>
+             <!-- BEGIN botones -->
+				<input type="hidden" name="id_estado" value="{id_estado}">
+				<input type="hidden" name="id_ot" value="{id_ot}">
+				<input type="hidden" name="tipo_ot" value="{tipo_ot}">
+				<input type="hidden" name="tipoDes" value="{tipoDes}">
+				<input type="hidden" name="destino" value="{destino}">
+		      <td width="140"><div align="center">
+			   <input type="button" name="boton" value="{desc_transicion}" style="color:#FF0000" onClick="acciones('{desc_transicion}','{tipo_ot}','{destino}','{id_ot}',{tipoDes},'{esta_tipo}','{id_estado}',document.cantidades)">
+              </div></td>
+			<!-- END botones -->
+			  <td width="140">
+			  	<div align="center"><input type="button" name="Button" value="Imprimir Picking" onClick="PrintPickin({id_ot});" style="color: rgb(255, 0, 0); display:compact;"/></div>
+			  </td>
+              </tr>
+			</form>
+          </table></td>
+        </tr>
+      </table>
+	</td>
+  </tr>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+function Llena_ceros(f){
+	eval(text_parse);
+}
+//Llena_ceros(document.cantidades);
+window.document.cantidades.onkeypress = KeyIsNumber;
+</script>
+

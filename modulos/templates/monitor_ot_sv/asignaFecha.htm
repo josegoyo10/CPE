@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Asigna Fecha de Visita Instalador</title>
+<link href="../estilos.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT language="JavaScript" src="../CalendarPopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+	var cal1 = new CalendarPopup("testdiv1");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = -77;										
+	cal1.offsetY = +20;
+	
+	function fechaNovacia(){
+	//Valida que los campos de fecha no esten vacios y la diferencia de fechas no sea superior a 30 dias
+		var Fcha = document.fhVisita.fecha.value;
+		if(Fcha == '')
+				alert("Debe ingresar Fecha de Instalación");		
+		else
+			accion();							
+	}
+	
+	function accion(){
+		document.fhVisita.accion.value="update";
+		document.fhVisita.submit();			
+		opener.document.location.reload();	
+	}
+</SCRIPT>
+
+<form name="fhVisita" ACTION="asignaFecha.php" onSubmit="">
+<table width="37%"  border="0" cellpadding="3" cellspacing="10">
+  <tr>
+    <td colspan="2" class="textonormal">* Fecha de Visita </td>
+    <td colspan="4">
+		<a href="#" onClick="cal1.select(document.forms[0].fecha,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/cal.gif" width="16" height="16" border="0" title="Fecha Desde "></a>
+		<DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+		<input name="fecha" id="fecha" type="text" size="12" maxlength="12" value="{fecha_visita}" onClick="cal1.select(document.forms[0].fecha,'anchor1','dd/MM/yyyy'); return false;" readonly="readonly">
+		<input name="accion" id="accion" type="hidden" value="">
+		<input name="id_ot" id="id_ot" type="hidden" value="{id_ot}"/>						 
+	</td>
+  </tr>
+  <tr>
+    <td width="12%" class="textonormal">*Horas</td>
+    <td width="23%">
+		<div align="right">
+		  <select name="horas" class="userinput" id="horas">
+		      <option>{hora_visita}</option>
+		      <option>01</option><option>02</option>
+		      <option>03</option><option>04</option>
+		      <option>05</option><option>06</option>
+		      <option>07</option><option>08</option>
+		      <option>09</option><option>10</option>
+		      <option>11</option><option>12</option>
+	      </select>
+        </div></td>
+    <td width="13%" class="textonormal">*Minutos</td>
+    <td width="19%">
+		<div align="right">
+		  <select name="minutos" class="userinput" id="minutos">
+		      <option>{minuto_visita}</option>
+		      <option>00</option><option>01</option>
+		      <option>02</option><option>03</option>
+		      <option>04</option><option>05</option>
+		      <option>06</option><option>07</option>
+		      <option>08</option><option>09</option>
+		      <option>10</option><option>11</option>
+		      <option>12</option><option>13</option>
+		      <option>14</option><option>15</option>
+		      <option>16</option><option>17</option>
+		      <option>18</option><option>19</option>
+		      <option>20</option><option>21</option>
+		      <option>22</option><option>23</option>
+		      <option>24</option><option>25</option>
+		      <option>26</option><option>27</option>
+		      <option>28</option><option>29</option>
+		      <option>30</option><option>31</option>
+		      <option>32</option><option>33</option>
+		      <option>34</option><option>35</option>
+		      <option>36</option><option>37</option>
+		      <option>38</option><option>39</option>
+		      <option>40</option><option>41</option>
+		      <option>42</option><option>43</option>
+		      <option>44</option><option>45</option>
+		      <option>46</option><option>47</option>
+		      <option>48</option><option>49</option>
+		      <option>50</option><option>51</option>
+		      <option>52</option><option>53</option>
+		      <option>54</option><option>55</option>
+		      <option>56</option><option>57</option>
+		      <option>58</option><option>59</option>
+	      </select>
+        </div></td>
+    <td width="12%" class="textonormal">*AM/PM</td>
+    <td width="21%">
+		<div align="right">
+		  <select name="ampm" class="userinput" id="ampm">
+		  	  <option>{am_pm}</option>
+		      <option>AM</option>
+		      <option>PM</option>		
+	      </select>
+        </div></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="4">
+    	<div align="center"> <input type="button" name="Button" value="Asignar Fecha de Instalación" onclick="fechaNovacia()"></div>
+    </td>
+	<td>&nbsp;</td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

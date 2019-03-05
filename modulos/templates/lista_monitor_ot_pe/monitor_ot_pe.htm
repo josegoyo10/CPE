@@ -1,0 +1,140 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+function validar_osot(){
+    var valorE,radioE,elec;
+    if ( validar_numero( document.busca_osot.texto_osot , "Debe ingresar valor numérico" ) )
+        return false;
+    
+    for (i=0;i<document.busca_osot.radioE.length;i++){ 
+       if (document.busca_osot.radioE[i].checked){ 
+          valor = document.busca_osot.radioE[i].value;
+		  elec=valor;
+		  break;
+       }
+    }          
+	texto_osot =document.busca_osot.texto_osot.value;
+    radioE =elec;
+    document.busca_osot.submit();
+}
+</SCRIPT>
+
+<table width="780" height="5%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="390" class="titulonormal">Monitor OT Pedidos Especiales </td>
+		<td width="390" class="titulonormal">&nbsp;</td>
+	</tr>
+</table>
+
+<table width="780" border="0" height="95%" cellpadding="0" cellspacing="0"  border="5" bordercolor="white">
+	<tr>
+		<td valign="top">
+			<table width="25%" border="0" align="center" cellpadding="0" cellspacing="2">
+				<tr>
+				<form NAME="busca_osot" METHOD="POST" ACTION="index.php" onSubmit="return validar_osot(this);">
+					
+					<td>
+						<table width="200" border="0" align="rigth" cellpadding="0" cellspacing="0" class="textonormal">
+							<tr>
+								<td width="200" align="center">
+									<fieldset>
+									<legend>N&deg; OT/OS</legend>
+									<span class="userinput">
+										<input name="radioE" type="radio" value="ot" {checkedT}>OT
+										<input name="radioE" type="radio" value="os" {checkedS}>OS
+										<input type="text" name="texto_osot" value="{texto_osot}" size=8 maxlength=8>
+										<input type="submit" value="Buscar">
+									</span>
+									</fieldset>
+								</td>
+							</tr>
+						</table> 
+					</td>
+					
+					
+					  
+				</form>
+				</tr>
+			</table>
+
+			<table BORDER="0" cellspacing="0" cellpadding="0" align="center">
+				<tr>
+					<td>
+						<table width="750"  border="0" bordercolor="#000000" align="left" cellpadding="2" cellspacing="0" class="tabla2">
+							<FORM NAME="monitor" METHOD="POST" ACTION="index.php" onSubmit="">
+							<input type="hidden" name="texto_osot" value="{texto_osot}">
+							<input type="hidden" name="radioE" value="{radioE}">
+							<input type="hidden" name="radioR" value="{radioR}">
+							<tr>
+								<th width="50" >N&ordm;. OT </th>
+								<th width="50" >N&ordm;. OS </th>
+								<th width="50" >N&ordm;. TRAS SAP </th>
+								<th width="50" >N&ordm;. OC SAP </th>
+								<th width="100" >Tienda	</th>
+								<th width="100" >F. Creaci&oacute;n	</th>
+								<th width="100">Estado </th>
+								<th width="60" align=center>Acci&oacute;n</th>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">
+						<!--div style="width: 770px; height: 350px; left: 100px; top: 353px; overflow: auto;"-->    
+						<table width="750" border="0" cellpadding="1" cellspacing="0" align="left" class="tabla2">
+							<!-- BEGIN Lista -->
+							<tr>
+								<td width="50" align=center><font color="{color}">{ot_idList}</font></td>
+								<td width="50" align=center><font color="{color}">{idLista_OS_enc}</font></td>
+								<td width="50" align=center><font color="{color}">{no_OC_SAP}</font></td>
+								<td width="50" align=center><font color="{color}">{no_TR_SAP}</font></td>
+								<td width="100"><font color="{color}">{nom_local}</font></td>
+								<td width="100"><font color="{color}">{OS_fecCrea}</font></td>
+								<td width="100"><font color="{color}">{esta_nombre}</font></td>
+								<td width="60" align=center><a href="../lista_monitor_ot_pe/monitor_detalle_01.php?id_ot={ot_idList}&id_estado={ot_idEstado}">Ver</a></td>
+							</tr>
+							<!-- END Lista -->
+						</table>
+						<!--/div-->
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+<!--paginacion-->
+			{inicio}
+			<tr><td>
+			<table BORDER="0" cellspacing="0" cellpadding="0" align="right">
+			<tr>
+			<td>&nbsp;&nbsp;</td>
+			</tr>
+			<tr><td>
+				<form NAME="form_paginas" METHOD="POST" ACTION="monitor_ot_pe.php">
+				<input type="hidden" name="texto_osot" value="{texto_osot}">
+				<input type="hidden" name="radioE" value="{radioE}">
+				<input type="hidden" name="radioR" value="{radioR}">
+
+				<td align="right" class="textonormal">N&uacute;mero de página &nbsp;</td>
+				<td align="right">
+				<span class="userinput">
+				<select name="select_pag" Onchange="submit();">
+				   <!-- BEGIN Paginas -->
+					 <option value="{pag}" {selected}>{pag}&nbsp;</option>
+				   <!-- END Paginas -->
+				{inicio}</select>
+				</span>
+				</td>
+				</tr>
+				</form>
+			</td></tr>
+			</table>
+			</td>
+			</tr>
+			{fin}
+
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+	document.busca_osot.texto_osot.onkeypress = NumberIsKey ;
+</script>

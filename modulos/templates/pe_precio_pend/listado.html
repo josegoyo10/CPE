@@ -1,0 +1,138 @@
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript" src="../includes/funciones.js"></script>
+
+<script language="javascript">
+<!--
+
+function validar_search3(){
+    if( validar_obligatorio( document.form_search3.bus_os, "Campo obligatorio" ))
+        return false;
+    else
+        form_search3.submit();
+}
+function versum(){
+	document.listadopp.submit();
+}
+
+-->
+</script>
+<body  onload="document.form_search3.bus_os.focus();"> 
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Monitor PE con Precio Pendiente <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="31%" valign="top">
+              <table border="0" align="center" cellpadding="0" cellspacing="4" class="textonormal">
+            <tr>
+              <!-- form NAME="form_search1" METHOD="GET" ACTION="index.php"> //JSE: 07092005
+			  <td valign="top"><p class="userinput">
+			  <input type="hidden" name="req" value="">
+			  <fieldset>
+                <legend>Tipo de Producto </legend>
+                <table  border="0" cellspacing="2" cellpadding="2">
+                  <tr>
+                    <td><span class="userinput">
+                      <select name="select_tipo">
+                        <option value='0'>Sin Precio</option>
+                        <option value='1' {select1}>Con Precio</option>
+                        <option value='2' {select2}>TODOS</option>
+                      </select>
+                    </span></td>
+                    <td><input type="submit" name="Button2" value="Filtrar"></td>
+                  </tr>
+                </table>
+			  </fieldset></td>
+			  </form-->
+              <form NAME="form_search2" METHOD="GET" ACTION="index.php">
+			  <td valign="top"><p class="userinput">              
+				  <input type="hidden" name="req" value="">
+                  <fieldset>
+                  <legend>Local</legend>
+                  <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+                    <tr>
+                      <td><span class="userinput">
+                        <select name="select_local">
+	                        {ALL}
+                            <!-- BEGIN Locales -->
+                            <option value="{id_local}" {selected}>{nom_local}</option>
+                            <!-- END Locales -->
+                        </select>
+                      </span></td>
+                      <td><input type="submit" name="Button2" value="Filtrar"></td>
+                    </tr>
+                  </table>
+                  </fieldset></td>
+			  </form>
+              <form NAME="form_search3" METHOD="GET" ACTION="index.php">
+			  <td valign="top"><fieldset>
+			  <input type="hidden" name="req" value="">
+              <legend>N&deg; OS</legend>
+              <table  border="0" cellspacing="2" cellpadding="2">
+                <tr>
+                  <td><span class="userinput"><input name="bus_os" type="text" size="10"></span></td>
+                  <td><input type="button" name="Button23" value="Filtrar" onclick="validar_search3();"></td>
+                </tr>
+              </table>
+              </fieldset></td>
+              </form>
+			  </tr>
+          </table>
+
+		<table BORDER="0" cellspacing="0" cellpadding="0" align="center">
+		<tr>
+		  <td>
+
+		  <table width="750" border="0" align="left" cellpadding="2" cellspacing="0" class="tabla2">
+            <tr>
+              <th width="62">N&ordm; OS <a href="index.php?filtro=os&orden={orden}&select_tipo={select_tipo}&select_local={select_local}&bus_os={bus_os}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+              <th width="73">Tienda</th>
+              <th width="100">Fecha Creaci&oacute;n <a href="index.php?filtro=fc&orden={orden}&select_tipo={select_tipo}&select_local={select_local}&bus_os={bus_os}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+              <th width="259">Producto</th>
+              <th width="55">Costo</th>
+              <th width="65">Precio</th>
+              <th width="69">Acci&oacute;n</th>
+            </tr>
+		 </table>
+			</td>
+		  </tr>
+		<tr>
+		  <td>
+			<div style="width: 770px; height: 343px; left: 49px; top: 353px; overflow: auto;">  
+		<table width="750" border="1" align="left" class="tabla2" cellspacing="0">
+			<!-- BEGIN listado -->
+			<tr>
+              <td width="62" align=center>{id_os}&nbsp;</td>
+              <td width="73">{local}&nbsp;</td>
+              <td width="100"><div align="center">{os_fechacreacion}&nbsp; </div></td>
+              <td width="250"> {desc_prod}&nbsp; <br></td>
+              <td width="55"><div align="right">{costo}&nbsp;</div></td>
+              <td width="65"><div align="right">{precio}&nbsp;</div></td>
+              <td width="69"><div align="center"><a href="../pe_precio_pend/index.php?idosde={idosde}&req=frmed">Editar</a></div></td>
+            </tr>
+			<!-- END listado -->
+		  </table>
+		  
+	</div>		  
+ 	</td>
+    </tr>
+    </table>
+		</td>
+        </tr>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.form_search3.bus_os.onkeypress = KeyIsNumber;
+-->
+</script>
+
+

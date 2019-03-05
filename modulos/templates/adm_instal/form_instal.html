@@ -1,0 +1,127 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function checkDV( ){
+	
+	if( validar_obligatorio( form_1.inst_rut, "Cédula es obligatorio" ))return false;	
+	if( validar_obligatorio( form_1.inst_nombre, "Nombre es obligatorio" ))return false;
+	if( validar_obligatorio( form_1.inst_paterno, "Primer Apellido es obligatorio" ))return false;
+	if( validar_obligatorio( form_1.inst_materno, "Segundo Apellido es obligatorio" ))return false;
+	if( validar_obligatorio( form_1.inst_fono1, "Teléfono Uno es obligatorio" ))return false;
+	if( validar_obligatorio( form_1.inst_dire, "La Dirección es obligatoria" ))return false;
+	
+	
+	
+	  crut = '';
+	  mcrut= form_1.inst_rut.value;
+	  for(i=0; i<mcrut.length; ++i)
+		if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-'){
+		 crut = crut + mcrut.charAt(i);
+		}
+	  largo = crut.length;
+	  if ( largo < 5 ){
+		alert("Debe ingresar la Cédula completa.");
+		document.form_1.inst_rut.focus();
+		document.form_1.inst_rut.select();
+		return false;
+	  }
+	  
+	  
+	  window.document.form_1.inst_rut.onkeypress = KeyIsEnter ;
+	  document.form_1.submit();
+	  return true;
+ 
+}
+//-->
+</SCRIPT>
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript" src="../includes/funciones.js"></script>
+
+{OUT_BARRA}
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Administración de Instaladores <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" -->
+      <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" height="500" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="500" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                <tr>
+                  <form NAME="form_1" METHOD="POST" ACTION="adm_instal.php" OnSubmit="return validar_form1(this);">
+				  <input type="hidden" name="req" value="{req}">
+				  <input type="hidden" name="inst_id" value="{inst_id}">
+				  <td><fieldset>
+                    <legend>Datos del Instalador</legend>
+                    <table width="435" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="136">Cédula (*)</td>
+                        <td width="240" class="userinput"><input name="inst_rut" value='{inst_rut}' type="text" size="12" maxlength='12'></td>
+                      </tr>
+                      <tr>
+                        <td width="136">Nombre (*)</td>
+                        <td width="240" class="userinput"><input name="inst_nombre" value='{inst_nombre}' type="text" size="40" maxlength='40'></td>
+                      </tr>
+                      <tr>
+                        <td width="136">Primer Apellido (*)</td>
+                        <td width="240" class="userinput"><input name="inst_paterno" value='{inst_paterno}' type="text" size="40" maxlength='40'></td>
+                      </tr>
+                      <tr>
+                        <td width="136">Segundo Apellido (*)</td>
+                        <td width="240" class="userinput"><input name="inst_materno" value='{inst_materno}' type="text" size="40" maxlength='40'></td>
+                      </tr>
+                      <tr>
+                        <td width="136">Teléfono 1 (*)</td>
+                        <td width="240" class="userinput"><input name="inst_fono1" value='{inst_fono1}' type="text" size="30" maxlength='30'></td>
+                      </tr>
+                      <tr>
+                        <td width="136">Teléfono 2</td>
+                        <td width="240" class="userinput"><input name="inst_fono2" value='{inst_fono2}' type="text" size="30" maxlength='30'></td>
+                      </tr>
+                      <tr>
+                        <td width="136">e-mail </td>
+                        <td width="240" class="userinput"><input name="inst_mail" value='{inst_mail}' type="text" size="40" maxlength='40'></td>
+                      </tr>
+                      <tr>
+                        <td width="136">Dirección (*) </td>
+                        <td width="240" class="userinput"><input name="inst_dire" value='{inst_dire}' type="text" size="40" maxlength='40'></td>
+                      </tr>
+                      <tr>
+                        <td width="136">Empresa Instaladora </td>
+                        <td width="240" class="userinput">
+							<select name="inst_empresa">
+							<!-- BEGIN Inst_Empresas -->
+								<option value="{id_empresa_instaladora}" {selected}>{descripcion}</option>
+							<!-- END Inst_Empresas -->
+							</select>
+						<td width="43">
+                      </tr>
+                      <tr>
+                        <td colspan=3 align="center"><input type="button" onClick="checkDV()" value="Guardar Datos"></td>
+                      </tr>
+                      <tr>
+                        <td colspan=3 align="right">(*) Datos obligatorios.</td>
+                      </tr>
+                    </table>
+                  </fieldset>
+				  </td>
+				  </form>
+                </tr>
+              </table>
+              <br>
+              {OUT_ASOC}
+			</td>
+        </tr>
+      </table>
+      <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</div>
+<script LANGUAGE="javascript">
+	window.document.form_1.inst_rut.onkeypress = KeyIsRut;
+</script>

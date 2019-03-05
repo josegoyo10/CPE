@@ -1,0 +1,4 @@
+INSERT INTO os (id_estado,       id_proyecto,					id_local,					      id_direccion,	  clie_rut,	  os_fechacreacion, os_fechacotizacion,     os_fechaestimacion,	                                         os_fechaestimada,								      os_comentarios,    os_descripcion,	  usuario,							  USR_ID,            origen,                  USR_ORIGEN)
+					  SELECT		  'SA',		 596474, 101, d.id_direccion, c.clie_rut, now(),			now(),			        DATE_ADD(now(), INTERVAL 3 DAY), '2019/02/06 00:00:00', '', NULL, 'admin', 1, 'C' ,'0'
+					  FROM clientes c left join direcciones d on d.clie_rut = c.clie_rut
+					  WHERE c.clie_rut = 80243868 and d.dire_defecto = 'p'

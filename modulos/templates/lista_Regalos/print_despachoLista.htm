@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>{PAGETITLE}</title>
+</head>
+<script language="javascript" src="../../includes/popup.js"></script>
+<script type="text/javascript">
+	function print_OT(){
+		if ({numImp} == '0'){
+			popUpWindowMod('printDespacho.php?idLista={idLista}',100,50,750,700);
+			location.href = 'print_despachoLista.php?idLista={idLista}';
+		}
+		else{
+			if(confirm('El Acta de Entrega N°.{noGuia} ya fue impresa . \n         Desea Re-imprimirla?'))
+				popUpWindowMod('../lista_Regalos/valida_subAdmin.php?accion=Imp&idLista={idLista}&clie_rut=GD',300,300,300,170);
+		}
+	}
+	
+	function Accion_flecha_ant(){
+		location.href='nueva_lista_sumario_01.php?idLista={idLista}';
+	}
+	
+	function printLista(){
+		popUpWindowMod('print_lista.php?idLista={idLista}',100,100,750,600);
+	}
+	
+	function verOS(){
+		location.href = '../cotiza_Regalos/monitor_OSRegalos.php?idLista={idLista}';
+	}
+	
+	function verOT(){
+		location.href = '../cotiza_Regalos/monitor_OTRegalos.php?idLista={idLista}';	
+	}
+	
+	function tracking(){
+		location.href = 'tracking.php?idLista={idLista}&clie_rut={clie_rut}';
+	}
+	
+	function liqBono(){
+		popUpWindowMod('valida_subAdmin.php?accion=Val&idLista={idLista}&clie_rut=BN',300,300,300,170);
+	}
+</script>
+<body>
+<div align="left" style="margin-top: 5;" class="titulonormal">{TEXT_TITULO}</div>
+<table border="0" align="center" style="width: 780; margin-top: 0;">
+	<tr>
+		<td style="height: 50" align="center">
+			<input type="hidden" name="numImp" value="{numImp}">
+			<div id="Impr">
+				<a href="#" title="Imprimir" onclick="print_OT()">
+				<img src="../img/ico_print.gif" border="0" style="width:36; height: 36;">
+				</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table border="0" align="center" style="width: 700;">
+				<tr>
+				  	<td colspan="3">
+				  		<table border="0" align="center" style="width: 700; margin-top: 0;">
+				  			<tr>
+								<td align="left" style="width: 150"><img src="../img/logo3.gif" border="0" style="width:95; height: 55;"></td>
+								<td>
+									<table width="550">
+									  <tr>
+									    <td class="subtitulonormal">{TEXT_CAMPO_1}  {noGuia}</td>
+									  </tr>
+									  <tr>
+									    <td class="subtitulonormal">{TEXT_CAMPO_2}  {idLista}</td>
+									  </tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_5}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_6}</td>
+								<td style="width: 250;" class="userinput">{idLista}</td>
+								<td style="width: 120;" class="textonormal">{TEXT_CAMPO_7}</td>
+								<td style="width: 150;" class="userinput">{estado}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_8}</td>
+								<td style="width: 250;" class="userinput">{fec_crea}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_9}</td>
+								<td style="width: 150;" class="userinput">{tienda}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_10}</td>
+								<td style="width: 250;" class="userinput">{evento}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_11}</td>
+								<td style="width: 150;" class="userinput">{asesor}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_12}</td>
+								<td style="width: 250;" class="userinput">{festejado}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_13}</td>
+								<td style="width: 150;" class="userinput">{fec_entrega}</td>
+							</tr>				
+							<tr>
+							</tr>
+						</table>
+						</fieldset>
+					</td>	
+				</tr>
+				<tr>	
+					<td>
+					<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_14}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_16}</td>
+								<td style="width: 250;" class="userinput">{clie_rut}</td>
+								<td style="width: 120;" class="textonormal">{TEXT_CAMPO_15}</td>
+								<td style="width: 150;" class="userinput">{clie_nombre}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_17}</td>
+								<td style="width: 250;" class="userinput">{clie_telefonocasa}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_18}</td>
+								<td style="width: 150;" class="userinput">{clie_telcontacto2}</td>
+							</tr>		
+							</tr>
+						</table>
+					</fieldset>
+					</td>				
+				</tr>
+				</tr>
+				<tr>	
+					<td>
+					<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_19}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_20}</td>
+								<td style="width: 250;" class="userinput">{fec_entrega}</td>
+								<td style="width: 120;" class="textonormal">{TEXT_CAMPO_22}</td>
+								<td style="width: 150;" class="userinput">{ciudad}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_21}</td>
+								<td style="width: 250;" class="userinput">{direccion}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_23}</td>
+								<td style="width: 150;" class="userinput">{barrio}- {localidad}</td>
+							</tr>		
+							</tr>
+						</table>
+					</fieldset>
+					</td>			
+				</tr>
+				
+				<tr>
+					<td colspan="3">
+						<table width="100%" class="tabla1">
+							<tr>
+								<th style="width: 140;">{TEXT_CAMPO_22}</th>
+								<th style="width: 320;">{TEXT_CAMPO_23}</th>
+								<th style="width: 110;">{TEXT_CAMPO_26}</th>
+							</tr>
+							<!-- BEGIN Productos -->
+							<tr>
+								<td style="width: 120;">{cod_Ean}<br>( {cod_Easy} )</td>
+								<td style="width: 350;">{descripcion}</td>
+								
+								<td style="width: 70;" align="right">{cantPick}</td>
+								
+							</tr>
+							<!-- END Productos -->
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" align="center" style="width:560; margin-top: 15;" class="tabla1">
+	<tr>
+		<th colspan="6" align="center">{TEXT_CAMPO_35}</th>
+	</tr>
+	<tr>
+		<td align="center" width="80">
+			<a href="#" onClick="Accion_flecha_ant();">{TEXT_CAMPO_36}</a>
+		</td>
+		<td align="center" width="80">
+			<a href="#" onClick="liqBono()">{TEXT_CAMPO_34}</a>
+		</td>
+		<td align="center" width="80">
+			<a href="#" onClick="printLista();">{TEXT_CAMPO_33}</a>
+		</td>
+		<td align="center" width="80">
+			<a href="#" onClick="verOS();">{TEXT_CAMPO_29}</a>
+		</td>
+		<td align="center" width="80">
+			<a href="#" onClick="verOT();">{TEXT_CAMPO_30}</a>
+		</td>
+		<td align="center" width="80">
+			<a href="#" onClick="tracking();">{TEXT_CAMPO_31}</a>
+		</td>
+		</tr>
+</table>
+
+</body>
+</html>

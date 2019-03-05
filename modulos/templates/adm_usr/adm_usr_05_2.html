@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>{PAGETITLE}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<SPAN class=titulo>{TEXT_ADMIN_TITULO}</SPAN>
+<br>
+<br>
+
+<form action="adm_usr_05.php" method="post" name="form_modificar">
+<INPUT TYPE="hidden" NAME="action" VALUE="{ACTION}">
+<INPUT TYPE="hidden" NAME="id_perfil" VALUE="{ID_PERFIL}">
+<INPUT TYPE="hidden" NAME="pemo_mod_id" VALUE="{PEMO_MOD_ID}">
+<table border="0" align=center class="form_g">
+	<tr valign=top>
+		<td width="60">{TEXT_ASOCIAR_CAMPO_1}</td>
+		<td > : </td>
+		<td>{per_nombre}</td>
+	</tr>
+	<tr valign=top>
+		<td>{TEXT_ASOCIAR_CAMPO_2}</td>
+		<td > : </td>
+		<td>{mod_nombre}<p></td>
+	</tr>
+	<tr valign=top>
+		<td>{TEXT_ASOCIAR_CAMPO_3}</td>
+		<td > : </td>
+		<td>
+			
+				<INPUT TYPE="checkbox" NAME="select_in_d" VALUE="1" checked disabled>
+				<INPUT TYPE="hidden" NAME="select_in" VALUE="1">
+			
+		</td>
+	</tr>
+	<tr valign=top>
+		<td>{TEXT_ASOCIAR_CAMPO_4}</td>
+		<td > : </td>
+		<td>
+			
+				<INPUT TYPE="checkbox" NAME="insert_in" VALUE="1" {ch1}>
+			
+		</td>
+	</tr>
+	<tr valign=top> 
+		<td>{TEXT_ASOCIAR_CAMPO_5}</td>
+		<td > : </td>
+		<td>
+			
+				<INPUT TYPE="checkbox" NAME="delete_in" VALUE="1" {ch2}>
+			
+		</td>
+	</tr>
+	<tr valign=top>
+		<td>{TEXT_ASOCIAR_CAMPO_6}</td>
+		<td > : </td>
+		<td>
+			
+				<INPUT TYPE="checkbox" NAME="update_in" VALUE="1" {ch3}>
+			
+		</td>
+	</tr>
+</table>
+<center>
+<br>
+<INPUT TYPE="submit" value="{BOTON}">
+</center>
+</form>
+
+
+
+</body>
+
+</html>

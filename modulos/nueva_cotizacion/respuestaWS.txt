@@ -1,0 +1,48 @@
+Array
+(
+    [IdGroup] => 1
+    [Address] => Calle 175 No 22-13 piso 2do
+    [AgeRange] => 0
+    [Contact] => 
+    [Email] => 
+    [Fax] => 
+    [FirstName] => CLIENTE .
+    [Gender] => M
+    [IdCategory] => 0
+    [IdCustomer] => 1036668773
+    [IdDoc] => 13
+    [IdTypeContribuyente] => 0
+    [Location] => 11001000000000
+    [Occupation] => 1
+    [Phone] => 7429800
+    [Phone2] => 
+    [Quota] => 0
+    [ReteFuente] => false
+    [ReteIca] => false
+    [ReteIva] => false
+    [State] => 1
+    [Surname1] => COMFAMA
+    [Surname2] => .
+    [desc] => Cliente consultado exitósamente
+    [Department] => BOGOTA
+    [Province] => BOGOTA
+    [ExenIva] => false
+    [OtrIva] => false
+    [Status] => A
+    [Profession] => 1
+    [RewardPoints] => 0
+    [TypeCustomer] => 
+      <IdTypeCustomer>49</IdTypeCustomer>
+      <IdTypeCustomer>4</IdTypeCustomer>
+    
+    [0] => Array
+        (
+            [IdTypeCustomer] => 49
+        )
+
+    [1] => Array
+        (
+            [IdTypeCustomer] => 4
+        )
+
+)

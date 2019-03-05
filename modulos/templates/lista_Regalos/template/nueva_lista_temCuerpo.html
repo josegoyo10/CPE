@@ -1,0 +1,314 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="../../../estilos.css"></link>
+<script language="JavaScript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../../includes/ajax.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+	window.name="cliente";
+	function validar_form(){
+		if( validar_obligatorio( nueva_lista_01.clie_nombre, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+			return false;
+		if( validar_obligatorio( nueva_lista_01.clie_paterno, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+			return false;
+		if( validar_obligatorio( nueva_lista_01.clie_materno, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+			return false;
+		if( validar_obligatorio( nueva_lista_01.dire_direccion, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+			return false;
+		if( validar_obligatorio( nueva_lista_01.clie_telefonocasa, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+			return false;
+		if( validar_obligatorio( nueva_lista_01.barrios, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+			return false;
+		if( validar_obligatorio( nueva_lista_01.categoria_cliente, "Por favor seleccione la Categoría del Cliente " ))
+			return false;
+		if(isEmailAddress( nueva_lista_01.clie_email, 'clie_email' ))
+			return false;
+	  
+document.nueva_lista_01.submit();
+}
+
+/* AJAX PARA CIUDADES */
+function recargar(idCiudad)
+{
+	var selectDeparta=document.getElementById('departamento');
+	var dept=selectDeparta.options[selectDeparta.selectedIndex].value;
+
+	var selectCiudad=document.getElementById(idCiudad);
+	var opcion=selectCiudad.options[selectCiudad.selectedIndex].value;
+
+	exec_AJAXRPC('POST','../nueva_cotizacion/nueva_cotizacion_01_ajax_buscarBarrio.php?id_ciudad=' + opcion + '&id_dept=' + dept,'desplegar_barrio');
+}
+
+function desplegar_barrio(text){
+	var Selectbarrios=document.getElementById('barrios');
+	Selectbarrios.parentNode.innerHTML = text;
+}
+
+
+
+/* AJAX PARA DEPARTAMENTOS */
+function recargarDept(idDept)
+{
+	var selectDept=document.getElementById(idDept);
+	var opcion=selectDept.options[selectDept.selectedIndex].value;
+	exec_AJAXRPC('POST','../nueva_cotizacion/nueva_cotizacion_01_ajax_buscarCiudad.php?id_Dept=' + opcion,'desplegar_ciudad');
+}
+
+function desplegar_ciudad(text2){
+	var SelectCiudad = document.getElementById('ciudad');
+	SelectCiudad.parentNode.innerHTML = text2;
+
+	recargar('ciudad');
+}
+</SCRIPT>
+
+</head>
+<body onload="document.nueva_lista_01.clie_nombre.focus();">
+
+<FORM  NAME="nueva_lista_01" METHOD="POST" ACTION="nueva_lista_01.php" onSubmit="return validar_form(this);" TARGET="cliente">
+<table style="width: 780; height: 76%;" border="0" cellpadding="0" cellspacing="0">
+	<input type="hidden" name="accion" value="update"></input>
+	<input type="hidden" name="donde" value="{donde}"></input>
+	<input type="hidden" name="clie_rut" value="{clie_rut}"></input>
+	<tr>
+		<td valign="top">
+		<table style="width: 100%; border: 0;" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style=" width: 31%;" valign="top" class="titulonormal">{leyenda}
+				{espacio}<table width="754" border="0" cellpadding="0" cellspacing="0"
+					class="textonormal">
+					<tr>
+						<td style=" width: 32;">{TEXT_CAMPO_1}&nbsp;(*)</td>
+					    <td style=" width: 87;"><input name="clie_rut" type="text" disabled class="userinput" value="{clie_rut}" size="12"></input></td>
+						<td style=" width: 93;">Tipo Doc (*) </td>
+						<td style=" width: 436;"><select name="id_tipo_doc" class="userinput" id="id_tipo_doc">
+                          <!-- BEGIN tipo_doc -->
+                          <option value="{id_nif}"{selected}>{descripcion}</option>
+                          <!-- END tipo_doc -->
+                        </select></td>
+					</tr>
+
+				</table>
+
+				<table style=" width: 831; height: 221; border: 0;" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+
+					<tr>
+						<td>&nbsp;</td>
+						<td>{TEXT_CAMPO_2}&nbsp;(*)</td>
+						<td colspan="2">
+							<input name="clie_nombre" type="text" class="userinput" onBlur="Upper(this);" value="{clie_nombre}" size="30" maxlength="45"></input>
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>Primer Apellido &nbsp;(*)</td>
+						<td>
+							<input name="clie_paterno" type="text" class="userinput" onBlur="Upper(this);" value="{clie_paterno}" maxlength="45"></input>
+						</td>
+						<td>Segundo Apellido &nbsp;(*)</td>
+						<td>
+							<input name="clie_materno" type="text" class="userinput" onBlur="Upper(this);" value="{clie_materno}" maxlength="45"></input>
+						</td>
+
+					</tr>
+
+					<tr>
+						<td width="141">&nbsp;</td>
+						<td width="93">
+						<div align="left">Email</div>
+						</td>
+						<td style=" width: 177;">
+							<input name="clie_email" type="text" class="userinput" id="clie_email" value="{clie_email}" size="30" maxlength="50"></input>
+						</td>
+
+						<td style=" width: 103;">
+						<div align="left">{TEXT_CAMPO_5}&nbsp;(*)</div>
+						</td>
+						<td width="245">
+							<input name="dire_direccion" type="text" class="userinput" onBlur="Upper(this);" value="{dire_direccion}" size="25" maxlength="50"></input>
+						</td>
+
+					</tr>
+					<tr>
+					  <td>&nbsp;</td>
+					  <td>Departamento&nbsp;(*)</td>
+					  <td colspan="3">
+					  <select name="departamento" class="userinput" id="departamento" onChange="recargarDept(this.id); " >
+                        <!-- BEGIN Departamento -->
+                        <option value="{id_departamento}"{selected}>{nombre_departamento}</option>
+                        <!-- END Departamento -->
+                      </select>
+					  </td>
+					  <td style=" width:1;">&nbsp;</td>
+					  	<td style=" width: 17;">
+					  		<input name="clie_localidad" type="hidden" value="{clie_localidad}" maxlength="60"></input>
+					  	</td>
+				  </tr>
+
+					<tr>
+					  <td>&nbsp;</td>
+					  <td><div align="left">Ciudad&nbsp;(*)</div></td>
+					  <td colspan="3"><select name="ciudad" class="userinput" id="ciudad" onChange="recargar(this.id); ">
+                          <!-- BEGIN Ciudad -->
+                          <option value="{id_ciudad}"{selected}>{nombre_ciudad}</option>
+                          <!-- END Ciudad -->
+                        </select>
+
+                      </td>
+					  <td><div align="left"></div></td>
+					  <td>&nbsp;                      </td>
+					</tr>
+
+					<tr>
+					  <td>&nbsp;</td>
+					  <td><div align="left">{TEXT_CAMPO_6}&nbsp;(*)</div></td>
+					  <td colspan="3"><select name="barrios" class="userinput" id="barrios">
+                        <!-- BEGIN Barrios -->
+                        <option value="{id_comuna}"{selected}>{comu_nombre}</option>
+                        <!-- END Barrios -->
+                      </select></td>
+					  <td><div align="left"></div></td>
+					  <td>&nbsp;                      </td>
+					</tr>
+
+					<tr>
+						<td>&nbsp;</td>
+						<td>
+						<div align="left">{TEXT_CAMPO_7}&nbsp;(*)</div>
+						</td>
+						<td>
+							<input name="clie_telefonocasa" type="text" class="userinput" value="{clie_telefonocasa}" maxlength="20"></input>
+						</td>
+						<td>
+						<div align="left">Fax</div>
+						</td>
+						<td>
+							<input name="clie_telcontacto1" type="text" class="userinput" value="{clie_telcontacto1}" maxlength="20"></input>
+						</td>
+					</tr>
+
+					<tr>
+						<td>&nbsp;</td>
+						<td>
+						<div align="left">Tel&eacute;fono Celular</div>
+						</td>
+						<td>
+							<input name="clie_telcontacto2" type="text" class="userinput" value="{clie_telcontacto2}" maxlength="20"></input>
+						</td>
+						<td>
+						<div align="left">Sexo(*)</div>
+						</td>
+						<td><select name="sexo" class="userinput" id="sexo">
+							<!-- BEGIN Sexo_cliente -->
+							<option value="{id_sexo_cliente}"{selected}>{sexo_cliente}</option>
+							<!-- END Sexo_cliente -->
+						</select></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>
+						<div align="left">Tipo de Cliente (*)</div>
+						</td>
+						<td><select name="tipo_cliente" class="userinput" id="tipo_cliente">
+							<!-- BEGIN Tipo_cliente -->
+							<option value="{id_tipo_cliente}"{selected}>{nombre_tipo_cliente}</option>
+							<!-- END Tipo_cliente -->
+						</select></td>
+						<td>
+						<div align="left">Categor&iacute;a Cliente</div>
+						</td>
+						<td><select name="categoria_cliente" class="userinput" id="categoria_cliente">
+							<option value=""></option>
+							<!-- BEGIN Categoria_cliente -->
+							<option value="{id_categoria}"{selected}>{nombre_categoria}</option>
+							<!-- END Categoria_cliente -->
+						</select></td>
+					</tr>
+
+					<tr>
+						<td>&nbsp;</td>
+
+						<td>
+						<div align="left">Indicaciones Direcci&oacute;n</div>
+						</td>
+						<td colspan="3">
+						<p><textarea name="dire_observacion" cols="32" rows="3"
+							wrap="VIRTUAL" class="userinput" onBlur="Upper(this);">{dire_observacion}</textarea>
+						</p>
+						</td>
+					</tr>
+					<tr>
+				</table>
+				<br>
+			<tr>
+				<td>
+
+
+				<table style=" width:449; " border="0" align="center">
+
+					<tr>
+						<td colspan="3" class="subtitulonormal">Informaci&oacute;n
+						Tributaria</td>
+					</tr>
+
+
+					<tr>
+
+						<td style=" width:114;" class="textonormal">
+						<div align="left">Tipo Contribuyente (*)</div>
+						</td>
+						<td class="textonormal" colspan="2"><select
+							name="tipo_contribuyente" class="userinput" id="tipo_contribuyente">
+							<option value="RS">R&eacute;gimen Simplificado</option>
+						</select></td>
+
+
+					</tr>
+
+					<tr class="textonormal">
+
+						<td>
+						<div align="left">ReteIca
+							<input name="reteica" type="checkbox" disabled class="userinput" value="1"></input>
+						</div>
+						</td>
+						<td style=" width:116;">ReteFuente
+							<input name="retefuente" type="checkbox" disabled class="userinput" value="1"></input>
+						</td>
+						<td style="width: 251">
+						<div align="left">ReteIva
+							<input name="reteiva" type="checkbox" disabled class="userinput" value="1"></input>
+						</div>
+						</td>
+
+					</tr>
+
+
+				</table>
+
+			</FORM>
+	<script LANGUAGE="javascript">
+		window.document.nueva_lista_01.dire_direccion.onkeypress = KeyIsTexto;
+		window.document.nueva_lista_01.clie_nombre.onkeypress = KeyIsLetra ;
+		window.document.nueva_lista_01.clie_paterno.onkeypress = KeyIsLetra ;
+		window.document.nueva_lista_01.clie_materno.onkeypress = KeyIsLetra ;
+		window.document.nueva_lista_01.clie_telefonocasa.onkeypress = KeyIsTelefono;
+		window.document.nueva_lista_01.clie_telcontacto1.onkeypress = KeyIsTelefono;
+		window.document.nueva_lista_01.clie_telcontacto2.onkeypress = KeyIsTelefono;
+		window.document.nueva_lista_01.dire_observacion.onkeypress = KeyIsTexto;
+	</script>
+
+			</td>
+			</tr>
+
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+
+			<table style=" width: 709;" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+				<tr>
+					<td style=" width: 701:" align="center" class="subtitulonormal">(*)
+					Datos obligatorios.</td>
+				</tr>
+			</table>

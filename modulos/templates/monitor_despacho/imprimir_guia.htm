@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Imprimir Guia Despacho</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="../estilos.css"></link>
+<link rel="stylesheet" type="text/css" href="../estilos.css"></link>
+<script language="JavaScript" src="../funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var in_dices = new Array(); 
+var in_dices_sec = new Array(); 
+var in_dices_des = new Array(); 
+var statusprintgd = new Array(); 
+var i=0;
+	window.name="Guia";
+
+	function ImprimirGuias(ot_id){
+		f=document.guia;
+		impre=f.impresora.value;
+		/*Verifica si viene nombre impresora*/
+		if (!impre){
+			alert('La impresora es obligatoria, debe ingresar impresora');
+			f.impresora.focus();
+			return false;
+		}
+		sheck = false;
+		/*Verifica si viene algun checked*/
+		for (i=0;i<in_dices.length;i++){
+			if (in_dices[i].checked==true){
+				sheck = true;		
+			}
+		} 
+		if(!sheck){
+			alert('Debe seleccionar al menos una guía para imprimir');
+			return false;
+		}
+		if (confirm('Imprimir Guías seleccionadas en '+impre+'?')){
+			f.accion.value='print_guia';
+			f.impresora.value=impre;
+			f.ot_id.value=ot_id;
+			f.submit();	
+		}	
+	}
+//-->
+</SCRIPT>
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<table style="width:580;" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+<td style="width: 534;" class="titulonormal">Imprimir Gu&iacute;a de Despacho Retira Cliente OT {ot_id}</td>
+    <td style="width:46;" class="titulonormal"></td>
+  </tr>
+</table>
+<br>
+<table style="width:580;" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top">
+      <table style="width:100%;" border="0" cellpadding="1" cellspacing="1" class="textonormal">
+        <tr class="textonormal">
+          <td>
+		  <fieldset>
+		  <legend>Datos Despacho </legend>
+		  <table style="width:90%;" border="0" align="center" cellpadding="1" cellspacing="1" class="textonormal">
+            <tr>
+              <td style="width:22%;">N&deg; OT  : </td>
+              <td style="width:28%;">{ot_id}</td>
+              <td style="width:22%;">Local Despacho : </td>
+              <td style="width:28%;">{nombre_local} </td>
+            </tr>
+            <tr>
+              <td>Cant. Documentos : </td>
+              <td>{cant_doc}</td>
+              <td>Cant. Productos: </td>
+              <td>{cant_prod}</td>
+            </tr>
+		<form NAME="guia" METHOD="POST" action ="imprimir_guia.php" onSubmit="" TARGET="Guia">
+		<input type="hidden" name="action" Value=""></input>
+		<input type="hidden" name="accion" Value="print_guia"></input>
+		<input type="hidden" name="ot_id" Value="{ot_id}"></input>
+			<tr>
+              <td>Impresora : </td>
+              <td colspan="3"><input name="impresora" type="text" class="userinput" value="{impresora}" size="50"></td>
+              </tr>
+            
+          </table>
+		  </fieldset>
+            <br>
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+		document.guia.impresora.onkeypress=KeyIsRuta;
+	//-->
+   </SCRIPT>
+
+<!--table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" class="textonormal"-->
+   <table style="width:100%;" border="0" align="center" cellpadding="2" cellspacing="0" class="textonormal">
+ <tr class="textonormal">
+ <td valign="top">
+	<table style="width:100%;" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+	<td style="width:100%;">
+	<table style="width:100%;" border="0" cellpadding="0" cellspacing="0" class="tabla2">
+			  <tr>
+				<th style="width:9%;" scope="col">OT Ref. </th>
+				<th style="width:12%;" scope="col">Cédula Cliente </th>
+				<th style="width:24%;" scope="col">Nombre Cliente </th>
+				<th style="width:20%;" scope="col">Direcci&oacute;n</th>
+				<th style="width:12%;" scope="col">Barrio</th>
+				<th style="width:12%;" scope="col">Página</th>
+				<th style="width:12%;" scope="col">Incluir</th>
+				<th style="width:12%;" scope="col">Fecha Mañana</th>
+			  </tr>
+	</table>
+	</td>
+	</tr>
+
+	<tr>
+	<td style="width:100%;">
+	<div align="left" style="height:150px; overflow:auto;">
+     <table style="width:100%;" border="0" cellpadding="0" cellspacing="0" class="tabla2">
+				<!-- BEGIN Bloque_guias -->
+					  <tr>
+						<td style="width:9%;" ><div align="right" class="textonormal">{ot_id}</div></td>
+						<td style="width:12%;"><div align="center" class="textonormal">{clie_rut}-{dv_rut}</div></td>
+						<td style="width:24%;" align="center" >{clie_nombre} </td>
+						<td style="width:20%;" align="center" >{dire_direccion}</td>
+						<td style="width:12%;" align="center" >{comu_nombre}</td>
+						<td style="width:5%;" align="center">{secuencia}</td>
+						<td style="width:12%;"><div align="center">
+						<input id="secuencia_{secuencia}" name="secuencia[]" type="checkbox" value="{secuencia}" checked></input>
+						</div></td>
+						<td style="width:12%;"><div align="center">
+						<input id="fecha_{secuencia}" name="fecha[]" type="checkbox" value="{secuencia}" checked></input>
+						</div></td>
+					  </tr>
+				<SCRIPT LANGUAGE="JavaScript">
+				<!--
+					in_dices[i]	= document.getElementById('secuencia_{secuencia}');
+					in_dices_sec[i] = '{secuencia}';
+					in_dices_des[i] = '{ot_id}';
+					statusprintgd[i] = '{statusprintgd}';
+					i++;
+				//-->
+			   </SCRIPT>
+				<!-- END Bloque_guias -->
+		</table>
+	</div>
+	</td>
+	</tr>
+	</table>
+		</form>
+            <p align="center">
+  <input type="submit" name="Submit22" value="Cancelar" onClick="window.close()"/>
+  &nbsp;&nbsp;&nbsp;
+  <input type="submit" name="Submit222" value="Imprimir Guias" onClick="ImprimirGuias({ot_id})" />
+  &nbsp;&nbsp;&nbsp;  
+            </p></td></tr>
+      </table>
+      <center>
+      &nbsp;&nbsp;&nbsp;</center>      
+
+    </td>
+  </tr>
+</table>
+</body>
+</html>

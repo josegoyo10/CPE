@@ -1,0 +1,394 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+	function Valid(){
+		if( validar_obligatorio(tracking.hist_descripcion, "Debe ingresar descripción del evento" ))
+			return false;
+		document.tracking.submit();
+	}
+	
+	function asignaInstalador(){
+	 	popUpWindowModal('realizarcompra.php?id_ot={ot_idList}', 100, 100, 400, 300);
+	 	window.location.reload();
+	}
+	
+	function recibirOT(){
+	 	document.acciones.submit();
+	}
+	
+	function transferirOT(){
+		popUpWindowModal('transferirCompra.php?id_ot={ot_idList}', 100, 100, 400, 300);
+	 	window.location.href('../lista_monitor_ot_pe/index.php');
+	}
+</SCRIPT>
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->OT de Pedido Especial #{ot_idList} <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --><!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<FORM NAME="jump" METHOD="POST" ACTION="" TARGET="">
+	<input type="hidden" name="transicion" value="">
+	<input type="hidden" name="destino" value="">
+	<input type="hidden" name="accion" value="">
+	<input type="hidden" name="id_ot" value="">
+	<input type="hidden" name="desp_ddpr" value="">
+	<input type="hidden" name="id_tipodespacho" value="">
+</FORM>
+
+<table width="780" height="460" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+
+	<link id="luna-tab-style-sheet" type="text/css" rel="stylesheet" href="../../includes/tabs/tabpane.css" />
+	<script type="text/javascript" src="../../includes/tabs/tabpane.js"></script>
+	<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+	
+	<table width="95%" align="center" border="0">
+	<tr>
+	  <td>
+	<div class="tab-page" id="modules-cpanel">
+
+	<script type="text/javascript">
+	   var tabPane1 = new WebFXTabPane( document.getElementById( "modules-cpanel" ), 0 )
+	</script>
+
+		<!-- ################################### DATOS OT #################################### -->
+		<div class="tab-page" id="modulo1" >
+			<h2 class="tab">Datos OT</h2>
+			
+			<div align="left">
+			<!-- BEGIN datosot -->
+			<strong>Datos de la OT</strong><br/>
+				<br>
+				<table width="660"  border="0" cellspacing="0" cellpadding="0" class="textonormal">
+				  <tr>
+                    <td width="100">Lista de regalos N&deg;. </td>
+                    <td width="450">{Lista_No}</td>
+                  </tr>
+                  <tr>
+                    <td width="80">N&deg; OT </td>
+                    <td width="500">{ot_idList}</td>
+                  </tr>
+                  <tr>
+                    <td>Estado</td>
+                    <td><strong>{esta_nombre}</strong> </td>
+                  </tr>
+                  <tr>
+                    <td>Tipo de Despacho </td>
+                    <td style="color: red; font-weight: bold; font-size: 12px;">{nombre}</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Fecha Generaci&oacute;n OT</td>
+                    <td>{ot_listFeccrea}</td>
+                  </tr>
+                  <tr>
+                    <td>N&deg; Orden de Compra  SAP </td>
+                    <td>{no_OC_SAP}</td>
+                  </tr>
+                  <tr>
+                    <td>N&deg; Transferencia SAP </td>
+                    <td>{no_TR_SAP}</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>N&deg; OS </td>
+                    <td>{idLista_OS_enc}</td>
+                  </tr>
+                  <tr>
+                    <td>Local OS</td>
+                    <td>{nom_local}</td>
+                  </tr>
+                  <tr>
+                    <td>Atentido por </td>
+                    <td>{asesor}</td>
+                  </tr>
+                  <tr>
+                    <td>Fecha de Entrega </td>
+                    <td>{fec_Evento}</td>
+                  </tr>
+                </table>
+<!-- END datosot -->
+			<br>
+			<strong>Detalle de la OT</strong><br>
+			<br>
+			<table width="730" border="0" align="center" cellpadding="2" cellspacing="0" class="tabla2">
+              <tr>
+                <th width="42">C&oacute;digo</th>
+                <th width="365">Descripci&oacute;n</th>
+                <th width="30">Cant</th>
+                <th width="60">Instalaci&oacute;n</th>     
+                <th width="50">Precio Unit </th>
+                <th width="50">Total</th>
+              </tr>
+			  <!-- BEGIN DetalleOT -->
+              <tr valign="top">
+                <td align=center width="42">{cod_ean}<br>({cod_Easy})</td>
+                <td align="left" width="360">{descripcion}</td>
+                <td align="right" width="20">{OS_cantidad}</td>
+                <td align="center" width="80">{instalacion}</td>
+                <td align="right" width="40">{list_precio}&nbsp;</td>
+                <td align="right" width="40">{Total}</td>
+              </tr>
+			  <!-- END DetalleOT -->
+            </table>
+			<br/>
+			
+			</div>
+		</div>
+
+		<!-- ################################### DATOS CLIENTE #################################### -->
+		<div class="tab-page" id="modulo1">
+			<h2 class="tab"> Datos Cliente </h2>
+			
+			<div align="left">
+			<strong>Datos del Cliente</strong><br />
+				<table width="660"  border="0" cellspacing="2" cellpadding="0" class="textonormal">
+                  <tr>
+                    <td width="121">C&eacute;dula</td>
+                    <td width="306">{clie_rut}</td>
+                  </tr>
+                  <tr>
+                    <td>Nombre</td>
+                    <td>{clie_nombre}</td>
+                  </tr>
+                  <tr>
+                    <td>Direcci&oacute;n</td>
+                    <td>{clie_direccion}</td>
+                  </tr>
+                  <tr>
+                    <td>Barrio</td>
+                    <td>{clie_barrio}</td>
+                  </tr>
+                  <tr>
+                    <td>Tel&eacute;fono</td>
+                    <td>{clie_telefono}</td>
+                  </tr>
+                </table>
+				<BR>
+				<strong>Direccion de Servicio</strong><br />
+				<table width="660"  border="0" cellspacing="2" cellpadding="0" class="textonormal">
+                  <tr>
+                    <td width="121">Direcci&oacute;n</td>
+                    <td width="306">{dir_direccion}</td>
+                  </tr>
+                  <tr>
+                    <td>Barrio</td>
+                    <td>{dir_barrio}</td>
+                  </tr>
+                  <tr>
+                    <td>Tel&eacute;fono</td>
+                    <td>{dir_telefono}</td>
+                  </tr>
+                </table>
+
+			</div>
+		</div>
+
+		<!-- ################################### PROVEEDOR #################################### -->
+		<div class="tab-page" id="modulo1">
+			<h2 class="tab">Proveedor</h2>
+			<div align="left">
+			<strong>Datos del Proveedor</strong><br/>
+				<table width="660"  border="0" cellspacing="2" cellpadding="0" class="textonormal">
+				<tr>
+					<td colspan="2" height="25">
+						<strong style="color: red; font-weight: bold; font-size: 12px;">{msg}</strong>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" height="50">
+						{Boton}
+					</td>
+				</tr>
+
+				 <tr>
+                    <td width="192" >Cédula: </td>
+                    <td width="454">{rut_prov}</td>
+                  </tr>
+                  <tr>
+                    <td>Razon Social: </td>
+                    <td>{razsoc_prov}</td>
+                  </tr>
+                  <tr>
+                    <td>Contacto: </td>
+                    <td>{nomcontacto}</td>
+                  </tr>
+                  <tr>
+                    <td>Teléfono Contacto: </td>
+                    <td>{fonocto_prov} </td>
+                  </tr>
+                  <tr>
+                    <td>Mail Contacto: </td>
+                    <td>{mailcontacto}</td>
+                  </tr>
+                  <tr>
+                     <td>Observación: </td>
+                     <td>{compra_obs}</td>
+                  </tr>
+                </table>
+				
+				<br>
+			</div>
+		</div>
+
+		<!-- ################################### TRACKING #################################### -->
+		<div class="tab-page" id="modulo1">
+			<h2 class="tab">Tracking</h2>
+			
+			<div align="left">
+			<strong>Tracking de la OT</strong><br />
+				<br>
+				<FORM NAME="tracking" METHOD="POST">
+				<input type="hidden" name="accion" value="AgrTr">
+				<input type="hidden" name="id_ot" value="{id_ot}">
+				<input type="hidden" name="idLista" value="{Lista_No}">
+				<input type="hidden" name="indexPanel" value="3">
+				<table width="393" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+					<tr>
+						<th width="385"><div align="left">Ingresar Nuevo Evento </div></th>
+					</tr>
+					<tr valign="top">
+						<td>
+							<textarea name="hist_descripcion" cols="60"></textarea>
+						</td>
+					</tr>
+					<tr valign="top">
+						<td align=center><input type="button" name="Button" value="Ingresar" onClick="Valid()"></td>
+					</tr>
+				</table>      
+				</FORM>
+
+				<TABLE width="650" border="0" align="center" cellpadding="0" cellspacing="0">
+				<TR>
+					<TD>
+						<table width="700" border="0" align="left" cellpadding="0" cellspacing="1" class="tabla1">
+							<tr>
+								<th width="100">Fecha </th>
+								<th width="130">Usuario</th>
+								<th width="60">Tip. Evento</th>
+								<th width="410">Descripci&oacute;n</th>
+							</tr>
+						</table>            
+					</TD>
+				</TR>
+				<TR>
+					<TD>
+						<div style="width:720; height:150; overflow:auto;">
+						<table width="700" border="0" align="left" cellpadding="0" cellspacing="1" class="tabla1">
+							<!-- BEGIN Tracking -->
+							<tr valign="top">
+								<td width="102">{hist_fecha}</td>
+								<td width="132" align=center>{hist_usuario}</td>
+								<td width="65" align=center>{his_tipo}</td>
+								<td width="400">{hist_descripcion} </td>
+							</tr>
+							<!-- END Tracking -->
+						</table>            
+						</div>
+					</TD>
+				</TR>
+				</TABLE>
+				<br>
+			</div>
+		</div>
+
+		<!-- ################################### ACCIONES #################################### -->
+		<div class="tab-page" id="modulo1">
+			<h2 class="tab">Acciones</h2>
+			
+			<div align="left">
+			<strong>Acciones Disponibles</strong><br />
+				<br>
+				<form name="acciones" method="POST">
+				<input type="hidden" name="accion" value="recibir">
+				<input type="hidden" name="id_ot" value="{id_ot}">
+				<input type="hidden" name="idLista" value="{Lista_No}">
+				<table width="51%"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                  <tr>
+                    <td>
+                    	{Btn_acc}
+                    </td>
+                    <td>
+                    	{Btn_acc1}
+                    </td>
+                  </tr>
+                </table>
+			</form>	
+			</div>
+		</div>
+
+		<!-- ################################### OT Relacionadas #################################### -->
+		<div class="tab-page" id="modulo1">
+			<h2 class="tab">OT Relac.</h2>
+			
+			<div align="left">
+			<strong>OT's Relacionadas</strong>
+				<br>
+				<table width="200" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+					<tr>
+						<th width="385"><div align="left">Número total de OT: &nbsp;&nbsp;&nbsp;<strong>{num_otes}</strong> </div></th>
+					</tr>
+				</table>      
+				<TABLE width="530" border="0" align="center" cellpadding="0" cellspacing="0">
+				<TR>
+					<TD>
+						<table width="500" border="0" align="left" cellpadding="0" cellspacing="1" class="tabla1">
+							<tr>
+								<th width="50">N° OT</th>
+								<th width="60" align=center>Tipo OT</th>
+								<th width="140">Tipo Despacho</th>
+								<th width="100">Fecha Creación</th>
+								<th width="100">Estado</th>
+							</tr>
+						</table>            
+					</TD>
+				</TR>
+				<TR>
+					<TD>
+						<div style="width:520; height:270; overflow:auto;">
+						<table width="500" border="1" align="left" cellpadding="0" cellspacing="1" class="tabla1">
+							<!-- BEGIN Otes -->
+							<tr valign="top">
+								<td width="53" align=center>{ot_id2}</td>
+								<td width="63" align=center>{ot_tipo2}</td>
+								<td width="138" align=center>{ot_despacho2}</td>
+								<td width="100" align=center>{ot_fechacreacion2}</td>
+								<td width="100" align=center>{esta_nombre2}</td>
+							</tr>
+							<!-- END Otes -->
+						</table>            
+						</div>
+					</TD>
+				</TR>
+				</TABLE>
+				<br>
+			</div>
+		</div>
+	
+	</div>
+	</td>
+	</tr>
+	</table>
+	
+	</td>
+  </tr>
+</table>
+
+<script>
+	function setPanel(indexPanel) {
+		if (indexPanel)
+			tabPane1.setSelectedIndex(indexPanel);
+		else
+			tabPane1.setSelectedIndex(0);
+	}
+
+	setPanel({indexPanel});
+</script>

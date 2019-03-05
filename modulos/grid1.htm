@@ -1,0 +1,173 @@
+<html>
+
+<head>
+
+	<title>ActiveWidgets Grid :: Examples</title>
+
+	<style> body, html {margin:0px; padding: 0px; overflow: hidden;} </style>
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+	<!-- ActiveWidgets stylesheet and scripts -->
+
+	<link href="runtime/styles/xp/grid.css" rel="stylesheet" type="text/css" ></link>
+
+	<script src="runtime/lib/grid.js"></script>
+
+
+
+	<!-- grid format -->
+
+	<style>
+
+		.active-controls-grid {height: 100%; font: menu;}
+
+
+
+		.active-column-0 {width:  60px;}
+
+		.active-column-1 {width: 150px;}
+
+		.active-column-2 {width: 70px; text-align: left;}
+
+		.active-column-3 {width: 60px; text-align: left;}
+
+		.active-column-4 {width: 70px; text-align: right;}
+
+		.active-column-5 {width: 40px; text-align: right;}
+
+		.active-column-6 {width: 50px; text-align: right;}
+
+		.active-column-7 {width: 60px; text-align: right;}
+
+		.active-column-8 {width: 40px; text-align: center;}
+
+		
+
+		.active-grid-column {border-right: 1px solid threedlightshadow;}
+
+		.active-grid-row {border-bottom: 1px solid threedlightshadow;}
+
+	</style>
+
+
+
+	<!-- grid data -->
+
+	<script>
+
+		var myData = [
+
+			["435263","FENSA PROD PERSONALIZADO", "NORMAL", "NO", "55000","1","0","55000","*"],
+
+			["435263","DESPACHO EXPRESS", "", "", "7900","1","0","7900",""],
+
+			["435263","SVS INST CERAMICA", "", "", "25000","1","0","25000","*"],
+
+			["435263","CERAMICA", "NORMAL", "SI", "5000","4","0","20000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NORMAL", "NO", "55000","1","0","55000",""],
+
+			["435263","COCINA FENSA", "NEO", "NO", "55000","1","0","55000",""],
+
+		];
+
+
+
+		var myColumns = [
+
+			"Cód SAP", "Descripción", "Despacho", "Instalación", "Precio Unit", "Cant", "Dscto", "Subtot", "Espec"
+
+		];
+
+	</script>
+
+
+
+
+
+	<script>
+
+
+
+	//	create ActiveWidgets Grid javascript object
+
+	var obj = new Active.Controls.Grid;
+
+
+
+	//	set number of rows/columns
+
+	obj.setRowProperty("count", 18);
+
+	obj.setColumnProperty("count", 9);
+
+
+
+	//	provide cells and headers text
+
+	obj.setDataProperty("text", function(i, j){return myData[i][j]});
+
+	obj.setColumnProperty("text", function(i){return myColumns[i]});
+
+
+
+	//	set headers width/height
+
+	obj.setRowHeaderWidth("28px");
+
+	obj.setColumnHeaderHeight("20px");
+
+
+
+	//	set click action handler
+
+	obj.setAction("click", function(src){window.status = src.getItemProperty("text")});
+
+
+
+	//	write grid html to the page
+
+	document.write(obj);
+
+
+
+	</script>
+
+
+
+</body>
+
+</html>

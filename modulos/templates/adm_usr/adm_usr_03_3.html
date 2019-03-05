@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>{PAGETITLE}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<SPAN class=titulo>{TEXT_AGREGAR_TITULO_PERUSR} {TEXT_AGREGAR_CAMPO_USUARIO}</SPAN>
+<br>
+<br>
+
+<form action="adm_usr_03.php" method="post" name="form_buscar" >
+<INPUT TYPE="hidden" NAME="action" VALUE="seausr">
+<INPUT TYPE="hidden" NAME="id_padre" VALUE="{ID_PADRE}">
+
+<CENTER>
+<p>{TEXT_BUSCAR_CAMPO_1} : <INPUT TYPE="text" NAME="c_1" VALUE="{c_1}" SIZE="30" MAXLENGTH="200" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);"></p>
+<INPUT TYPE="submit" value="{BOTON_BUSCAR_USUARIO}">
+</CENTER>
+</form>
+
+<!-- BEGIN Usuarios -->
+&nbsp;&nbsp;<a href="adm_usr_03.php?action=addusr&id_padre={ID_PADRE}&usr_id={usr_id}" title="">{usr_login}</a><br>
+<!-- END Usuarios -->
+
+</body>
+
+</html>

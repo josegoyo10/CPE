@@ -1,0 +1,102 @@
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+	function Ver_Reporte_Detalle(accion){
+		var fecha_inicio,fecha_termino;
+		var valor=true;
+		if (accion=='Imprimir'){
+		fechaIni=document.jump.fechaIni.value;	
+		fechaTer=document.jump.fechaTer.value;
+		numLoc=document.jump.numero_local.value;	
+		numUsr=document.jump.usuario.value;
+		popUpWindowModal('printframe_DET.php?numLoc='+numLoc+'&numUsr='+numUsr+'&fechaIni='+fechaIni+'&fechaTer='+fechaTer+'&accion='+accion, 100, 100, 650, 500);
+		}
+		if (accion=='Exportar'){
+				document.jump.accion.value = accion;
+				document.jump.submit();	
+		}
+		if (accion=='VerReporte'){
+				document.jump.accion.value = accion;
+				document.jump.submit();	
+		}
+	}
+
+</SCRIPT>
+<FORM NAME="jump" METHOD="POST" ACTION="detalle_cotizaciones.php" onSubmit="">
+	<input type="hidden" name="numero_local" value="{numero_local}">
+	<input type="hidden" name="accion" value="">
+	<input type="hidden" name="usuario" value="{usuario}">
+	<input type="hidden" name="fechaIni" value="{fechaIni}">
+	<input type="hidden" name="fechaTer" value="{fechaTer}">
+</FORM>
+<table width="760" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+	<table width="760" align="left" height="30" border="0" cellpadding="0" cellspacing="0">
+	  <!--tr-->
+		<td class="titulonormal">Resumen Ventas Dise&ntilde;ador&nbsp;{disenador_nombre}</td>
+		<td class="titulonormal"></td>
+	  <!--/tr>
+	  <tr-->
+		<td align=right>
+			<input type="button" name="Button23" value="&nbsp;&nbsp;&nbsp;Imprimir&nbsp;&nbsp;&nbsp;&nbsp;" onClick="Ver_Reporte_Detalle('Imprimir')">
+		</td>
+		<td align=right>
+			<input type="button" name="Button23" value="Exportar Excel" onClick="Ver_Reporte_Detalle('Exportar')">
+		</td>
+	  <!--/tr-->
+	</table>
+</td>
+</tr>
+
+<tr>
+<td>
+<table width="760" border="0" align="left" cellpadding="2" cellspacing="2" >
+<tr>
+<td>
+		<table width="760" border="0" align="left" cellpadding="2" cellspacing="2" class="tabla1">
+				<tr>
+				  <th colspan=20>Ventas por {disenador_nombre} en {nom_local_titulo} &nbsp;{fecha_inicio_msg}&nbsp;{fecha_termino_msg}</th>
+				</tr>
+				<tr>
+				  <th rowspan=2>Proyectos Cotizados</th>
+				  <th rowspan=2>Proyectos Vendidos</th>
+				  <th rowspan=2>Proyectos Terminados</th>
+				  <th colspan=4 >Ventas Cant/Monto</th>
+				  <th rowspan=2>Total PS+PE+VI+IN</th>
+				</tr>
+				<tr>
+				  <th>PS</th>
+				  <th>PE</th>
+				  <th>VI</th>
+				  <th>IN</th>
+				</tr>
+
+		<!-- BEGIN detalle_dis -->            
+				{ini_normal}
+				<tr>
+				  <td align=right>{proycotizados}</td>
+				  <td align=right>{proyvendidos}</td>
+				  <td align=right>{proyterminados}</td>
+				  <td align=right>{cantPS} / {montoPS}</td>
+				  <td align=right>{cantPE} / {montoPE}</td>
+				  <td align=right>{cantVI} / {montoVI}</td>
+				  <td align=right>{cantIN} / {montoIN}</td>
+				  <td align=right>{total}</td>
+				</tr>
+					{fin_normal}
+		<!-- END detalle_dis --> 
+			</table>
+</td>
+</tr>
+</table>
+	{body}
+  </td>
+</tr>
+{iniTable}</table>{finTable}

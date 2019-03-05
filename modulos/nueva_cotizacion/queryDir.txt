@@ -1,0 +1,6 @@
+Select dire_direccion, 
+                             dire_observacion,
+                             dire_telefono 
+                    FROM direcciones 
+                      where clie_rut=1036668773 
+                      and dire_activo=1 and dire_defecto='p' or dire_defecto=null

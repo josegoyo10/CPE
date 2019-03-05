@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>{PAGETITLE}</title>
+</head>
+<script language="javascript" src="../../includes/popup.js"></script>
+<script type="text/javascript">
+	function print_CotiLista(){
+		popUpWindowMod('print_cotiLista.php?idLista_OS_enc={idLista_OS_enc}',0,0,600,700);
+		document.getElementById("Impr").innerHTML = '<a href="#" title="Imprimir"><img src="../img/Bloqueo_ ico_print.gif" border="0" style="width:37; height: 37;"></a>';
+		location.href='../lista_Regalos/nueva_lista_sumario_01.php?idLista={idLista}';
+	}
+	
+	function Accion_flecha_ant(){
+		location.href='../lista_Regalos/nueva_lista_sumario_01.php?idLista={idLista}';
+	}
+</script>
+<body>
+<div align="left" style="margin-top: 5;" class="titulonormal">{TEXT_TITULO}</div>
+<table border="0" align="center" style="width: 780; margin-top: 0;">
+	<tr>
+		<td style="height: 50" align="center">
+			<div id="Impr"><a href="#" title="Imprimir" onclick="print_CotiLista()"><img src="../img/ico_print.gif" border="0" style="width:36; height: 36;"></a></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table border="0" align="center" style="width: 700;">
+				<tr>
+				  	<td colspan="3">
+				  		<table border="0" align="center" style="width: 700; margin-top: 0;">
+				  			<tr>
+								<td align="left" style="width: 200"><img src="../img/logo3.gif" border="0" style="width:95; height: 55;"></td>
+								<td align="center" class="titulonormalnegro">{TEXT_CAMPO_1}{idLista_OS_enc}<th style='width: 90;'><img src='../img/LogoListaReg.jpg' width='95' height='95' border='0'></th>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_2}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_3}.</td>
+								<td style="width: 250;" class="userinput">{idLista}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_4}</td>
+								<td style="width: 150;" class="userinput">{evento}</td>
+							</tr>
+							<tr>
+								<td class="textonormal">{TEXT_CAMPO_5}</td>
+								<td colspan="3" class="userinput">{festejado}</td>
+							</tr>
+							<tr>
+								<td class="textonormal">{TEXT_CAMPO_6}</td>
+								<td colspan="3" class="userinput">{invitado}</td>
+							</tr>
+						</table>
+						</fieldset>
+					</td>			
+				</tr>
+				<tr>
+					<td colspan="3">
+						<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_7}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_8}.</td>
+								<td style="width: 250;" class="userinput">{local}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_9}</td>
+								<td style="width: 150;" class="userinput">{OS_fecCrea}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_10}.</td>
+								<td style="width: 250;" class="userinput">{tipoDespacho}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_11}</td>
+								<td style="width: 150;" class="userinput">{OS_Estado}</td>
+							</tr>
+						</table>
+						</fieldset>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<table class="tabla1">
+							<tr>
+								<th style="width: 140;">{TEXT_CAMPO_12}</th>
+								<th style="width: 320;">{TEXT_CAMPO_13}</th>
+								<th style="width: 110;">{TEXT_CAMPO_14}</th>
+								<th style="width: 90;">{TEXT_CAMPO_15}</th>
+							</tr>
+							<!-- BEGIN Productos -->
+							<tr>
+								<td style="width: 120;">{codigo}</td>
+								<td style="width: 350;">{descripcion}</td>
+								<td style="width: 120;" align="right">{precio}</td>
+								<td style="width: 70;" align="right">{cantidad}</td>
+							</tr>
+							<!-- END Productos -->
+							<tr>
+								<td colspan="2"></td>
+								<th align="right">VALOR TOTAL</th>
+								<th align="right">$ {Total}</th>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<fieldset>
+						<legend class="fieldsetLegend">Condiciones Comerciales</legend>
+						<table>
+							<tr>
+								<td class="select2"><P align=left>{cond_Comercial1}</P></td>
+							</tr>
+							<tr>
+								<td class="select2"><P align=left>{cond_Comercial2}</P></td>
+							</tr>
+							<tr>
+								<td class="select2"><P align=left>{cond_Comercial3}</P></td>
+							</tr>
+							<tr>
+								<td class="select2"><P align=left>{cond_Comercial4}</P></td>
+							</tr>
+							<tr>
+								<td class="select2"><P align=left>{cond_Comercial5}</P></td>
+							</tr>
+						</table>
+						</fieldset>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" align="center" style="width: 100; margin-top: 15;" class="textonormal">
+	<tr>
+		<td>
+			<a href="#" onClick="Accion_flecha_ant();"><img src="../img/anterior.gif"  alt="prueba" width="23" height="23" border="0" title="Anterior" ></a>
+		<td>
+		<td>{TEXT_CAMPO_16}</td>
+	</tr>
+</table>
+</body>
+</html>

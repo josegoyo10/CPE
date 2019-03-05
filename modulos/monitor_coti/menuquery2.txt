@@ -1,0 +1,1 @@
+select distinct mod_id, mod_url, mod_nombre from permisosxmodulo, modulos where mod_id = pemo_mod_id and pemo_mod_id in ( 44,26,43,56,27,65,67,90,75,60,66,48,82,105,93,102,99,97,95,106,108,109,107,110,76,64 ) and mod_padre_id = 27 and mod_estado = 1 order by mod_orden, mod_nombre

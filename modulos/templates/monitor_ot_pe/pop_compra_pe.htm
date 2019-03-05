@@ -1,0 +1,134 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<style type="text/css">
+<!--
+body {
+	background-color: #F2F4F4;
+}
+-->
+</style>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+window.name="compra_pe";
+function valida_form(){
+valor1=true;
+valor2=true;
+	f=document.compra_pe;
+		if( validar_obligatorio(f.noc_sap, "Debe ingresar número de orden de compra" )){
+			valor1=false;
+			return false;
+			}
+		if( validar_obligatorio(f.ot_fcompra_pe, "Debe ingresar Fecha de Reactivación" )){
+			valor2=false;
+			return false;
+			}
+	for (i=0;i<f.des_prov.length;i++){ 
+       if (f.des_prov[i].checked){ 
+          valor = f.des_prov[i].value;
+		  elec=valor;
+		  break;
+       }
+    } 
+
+	if (valor1&&valor2){
+		f.submit();
+	}else {
+		return false;
+	}
+
+}
+</SCRIPT>
+
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" ID="js17">
+	var ayer = new Date();										//Fecha de Hoy
+	ayer.setDate(ayer.getDate() - 1);							//Fecha de ayer
+	var cal1 = new CalendarPopup("testdiv1", "compra_pe");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = -126;										
+	cal1.offsetY = 20;
+	cal1.addDisabledDates(null,formatDate(ayer,"yyyy-MM-dd"));	//Deshabilita las fechas anteriores a "ayer"
+</SCRIPT>  
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal">Proceso de Compra de PE </td>
+  </tr>
+</table>
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+<form NAME="compra_pe" METHOD="POST" onSubmit="" target="compra_pe">
+<input type="hidden" name="select_prov" value="{id_proveedor}">
+<input type="hidden" name="des_prov" value="{des_prov}">
+<input type="hidden" name="id_ot" value="{id_ot}">
+<input type="hidden" name="accion" value="revisar">
+  <tr>
+    <td>
+      <table width="400"  border="0" align="left" cellpadding="2" cellspacing="2" class="textonormal">
+        <tr>
+          <td width="99">Proveedor</td>
+          <td width="287" class="userinput">
+		  <select id="select_prov" name="select_prov">
+			  <!-- BEGIN proveedores -->
+			  <option value="{id_proveedor}" {selected}>{nom_prov}</option>
+			  <!-- END proveedores -->
+          </select></td>
+		</tr>
+        <tr>
+          <td>N&deg; O/C SAP </td>
+          <td class="userinput"><input type="text" name="noc_sap" id="noc_sap"></td>
+        </tr>
+        <tr>
+          <td>Despacho Proveedor </td>
+          <td><input name="des_prov" type="radio" value="no" {checkedno}>
+            No 
+            <input name="des_prov" type="radio" value="si" {checkedsi}>
+            S&iacute;</td>
+        </tr>
+        <tr>
+          <td width="99">Fecha Reactivaci&oacute;n</td>
+          <td width="287">
+				<input name="ot_fcompra_pe" id="ot_freactivacion" type="text" value="{ot_freactivacion}" onClick="cal1.select(document.forms[0].ot_fcompra_pe,'anchor1','dd/MM/yyyy'); return false;">
+				<a href="#" onClick="cal1.select(document.forms[0].ot_fcompra_pe,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Reactivación"></a>
+				<DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+		  </td>
+        </tr>
+          <td valign="top">Comentario</td>
+          <!--td><textarea id="comentario" name="comentario" cols="20" wrap="VIRTUAL">{ot_comentario}</textarea></td-->
+          <td><textarea  id="comentario" name="comentario" cols="40" rows="4" wrap="VIRTUAL" class="textonormal">{ot_comentario}</textarea></td>
+        </tr>
+        <tr align="center">
+          <td height="27" colspan="2">&nbsp;</td>
+        </tr>
+        <tr align="center">
+          <td colspan="2"> <table width="198" border="0" cellpadding="2" cellspacing="2" class="tabla2">
+            <tr>
+              <td width="29"><a href="#"  onClick="window.close()"><img src="../img/cancelar.gif" width="23" height="23" border="0"></a></td>
+              <td width="51">Cancelar</td>
+              <td width="5">&nbsp;</td>
+              <td width="52">Finalizar</td>
+              <td width="29"><a href="#" onClick="valida_form()"><img src="../img/siguiente.gif" width="23" height="23" border="0"></a></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+	</td>
+  </tr>
+  </form>
+</table>
+</body>
+</html>
+<SCRIPT LANGUAGE="JavaScript">
+	window.document.compra_pe.comentario.onkeypress = KeyIsTexto ;
+	window.document.compra_pe.noc_sap.onkeypress = KeyIsNumber ;
+</SCRIPT>

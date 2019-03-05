@@ -1,0 +1,11 @@
+UPDATE direcciones 
+            SET dire_direccion     = 'CL 2 7 # 5 A - 1 2 5',
+                dire_telefono      = '281121',
+                dire_observacion   = 'ES UNA PRUEBA ALEJO',
+                id_departamento    = 91, 
+                id_ciudad          = 5, 
+                id_localidad       = 0, 
+                id_comuna          = 0,  
+                id_provincia       = 1, 
+                dire_localizacion  = 91001005000000  
+              WHERE clie_rut=14440244 and dire_defecto='p'

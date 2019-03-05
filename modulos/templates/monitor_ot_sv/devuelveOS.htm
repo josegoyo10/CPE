@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Devolución de OS</title>
+<link href="../estilos.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<SCRIPT LANGUAGE="JavaScript">	
+	function accion(){
+		document.devolucion.actua.value="update";
+		document.devolucion.submit();			
+		opener.document.location.reload();	
+	}
+</SCRIPT>
+<script language="JavaScript" src="../checkfield.js"></script>
+<form name="devolucion" ACTION="devuelveOS.php" onSubmit="">
+<table width="100%"  border="0" cellpadding="8" cellspacing="3">
+  <tr>
+	<td colspan="6" align="center">
+	  <input name="actua" id="actua" type="hidden" size="12" maxlength="12" value="">
+	  	<div class="textonormal" align="center">* Motivo de Devolución </div>
+	  	<select name="motivo" id="motivo">
+	  		<!-- BEGIN MOTIVOS -->
+	  		<option value="{id}">{motivo}</option>
+	  	<!-- END MOTIVOS -->
+	  </select>
+	  <input name="id_ot" id="id_ot" type="hidden" size="12" maxlength="12" value="{id_ot}">
+	</td>
+  </tr>
+  <tr>
+	<td colspan="6" align="center" class="textonormal">
+		<div class="textonormal" align="center">* Valor</div>
+		<input name="valor" id="valor" type="text" value="{val}" class="userinput" maxlength="12" style="width: 70px"/>
+	</td>   
+  </tr>
+  <tr>
+    <td colspan="6"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="4" align="center">
+    	<input type="button" name="Button" value="Guardar" onclick="accion()">
+    </td>
+	<td>&nbsp;</td>
+  </tr>
+</table>
+</form>
+<SCRIPT LANGUAGE="JavaScript">
+	window.document.devolucion.valor.onkeypress = KeyIsNumber ;
+</SCRIPT>
+</body>
+</html>

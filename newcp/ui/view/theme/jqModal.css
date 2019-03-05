@@ -1,0 +1,43 @@
+.jqmWindow {
+    display: none;    
+    position: fixed;
+    top: 17%;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    background-color: #ffffff;
+    color: #333;
+    border: 3px solid #c0c0c0;
+    padding: 0px;
+}
+
+.jqmWindow .jqmClose {
+}
+
+.jqmWindow .modalHeader {
+    background: orange;
+    font-size: 12px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.jqmWindow .modalBody {
+    padding: 5px;
+}
+
+.jqmOverlay { background-color: #000; }
+
+/* Background iframe styling for IE6. Prevents ActiveX bleed-through (<select> form elements, etc.) */
+* iframe.jqm {position:absolute;top:0;left:0;z-index:-1;
+	width: expression(this.parentNode.offsetWidth+'px');
+	height: expression(this.parentNode.offsetHeight+'px');
+}
+
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+* html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}

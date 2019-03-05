@@ -1,0 +1,241 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+	<!--
+
+	function abre_Estado(){
+
+		if (popUpWindowModal('estado2.php?id_estado={id_estado}&id_os={id_os}&clie_rut={clie_rut}&id_proyecto={id_proyecto}&accion=update', 100, 100, 300, 200)=='refresh') 
+
+			window.location.reload();
+
+	}
+
+
+
+	function Paga_Cot()
+	{
+
+		if ( "{esfechavalida}" == "0" ) {
+			if (!confirm("La cotización está fuera de fecha de validez (válido hasta {os_fechaestimacion}).\nDesea continuar de todas maneras?"))
+				return;
+		}
+
+		if ( "{eslocalcorrecto}" == "0" ) {
+			alert("La cotización no pertenece a este local. Esta no puede ser pagada");
+			return;
+		}
+		
+		if( "{id_estado}"=='SE' && popUpWindow('validar_pagoManual.php?id_estado={id_estado}&id_os={id_os}&clie_rut={clie_rut}&id_proyecto={id_proyecto}&accion=Ver', 180, 40, 510, 540)=='refresh') 
+			window.location.reload();
+
+	}
+	
+	function Accion_flecha_ant(){
+		location.href='./monitor_ListRegalos.php';
+	}
+	//-->
+
+</SCRIPT>
+
+<!--menu--->
+
+<table width="780" height="20" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">{NOMBRE_PAGINA}</td>
+    <td width="390" class="titulonormal">
+      <table  border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="../img/1a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/2a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/3a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/4a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/5b.gif" width="40" height="40"></td>
+        </tr>
+      </table>
+	</td>
+  </tr>
+</table>
+
+<script language="JavaScript" type="text/JavaScript" src="popup.js"></script>
+<FORM NAME="nuevo_list" METHOD="POST" ACTION="nueva_lista_sumario_01.php" onSubmit="">
+<input type="hidden" name="clie_rut" value="{clie_rut}">
+<input type="hidden" name="id_estado" value="{id_estado}">
+<input type="hidden" name="accion" value="update">
+
+<table width="100%" height="550" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="80%"  border="0" cellspacing="2" cellpadding="2" align="center">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                <tr>
+                  <td><fieldset><legend>Datos Lista de Regalos</legend>
+                      <table width="743" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                        <tr>
+                          <td style="width: 120px">{TEXT_CAMPO_1}</td>
+                          <td style="width: 260px">{idLista}</td>
+                          <td style="width: 120px">{TEXT_CAMPO_2}</td>
+                          <td style="width: 260px">{list_fec_cracion}</td>
+                        </tr>
+                        <tr>
+                          <td>{TEXT_CAMPO_3}</td>
+                          <td class="userinput">{esta_nombre} </td>
+                          <td>{TEXT_CAMPO_4} </td>
+                          <td class="userinput">{atendido} </td>
+                        </tr>
+                        <tr>
+                          <td>{TEXT_CAMPO_5} </td>
+                          <td class="userinput">{nom_local}</td>
+                          <td>{TEXT_CAMPO_23} </td>
+                          <td class="userinput">{list_fecEvento}</td>
+                        </tr>
+                        <tr>
+                          <td width="100">{TEXT_CAMPO_7} </td>
+                          <td width="244" class="userinput">{evento}</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>{TEXT_CAMPO_8} </td>
+                          <td colspan="3" class="userinput">{festejado} </td>
+                        </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos Cliente</legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="120">{TEXT_CAMPO_9}</td>
+                        <td width="260" class="userinput">{rut_cliente}</td>
+                        <td width="120">{TEXT_CAMPO_10}</td>
+                        <td width="260" class="userinput">{clie_nombre}</td>
+                      </tr>
+                      <tr>
+                        <td>{TEXT_CAMPO_11}</td>
+                        <td class="userinput">{dire_direccion_pri}</td>
+                        <td>{TEXT_CAMPO_12}</td>
+                        <td class="userinput">{comu_nombre_pri}</td>
+                      </tr>
+                      <tr>
+                        <td>{TEXT_CAMPO_13}</td>
+                        <td class="userinput">{dire_telefono_pri}</td>
+                        <td>Tel&eacute;fono Celular </td>
+		                <td class="userinput">{telefono_celular}</td>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos Entrega de Regalos</legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>                        
+                        <td width="120">{TEXT_CAMPO_13}</td>
+                        <td width="260" class="userinput">{dire_telefono}</td>
+						<td width="120">Departamento</td>
+						<td width="260" class="userinput" >{departamento}</td>
+                      </tr>
+                      <tr>
+                        <td>{TEXT_CAMPO_11}</td>
+                        <td  class="userinput" >{dire_direccion}</td>
+                        <td>Ciudad</td>
+                        <td class="userinput">{ciudad}</td>
+                      </tr>
+                      <tr>
+                        <td>{TEXT_CAMPO_14}</td>
+                        <td  class="userinput">{dire_observacion} </td>
+                        <td>{TEXT_CAMPO_12}</td>
+                        <td class="userinput">{comu_nombre}</td>
+                      </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+              </table>
+              <br>
+              
+              <table width="750" border="0" align="center" cellpadding="0" cellspacing="0" class="tabla2">
+            <tr>
+              <th width="55" align="center">C&oacute;digo</th>
+              <th width="30" align="center">Tipo</th>
+              <th width="305" align="center">Descripci&oacute;n</th>
+              <th width="70" align="center">Tipo Despacho</th>
+			  <th width="80" align="center">Fecha de Entrega</th>
+              <th width="65" align="center">Instalaci&oacute;n</th>
+			  <th width="60" align="center">Peso Kg</th>
+              <th width="30" align="center">Cantidad</th>
+			  <th width="65" align="center">Precio con Iva</th>
+              <th width="60" align="center">Total con Iva </th>
+            </tr>
+		 
+		 <!-- BEGIN Precio_Total -->
+		   <tr valign="top">
+                <td width="55" align="center">{cod_Ean}<br>({cod_Easy})</td>
+			    <td width="30" align="center">{list_tipoprod}</td>
+                <td width="305" align="left">{descripcion}</td>
+                <td width="70" align="left">{tipo_nombre}</td>
+				<td width="80" align="center">{fec_entrega}</td>
+	            <td width="65" align="center">{list_instalacion}</td>
+				<td width="60" align="center">{peso}</td>
+                <td width="30" align="center">{list_cantprod}</td>
+				<td width="65" align="right">{precioVacio}{list_precio}</td>
+				<td width="60" align="right">{totalVacio}{Total}</td>
+		 <!-- END Precio_Total -->
+
+            <tr>
+			  <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>Total</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th><div align="right">{TG}</div></th>
+            </tr>
+          </table>  
+        </td>
+        </tr>
+        <tr>
+          <td><table width="500" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+            <tr>
+              <th colspan="11">Acciones sobre la Lista de Regalos </th>
+            </tr>
+            <script language="JavaScript" type="text/JavaScript" src="popup.js"></script>			  
+            <tr>
+              {Crg_Prod}
+              {Edt_List}
+              {Ctz_Reg}
+              {Impr_List}
+              {List_Pdf}
+			  {Cer_Lista}
+			  {Ver_Ot}
+			  {Ver_Os}
+			  {Ver_OD}
+			  {Track}
+			</tr>
+</Form>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          	<table width="10%"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+			  <tr>
+                <td align="center">
+			  	  <a onClick="Accion_flecha_ant();">
+			  	  <img src="../img/anterior.gif"  alt="prueba" width="23" height="23" border="0" title="Regresar" ></a>
+			  	</td> 
+			  	<td>Regresar</td>
+			  </tr>
+          </table>
+          </td>
+        </tr>
+      </table>

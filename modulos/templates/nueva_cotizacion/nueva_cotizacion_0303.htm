@@ -1,0 +1,172 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="javascript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+window.name="busqueda";
+
+function KeyIsTextoEsp(evt)/* NO permite ' " $ / \   */
+{
+var isNav = (navigator.appName.indexOf("Netscape") != -1)
+var isIE = (navigator.appName.indexOf("Microsoft") != -1)
+
+	if (isNav) {
+		if ( evt.which == 34 ||  evt.which == 36 || evt.which == 39 || evt.which == 47 || evt.which == 92 )
+		return false;
+	return true;
+	}
+	else if (isIE)
+		{evt = window.event;
+		if (evt.keyCode == 34 || evt.keyCode == 36 || evt.keyCode == 39 || evt.keyCode == 47 || evt.keyCode == 92)
+		return false;
+		if(evt.keyCode == 13){				
+				return false;
+				//valida(this, this.form);
+		}
+	return true;
+		}
+	else {
+		alert("Su browser no es soportado por esta aplicación")
+	}
+	return false
+}
+
+function imprimir() {
+	this.focus();
+	this.print();
+}
+
+function valida(campo,form){
+	if (campo.value.length<3){
+		alert("El tamaño del texto debe ser al menos  3 caracteres");
+	return;
+	}else{
+		form.submit();
+		return;
+	}
+}
+
+-->
+</script>
+
+<FORM NAME="jump" METHOD=POST ACTION="" TARGET="">
+</FORM>
+
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal">{TEXT_TITULO}</td>
+  </tr>
+</table>
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>
+            <table width="600" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <table width="544" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                            <tr>
+                                <td width="619" colspan="7">
+                                    <fieldset>
+                                    <legend>{TEXT_SUB_TITULO}</legend>
+                                    <table border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                                        <form NAME="form_proveedor" action="nueva_cotizacion_0303.php" METHOD="POST" onsubmit="" TARGET="busqueda">
+                                        <input type="hidden" name="accion" value="PE" >
+                                        <!--<input type="hidden" name="rad_proveedor">-->
+                                        <tr>
+                                            <td colspan=3>&nbsp;</td>
+                                            </tr>
+                                        <tr>
+                                            <td>Por Proveedor</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            </tr>
+                                        <tr>
+                                            <td><input name="rad_proveedor" value="1" type="radio" checked>{TEXT_CAMPO_9} 
+                                                <input name="rad_proveedor" value="2" type="radio">{TEXT_CAMPO_3}</td>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;<input name="proveedor" type="text" maxlength="50" size=40></td>
+                                            <td><input type="button" value="{TEXT_BOTON_BUS}" onClick="valida(form_proveedor.proveedor,form_proveedor)"></td>
+                                        </tr>
+                                        </form>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            </tr>
+                                        <tr>
+                                            <td colspan=3>&nbsp;</td>
+                                            </tr>
+                                        <tr>
+                                            <td>Por Producto</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            </tr>
+                                        <form NAME="form_producto" METHOD="POST" ACTION="nueva_cotizacion_0303.php" TARGET="busqueda">
+                                        <input type="hidden" name="accion" value="PS">
+                                        <!--<input type="hidden" name="rad_producto">-->
+                                        <tr>
+                                            <td><input name="rad_producto" type="radio" value="3" checked>Descripci&oacute;n
+												<input name="rad_producto" type="radio" value="1" >{TEXT_CAMPO_5} 
+                                                <input name="rad_producto" type="radio" value="2">{TEXT_CAMPO_6} 
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;<input name="producto" type="text" maxlength="50" size=40></td>
+                                            <td><input type="button" value="{TEXT_BOTON_BUS}" onClick="valida(form_producto.producto,form_producto)"></td>
+                                        </tr>
+                                        </form>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=3>&nbsp;</td>
+                                            </tr>
+                                        <tr>
+                                            <td>Por Servicio</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <form NAME="form_servicio" METHOD="POST" ACTION="nueva_cotizacion_0303.php" TARGET="busqueda">
+                                        <input type="hidden" name="accion" value="SV">
+                                        <!--<input type="hidden" name="rad_servicio">-->
+                                        <tr>
+                                            <td><input name="rad_servicio" type="radio" value="3" checked >{TEXT_CAMPO_7}
+												<input name="rad_servicio" type="radio" value="1" >{TEXT_CAMPO_5}
+                                                <input name="rad_servicio" type="radio" value="2">{TEXT_CAMPO_6}</td>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;<input name="servicio" type="text" maxlength="50" size=40></td>
+                                            <td><input type="button" value="{TEXT_BOTON_BUS}" onClick="valida(form_servicio.servicio,form_servicio)"></td>
+                                        </tr>
+                                        </form>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            </tr>
+                                        <tr>
+                                            <td colspan=3>&nbsp;</td>
+                                            </tr>
+                                    </table>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                        </table>      
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+	<tr>
+		<td align="center"><input type="button" value="Cerrar" onClick="window.close();"></td>
+	</tr>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+/*    document.form_proveedor.proveedor.onkeypress = KeyIsAlfaNumeric;
+    document.form_producto.producto.onkeypress = KeyIsAlfaNumeric;
+    document.form_servicio.servicio.onkeypress = KeyIsAlfaNumeric;*/
+    document.form_proveedor.proveedor.onkeypress = KeyIsTexto;
+    document.form_producto.producto.onkeypress = KeyIsTextoEsp;
+    document.form_servicio.servicio.onkeypress = KeyIsTexto;
+-->
+</script>
+</body>

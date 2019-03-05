@@ -1,0 +1,34 @@
+              <table width="650" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+            <tr>
+              <th width="55">UPC/(SKU)</th>
+              <th width="38">Tipo</th>
+              <th width="277">Descripci&oacute;n</th>
+              <th width="69">Despacho</th>
+              <th width="66">Instalaci&oacute;n</th>
+              <th width="39">Cant</th>
+			  <th width="65">Precio</th>
+              <th width="61">Total</th>
+            </tr>
+	<!-- BEGIN OSDETALLE -->
+		   <tr valign="top">
+                <td align="center">{cod_barra}<br>({cod_sap})</td>
+			    <td><div align="center">{osde_tipoprod}</div></td>
+                <td>{osde_descripcion}{especificacion}{osde_especificacion}</td>
+                <td>{tipo_nombre}</td>
+	            <td><div align="center">{osde_instalacion}</div></td>
+                <td><div align="right">{osde_cantidad}</div></td>
+				<td><div align="right">{precioVacio}{osde_precio}</div></td>
+				<td><div align="right">&nbsp;{totalVacio}{Total}</div></td>
+              </tr>
+	<!-- END OSDETALLE -->  
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <th>Total</th>
+              <td>&nbsp;</td>
+              <td>&nbsp; </td>
+              <td><div align="center">&nbsp;</div></td>
+              <td>&nbsp;</td>
+              <th><div align="right">{TG}</div></th>
+            </tr>
+          </table>  

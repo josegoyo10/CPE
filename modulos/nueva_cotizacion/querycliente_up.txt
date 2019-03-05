@@ -1,0 +1,22 @@
+UPDATE clientes 
+             SET clie_nombre='AMPARO', 
+                 clie_paterno='RODRIGUEZ', 
+                 clie_materno='N',
+                 clie_telefonocasa='3103292214',
+                 clie_telcontacto1='',
+                 clie_telcontacto2='',
+                 clie_activo=1,
+                 clie_tipo='p', 
+                 clie_email='', 
+                 clie_ciudad =  004, 
+                 clie_barrio =  000, 
+                 clie_sexo = '1', 
+                 clie_tipo_cliente = 1, 
+                 clie_categoria_cliente = 0, 
+                 clie_tipo_contribuyente = 'RS', 
+                 clie_departamento =  86, 
+                 clie_localidad =  000,  
+                 clie_provincia =  885 , 
+                 clie_localizacion = 86885004000000, 
+                 id_tipo_doc = 13 
+            WHERE clie_rut=51564915

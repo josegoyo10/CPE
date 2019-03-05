@@ -1,0 +1,35 @@
+	Letra Normal  Prueba Prueba Prueba Prueba
+18			Letra 10cpi   Prueba Prueba Prueba Prueba
+27 58		:	Letra 12cpi   Prueba Prueba Prueba Prueba
+27 103		g	Letra 15cpi   Prueba Prueba Prueba Prueba
+15			Letra 17.1cpi Prueba Prueba Prueba Prueba IBM
+29			Letra 17.1cpi Prueba Prueba Prueba Prueba Okidata
+18			Letra 10cpi   Prueba Prueba Prueba Prueba
+			Letra Normal  Prueba Prueba Prueba Prueba
+27 69		E	Letra Negrita Prueba Prueba Prueba Prueba
+27 70		F	Letra Normal  Prueba Prueba Prueba Prueba
+			Letra Normal  Prueba Prueba Prueba Prueba
+27 37 71	%G	Letra Italica Prueba Prueba Prueba Prueba
+27 37 72	%H	Letra Normal  Prueba Prueba Prueba Prueba
+27 35 48	#0	HSD/SSL
+27 48		0	Utility
+12			Form feed
+27 37 57 n	%9	Set spacing, in n/144 ( 0 <= n <= 127 )
+27 54		6	Set spacing to 1/6"
+27 56		8	Set spacing to 1/8"
+
+49		1	
+23		
+24		
+25		
+21		
+22		
+
+
+IBM | 17 cpi | Set spacing, in n/144 ( 0 <= n <= 127 ) | 25
+%9
+
+OKIDATA | 17 cpi | Set spacing, in n/144 ( 0 <= n <= 127 ) | 25
+%9
+
+

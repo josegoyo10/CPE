@@ -1,0 +1,123 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<link rel="stylesheet" type="text/css" href="../estilos.css"></link>
+
+<script language="javascript" src="../../includes/popup.js"></script>
+<script LANGUAGE=javascript>
+function Accion_flecha_ant(){
+	location.href='../lista_Regalos/monitor_ListRegalos.php';
+}
+
+function export_Excl(){	
+	var idLista = document.viaje.idLista.value;
+	var accion = 'export';
+	location.href='../rep_Compras/reporteCompras_Excl.php?idLista='+idLista+'&accion='+accion+'';
+}
+
+function PrintReport(){
+	var idLista = document.viaje.idLista.value;
+	var accion = 'printp';
+	if (idLista != 0){
+		popUpWindow('../rep_Compras/reporteCompras_Excl.php?idLista='+idLista+'&accion='+accion+'',1,1,50,50);
+	}else{
+		alert('Debe seleccionar por lo menos una Lista de Regalos para impresión');
+	}
+}
+
+function export_Pdf(){	
+	nuevaVentana = null;
+	var idLista = document.viaje.idLista.value;
+	nuevaVentana = window.open('../rep_Compras/reporteCompras_Pdf.php?idLista='+idLista+'', 1,0,0,0,0,1,1);
+	nuevaVentana.location.href = '../rep_Compras/reporteCompras_Pdf.php?idLista='+idLista+'';
+}
+
+</script>
+</head>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0" background="../img/bg_pattern_002.jpg">
+
+<table width="800" height="50" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">Reporte de compras Listas de Regalos</td>
+    <td height="50"></td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<FORM NAME="viaje" METHOD="POST" ACTION="prog_Instalacion.php" onSubmit="">
+		  <tr>
+		    <td>
+		      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		        <tr>
+		          <td>	
+					<!-- BEGIN Grilla -->
+					<table width="30%" border="0" align="center" cellpadding="2" cellspacing="2">
+					    <tr>
+							<td align="center" colspan="3"></td>
+							<td align="center">
+								<input type="button" value="Exp. Excel" onCLick="export_Excl()" style="width: 90; color: rgb(255, 0, 0); display:compact;">
+							</td>
+							<td align="center">
+								<input type="button" value="Imprimir" onClick="PrintReport();" style="width: 90; color: rgb(255, 0, 0); display:compact;">
+							</td>
+							<td align="center">
+								<input type="button" value="Exp. PDF" onCLick="export_Pdf()" style="width: 90;" style="width: 90; color: rgb(255, 0, 0); display:compact;">
+							</td>
+							<td align="center"  colspan="3"></td>
+						</tr>
+						<tr style="color:#FF0000">
+							<td colspan="9" align="center" height="15">
+								<input type="hidden" name="idLista" value="{id_Lista}">
+							</td>
+						</tr>
+					</table>
+					<table id=idTable width="95%" border="0" align="center" cellpadding="2" cellspacing="1" class="tabla1">
+						<tr>
+							<th height="30" align="center">N°<br>Lista</th>
+							<th align="center">Tienda</th>
+							<th align="center">Código</th>
+							<th align="center">Descripción</th>
+							<th align="center">Cant.<br>Solicitada</th>
+							<th align="center">Cant.<br>Comprada</th>
+							<th align="center">Cant. x<br>Comprar</th>
+						</tr>
+						<!-- BEGIN Bloque_Resultados -->
+						<tr>
+							<td height="25" align="center">{idLista}</td>
+							<td height="25" align="center">{id_Local}</td>	
+							<td height="25" align="left">{codigo}</td>
+							<td height="25" align="left">{descripcion}</td>
+							<td height="25" align="center">{cant_solici}</td>
+							<td height="25" align="center">{cant_comp}</td>					
+							<td height="25" align="center">{cant_Xcomp}</td>		
+						</tr>
+						<!-- END Bloque_Resultados -->
+					</table>
+					<!-- END Grilla -->
+					</FORM>
+		
+				</td>
+		        </tr>
+		      </table>
+		     <p>&nbsp;</p>
+			</td>
+		  </tr>
+		
+		<!-- InstanceEndEditable -->
+		</table>
+    </td>
+  </tr>
+</table>
+
+<table width="10%"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+	<tr>
+    	<td align="center">
+			<a onClick="Accion_flecha_ant();">
+			<img src="../img/anterior.gif"  alt="prueba" width="23" height="23" border="0" title="Regresar" ></a>
+		</td> 
+		<td>Regresar</td>
+	</tr>
+</table>
+</body>
+<!-- InstanceEnd -->
+</html>

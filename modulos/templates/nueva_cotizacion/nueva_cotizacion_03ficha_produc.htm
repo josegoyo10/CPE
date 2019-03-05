@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<script language="javascript" src="../../includes/funciones.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+window.name="busqueda";
+
+function volver(){
+	document.jump.target = "busqueda";
+	document.jump.action = 'nueva_cotizacion_0303.php?accion=verprod&id_pro={id_pro}&rad_proveedor={rad_proveedor}&proveedor={prov}';
+	document.jump.submit();
+}
+function returnProducto(valor){
+	window.returnValue = valor;
+	window.close();
+}
+//-->
+</SCRIPT>
+<FORM NAME="jump" METHOD=POST ACTION="" TARGET="">
+</FORM>
+
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal">{TEXT_TITULO} tres</td>
+  </tr>
+</table>
+<div style=" width: 590px; height: 350px; overflow: auto">
+<table width="570" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>
+            <table border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>
+                    <td><div align="left">{TEXT_CAMPO_200}</div></td>
+                    <td class="userinput">{cod_sap}</td>
+                </tr>
+                <tr>
+                    <td><div align="left">{TEXT_CAMPO_22}</div></td>
+                    <td class="userinput">{prod_descripccion}</td>
+                </tr>
+                <tr>
+                    <td width="120" valign='top'><div align="left">{TEXT_CAMPO_11}</div></td>
+                    <td width="226" class="userinput">{prov_nombre}</td>
+                </tr>
+            </table>
+                <br>
+            <table height="200" border="1" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>
+                    <td width="200" height="306" valign="top"><img src="{imagen}" width="200" height="240"></td>
+                    <td width="291" valign="top" class="userinput">
+                        &nbsp;&nbsp;{TEXT_CAMPO_201}<br>
+                        {descripcion_add}
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>
+                    <td><input type="button" name="Button22" value="Agregar" onClick="returnProducto('{cod_sap}')"></td>
+                    <td><input type="button" name="Button222" value="Volver" onclick="volver()"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
+</body>

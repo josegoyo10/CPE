@@ -1,0 +1,214 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	function Accion_flecha_ant(){	
+		tipo=nueva_lista_02.clie_tipo.value;
+		if (tipo=='p')
+			location.href='nueva_lista_01.php?clie_rut={clie_rut}';
+		if (tipo=='e')
+			location.href='nueva_lista_empresa_01.php?clie_rut={clie_rut}';
+	}
+	function validadel(id_os, url_os) {
+		if(confirm('¿Está seguro que desea borrar la Lista de Regalos número ' + id_os + '?')) {
+			location.href=url_os;
+		}
+	}
+	function nueva_Lista(clie_rut){
+	if(confirm('Desea continuar con la creacion de la Lista de Regalos')) {
+			location.href = 'nueva_lista_03.php?accion=crear&clie_rut='+clie_rut;
+		}
+	}
+	//-->
+	</SCRIPT>
+
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<!--menu--->
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Paso 3/5 - {NOMBRE_PAGINA} <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" -->
+      <table  border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="../img/1a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/2a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/3b.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/4a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/5a.gif" width="40" height="40"></td>
+        </tr>
+      </table> 
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+
+<table width="850" height="550" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="95%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%" valign="top">
+<!--- Inicio FORM que edita los datos del cliente!-->
+<FORM NAME="nueva_lista_02" METHOD="POST" ACTION="nueva_lista_02.php" onSubmit="">
+<input type="hidden" name="accion" value="crear">
+<input type="hidden" name="clie_rut" value="{clie_rut}">
+<input type="hidden" name="clie_tipo" value="{clie_tipo}">
+            <table width="700" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+              <tr>
+                <td><fieldset><legend>Datos del Cliente</legend>
+                  <table width="100%" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                    <tr>
+                      <td width="95">{TEXT_CAMPO_2}</td>
+                      <td width="223" class="userinput">{clie_nombre}&nbsp;{clie_paterno}&nbsp;{clie_materno} </td>
+                      <td width="89">{TEXT_CAMPO_1}</td>
+                      <td width="229" class="userinput">{clie_rut}</td>
+                    </tr>
+                    <tr>
+                      <td>{TEXT_CAMPO_5}</td>
+                      <td class="userinput">{dire_direccion}</td>
+                      <td>{TEXT_CAMPO_6}</td>
+                      <td class="userinput">{comu_nombre}</td>
+                    </tr>
+                    <tr>
+                      <td>{TEXT_CAMPO_7} </td>
+                      <td class="userinput">{clie_telefonocasa}</td>
+                      <td>{TEXT_CAMPO_8}</td>
+                      <td class="userinput">{clie_telcontacto1} </td>
+                    </tr>
+                    <tr>
+                      <td>{TEXT_CAMPO_9}</td>
+                      <td class="userinput">{clie_telcontacto2}</td>
+                      <td>{TEXT_CAMPO_10}</td>
+                      <td class="userinput">{dire_observacion}</td>
+                    </tr>
+                    <tr>
+                      <td colspan=4 align=center><input type="button" name="EditDire" value="Editar" onClick="Accion_flecha_ant()"></td>
+                    </tr>
+                  </table>
+<!--- Fin del FORM que edita los datos del cliente!-->
+                </fieldset></td>
+				</form>
+                </tr>
+            </table>
+
+            <table border="0" align="center" cellpadding="0" cellspacing="2" class="textonormal">
+              <tr>
+<!--- Inicio del Bloque que Inserta nuevas Listas de regalo !-->
+                <td valign="top"><p class="userinput">
+                    <fieldset>
+                        <legend>Crear Lista de Regalos </legend>
+                        <script language="JavaScript" type="text/JavaScript" src="popup.js"></script>
+                        <table  border="0" cellspacing="2" cellpadding="2">
+                            <tr>
+                                <td align="left"><input type="button" id="blanco"  name="Button3" value="Crear Lista de Regalos" onClick="nueva_Lista({clie_rut});"></td>
+                            </tr>
+                            </table>
+                    </fieldset>
+                </td>
+<!--- Fin del Bloque que crea las Listas de Regalos !-->
+<!--- Inicio del FORM que filtra por Evento !-->
+                <FORM NAME="nueva_lista_02_filtra_event" METHOD="POST" ACTION="nueva_lista_02.php" onSubmit="">
+                <input type="hidden" name="accion" value="filtra_event">
+                <input type="hidden" name="clie_rut" value="{clie_rut}">
+                <td valign="top"><fieldset>
+                  <legend>Evento</legend>
+                  <table  border="0" cellspacing="2" cellpadding="2">
+                    <tr>
+                      <td><span class="userinput">
+                        <select name="select_evento">
+						{todosEv}
+						<!-- BEGIN Eventos -->
+							<option value="{idEvento}" {selected}>{nombre}</option>
+						<!-- END Eventos -->
+                        </select></span></td>
+                      <td><input type="button" name="Button232" value="Filtrar"  onClick="submit();"></td>
+                    </tr>
+                  </table>
+                </fieldset></td>
+                </form>
+<!--- Fin del FORN que filtra por Evento !-->
+<!--- Inicio del FORM que filtra por Estado !-->                
+                <FORM NAME="nueva_lista_02_filtra_estado" METHOD="POST" ACTION="nueva_lista_02.php" onSubmit="">
+                <input type="hidden" name="accion" value="filtra_esta">
+                <input type="hidden" name="clie_rut" value="{clie_rut}">
+                <td valign="top">
+                <p class="userinput">
+                    <fieldset>
+                    <legend>Estado</legend>
+                        <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+                        <tr>
+                            <td><span class="userinput">
+                            <select name="select_estado">
+                            {todosE}
+                            <!-- BEGIN Estados -->
+                            	<option value="{id_estado}" {selected}>{esta_nombre}</option>
+                            <!-- END Estados -->
+                            </select></span></td>
+                            <td><input type="button" name="accion" value="Filtrar"  onClick="submit();"></td>
+                        </tr>	
+                        </table>
+                    </fieldset>
+                </td>
+                </form>
+<!--- Fin del FORM que filtra por Estado !-->
+              </tr>
+            </table> 
+		
+		<table BORDER="0" cellspacing="0" cellpadding="0" align="center">
+		<tr>
+		  <td>
+
+			<table align="left" width="630" border="1" bordercolor="#000000"  cellpadding="2" cellspacing="0" class="tabla2">
+              <tr>
+                <th width="60" align="center">{TEXT_CAMPO_11}</th>
+                <th width="120" align="center">{TEXT_CAMPO_12}</th>
+                <th width="150" align="center">{TEXT_CAMPO_13}</th>
+                <th width="100" align="center">{TEXT_CAMPO_14}</th>
+                <th width="100"align="center">{TEXT_CAMPO_15}</th>
+                <th width="100">Acciones</th>
+              </tr>
+			</table>
+			</td>
+		  </tr>
+		<tr>
+		  <td>
+			<div style="width: 650px; height: 245px; left: 49px; top: 353px; overflow: auto;">      
+			<table width="100%" border="1" align="left" class="tabla2" cellspacing="0">
+			<!-- BEGIN LISTA -->
+				  <tr>
+						<td width="60" align="center">{idLista}</td>
+						<td width="120" align="center">{evento}</td>
+						<td width="150" align="center">{fec_creacion}&nbsp; </td>
+						<td width="100" align="center">{esta_nombre}</td>
+						<td width="100" align="center">{fec_entrega}</td>
+						<td width="100" align="center"><a href="nueva_lista_sumario_01.php?idLista={idLista}">Ver</a>{editar}{eliminar}</td>
+					  </tr>
+			<!-- END LISTA -->    
+			</table>
+			</div>		  
+			</td>
+		  </tr>
+		</table>
+		  </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><table width="219"  height="23"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+            <tr>
+              <td width="33">
+			  	  <a href="#"  onClick="Accion_flecha_ant();"><img src="../img/anterior.gif"  alt="prueba" width="23" height="23" border="0" title="Anterior" ></a></td>
+              <td width="59">Anterior</td>
+              <td width="70">
+                <div align="right">Siguiente </div></td>
+              <td width="31">
+			  <a onclick="nueva_Lista({clie_rut})"><img src="../img/siguiente.gif" alt="prueba" width="23" height="23" border="0" title="Siguiente" ></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+</html>

@@ -1,0 +1,151 @@
+21122007 101007  => crea instancia soap_server .....wspoccp_os
+21122007 101007  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004100</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0000015002020</ean>
+  </detalle>
+  <detalle>
+    <precio>00004100</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0000015002020</ean>
+  </detalle>
+</req>
+21122007 101007  => Graba_OS : Existe Local y rut
+21122007 101007  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+21122007 101007  => Graba_OS : Se verifica local ->42
+21122007 101007  => Verifica_rut -> Largo de rut correcto 8
+21122007 101007  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+21122007 101007  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+21122007 101007  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+21122007 101007  => Graba_OS : Se obtiene Rut Cliente ->13924695
+21122007 101012  => busca_direccion -> No existe direccion para el rut  13924695
+21122007 101012  => inserta_nueva_direccion -> Inserta direccion para el rut  13924695
+21122007 101012  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42521  
+21122007 101012  => ERROR(20) : <?xml version="1.0"?><resp><os>42521</os>
+		<estado>0</estado>
+		<desc>20-No es posible insertar el producto =0000015002020 en el detalle de la OS 42521</desc></resp>
+21122007 162820  => crea instancia soap_server .....wspoccp_os
+21122007 162820  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00010082</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0000001190748</ean>
+  </detalle>
+</req>
+21122007 162820  => Graba_OS : Existe Local y rut
+21122007 162820  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+21122007 162820  => Graba_OS : Se verifica local ->42
+21122007 162820  => Verifica_rut -> Largo de rut correcto 8
+21122007 162820  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+21122007 162820  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+21122007 162820  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+21122007 162820  => Graba_OS : Se obtiene Rut Cliente ->13924695
+21122007 162821  => Graba_OS :No se verifica ean ->0000001190748 en CPE 
+21122007 162821  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001190748 en CPE </desc></resp>
+21122007 163759  => crea instancia soap_server .....wspoccp_os
+21122007 163759  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00010082</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0000001190748</ean>
+  </detalle>
+</req>
+21122007 163759  => Graba_OS : Existe Local y rut
+21122007 163759  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+21122007 163759  => Graba_OS : Se verifica local ->42
+21122007 163759  => Verifica_rut -> Largo de rut correcto 8
+21122007 163759  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+21122007 163759  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+21122007 163759  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+21122007 163759  => Graba_OS : Se obtiene Rut Cliente ->13924695
+21122007 163759  => Graba_OS :No se verifica ean ->0000001190748 en CPE 
+21122007 163759  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001190748 en CPE </desc></resp>
+21122007 163821  => crea instancia soap_server .....wspoccp_os
+21122007 163821  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00010082</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0000001190748</ean>
+  </detalle>
+</req>
+21122007 163821  => Graba_OS : Existe Local y rut
+21122007 163821  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+21122007 163821  => Graba_OS : Se verifica local ->42
+21122007 163821  => Verifica_rut -> Largo de rut correcto 8
+21122007 163821  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+21122007 163821  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+21122007 163821  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+21122007 163821  => Graba_OS : Se obtiene Rut Cliente ->13924695
+21122007 163821  => Graba_OS :No se verifica ean ->0000001190748 en CPE 
+21122007 163821  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001190748 en CPE </desc></resp>
+21122007 163907  => crea instancia soap_server .....wspoccp_os
+21122007 163907  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000499</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0000000000024</ean>
+  </detalle>
+</req>
+21122007 163907  => Graba_OS : Existe Local y rut
+21122007 163907  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+21122007 163907  => Graba_OS : Se verifica local ->42
+21122007 163907  => Verifica_rut -> Largo de rut correcto 8
+21122007 163907  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+21122007 163907  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+21122007 163907  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+21122007 163907  => Graba_OS : Se obtiene Rut Cliente ->00002222
+21122007 163907  => Graba_OS :No se verifica ean ->0000000000024 en CPE 
+21122007 163907  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000000000024 en CPE </desc></resp>
+21122007 172440  => crea instancia soap_server .....wspoccp_os
+21122007 172440  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00010082</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0000001190748</ean>
+  </detalle>
+</req>
+21122007 172440  => Graba_OS : Existe Local y rut
+21122007 172440  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+21122007 172440  => Graba_OS : Se verifica local ->42
+21122007 172440  => Verifica_rut -> Largo de rut correcto 8
+21122007 172440  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+21122007 172440  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+21122007 172440  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+21122007 172440  => Graba_OS : Se obtiene Rut Cliente ->13924695
+21122007 172440  => Graba_OS :No se verifica ean ->0000001190748 en CPE 
+21122007 172440  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001190748 en CPE </desc></resp>

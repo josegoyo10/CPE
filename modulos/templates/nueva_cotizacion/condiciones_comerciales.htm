@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Condiciones comerciales</title>
+<script language="JavaScript" type="text/javascript" src="../checkfield.js"></script>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+
+<SCRIPT LANGUAGE="JavaScript">
+	function valida_form() {
+		if (!document.condiciones_comerciales.osde_descuento.value || !document.condiciones_comerciales.osde_precio.value)
+			document.condiciones_comerciales.osde_descuento.value = 0; 
+		
+		if (!document.condiciones_comerciales.usuarioaut.value) {
+			alert('Debe ingresar el usuario que autoriza el descuento');
+			document.condiciones_comerciales.usuarioaut.focus();
+			return;
+		}
+
+		if (!document.condiciones_comerciales.claveaut.value) {
+			alert('Debe ingresar la clave del usuario que autoriza el descuento');
+			document.condiciones_comerciales.claveaut.focus();
+			return;
+		}
+
+		if (document.condiciones_comerciales.tipodesc[0].checked && document.condiciones_comerciales.osde_precio.value && parseFloat(document.condiciones_comerciales.osde_descuento.value)>parseFloat(document.condiciones_comerciales.osde_precio.value)) {
+			alert('El valor del descuento [$] no puede ser mayor al precio');
+			document.condiciones_comerciales.osde_descuento.value = document.condiciones_comerciales.osde_precio.value;
+			document.condiciones_comerciales.osde_descuento.focus();
+			document.condiciones_comerciales.osde_descuento.select();
+			return;
+		}
+
+		if (document.condiciones_comerciales.tipodesc[1].checked && document.condiciones_comerciales.osde_precio.value && parseFloat(document.condiciones_comerciales.osde_descuento.value)>100) {
+			alert('El valor del descuento [%] no puede ser mayor a 100');
+			document.condiciones_comerciales.osde_descuento.value = 100;
+			document.condiciones_comerciales.osde_descuento.focus();
+			document.condiciones_comerciales.osde_descuento.select();
+			return;
+		}
+
+		document.condiciones_comerciales.osde_precio_aux.value = document.condiciones_comerciales.osde_precio.value;
+		document.condiciones_comerciales.submit();
+	}
+	window.name = "cond_modal";
+</SCRIPT>
+</head>
+<body >
+<FORM METHOD=POST NAME="condiciones_comerciales" target="cond_modal">
+<INPUT TYPE="hidden" NAME="id_os_detalle" VALUE="{id_os_detalle}">
+<INPUT TYPE="hidden" NAME="prec_mod" VALUE="{prec_mod}">
+<INPUT TYPE="hidden" NAME="osde_precio_aux" VALUE="{osde_precio}">
+<INPUT TYPE="hidden" NAME="accion" VALUE="editar">
+	<table width="90%"  border="0" cellpadding="2" align="center" cellspacing="2" class="textonormal" bgcolor="#fff00b">
+	  <tr>
+		<td width="35%">Usuario</td>
+		<td width="65%"><input type="text" name="usuarioaut" value="{usrnomaut}" maxlength=50></td>
+	  </tr>
+	  <tr>
+		<td>Clave</td>
+		<td><input type="text" name="claveaut" value="{usrpassaut}" maxlength="20"></td>
+	  </tr>
+	  <tr>
+		<td>Producto</td>
+		<td>{osde_descripcion}</td>
+	  </tr>
+	  <tr>
+		<td>Precio ($)</td>
+		<td><input type="text" name="osde_precio" value="{osde_precio}" {disabled} maxlength="8"></td>
+	  </tr>
+	  <tr>
+		<td>Descuento</td>
+		<td><input type="text" name="osde_descuento" value="{osde_descuento}" maxlength="8" onKeyUp="if (window.event.keyCode==13){ valida_form()};"> 
+		<input name="tipodesc" type="radio" value="pesos" checked> $
+		<input name="tipodesc" type="radio" value="porcent"> % </td>
+	  </tr>
+	  <tr>
+		<td>Origen</td>
+		<td><select name="select_origen">
+			<!-- BEGIN Origen -->
+			<option value="{id_origen}" {selected}>{nombre}</option>
+			<!-- END Origen -->
+		</select></td>
+	  </tr>
+	  <tr>
+		<td>&nbsp;</td>
+		<td><input type="button" name="Button" value="Aplicar" onClick="valida_form();">
+		<input type="button" name="Button" value="Cancelar" onClick="window.close()"></td>
+	  </tr>
+	</table>
+</FORM>
+<script LANGUAGE="javascript">
+	window.document.condiciones_comerciales.usuarioaut.onkeypress = KeyIsTexto ;
+	window.document.condiciones_comerciales.claveaut.onkeypress = KeyIsTexto ;
+	window.document.condiciones_comerciales.osde_precio.onkeypress = KeyIsNumber ;
+	window.document.condiciones_comerciales.osde_descuento.onkeypress = KeyIsNumber ;
+</script>
+</body>
+</html>
+<SCRIPT LANGUAGE="JavaScript">
+	function deshabilita_elementos(formulario) {
+		for (i=0;i<formulario.elements.length;i++){
+			if (formulario.elements[i].type == 'checkbox' || formulario.elements[i].type == 'select' || formulario.elements[i].type == 'select-one' || formulario.elements[i].type == 'text' || formulario.elements[i].type == 'textarea' || formulario.elements[i].type == 'password' || formulario.elements[i].type == 'radio' ||  formulario.elements[i].type == 'button' ){
+				formulario.elements[i].disabled = true;
+			}
+		}
+	}
+	if (("{osde_tipoprod}"=="PS")){
+		alert('Este producto no puede tener descuento ya que es un producto de Stock\'');
+		window.close();
+		//deshabilita_elementos(condiciones_comerciales);
+	}
+</SCRIPT>

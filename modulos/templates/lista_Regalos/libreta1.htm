@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/template2.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Libreta de direcciones</title>
+<link rel="stylesheet" type="text/css" href="../estilos.css"></link>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="javascript">
+	window.name="Libreta2";
+
+
+	function validar_form(){
+		for (i=0; i<document.libreta1.dire.length; i++) {
+			if (document.libreta1.dire[i].checked) {
+				 y=document.libreta1.dire[i].value;
+				i= document.libreta1.dire.length;
+			}
+		}
+
+		if (document.libreta1.dire && i==0) {
+                if (document.libreta1.dire.checked) {
+				y=0;
+				i=1;
+                       document.libreta1.submit();
+               }
+        }
+
+
+		document.jump.target = "Libreta2";
+		document.jump.action = 'libreta1.php?id_direccion='+y+'&accion=Utilizar&idLista={idLista}';
+		document.jump.submit();
+	}
+
+	function validar_Editar(){
+		for (i=0; i<document.libreta1.dire.length; i++) {
+			if (document.libreta1.dire[i].checked) {
+				 y=document.libreta1.dire[i].value;
+				i= document.libreta1.dire.length;
+			}
+		}
+		document.jump.target = "Libreta2";
+		document.jump.action = 'libreta2.php?id_direccion='+y+'&accion=modificar&idLista={idLista}';
+		document.jump.submit();
+	}
+
+	function nueva(){
+		document.jump.target = "Libreta2";
+		document.jump.action = 'libreta2.php?accion=Nueva&idLista={idLista}';
+		document.jump.submit();
+	}
+	
+</script>
+
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table width="550" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Libreta de Direcciones<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+
+<FORM NAME="jump" METHOD="POST" ACTION="" TARGET="">
+</FORM>
+
+<FORM NAME="libreta1" METHOD="GET" ACTION="libreta1.php" onSubmit="" TARGET="Libreta2">
+<input type="hidden" name="clie_rut" value="{clie_rut}">
+<input type="hidden" name="id_direccion" value="{id_direccion}">
+<table width="550" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><!-- InstanceBeginEditable name="Cuerpo" -->
+
+    <table width="550" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"> <table width="347"  border="0" cellpadding="2" cellspacing="2" class="tabla1">
+      <tr>
+        <th width="9%">Sel</th>
+        <th width="24%">Nombre</th>
+		<th width="67%">Direcci&oacute;n</th>
+        <th width="24%">Barrio</th>
+        </tr>
+	<!-- BEGIN DIRE -->
+	  <tr>
+        <td><input name="dire" type="radio" value="{id_direccion}" {checked}></td>
+		<td>{dire_nombre}</td>
+		<td>{dire_direccion}</td>
+        <td>{comu_nombre}</td>
+        </tr>
+	<!-- END DIRE -->
+    </table>      <br>
+    <table width="347"  border="0" cellpadding="2" cellspacing="2" class="textonormal">
+      <tr>
+        <td width="25%"><div align="center"><input type="button" name="Button" value="Utilizar" onClick="validar_form()" {desactivado} ></div></td>
+        <td width="25%"><div align="center"><input type="button" name="Submit2" value="Nueva" onClick="nueva()"></div></td>
+        <td width="25%"><div align="center"><input type="button" name="Submit2" value="Editar" onClick="validar_Editar()" {desactivado} ></div></td>
+        <td width="27%"><div align="center"><input type="button" name="Submit2" value="Cerrar" onClick="javascript:window.close();"></div></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

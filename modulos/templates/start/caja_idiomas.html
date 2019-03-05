@@ -1,0 +1,15 @@
+<script>
+	if (document.all) {
+		document.write ("<div id=\"PopUpCalendar\" style=\"position:absolute; left:0px; top:30px; z-index:7; width:150px; height:100px; overflow: visible; visibility: hidden; border:5px none #000000\" >");
+	}
+
+	var content = '';
+	<!-- BEGIN Idiomas -->
+	content += "<a href='../start/start_01.php?idioma={IDIOMA}'><img src='../img/idiomas/flag-{IDIOMA}.png' border=0></a> ";
+	<!-- END Idiomas -->
+
+	var obj = document.all['PopUpCalendar'];
+
+	generar_caja( 100, 350, content, obj );
+
+</script>

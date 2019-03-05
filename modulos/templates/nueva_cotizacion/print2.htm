@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/Impresiones.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table width="640" height="403" border="0" cellpadding="0" cellspacing="0" style="border: 2px solid #ffffff;">
+  <tr>
+    <td height="69" valign="top">
+    <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td width="15%" height="49"><img src="../img/logo2.jpg" width="49" height="45"></td>
+        <td width="79%" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" --> Cotizaci&oacute;n N&ordm; {id_os} <!-- InstanceEndEditable --></td>
+        <!--<td width="6%"><img src="../img/banner1.gif" width="100" height="41"></td>-->
+      </tr>
+    </table>
+    </td>
+  </tr>  
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2" class="textonormal">
+        <tr>
+		  <td width="30%" align=center>&nbsp;</th>
+		  <td width="40%" align=center colspan=2>Descripción</th>
+		  <td width="30%" align=center>&nbsp;</th>
+		</tr>
+		
+		<!-- BEGIN Codigos -->
+		<tr valign="top" align=center>
+		  <td rowspan=5>{cod_barraleft}</td>
+		  <td>&nbsp;&nbsp;&nbsp;</td>
+		  <td align="left" >{osde_descripcion}</td><td rowspan=5>{cod_barraright}</td>
+		<tr><td>&nbsp;</td><td align="left">Cod. Barra: {cod_barra2} </td></td>
+		<tr><td>&nbsp;</td><td align="left">Cod. SAP: {cod_sap} </td></td>
+    	<tr><td>&nbsp;</td><td align="left"><font face="Arial"size="2"><strong>Cant.: {osde_cantidad}</strong></font></td></td>
+    	<tr><td>&nbsp;</td><td align="left"><font face="Arial"size="2"><strong>Precio: {osde_precio}</strong></font></td></td>
+	  </td></tr>
+		<tr>
+		  <td align="center" colspan="4">&nbsp;</th>
+		</tr>
+		<!-- END Codigos -->
+	  </table>
+      <!-- InstanceEndEditable -->
+	</td>
+  </tr>
+  <tr>
+    <td align="center">
+		<TABLE border="0" align="center" cellspacing="2" cellpadding="2" class="textonormal">
+		<TR>
+			<TD>Total de Productos:</TD>
+			<TD>{cant_prod}</TD>
+		</TR>
+		<TR>
+			<TD>Total de la Venta:</TD>
+			<TD>$ {suma_prod}</TD>
+		</TR>
+		</TABLE>
+    </td>
+  </tr>  
+</table>
+
+</body>
+<!-- InstanceEnd --></html>

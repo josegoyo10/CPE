@@ -1,0 +1,595 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="../estilos.css"></link>
+<link href="estilos.css" rel="stylesheet" type="text/css"></link>
+<link rel="stylesheet" href="menu/menu.css"></link>
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="JavaScript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<!-- calendario --->
+<SCRIPT LANGUAGE="JavaScript">
+	var cal1 = new CalendarPopup("testdiv1");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = 20;										
+	cal1.offsetY = 0;
+</SCRIPT> 
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function validar_rut(){
+    crut = '';
+    mcrut= form_search4.bus_rut.value;
+    for(i=0; i<mcrut.length; ++i)
+        if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-')
+        {
+        crut = crut + mcrut.charAt(i);
+        }
+    largo = crut.length;
+    if ( largo < 2 )
+    {
+        alert("Debe ingresar la Cédula completa.");
+        document.form_search4.bus_rut.focus();
+        document.form_search4.bus_rut.select();
+        return false;
+    }
+
+    if ( largo > 2 )
+        rut = crut.substring(0, largo - 1);
+    else
+        rut = crut.charAt(0);
+    dv = crut.charAt(largo-1);
+
+    //checkCDV( dv );
+    if ( rut == null || dv == null )
+    return 0;
+    var dvr = '0';
+    suma = 0;
+    mul  = 2;
+
+    for (i= rut.length -1 ; i >= 0; i--)
+    {
+    suma = suma + rut.charAt(i) * mul;
+        if (mul == 7)
+                mul = 2;
+        else
+                mul++;
+    }
+    res = suma % 11;
+    if (res==1)
+        dvr = 'k';
+    else if (res==0)
+        dvr = '0';
+    else
+    {
+        dvi = 11-res;
+        dvr = dvi + "";
+    }
+
+    /* Validación digito de verificación
+    if ( dvr != dv.toLowerCase() )
+    {
+        alert("EL rut es incorrecto.");
+        document.form_search4.bus_rut.focus();
+        document.form_search4.bus_rut.select();
+        return false;
+    }
+    */
+
+    document.form_search4.bus_rut.value = mcrut;
+    digito=crut.substr(crut.length-1, 1).toUpperCase();
+    document.form_search4.submit();
+  return true;
+}
+function validar_OS(){
+    var valor;
+    if( validar_obligatorio( document.form_search3.bus_os, "Campo Obligatorio" ))
+        return false;
+
+    for (i=0;i<document.form_search3.rad_selec.length;i++){
+       if (document.form_search3.rad_selec[i].checked){
+          valor = document.form_search3.rad_selec[i].value;
+          break;
+       }
+    }
+    if ( valor == 1 ){
+        if ( validar_numero( document.form_search3.bus_os , "La OS debe ser numérica" ) ){
+            return false;
+        }
+    }
+}
+function selecCliente(){
+		popUpWindow('../seleccionar_cliente/seleccionar_vendedor.php', 200, 300, 710, 500);
+}
+function EvaluaFechas(){
+	var fecha1 = new Date()
+	var fecha2 = new Date()
+	var str1 = document.rango_fechas.fecha_inicio.value;
+	var str2 = document.rango_fechas.fecha_termino.value;
+
+	if (str1 == ""){
+		alert("Seleccione la fecha inicial.");
+		document.rango_fechas.fecha_inicio.focus();
+		return false;
+	}
+	
+	fechaArr1 = new Array;
+	fechaArr2 = new Array;
+	 
+	fechaArr1 = str1.split("/");
+	fechaArr2 = str2.split("/");
+
+	/* Convierte la fecha a número comparable*/
+	fecha1.setFullYear(fechaArr1[2], fechaArr1[1]-1, fechaArr1[0])
+	fecha2.setFullYear(fechaArr2[2], fechaArr2[1]-1, fechaArr2[0])
+	 
+	if (fecha1 > fecha2){
+		alert("Fecha de inicio mayor que fecha de término.");
+		return false;
+	}
+	return true;	
+}
+//-->
+</SCRIPT>
+</head>
+<body  onload="document.form_search3.bus_os.focus();">
+<table style="width:780; height:30;" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="width:390;" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->{SUBTITULO1}<!-- InstanceEndEditable --></td>
+    <td style="width:390;" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --><!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+
+<table style="width:780; height:auto;" border="0" cellpadding="0" cellspacing="0" class="textonormal">
+<tr><td>
+<table style="width:15cm;" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+       <td style="width:5cm;">
+		  <table border="0" align="right" cellpadding="0" cellspacing="0" class="textonormal">
+            <tr>
+              <td>
+              <form NAME="form_search1" METHOD="POST" ACTION="monitor_cotizaciones_00.php">
+                <input type="hidden" name="accion" value="search"></input>
+<input type="hidden" name="select_estado" value="{select_estado}">
+<input type="hidden" name="select_local" value="{select_local}">
+<input type="hidden" name="checkr1" value="{checkr1}">
+<input type="hidden" name="checkr2" value="{checkr2}">
+<input type="hidden" name="checkr3" value="{checkr3}">
+<input type="hidden" name="rad_selec" value="{rad_selec}">
+<input type="hidden" name="rut" value="{rut}">
+<input type="hidden" name="bus_rut" value="{bus_rut}">
+<input type="hidden" name="bus_os" value="{bus_os}">
+<input type="hidden" name="select_catCliente" value="{select_catCliente}"></input>
+<input type="hidden" name="fecha_inicio" value="{fecha_inicio}"></input>
+<input type="hidden" name="fecha_termino" value="{fecha_termino}"></input>
+		        <fieldset>
+                <legend>{TEXT_CAMPO_13}</legend>
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><span class="userinput">
+                       <select name="select_origen">
+                          <option value="0">Todos</option>
+
+                          <!-- BEGIN Origenes -->
+                          <option value="{id_origen}" {selected}>{origen}</option>
+                          <!-- END Origenes -->                          
+                          
+                       </select>
+                       </span>&nbsp;<input type="submit" value="Filtrar"></input>
+                     </td>
+			         
+			   	  </tr>
+                </table>
+                </fieldset>
+                </form>
+		        </td>
+			 </tr>
+			</table>
+		</td>  
+       <td style="width:5cm;">
+		  <table border="0" align="right" cellpadding="0" cellspacing="0" class="textonormal">
+            <tr>
+              <td>
+              <form NAME="form_search1" METHOD="POST" ACTION="monitor_cotizaciones_00.php">
+                <input type="hidden" name="accion" value="search"></input>
+<input type="hidden" name="select_local" value="{select_local}">
+<input type="hidden" name="select_origen" value="{select_origen}">
+<input type="hidden" name="checkr1" value="{checkr1}">
+<input type="hidden" name="checkr2" value="{checkr2}">
+<input type="hidden" name="checkr3" value="{checkr3}">
+<input type="hidden" name="rad_selec" value="{rad_selec}">
+<input type="hidden" name="rut" value="{rut}">
+<input type="hidden" name="bus_rut" value="{bus_rut}">
+<input type="hidden" name="bus_os" value="{bus_os}">
+<input type="hidden" name="select_catCliente" value="{select_catCliente}"></input>
+<input type="hidden" name="fecha_inicio" value="{fecha_inicio}"></input>
+<input type="hidden" name="fecha_termino" value="{fecha_termino}"></input>
+		        <fieldset>
+                <legend>{TEXT_CAMPO_7}</legend>
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><span class="userinput">
+                       <select name="select_estado">
+                          <option value="0">Todos</option>
+                          <!-- BEGIN Estados -->
+                          <option value="{id_estado}" {selected}>{estado}</option>
+                          <!-- END Estados -->
+                       </select>
+                       </span>&nbsp;<input type="submit" value="Filtrar"></input>
+                     </td>
+			         
+			   	  </tr>
+                </table>
+                </fieldset>
+                </form>
+		        </td>
+			 </tr>
+			</table>
+		</td>
+		
+		<td style="width:5cm;">
+		  <table border="0" align="center" cellpadding="0" cellspacing="0" class="textonormal">
+            <tr>
+              <td>
+			    <form NAME="form_search2" METHOD="POST" ACTION="monitor_cotizaciones_00.php">
+		    	<input type="hidden" name="accion" value="search"></input>
+<input type="hidden" name="select_estado" value="{select_estado}">
+<input type="hidden" name="select_origen" value="{select_origen}">
+<input type="hidden" name="checkr1" value="{checkr1}">
+<input type="hidden" name="checkr2" value="{checkr2}">
+<input type="hidden" name="checkr3" value="{checkr3}">
+<input type="hidden" name="rad_selec" value="{rad_selec}">
+<input type="hidden" name="rut" value="{rut}">
+<input type="hidden" name="bus_rut" value="{bus_rut}">
+<input type="hidden" name="bus_os" value="{bus_os}">
+<input type="hidden" name="select_catCliente" value="{select_catCliente}"></input>
+<input type="hidden" name="fecha_inicio" value="{fecha_inicio}"></input>
+<input type="hidden" name="fecha_termino" value="{fecha_termino}"></input>
+                <legend>{TEXT_CAMPO_9}</legend>
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><span class="userinput">
+                      <select name="select_local">
+							{ALL}
+						<!-- BEGIN Locales -->
+                            <option value="{id_local}" {selected}>{nom_local}</option>
+                            <!-- END Locales -->
+                            </select>
+                            </span>&nbsp;<input type="submit" value="Filtrar"></input>
+			        </td>
+                  </tr>
+                </table>
+              </fieldset>
+            </form>
+          </td>
+        <tr>
+	  </table>
+	  </td>
+	  <td style="width:5cm;">
+	  <table align="left" border="0" cellpadding="0" cellspacing="0" class="textonormal">
+	    <tr>
+	      <td>
+	        <form NAME="form_search4" METHOD="POST" ACTION="monitor_cotizaciones_00.php" onSubmit="return validar_rut(this);">
+        	<input type="hidden" name="accion" value="search"/>
+<input type="hidden" name="select_estado" value="{select_estado}">
+<input type="hidden" name="select_local" value="{select_local}">
+<input type="hidden" name="select_origen" value="{select_origen}">
+<input type="hidden" name="checkr1" value="{checkr1}">
+<input type="hidden" name="checkr2" value="{checkr2}">
+<input type="hidden" name="checkr3" value="{checkr3}">
+<input type="hidden" name="rad_selec" value="{rad_selec}">
+<input type="hidden" name="rut" value="{rut}">
+<input type="hidden" name="bus_os" value="{bus_os}">
+<input type="hidden" name="select_catCliente" value="{select_catCliente}"></input>
+<input type="hidden" name="fecha_inicio" value="{fecha_inicio}"></input>
+<input type="hidden" name="fecha_termino" value="{fecha_termino}"></input>
+        	<fieldset>
+        	<legend>{TEXT_CAMPO_4} </legend>
+          	  <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td><span class="userinput">
+                    <input name="bus_rut" value="{bus_rut}" type="text" size="10" maxlength="12"/>
+			      </span>&nbsp;<input type="submit" value="Filtrar"/>
+			      </td>         
+			    </tr>
+              </table>
+            </fieldset>
+ 			</form>     
+          </td>
+	    </tr>
+	    </table>
+	  </td> 
+  </tr>
+  <tr>
+  	<!-- RANGO FECHAS -->
+	<td style="width:5cm;">
+      <table table border="0" align="right" cellpadding="0" cellspacing="0" class="textonormal">
+        <tr>
+          <td>
+            <form name="rango_fechas" METHOD="POST" ACTION="monitor_cotizaciones_00.php" onSubmit="return EvaluaFechas(this);">
+			 	<input type="hidden" name="accion" value="search">
+<input type="hidden" name="select_estado" value="{select_estado}">
+<input type="hidden" name="select_local" value="{select_local}">
+<input type="hidden" name="select_origen" value="{select_origen}">
+<input type="hidden" name="checkr1" value="{checkr1}">
+<input type="hidden" name="checkr2" value="{checkr2}">
+<input type="hidden" name="checkr3" value="{checkr3}">
+<input type="hidden" name="rad_selec" value="{rad_selec}">
+<input type="hidden" name="rut" value="{rut}">
+<input type="hidden" name="bus_rut" value="{bus_rut}">
+<input type="hidden" name="bus_os" value="{bus_os}">
+<input type="hidden" name="select_catCliente" value="{select_catCliente}"></input>
+				<fieldset>
+					<legend>{TEXT_CAMPO_12}</legend>
+					<table width="130" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td class="textonormal">Desde</td>
+							<td>
+							<input name="fecha_inicio" id="fecha_inicio" type="text" size=10 maxlength="10" value="{fecha_inicio}" onClick="cal1.select(document.rango_fechas.fecha_inicio,'anchor1','dd/MM/yyyy'); return false;">
+							<a href="#" onClick="cal1.select(document.rango_fechas.fecha_inicio,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Desde "></a>
+							 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+						  </td>
+						 </tr>
+						 <tr>
+							<td class="textonormal">Hasta</td>
+							<td>
+							<input name="fecha_termino" id="fecha_termino" type="text" size=10 maxlength=10 value="{fecha_termino}" onClick="cal1.select(document.rango_fechas.fecha_termino,'anchor','dd/MM/yyyy'); return false;">
+							<a href="#" onClick="cal1.select(document.rango_fechas.fecha_termino,'anchor','dd/MM/yyyy'); return false;" name="anchor" id="anchor"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Hasta "></a>
+							 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td align="right">
+								<input type="submit" value="Filtrar"></input>
+							</td>
+						</tr>
+					</table>
+		  		</fieldset>
+    		</form>
+  		  </td>
+		</tr>
+      </table>
+    </td>
+	  <!-- RANGO FECHAS -->
+  
+    <td style="width:5cm;">
+      <table table border="0" align="right" cellpadding="0" cellspacing="0" class="textonormal">
+        <tr>
+          <td>
+            <form name="vendedor" METHOD="POST" ACTION="monitor_cotizaciones_00.php">
+		 	<input type="hidden" name="accion" value="search">
+<input type="hidden" name="select_estado" value="{select_estado}">
+<input type="hidden" name="select_local" value="{select_local}">
+<input type="hidden" name="select_origen" value="{select_origen}">
+<input type="hidden" name="checkr1" value="{checkr1}">
+<input type="hidden" name="checkr2" value="{checkr2}">
+<input type="hidden" name="checkr3" value="{checkr3}">
+<input type="hidden" name="rad_selec" value="{rad_selec}">
+<input type="hidden" name="bus_rut" value="{bus_rut}">
+<input type="hidden" name="bus_os" value="{bus_os}">
+<input type="hidden" name="select_catCliente" value="{select_catCliente}"></input>
+<input type="hidden" name="fecha_inicio" value="{fecha_inicio}"></input>
+<input type="hidden" name="fecha_termino" value="{fecha_termino}"></input>
+            <fieldset>
+			<legend>{TEXT_CAMPO_10}</legend>
+			  <table border="0" cellspacing="0" cellpadding="0">
+			    <tr>
+				  <td><span class="userinput">
+				    <input name="clien" id="clien" type="text" size="12" maxlength="135" value="{clien}" style="width: 190px" disabled="disabled"/>
+  					<input type="button" name="Button" value="Selec.Vendedor" onclick="selecCliente()">&nbsp;</input>
+					<input type="submit" value="Filtrar"></input>
+					<input name="rut"  value="{rut}" type="hidden" size="12" maxlength="135" style="width: 38px"></input>
+				  </span></td>
+				</tr>
+			  </table>
+			  </fieldset>
+		    </form>
+		  </td>
+		</tr>
+      </table>
+    </td>
+    <td style="width:5cm;">
+      <table table border="0" align="center" cellpadding="0" cellspacing="0" class="textonormal">
+        <tr>
+          <td>
+            <form NAME="form_search3" METHOD="POST" ACTION="monitor_cotizaciones_00.php" onSubmit="return validar_OS(this);">
+            <input type="hidden" name="accion" value="search"></input>
+<input type="hidden" name="select_estado" value="{select_estado}">
+<input type="hidden" name="select_local" value="{select_local}">
+<input type="hidden" name="select_origen" value="{select_origen}">
+<input type="hidden" name="checkr1" value="{checkr1}">
+<input type="hidden" name="checkr2" value="{checkr2}">
+<input type="hidden" name="checkr3" value="{checkr3}">
+<input type="hidden" name="rut" value="{rut}">
+<input type="hidden" name="bus_rut" value="{bus_rut}">
+<input type="hidden" name="select_catCliente" value="{select_catCliente}"></input>
+<input type="hidden" name="fecha_inicio" value="{fecha_inicio}"></input>
+<input type="hidden" name="fecha_termino" value="{fecha_termino}"></input>
+            <fieldset>
+            <legend>{TEXT_CAMPO_1} </legend>
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td><span class="userinput">
+                    <input name="rad_selec" value='1' type="radio" {checkr1}>OS</input>
+                    <input name="rad_selec" value='2' type="radio" {checkr2}>Nombre</input>
+                    <input name="rad_selec" value='3' type="radio" {checkr3}>Apellido</input>
+                  </span></td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                <td><span class="userinput">
+                  <input name="bus_os" value='{bus_os}' type="text" size="20" maxlength='40'></input>
+                  </span>
+                  <input type="submit" value="Filtrar"></input>
+                </td>
+                </tr>
+                </table>
+              </fieldset>
+            </form>   
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td style="width:5cm;">
+	  <table border="0" align="left" cellpadding="0" cellspacing="4" class="textonormal">
+            <tr>
+              <td>
+              <form NAME="catCliente" METHOD="POST" ACTION="monitor_cotizaciones_00.php">
+                <input type="hidden" name="accion" value="search"></input>
+<input type="hidden" name="select_estado" value="{select_estado}">
+<input type="hidden" name="select_local" value="{select_local}">
+<input type="hidden" name="select_origen" value="{select_origen}">
+<input type="hidden" name="checkr1" value="{checkr1}">
+<input type="hidden" name="checkr2" value="{checkr2}">
+<input type="hidden" name="checkr3" value="{checkr3}">
+<input type="hidden" name="rad_selec" value="{rad_selec}">
+<input type="hidden" name="rut" value="{rut}">
+<input type="hidden" name="bus_rut" value="{bus_rut}">
+<input type="hidden" name="bus_os" value="{bus_os}">
+<input type="hidden" name="fecha_inicio" value="{fecha_inicio}"></input>
+<input type="hidden" name="fecha_termino" value="{fecha_termino}"></input>
+		        <fieldset>
+                <legend>{TEXT_CAMPO_11}</legend>
+                <table  border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><span class="userinput">
+                       <select name="select_catCliente">
+                          <option value="0">Todos</option>
+                          <!-- BEGIN cat_cliente -->
+                          <option value="{id_categoria}" {selected}>{nombre_categoria}</option>
+                          <!-- END cat_cliente -->
+                       </select>
+                     </span><input type="submit" value="Filtrar"></input></td>     
+			   	  </tr>
+                </table>
+              </fieldset>
+              </form>
+		    </td>
+	     </tr>
+	  </table>
+    </td>
+  </tr>
+</table>
+</tr></td>
+<tr>
+  <td align="center">
+  	<b>{MSG_FECHAS}</b>
+  </td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+</tr>
+<tr><td>
+
+
+
+		
+		
+<table BORDER="0" cellspacing="0" cellpadding="0" align="center" width="830">
+	<tr>
+		<td>
+          <table  style='text-align:left' border="0" bordercolor="#000000"  cellpadding="2" cellspacing="0" class="tabla2" width="100%">
+             <tr>
+                <th style="width:50px">{TEXT_CAMPO_1} <a href="monitor_cotizaciones_00.php?filtro=os&orden={orden}&select_estado={select_estado}&select_local={select_local}&bus_os={bus_os}&bus_rut={bus_rut}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+                <th style="width:110px">{TEXT_CAMPO_2}</th>
+                <th style="width:105px">{TEXT_CAMPO_3} <a href="monitor_cotizaciones_00.php?filtro=fc&orden={orden}&select_estado={select_estado}&select_local={select_local}&bus_os={bus_os}&bus_rut={bus_rut}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+                <th style="width:80px">{TEXT_CAMPO_4}</th>
+                <th style="width:200px">{TEXT_CAMPO_5}</th>
+                <th style="width:68px">{TEXT_CAMPO_6}</th>
+                <th  style="width:85px">{TEXT_CAMPO_7}</th>
+                <th  >{TEXT_CAMPO_13}</th>
+                <th  >{TEXT_CAMPO_8}</th>
+             </tr>
+		  </table>
+		</td>
+	 </tr>
+	 <tr>
+		<td>
+			<!--div style="width: 770px; height: 330px; left: 100px; top: 353px; overflow: auto;"-->
+				<table border="0" cellpadding="1" cellspacing="0" align="left" class="tabla2" width="100%">
+                <!-- BEGIN Modulos -->
+                <tr>
+                    <td style="width:50px" >{id_os}&nbsp;</td>
+                    <td style="width:120px">{os_comentarios}&nbsp;</td>
+                    <td style="width:110px">{os_fechacreacion}&nbsp;</td>
+                    <td style="width:80px">{clie_rut}</td>
+                    <td style="width:210px">{clie_nombre}&nbsp;{clie_paterno}</td>
+                    <td style="width:68px"><div align="left">{clie_telcontacto2}&nbsp;</div></td>
+                    <td style="width:90px"><div align="left">{esta_nombre}&nbsp;</div></td>
+                    <td ><div align="left">{origen}&nbsp;</div></td>
+                    <td ><div align="center">
+					<a href="../nueva_cotizacion/nueva_cotizacion_sumario_01.php?clie_rut={clie_rut}&id_os={id_os}"  class="link1">{TEXT_BOTON}</a></td>
+                </tr>
+                <!-- END Modulos -->
+			</table>
+			<!--/div-->
+		  </td>
+		  </tr>
+		</table>		
+		
+		
+		
+		
+	  </td>
+      </tr>
+
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  <td >
+	<!--paginacion-->
+	<form NAME="form_paginas" METHOD="POST" ACTION="monitor_cotizaciones_00.php">
+	<input type="hidden" name="select_estado" value="{select_estado}">
+	<input type="hidden" name="select_local" value="{select_local}">
+	<input type="hidden" name="select_origen" value="{select_origen}">
+	<input type="hidden" name="checkr1" value="{checkr1}">
+	<input type="hidden" name="checkr2" value="{checkr2}">
+	<input type="hidden" name="checkr3" value="{checkr3}">
+	<input type="hidden" name="rad_selec" value="{rad_selec}">
+	<input type="hidden" name="rut" value="{rut}">
+	<input type="hidden" name="bus_rut" value="{bus_rut}">
+	<input type="hidden" name="bus_os" value="{bus_os}">
+	<input type="hidden" name="select_catCliente" value="{select_catCliente}"></input>
+	<input type="hidden" name="fecha_inicio" value="{fecha_inicio}"></input>
+	<input type="hidden" name="fecha_termino" value="{fecha_termino}"></input>
+	{inicio}
+	</td>
+	<td></td>
+	<td>
+	<table BORDER="0" cellspacing="0" cellpadding="0" align="right">
+      <tr>
+ 		<td align="right" class="textonormal">N&uacute;mero de página &nbsp;</td>
+		<td align="right">
+		<span class="userinput">
+		<select name="select_pag" Onchange="submit();">
+		<!-- BEGIN Paginas -->
+		<option value="{pag}" {selected}>{pag}&nbsp;</option>
+		<!-- END Paginas -->
+		{inicio}</select>
+		</span>
+	    </td>
+	  </tr>
+	</form>  
+	</td>  
+</tr>
+</table>
+<tr>
+  <td>{fin}</td>
+</tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//document.form_search3.bus_os.onkeypress = NumberIsKey;
+document.form_search4.bus_rut.onkeypress = RutIsKey ;
+-->
+</script>

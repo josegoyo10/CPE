@@ -1,0 +1,28 @@
+<?
+define( "NOMBRE_PAGINA", "Monitor de Cotizaciones " );
+define( "TEXT_TITULO", "Monitor de Cotizaciones " );
+define( "TEXT_2", "Monitor de Cotizaciones " );
+
+define( "TEXT_CAMPO_1", "N&ordm; OS" );
+define( "TEXT_CAMPO_2", "Detalle" );
+define( "TEXT_CAMPO_3", "Fecha Creaci&oacute;n" );
+define( "TEXT_CAMPO_4", "C&eacute;dula Cliente" );
+define( "TEXT_CAMPO_5", "Nombre" );
+define( "TEXT_CAMPO_6", "T&eacute;lefono" );
+define( "TEXT_CAMPO_7", "Estado" );
+define( "TEXT_CAMPO_8", "Acci&oacute;n" );
+define( "TEXT_CAMPO_9", "Local" );
+
+define( "TEXT_SELECT", "Todos" );
+
+define( "TEXT_BOTON", "Ver" );
+
+define( "BOTON_UP", "../img/uparrow.gif" );
+define( "BOTON_DOWN", "../img/downarrow.gif" );
+define( "BOTON_VER", "../img/lista1.png" );
+
+
+define( 'CONFIRM_ELIMINAR_TRA', '¿Esta seguro que desea eliminar todos los registros de la tabla de tracking?');
+
+
+?>

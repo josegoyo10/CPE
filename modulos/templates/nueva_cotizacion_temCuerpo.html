@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+      <link rel="stylesheet" type="text/css" href="../estilos.css">
+
+      </link>
+      <script language="JavaScript" src="../../includes/funciones.js"></script>
+      <script language="JavaScript" src="../../includes/ajax.js"></script>
+      <script language="JavaScript" src="../checkfield.js"></script>
+      <script language="JavaScript" type="text/JavaScript" src="popup.js"></script>
+  
+
+      <SCRIPT LANGUAGE="JavaScript">
+         window.name="cliente";
+        
+         //Agregado J.G dia 07-02_2019
+        
+
+         function showWindow () {
+
+          // popUpWindow('validar_pagoManual.php?&clie_rut={clie_rut}&accion=Ver&modulo=activarCampos&title=Desahabilitar Campos', 180, 40, 510, 540);
+
+           // location.href='acceso.php?clie_rut={clie_rut}';
+           //Modificado el dia 25-02-2019
+            location.href='nueva_cotizacion_01.php?clie_rut={clie_rut}&clie_tipo=01';
+     
+
+         }
+     
+      //**********************************************************************//
+         function validar_form(){
+
+            var departamento = document.getElementById('departamento').value;
+            var direccion_cli = document.getElementById('dire_direccion').value;
+
+
+            if( departamento == 0) { 
+
+                 alert("Los Campos Departamento,Ciudad y Barrio no pueden estar Vacios.");
+               return false;
+            }
+            
+             if ((direccion_cli == '') || (direccion_cli == 'SIN DIRECCIÓN')) { 
+
+                 alert("El campo dirección no tiene una dirección valida.");
+               return false;
+            }
+
+
+          
+          	if( validar_obligatorio( nueva_cotizacion_01.clie_nombre, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+         		return false;
+         	if( validar_obligatorio( nueva_cotizacion_01.clie_paterno, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+         		return false;
+         	if( validar_obligatorio( nueva_cotizacion_01.clie_materno, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+         		return false;
+         	if( validar_obligatorio( nueva_cotizacion_01.dire_direccion, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+         		return false;
+         	if( validar_obligatorio( nueva_cotizacion_01.clie_telefonocasa, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+         		return false;
+         	if( validar_obligatorio( nueva_cotizacion_01.barrios, "Por favor diligencie todos los campos obligatorios (campos precedidos por *)" ))
+         		return false;
+         	if( validar_obligatorio( nueva_cotizacion_01.categoria_cliente, "Por favor seleccione la Categoría del Cliente " ))
+         		return false;
+         		
+         	if(isEmailAddress( nueva_cotizacion_01.clie_email, 'clie_email' ))
+         		return false;
+         				
+            document.nueva_cotizacion_01.submit();
+         }
+         
+         /* AJAX PARA CIUDADES */
+         function recargar(idCiudad)
+         {
+         var selectDeparta=document.getElementById('departamento');
+         var dept=selectDeparta.options[selectDeparta.selectedIndex].value;
+         
+         var selectCiudad=document.getElementById(idCiudad);
+         var opcion=selectCiudad.options[selectCiudad.selectedIndex].value;	
+         
+         exec_AJAXRPC('POST','./nueva_cotizacion_01_ajax_buscarBarrio.php?id_ciudad=' + opcion + '&id_dept=' + dept,'desplegar_barrio');
+         }
+         
+         function desplegar_barrio(text){
+         var Selectbarrios=document.getElementById('barrios');
+         Selectbarrios.parentNode.innerHTML = text;
+         }
+         
+         
+         
+         /* AJAX PARA DEPARTAMENTOS */
+         function recargarDept(idDept)
+         {
+         var selectDept=document.getElementById(idDept);
+         var opcion=selectDept.options[selectDept.selectedIndex].value;
+         exec_AJAXRPC('POST','./nueva_cotizacion_01_ajax_buscarCiudad.php?id_Dept=' + opcion,'desplegar_ciudad');
+         }
+         
+         function desplegar_ciudad(text2){
+         var SelectCiudad = document.getElementById('ciudad');
+         SelectCiudad.parentNode.innerHTML = text2;
+         
+         recargar('ciudad');
+         }
+      </SCRIPT>
+   </head>
+
+ 
+
+
+
+   <body onload="document.nueva_cotizacion_01.clie_nombre.focus();">
+    
+      <FORM  NAME="nueva_cotizacion_01" METHOD="POST" ACTION="nueva_cotizacion_01.php" onSubmit="return validar_form(this);" TARGET="cliente">
+         <table style="width: 780; height: 76%;" border="0" cellpadding="0" cellspacing="0">
+         <input type="hidden" name="accion" value="update"></input>
+         <input type="hidden" name="donde" value="{donde}"></input>
+         <input type="hidden" name="clie_rut" value="{clie_rut}"></input>
+         <input type="hidden" name="barrio_local" id="barrio_local" value="{id_comuna}"></input>
+         <input type="hidden" name="id_tipoDoc" value="{descripcion}"></input>
+         <input type="hidden" name="nombre_cliente" value="{clie_nombre}"></input>         
+         <input type="hidden" name="primerApellido_cliente" value="{clie_paterno}"></input>
+         <input type="hidden" name="segundopellido_cliente" value="{clie_materno}"></input>
+         <input type="hidden" name="email_cliente" value="{clie_email}"></input>   
+         <input type="hidden" name="direccion_cliente" id="direccion_cliente" value="{dire_direccion}"></input>
+         <input type="hidden" name="sexo_cliente" value=""></input>  
+         <input type="hidden" name="tipo_cliente" value="{id_tipo_cliente}"></input>
+          
+         <input type="hidden" name="show_boton" id="show_boton" value="{showBoton}"></input>
+         
+         <input type="hidden" name="desactivar" id="desactivar" value="{desactivar}"></input>
+   
+         <tr>
+
+         <td valign="top">
+         <table style="width: 100%; border: 0;" cellspacing="0" cellpadding="0">
+         <tr>
+            <td style=" width: 31%;" valign="top" class="titulonormal">
+               {leyenda}
+               {espacio}
+               <table width="754" border="0" cellpadding="0" cellspacing="0"
+                  class="textonormal">
+                  <tr>
+                     <td style=" width: 32;">{TEXT_CAMPO_1}&nbsp;(*)</td>
+                     <td style=" width: 87;"><input name="clie_rut" type="text" disabled class="userinput" value="{clie_rut}" size="12"></input></td>
+                     <td style=" width: 93;">Tipo Doc (*) </td>
+                     <td style="width:478; margin-left:-24px;">
+                        <select name="id_tipo_doc"  class="userinput" id="id_tipo_doc"  {desahabilitado}>
+                           <!-- BEGIN tipo_doc -->
+                           <!-- Mantis 30593: Deshabilitar edicion de clientes Inicio-->
+                           <!-- Se agrega disabled a cada input para que no se permita su modificacion-->
+                           <option value="{id_nif}"{selected} >{descripcion}</option>
+                           <!-- END tipo_doc -->
+                        </select>
+                     </td>
+                  </tr>
+               </table>
+               <table style=" width: 831; height: 221; border: 0;" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                  <tr>
+                     <td>&nbsp;</td> 
+                     <td>{TEXT_CAMPO_2}&nbsp;(*)</td>
+                     <td colspan="2">
+                        <input name="clie_nombre"  type="text" class="userinput" onBlur="Upper(this);" value="{clie_nombre}" size="30" maxlength="45"  {desahabilitado}></input>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>&nbsp;</td>
+                     <td>Primer Apellido &nbsp;(*)</td>
+                     <td>
+                        <input name="clie_paterno"  type="text" class="userinput" onBlur="Upper(this);" value="{clie_paterno}" maxlength="45"  {desahabilitado}></input>
+                     </td>
+                     <td>Segundo Apellido &nbsp;(*)</td>
+                     <td>
+                        <input name="clie_materno"  type="text" class="userinput" onBlur="Upper(this);" value="{clie_materno}" maxlength="45"  {desahabilitado}></input>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="141">&nbsp;</td>
+                     <td width="93">
+                        <div align="left">Email</div>
+                     </td>
+                     <td style=" width: 177;">
+                        <input name="clie_email"  type="text" class="userinput" id="clie_email" value="{clie_email}" size="30" maxlength="50"  {desahabilitado}></input>
+                     </td>
+                     <td style=" width: 103;">
+                        <div align="left">{TEXT_CAMPO_5}&nbsp;(*)</div>
+                     </td>
+                     <td width="245">
+                        <input name="dire_direccion" id="dire_direccion" type="text" class="userinput" onBlur="Upper(this);" value="{dire_direccion}" size="25" maxlength="50"  {desahabilitado}></input>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>&nbsp;</td>
+                     <td>Departamento&nbsp;(*)</td>
+                     <td colspan="3">
+                        <select name="departamento" class="userinput" id="departamento" onChange="recargarDept(this.id);" {desahabilitado} />
+                           <!-- BEGIN Departamento -->
+                           <option value="{id_departamento}"{selected} >{nombre_departamento}</option>
+                           <!-- END Departamento -->
+                        </select>
+                     </td>
+                     <td style=" width:1;">&nbsp;</td>
+                     <td style=" width: 17;">
+                        <input name="clie_localidad" {desahabilitado} type="hidden" value="{clie_localidad}" maxlength="60"></input>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>&nbsp;</td>
+                     <td>
+                        <div align="left">Ciudad&nbsp;(*)</div>
+                     </td>
+                     <td colspan="3">
+                        <select name="ciudad" class="userinput" id="ciudad" onChange="recargar(this.id); " {desahabilitado}>
+                           <!-- BEGIN Ciudad -->
+                           <option value="{id_ciudad}"{selected} {desahabilitado} >{nombre_ciudad}</option>
+                           <!-- END Ciudad -->
+                        </select>
+                     </td>
+                     <td>
+                        <div align="left"></div>
+                     </td>
+                     <td>&nbsp;                      </td>
+                  </tr>
+                  <tr>
+                     <td>&nbsp;</td>
+                     <td>
+                        <div align="left">{TEXT_CAMPO_6}&nbsp;(*)</div>
+                     </td>
+                     <td colspan="3">
+                        <select name="barrios" class="userinput" id="barrios" {desahabilitado} >
+                           <!-- BEGIN Barrios -->
+                           <option value="{id_comuna}"{selected}>{comu_nombre}</option>
+                           <!-- END Barrios -->
+                        </select>
+                     </td>
+                     <td>
+                        <div align="left"></div>
+                     </td>
+                     <td>&nbsp;                      </td>
+                  </tr>
+                  <tr>
+                     <td>&nbsp;</td>
+                     <td>
+                        <div align="left">{TEXT_CAMPO_7}&nbsp;(*)</div>
+                     </td>
+                     <td>
+                        <input name="clie_telefonocasa" {desahabilitado} type="text" class="userinput" value="{clie_telefonocasa}" maxlength="20"></input>
+                     </td>
+                     <td>
+                        <div align="left">Fax</div>
+                     </td>
+                     <td>
+                        <input name="clie_telcontacto1"  {desahabilitado} type="text" class="userinput" value="{clie_telcontacto1}" maxlength="20"></input>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>&nbsp;</td>
+                     <td>
+                        <div align="left">Tel&eacute;fono Celular</div>
+                     </td>
+                     <td>
+                        <input name="clie_telcontacto2" {desahabilitado} type="text" class="userinput" value="{clie_telcontacto2}" maxlength="20"></input>
+                     </td>
+                     <td>
+                        <div align="left">Sexo(*)</div>
+                     </td>
+                     <td>
+                        <select name="sexo" class="userinput" id="sexo" {desahabilitado} >
+                           <!-- BEGIN Sexo_cliente -->
+                           <option value="{id_sexo_cliente}"{selected}>{sexo_cliente}</option>
+                           <!-- END Sexo_cliente -->
+                        </select>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>&nbsp;</td>
+                     <td>
+                        <div align="left">Tipo de Cliente (*)</div>
+                     </td>
+                     <td>
+                        <select name="tipo_cliente" class="userinput" id="tipo_cliente" {desahabilitado} >
+                           <!-- BEGIN Tipo_cliente -->
+                           <option value="{id_tipo_cliente}"{selected}>{nombre_tipo_cliente}</option>
+                           <!-- END Tipo_cliente -->
+                        </select>
+                     </td>
+                     <td>
+                        <div align="left">Categor&iacute;a Cliente</div>
+                     </td>
+                     <td>
+                        <select name="categoria_cliente" class="userinput" id="categoria_cliente" {desahabilitado}>
+                           <!-- <option value=""></option> -->
+                           <!-- BEGIN Categoria_cliente -->
+                           <option value="{id_categoria}"{selected}>{nombre_categoria}</option>
+                           <!-- END Categoria_cliente -->
+                        </select>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>&nbsp;</td>
+                     <td>
+                        <div align="left">Indicaciones Direcci&oacute;n</div>
+                     </td>
+                     <td>
+                        <p><textarea name="dire_observacion" cols="32" rows="3"
+                           wrap="VIRTUAL" class="userinput" onBlur="Upper(this);" >{dire_observacion}</textarea>
+                        </p>
+
+                     </td>
+                  
+                     <div id="btn_desahabilitar">
+                        <td>
+                          &nbsp; &nbsp;&nbsp; &nbsp; 
+                           {showBoton}
+                        </td>
+                     </div>
+                     
+                 
+
+
+                  </tr>
+                  <tr>
+               </table>
+               <br>
+         <tr>
+            <td>
+               <table style=" width:449; " border="0" align="center">
+                  <tr>
+                     <td colspan="3" class="subtitulonormal">Informaci&oacute;n
+                        Tributaria
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style=" width:114;" class="textonormal">
+                        <div align="left">Tipo Contribuyente (*)</div>
+                     </td>
+                     <td class="textonormal" colspan="2">
+                        <select
+                           name="tipo_contribuyente" class="userinput" id="tipo_contribuyente" {desahabilitado}>
+                           <option value="RS">R&eacute;gimen Simplificado</option>
+                        </select>
+                     </td>
+                  </tr>
+                  <tr class="textonormal">
+                     <td>
+                        <div align="left">ReteIca 
+                           <input name="reteica" type="checkbox" {desahabilitado} class="userinput" value="1" disabled></input>
+                        </div>
+                     </td>
+                     <td style=" width:116;">ReteFuente 
+                        <input name="retefuente" type="checkbox"  class="userinput" value="1" {desahabilitado}></input>
+                     </td>
+                     <td style="width: 251">
+                        <div align="left">ReteIva
+                           <input name="reteiva" type="checkbox"  class="userinput" value="1" {desahabilitado}></input>
+                        </div>
+                     </td>
+                     <!-- Mantis 30593: Deshabilitar edicion de clientes Inicio-->
+                  </tr>
+               </table>
+      </FORM>
+      <script LANGUAGE="javascript">
+         window.document.nueva_cotizacion_01.dire_direccion.onkeypress = KeyIsTexto;
+         window.document.nueva_cotizacion_01.clie_nombre.onkeypress = KeyIsLetra ;
+         window.document.nueva_cotizacion_01.clie_paterno.onkeypress = KeyIsLetra ;
+         window.document.nueva_cotizacion_01.clie_materno.onkeypress = KeyIsLetra ;
+         window.document.nueva_cotizacion_01.clie_telefonocasa.onkeypress = KeyIsTelefono;
+         window.document.nueva_cotizacion_01.clie_telcontacto1.onkeypress = KeyIsTelefono;
+         window.document.nueva_cotizacion_01.clie_telcontacto2.onkeypress = KeyIsTelefono;
+         window.document.nueva_cotizacion_01.dire_observacion.onkeypress = KeyIsTexto;
+      
+         </script>
+      </td>
+      </tr>
+      <tr>
+         <td>&nbsp;</td>
+      </tr>
+      <table style=" width: 709;" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+         <tr>
+            <td style=" width: 701:" align="center" class="subtitulonormal">(*)
+               Datos obligatorios.
+            </td>
+         </tr>
+      </table>
+
+
+      <SCRIPT LANGUAGE="JavaScript">
+      
+        
+         //Agregado J.G dia 07-02_2019
+        
+         var x = document.getElementById("desactivar").value;
+      
+          if (x == 'combos') {
+            //alert ("Usuario fue Validado Exitosamente...");
+
+            document.getElementById('departamento').disabled = false;
+            document.getElementById('ciudad').disabled = false;
+            document.getElementById('barrios').disabled = false;
+            document.nueva_cotizacion_01.dire_direccion.disabled = false;
+           
+          }
+     
+    </SCRIPT>

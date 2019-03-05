@@ -1,0 +1,227 @@
+<script>
+
+	function validar_form( form ) {
+		if( validar_obligatorio( form.c_1, "{CAMPO_OBLIGATORIO}" ) ) return false;
+		if( validar_obligatorio( form.c_2, "{CAMPO_OBLIGATORIO}" ) ) return false;
+		if( validar_obligatorio( form.c_3, "{CAMPO_OBLIGATORIO}" ) ) return false;
+		if( validar_obligatorio( form.c_4, "{CAMPO_OBLIGATORIO}" ) ) return false;
+		if( form.c_5.value != form.c_6.value ) {
+			alert( "{TEXT_CAMPO_CLAVES_DISTINTAS}" );
+			return false;
+		}
+		return true;
+	}
+	
+	
+	function cambiar(forma)
+	{	
+	var formulario = document.getElementById(forma);	
+	formulario.action.value = 'delmod';	
+	}
+
+
+</script>
+
+<SPAN class=titulo>{TEXT_TITULO}</SPAN>
+<br>
+{OUT_BARRA}
+<br>
+<p align=center class="error">{TEXT_ERROR}</p>
+<p>{TEXT}</p>
+<SPAN class=subtitulo>{TEXT_SUB}</SPAN>
+<br>
+<br>
+
+<table border="0" align=center class="form_g">
+<form action="adm_musr_01.php" method="post" name="form_agregar" onSubmit="return validar_form(this);">
+<INPUT TYPE="hidden" NAME="action" VALUE="upd1">
+<INPUT TYPE="hidden" NAME="usr_id" VALUE="{usr_id}">
+<tr>
+    <td >{TEXT_CAMPO_1}</td>
+    <td align=center>:</td>
+    <td>
+        
+        <INPUT TYPE="text" NAME="c_1" VALUE="{usr_nombres}" SIZE="30" MAXLENGTH="200" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+        
+    </td>
+</tr>
+<tr>
+    <td >{TEXT_CAMPO_2}</td>
+    <td align=center>:</td>
+    <td>
+        
+        <INPUT TYPE="text" NAME="c_2" VALUE="{usr_apellidos}" SIZE="30" MAXLENGTH="200" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+        
+    </td>
+</tr>
+<tr>
+    <td >{TEXT_CAMPO_3}</td>
+    <td align=center>:</td>
+    <td>
+        
+        <INPUT TYPE="text" NAME="c_3" VALUE="{usr_email}" SIZE="30" MAXLENGTH="200" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+        
+    </td>
+</tr>
+<tr>
+    <td >Local</td>
+    <td  align=center>:</td>
+    <td>
+		<select name="local" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+		<option value="0">TODOS</option>
+		<!-- BEGIN Locales -->
+		<option value="{id_local}" {selected}>{nom_local}</option>
+		<!-- END Locales -->
+		</select>
+    </td>
+</tr>
+<tr>
+    <td >{TEXT_CAMPO_4}</td>
+    <td align=center>:</td>
+    <td>
+        
+        <INPUT TYPE="text" NAME="c_4" VALUE="{usr_login}" SIZE="30" MAXLENGTH="200" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+        
+    </td>
+</tr>
+<tr>
+    <td >{TEXT_CAMPO_5}</td>
+    <td align=center>:</td>
+    <td>
+        
+        <INPUT TYPE="password" NAME="c_5" VALUE="" SIZE="30" maxlength="10"  onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+        
+    </td>
+</tr>
+<tr>
+    <td >{TEXT_CAMPO_6}</td>
+    <td align=center>:</td>
+    <td>
+        
+        <INPUT TYPE="password" NAME="c_6" VALUE="" SIZE="30" maxlength="10" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+        
+    </td>
+</tr>
+<tr>
+    <td >Origen Usuario</td>
+    <td  align=center>:</td>
+    <td>
+		<select name="origen" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+		<option value="0">SIN ORIGEN</option>
+		<!-- BEGIN Origen -->
+		<option value="{id_origen}" {selected}>{nom_origen}</option>
+		<!-- END Origen -->
+		</select>
+    </td>
+</tr>
+<tr>
+    <td >{TEXT_CAMPO_7}</td>
+    <td align=center>:</td>
+    <td>
+        <INPUT TYPE="radio" NAME="c_7" value="1" {chec1}>{TEXT_CAMPO_8}
+        <INPUT TYPE="radio" NAME="c_7" value="0" {chec2}>{TEXT_CAMPO_9}
+    </td>
+</tr>
+<tr>
+	<td colspan=4 align=center><br>
+        <input name="imageField" type="image" src="../img/checkin.jpg" alt="{BOTON}" width="25" height="25" border="0"></td>
+</tr>
+</tr>
+</form>
+</table>
+
+<br>
+<SPAN class=subtitulo>{TEXT_SUB2}</SPAN>
+<br>
+<br>
+
+<table border="0" align=center class="generica">
+<tr class="table_titulo">
+	<td >&nbsp;</td>
+	<td > {TEXT_ASOCIAR_CAMPO_1} </td>
+	<td > {TEXT_ASOCIAR_CAMPO_2} </td>
+	<td > {TEXT_ASOCIAR_CAMPO_3} </td>
+	<td > {TEXT_ASOCIAR_CAMPO_4} </td>
+	<td>&nbsp;</td>
+</tr>
+<!-- BEGIN Modulos_a -->
+	<form action="adm_musr_01.php" method="post" name="{pemo_mod_id}" id="{pemo_mod_id}">
+	<INPUT TYPE="hidden" NAME="action" VALUE="updmod">
+	<INPUT TYPE="hidden" NAME="usr_id" VALUE="{usr_id}">
+	<INPUT TYPE="hidden" NAME="pemo_mod_id" VALUE="{pemo_mod_id}">
+	<tr >
+		<td width=300>
+			<li>{mod_nombre}</li>
+		</td>
+		<td width=60 align=center>
+			<INPUT TYPE="checkbox" NAME="select_in_d" VALUE="1" checked disabled>
+			<INPUT TYPE="hidden" NAME="select_in" VALUE="1">
+		</td>
+		<td width=60 align=center>
+			<INPUT TYPE="checkbox" NAME="insert_in" VALUE="1" {ch1}>
+		</td>
+		<td width=60 align=center>
+			<INPUT TYPE="checkbox" NAME="delete_in" VALUE="1" {ch2}>
+		</td>
+		<td width=60 align=center>
+			<INPUT TYPE="checkbox" NAME="update_in" VALUE="1" {ch3}>
+		</td>
+		
+      <td width="160" align=center>
+			
+			
+        <input name="imageField3" type="image" src="../img/tick.png" alt="Modificar" width="12" height="12" border="0">
+        <input name="imageField2" type="image" src="../img/publish_x.png" alt="Eliminar" onClick="cambiar({pemo_mod_id});"  width="12" height="12" border="0">
+			
+		</td>
+	</tr>
+	</form>
+<!-- END Modulos_a -->
+</table>
+
+<br>
+<SPAN class=subtitulo>{TEXT_SUB3}</SPAN>
+<br>
+<br>
+
+<table border="0" align=center class="generica">
+<tr class="table_titulo">
+	<td >&nbsp;</td>
+	<td > {TEXT_ASOCIAR_CAMPO_1} </td>
+	<td > {TEXT_ASOCIAR_CAMPO_2} </td>
+	<td > {TEXT_ASOCIAR_CAMPO_3} </td>
+	<td > {TEXT_ASOCIAR_CAMPO_4} </td>
+	<td>&nbsp;</td>
+</tr>
+<!-- BEGIN Modulos_b -->
+	<form action="adm_musr_01.php" method="post" name="form_asociar">
+	<INPUT TYPE="hidden" NAME="action" VALUE="addmod">
+	<INPUT TYPE="hidden" NAME="usr_id" VALUE="{usr_id}">
+	<INPUT TYPE="hidden" NAME="pemo_mod_id" VALUE="{pemo_mod_id}">
+	<tr >
+		<td width=300>
+			<li>{mod_nombre}</li>
+		</td>
+		<td width=60 align=center>
+			<INPUT TYPE="checkbox" NAME="select_in_d" VALUE="1" checked disabled>
+			<INPUT TYPE="hidden" NAME="select_in" VALUE="1">
+		</td>
+		<td width=60 align=center>
+			<INPUT TYPE="checkbox" NAME="insert_in" VALUE="1" >
+		</td>
+		<td width=60 align=center>
+			<INPUT TYPE="checkbox" NAME="delete_in" VALUE="1" >
+		</td>
+		<td width=60 align=center>
+			<INPUT TYPE="checkbox" NAME="update_in" VALUE="1" >
+		</td>
+		
+      <td width="160" align=center>
+<input name="imageField4" type="image" src="../img/tick.png" alt="Asociar" width="12" height="12" border="0">			
+		</td>
+	</tr>
+	</form>
+<!-- END Modulos_b -->
+</table>
+
+<br>

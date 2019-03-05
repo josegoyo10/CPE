@@ -1,0 +1,33 @@
+table.dgrid {
+	border-collapse: collapse;
+}
+
+table.dgrid tbody tr td {
+	border: 1px solid #c0c0c0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding: 2px;
+}
+
+table.dgrid tbody tr.odd {
+	background: #ffffff;
+}
+
+table.dgrid tbody tr.even {
+	background: #f5f5f5;
+}
+
+table.dgrid tbody tr.selected td {
+	background: #fffdba;
+	font-weight: bold;
+}
+
+table.dgrid thead tr td,
+table.dgrid thead tr th {
+	background: url(images/fhbg.gif) repeat-x;
+	border: 1px solid #c0c0c0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+    font-weight: bold;
+	padding: 2px;
+}

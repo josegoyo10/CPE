@@ -1,0 +1,33 @@
+<request>
+      <customer>
+      <Source>20</Source>
+        <IdCustomer>5470120</IdCustomer>
+        <IdCategory>0</IdCategory>
+            <IdTypeContribuyente>2</IdTypeContribuyente>
+            <TypeCustomer>
+        <IdTypeCustomer>1</IdTypeCustomer>
+        </TypeCustomer>
+        <Location>27001063000000</Location>
+            <IdDoc>13</IdDoc>
+            <FirstName>YANERVIS</FirstName>
+            <Surname1>VELASQUEZ</Surname1>
+        <Surname2>RODRIGUEZ</Surname2>
+        <Address>CL 6 SUR N 5 1 - 1 4</Address>
+            <Phone>5828325</Phone>
+        <Phone2>3203680858</Phone2>
+        <Fax></Fax>
+        <Email>YANERVIS@GMAIL.COM</Email>
+        <AgeRange>0</AgeRange>
+        <Contact></Contact>
+        <Gender>F</Gender>
+        <Occupation></Occupation>
+        <Profession></Profession>
+        <ReteIca>0</ReteIca>
+        <ReteFuente>0</ReteFuente>
+        <ReteIva>0</ReteIva>
+        <OtrIva>0</OtrIva>
+        <ExenIva>0</ExenIva>
+        <Status>A</Status>
+        <CustomerLoyality></CustomerLoyality>
+      </customer>
+    </request>

@@ -1,0 +1,100 @@
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript" src="../includes/funciones.js"></script>
+
+<script language="javascript">
+<!--
+
+function valida(campo,form){
+	var cadena = new Array(); 
+	var cadena = campo.value.split(',');
+	for(i = 0; i < cadena.length; i++) {
+		if (cadena[i].length>10){
+			alert('Error en ingreso \''+cadena[i]+'\'. El código no debe ser mayor a 10 caracteres');
+			return false;
+		}
+	}
+	document.pedido_especial.submit();
+}
+
+-->
+</script>
+
+<body  onload="document.pedido_especial.ca_sap.focus();"> 
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Administrador de Pedidos Especiales <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" height="81%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="760" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+        <tr>
+          <td valign="top"><fieldset>
+            <legend>Pedido Especial-Catálogo/ Categorías  </legend>
+            <form NAME="pedido_especial" METHOD="POST" ACTION="pedido_especial.php" onSubmit="">
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="ca_sap" wrap="VIRTUAL" rows="5" cols="78">{ca_sap}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(pedido_especial.ca_sap,pedido_especial)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+
+        </tr>
+<!---codigo prod1 pe ca!-->
+		<!--tr>
+          <td valign="top"><fieldset>
+            <legend>Pedido Especial-Catálogo/Códigos Sap  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="ca_sap" wrap="VIRTUAL" rows="5" cols="78">{ca_sap}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(pedido_especial.ca_sap,pedido_especial)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr--->
+
+<!---codigo categoria PE GENERICO!-->
+		<!--tr>
+          <td valign="top"><fieldset>
+            <legend>Pedido Especial-Genérico/Categorías </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="ge_categoria" wrap="VIRTUAL" rows="5" cols="78">{ge_categoria}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(pedido_especial.ge_categoria,pedido_especial)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr-->
+
+<!---codigo sap PE GENERICO!-->
+		<tr>
+          <td valign="top"><fieldset>
+            <legend>Pedido Especial- Genérico/Códigos Sap  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="ge_sap" wrap="VIRTUAL" rows="5" cols="78">{ge_sap}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(pedido_especial.ge_sap,pedido_especial)"></td>
+              </tr>
+            </table>
+            </form>
+          </fieldset></td>
+        </tr>
+
+
+
+      </table>
+     
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+    
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+    //window.document.forma1.precio.onkeypress = KeyIsNumber;
+	window.document.pedido_especial.ca_sap.onkeypress = KeyIsNumberCo;
+/*    window.document.pedido_especial.ca_sap.onkeypress = KeyIsNumberCo;*/
+	/*window.document.pedido_especial.ge_categoria.onkeypress = KeyIsNumberCo;*/
+    window.document.pedido_especial.ge_sap.onkeypress = KeyIsNumberCo;
+-->
+</script>
+
+

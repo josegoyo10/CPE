@@ -1,0 +1,350 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0" background="../img/bg_pattern_002.jpg">
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Reporte de Ventas Instalador. <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+	var cal1 = new CalendarPopup("testdiv1");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = -77;										
+	cal1.offsetY = +20;
+	
+	function fechaNovacia(){
+	//Valida que los campos de fecha no esten vacios y la diferencia de fechas no sea superior a 30 dias
+		var Fini = document.viaje.fecha_desde.value
+		var FFin = document.viaje.fecha_hasta.value;
+	
+		if(Fini != '' && FFin != '')
+				fechaMayor30();	
+		
+		else if(Fini != '' && FFin == '')
+			alert("Debe ingresar Fecha Final");
+			
+		else if(Fini == '' && FFin != '')
+			alert("Debe ingresar Fecha de Inicio");
+		
+		else
+			alert("Debe ingresar Fecha de Inicio y Fecha Final");							
+	}
+	
+	function fechaMayor30(){	
+	//Valida que los campos de fecha no esten vacios y la diferencia de fechas no sea superior a 30 dias
+		var Fini = document.viaje.fecha_desde.value
+		var FFin = document.viaje.fecha_hasta.value;
+	
+			str1 = Fini.split("/");
+			str2 = FFin.split("/");
+						
+			var mesmn =  str1[1];
+			var mesmy =  str2[1];
+					
+			var mesmnF = mesmn *30;
+			var mesmyF = mesmy *30;
+					
+			var evalmes = mesmyF - mesmnF;
+					
+			var diamn =  str1[0];
+			var diamy =  str2[0];
+					
+			var evaldia = diamy - diamn;
+					
+			var totaldias = evaldia + evalmes;
+					
+			if(totaldias < 31){
+				Buscar();
+			}
+			else{
+				alert("Debe seleccionar un rango de fechas menor o igual a 30 días");
+				}
+	}
+	
+	function Buscar(){
+		fecha_desde = document.viaje.fecha_desde.value;
+		fecha_hasta = document.viaje.fecha_hasta.value;
+		formatof=true;
+		if(fecha_desde || fecha_hasta){
+			formatof=FormatoFechas(fecha_desde,fecha_hasta);
+		}
+		
+		valor = EvaluaFechas(fecha_desde,fecha_hasta);
+		if(formatof){
+			if(valor==false){
+				alert('Fecha Desde mayor que Fecha Hasta');
+				document.viaje.fecha_desde.select();
+				return false;					
+			}
+		}
+		else{
+			alert('Debe ingresar Formato Correcto en Fecha');
+		}
+		accion();
+	}
+	
+	function accion(){
+		document.viaje.accion.value="update";
+		document.viaje.submit();			
+	}
+
+	function FormatoFechas(fi,ft){
+		var str1 = fi;
+		var str2 = ft;
+		fechaArr1 = new Array;
+		fechaArr2 = new Array;
+		 
+		fechaArr1 = str1.split("/");
+		fechaArr2 = str2.split("/");
+		if (((str1.substring(2,3))=="/")&&((str1.substring(5,6))=="/")){
+			f1correcta=true;
+		}else{
+			f1correcta=false;
+		}
+
+		if (((str2.substring(2,3))=="/")&&((str2.substring(5,6))=="/")){
+			f2correcta=true;
+		}else{
+			f2correcta=false;
+		}
+		if (f1correcta && f1correcta){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	function EvaluaFechas(fi,ft){
+		var fecha1=new Date()
+		var fecha2=new Date()
+		var str1 = fi;
+		var str2 = ft;
+		
+		fechaArr1 = new Array;
+		fechaArr2 = new Array;
+		 
+		fechaArr1 = str1.split("/");
+		fechaArr2 = str2.split("/");
+		
+		/* convierte la fecha a número comparable*/
+		fecha1.setFullYear(fechaArr1[2],fechaArr1[1]-1,fechaArr1[0])
+		fecha2.setFullYear(fechaArr2[2],fechaArr2[1]-1,fechaArr2[0])
+		 
+		if (fecha1>fecha2){
+		  return false;
+		}
+		if (fecha1 == fecha2){
+		  return true;
+		}
+		if (fecha1 < fecha2){
+		  return true;
+		}
+	}
+	
+	function FechasSup30(fi,ft){
+		var fecha1=new Date()
+		var fecha2=new Date()
+		var str1 = fi;
+		var str2 = ft;
+		
+		fechaArr1 = new Array;
+		fechaArr2 = new Array;
+		 
+		fechaArr1 = str1.split("/");
+		fechaArr2 = str2.split("/");
+		
+		if (fechaArr1[2]==fechaArr2[2] && fechaArr1[1]==fechaArr2[1] && fechaArr1[0]==fechaArr2[0]){
+		  return true;
+		}
+		if (fechaArr1[2]==fechaArr2[2] && fechaArr1[1]!=fechaArr2[1] && fechaArr1[0]==fechaArr2[0]){
+		  return false;
+		}
+	}
+	
+	function selecCliente(){
+		popUpWindowMod('../seleccionar_cliente/seleccionar_cliente.php', 200, 300, 710, 500);
+	}
+</SCRIPT> 
+<!--  Función que realiza la operación de Exportar a Excel -->
+<!-- Si se genera error en la ejecucion de este JavaScript, por favor habilite la ejecucion de controles ActiveX
+     en su navegador, (Menú - Herramientas - Opciones de Internet - Seguridad) -->
+<script LANGUAGE=javascript>
+function exportToXL(eSrc) {
+var oExcel;
+var oExcelSheet;
+var oWkBooks;
+var cols;
+oExcel = new ActiveXObject('Excel.Application');
+oWkBooks = oExcel.Workbooks.Add;
+oExcelSheet = oWkBooks.Worksheets(1);
+oExcelSheet.Activate();
+if (eSrc.tagName != 'TABLE') {
+alert('No ha sido posible exportar la tabla a excell');
+return false;
+}
+cols = Math.ceil(eSrc.cells.length / eSrc.rows.length);
+for (var i = 0; i < eSrc.cells.length; i ++)
+{
+var c, r;
+r = Math.ceil((i+1) / cols);
+c = (i+1)-((r-1)*cols)
+if (eSrc.cells(i).tagName == 'TH') {
+oExcel.ActiveSheet.Cells(r,c).Font.Bold = true;
+oExcel.ActiveSheet.Cells(r,c).Interior.Color = 14474460;
+}
+if (eSrc.cells(i).childNodes.length > 0 && eSrc.cells(i).childNodes(0).tagName == "B")
+oExcel.ActiveSheet.Cells(r,c).Font.Bold = true;
+oExcel.ActiveSheet.Cells(r,c).Value = eSrc.cells(i).innerText;
+}
+oExcelSheet.Application.Visible = true;
+}
+</script>
+
+<FORM NAME="viaje" METHOD="POST" ACTION="reporte_instalador.php" onSubmit="">
+<table style="width: 780" height="auto"  align="center" cellpadding="2" cellspacing="2">
+	  <tr>
+		<td align="center">		    
+			<table width="50%" align="center"  class="userinput">
+			  <tr>
+			    <td>    
+			      <fieldset>
+			        <legend>Tienda</legend>
+			          <table width="150" height="30" align="center" border="0" cellspacing="1" cellpadding="1">
+			            <tr>
+			              <td><span class="userinput">
+				            <select name="idCentroDespacho" id="idCentroDespacho" class="select1">
+			                <option value="0" >Todos</option>
+							<!-- BEGIN Bloque_centro_despacho -->
+							<option value="{id_local}" {selected_local}>{nombre_local}</option>
+							<!-- END Bloque_centro_despacho -->
+							</select></span>
+						  </td>
+			            </tr>
+			          </table>
+			        </fieldset>
+				</td>
+				<td>
+			      <fieldset style="width: 380p;">
+			        <legend>Empresa Instaladora</legend>
+			          <table width="150" border="0" cellspacing="1" cellpadding="1">
+			            <tr>
+			              <td><span class="userinput" style="overflow: auto;" overflow: auto;>
+				            <select name="emp_inst" id="emp_inst" class="select1">
+			                  <option value="">Todos</option>
+								 <!-- BEGIN Bloque_instalador -->
+								 <option value="{id_instalador}">{nom_instalador}</option>
+								 <!-- END Bloque_instalador -->
+							</select></span>
+						  </td>
+			            </tr>
+			          </table>
+			        </fieldset>
+			    </td>
+			  </tr>
+			  <tr>
+			    <td>
+			      <fieldset>
+			        <legend>Categoria Cliente</legend>
+			          <table width="150" border="0" cellspacing="1" cellpadding="1">
+			            <tr>
+			              <td><span class="userinput">
+				            <select name="cat_cliente" id="cat_cliente" class="select1">
+			                  <option value="">Todos</option>
+								<!-- BEGIN cat_cliente -->
+								  <option value="{id_categoria}" {selected}>{nombre_categoria}</option>
+								<!-- END cat_cliente -->
+							</select></span>
+						  </td>
+			            </tr>
+			          </table>
+			        </fieldset>
+			    </td>
+			    <td>
+			      <fieldset style="height: 30; width: 380px">
+					<legend>&nbsp;
+					Fecha Inicio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					Fecha Fin&nbsp;
+					</legend>
+					  <table border="0" cellspacing="5" cellpadding="0">
+						 <tr>
+							 <td class="textonormal" class="titulonormalnegro">*Desde&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							 <a href="#" onClick="cal1.select(document.forms[0].fecha_desde,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/cal.gif" width="16" height="16" border="0" title="Fecha Desde "></a>
+								 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+								 <input name="fecha_desde" id="fecha_desde" type="text" size="12" maxlength="12" value="{fecha_desde}" onClick="cal1.select(document.forms[0].fecha_desde,'anchor1','dd/MM/yyyy'); return false;" readonly="readonly">
+							 </td>
+							 <td>
+								 &nbsp;&nbsp;&nbsp;
+							 </td>
+							 <td class="textonormal" class="titulonormalnegro">*Hasta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								 <a href="#" onClick="cal1.select(document.forms[0].fecha_hasta,'anchor','dd/MM/yyyy'); return false;" name="anchor" id="anchor"><img src="../img/cal.gif" width="16" height="16" border="0" title="Fecha Hasta "></a>
+								 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+								 <input name="fecha_hasta" id="fecha_hasta" type="text" size="12" maxlength="12" value="{fecha_hasta}" onClick="cal1.select(document.forms[0].fecha_hasta,'anchor','dd/MM/yyyy'); return false;" readonly="readonly">
+							 </td>
+						 </tr>
+					  </table>
+					</fieldset>
+			    </td>
+			  </tr>
+			  <tr>
+			    <td valign="top" width="40%" align="center" colspan="2">
+				  <br>
+					 <input type="button" name="Button" value="&nbsp;Consultar&nbsp;" onclick="fechaNovacia()"><br>
+					 <input name="accion" id="accion" type="hidden" value=""/>{Export}
+				</td>
+			  </tr>
+			</table>
+		</tr>
+	  </td>
+	  <tr>
+	    <td>
+			<!-- BEGIN Grilla -->
+			<table width="100%" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+			    <tr>
+					<td align="center" colspan="9" class="titulonormalnegro">
+						* Campos de carácter obligatorio</span>
+							{alert}&nbsp;{prueba}			
+					</td>
+				</tr>
+				<tr style="color:#FF0000">
+					<th colspan="9" align="center">{Encabezado}</td>
+				</tr>
+			</table>
+	     </td>
+	   </tr>
+	   <tr>
+	     <td>
+			<table id=idTable width="100%" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+				<tr>
+					<th>N°</td>
+					<th>Rut Instalador</td>
+					<th>Nombre Instalador</td>
+					<th>Costo</td>
+					<th>N°.Instalaciones</td>
+				</tr>
+				<!-- BEGIN Bloque_Resultados -->
+				<tr>
+					<td align="center">{num}</td>			
+					<td align="left">{rut_inst}</td>		
+					<td align="left">{nom_inst}</td>		
+					<td align="right">{costo}</td>	
+					<td align="center">{num_inst}</td>
+				</tr>
+				<!-- END Bloque_Resultados -->
+			</table>
+		<!-- END Grilla -->
+		    </td>
+          </tr>
+        </table>
+</FORM>
+
+
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+</html>

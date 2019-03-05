@@ -1,0 +1,109 @@
+
+<script>
+
+	function validar_form( form ) {
+		if( validar_obligatorio( form.c_1, "{CAMPO_OBLIGATORIO}" ) ) return false;
+		if( validar_obligatorio( form.c_5, "{CAMPO_OBLIGATORIO}" ) ) return false;
+		if( validar_numero( form.c_5, "{CAMPO_NUMERICO}" ) ) return false;
+		return true;
+	}
+
+</script>
+<link href="../../style.css" rel="stylesheet" type="text/css">
+
+
+<SPAN class=titulo>{TEXT_TITULO}</SPAN>
+<br>
+{OUT_BARRA}
+<br>
+<SPAN class=subtitulo>{SUBTITULO1}</SPAN>
+<br>
+<br>
+
+<table border="0" align=center class="form_g">
+	<FORM METHOD=POST ACTION="adm_mod_01.php" NAME="form_mod" onSubmit="return validar_form(this);">
+	<input type=hidden name=action value={ACTION}>
+	<input type=hidden name=mod_id value="{act_mod_id}">
+	<tr>
+		<td width="150">
+			{TEXT_CAMPO_1}
+		</td>
+		<td width="3">
+			 : 
+		</td>
+		<td>
+			<INPUT TYPE="text" NAME="c_1" SIZE="80" MAXLENGTH="80" value="{mod_nombre}" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);" >
+		</td>
+	</tr>
+	<tr valign=top>
+		<td width="150">
+			{TEXT_CAMPO_2}
+		</td>
+		<td width="3">
+			 : 
+		</td>
+		<td>
+			<TEXTAREA NAME="c_2" ROWS="4" COLS="79" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">{mod_descripcion}</TEXTAREA>
+		</td>
+	</tr>
+	<tr>
+		<td width="150">
+			{TEXT_CAMPO_3}
+		</td>
+		<td width="3">
+			 : 
+		</td>
+		<td>
+			<INPUT TYPE="radio" NAME="c_3" VALUE="1" {chec1}>{TEXT_CAMPO_4} 
+			<INPUT TYPE="radio" NAME="c_3" VALUE="2" {chec2}>{TEXT_CAMPO_5} 
+		</td>
+	</tr>
+	<tr>
+		<td width="150">
+			{TEXT_CAMPO_6}
+		</td>
+		<td width="3">
+			 : 
+		</td>
+		<td>
+			<INPUT TYPE="text" NAME="c_4" SIZE="80" MAXLENGTH="80" value="{mod_url}" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+		</td>
+	</tr>
+	<tr>
+		<td width="150">
+			{TEXT_CAMPO_10}
+		</td>
+		<td width="3">
+			 : 
+		</td>
+		<td>
+			<select name="c_6" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+			<option value="---"></option>
+			<!-- BEGIN Padres -->
+				<option value="{padre_mod_id}" {selected}>{padre_mod_nombre}</option>
+			<!-- END Padres -->
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td width="150">
+			{TEXT_CAMPO_7}
+		</td>
+		<td width="3">
+			 : 
+		</td>
+		<td>
+			<INPUT TYPE="text" NAME="c_5" SIZE="5" MAXLENGTH="5" value="{mod_orden}" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+		</td>
+	</tr>
+	<tr>
+		
+      <td colspan=3 align=center>
+				
+        <input name="imageField" type="image" src="../img/checkin.jpg" alt="{BOTON}" width="25" height="25" border="0">
+		</td>
+	</tr>
+	</FORM>
+</table>
+
+<br>

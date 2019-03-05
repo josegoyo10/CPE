@@ -1,0 +1,60 @@
+<script>
+
+	function validar_form( form ) {
+		if( validar_obligatorio( form.c_1, "{CAMPO_OBLIGATORIO}" ) ) return false;
+		if( validar_obligatorio( form.c_2, "{CAMPO_OBLIGATORIO}" ) ) return false;
+		return true;
+	}
+
+</script>
+
+<SPAN class=titulo>{TEXT_TITULO}</SPAN>
+<br>
+{OUT_BARRA}
+<br>
+<SPAN class=subtitulo>{TEXT_TITULO_SUB}</SPAN>
+<br>
+
+<table border="0" align=center class="form_g">
+    <form action="glo_01.php" method="post" name="form_agregar" onSubmit="return validar_form(this);">
+    
+  <INPUT TYPE="hidden" NAME="action" VALUE="{ACTION}">
+    
+  <INPUT TYPE="hidden" NAME="glo_id" VALUE="{GLO_ID}">
+    
+  <tr>
+        
+    <td >{TEXT_CAMPO_1}</td>
+    <td align=center>:</td>
+    <td>
+            
+            <INPUT TYPE="text" NAME="c_1" VALUE="{glo_titulo}" SIZE="50" MAXLENGTH="200" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+            
+        </td>
+  </tr>
+    
+  <tr>
+        
+    <td >{TEXT_CAMPO_2}</td>
+    <td align=center>:</td>
+    <td>
+            
+            <INPUT TYPE="text" NAME="c_2" VALUE="{glo_descripcion}" SIZE="50" MAXLENGTH="200" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+            
+        </td>
+  </tr>
+  <tr align="center">
+    <td colspan="3" >
+        <input name="imageField" type="image" src="../img/checkin.jpg" alt="{BOTON}" width="25" height="25" border="0">
+		</td>
+  </tr>
+  </form>
+</table>
+<br>
+<center>
+
+  
+</center>
+
+
+<br>

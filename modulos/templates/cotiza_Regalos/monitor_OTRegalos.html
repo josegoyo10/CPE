@@ -1,0 +1,193 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="../estilos.css"></link>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="javascript" src="../../includes/popup.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function Accion_flecha_ant(){
+	location.href='../lista_Regalos/nueva_lista_sumario_01.php?idLista={idLista}';
+}
+//-->
+</SCRIPT>
+</head>
+<body>
+<table style="width:780; height:30;" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="width:390;" class="titulonormal">{SUBTITULO1}</td>
+    <td style="width:390;" class="titulonormal"></td>
+  </tr>
+</table>
+
+<table style="width:780; height:auto;" border="0" cellpadding="0" cellspacing="0" class="textonormal">
+  <tr>
+    <td>
+
+      <table align="center" border="0" cellpadding="0" cellspacing="0">
+        <tr>     
+          <td>
+			<form NAME="form_search" METHOD="POST" ACTION="monitor_OTRegalos.php">
+			<fieldset style="width: 50;">
+		    <input type="hidden" name="accion" value="search"></input>
+            <input type="hidden" name="select_local" value="{select_local}"></input>
+		    <input type="hidden" name="bus_List" value="{bus_List}"></input>
+		    <input type="hidden" name="idLista" value="{idLista}"></input>
+		       
+			<span class="userinput">
+            <select name="select_local">
+			{ALL}
+			<!-- BEGIN Locales -->
+            <option value="{id_local}" {selected}>{nom_local}</option>
+            <!-- END Locales -->
+            </select>
+
+            <input type="submit" value="Filtrar">
+            </span>
+			
+		    </fieldset>
+            </form>
+		  </td>
+		  <td width="10"></td>
+		  <td>
+		    <span class="userinput">
+			<form NAME="form_search1" METHOD="POST"  ACTION="monitor_OTRegalos.php">	
+			 <fieldset style="width: auto; height: 50;">
+			 <input type="hidden" name="accion" value="search"></input>
+			 <input type="hidden" name="select_local" value="{select_local}"></input>
+			 <input type="hidden" name="bus_List" value="{bus_List}"></input> 
+			 <input type="hidden" name="idLista" value="{idLista}"></input>
+			 
+			 <input name="rad_selec" value="1" type="radio" {checkr1}/>{TEXT_CAMPO_11}
+			 <input name="rad_selec" value="2" type="radio" {checkr2}/>{TEXT_CAMPO_7}
+			<br>
+         	<input name="bus_List" value="{bus_List}" type="text" size="30" maxlength="40"/>
+            <input type="submit" value="Filtrar"/>
+            </fieldset>
+            </form>
+            </span>
+		  </td>
+        </tr>
+       </table>
+    
+    </td>
+  </tr>
+  
+  <tr>
+    <td>  
+		<table BORDER="o" cellspacing="0" cellpadding="0" align="center">
+			<tr>
+				<td >
+		          <table align="center" style="width:780;" border="0" bordercolor="#000000"  cellpadding="0" cellspacing="0" class="tabla2">
+		             <tr>
+		                <th style="width:40;" align="center">{TEXT_CAMPO_1} <a href="monitor_OTRegalos.php?idLista={idLista}&orden={orden}&select_local={select_local}&bus_List={bus_List}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+		                <th style="width:1;">&nbsp;</th>
+		                <th style="width:55;" align="center">{TEXT_CAMPO_2}</th>
+		                <th style="width:70;" align="center">{TEXT_CAMPO_3}</th>
+		                <th style="width:70;" align="center">{TEXT_CAMPO_4}</th>
+		                <th style="width:150;" align="center">{TEXT_CAMPO_6}</th>
+		                <th style="width:90;" align="center">{TEXT_CAMPO_5}</th>
+		             </tr>
+				  </table>
+				</td>
+			 </tr>
+			 <tr>
+				<td>
+				  <table align="center" style="width:780;" border="0" cellpadding="0" cellspacing="0" class="tabla2">
+		            <FORM id="monitorCheck" NAME="monitor" METHOD="POST" ACTION="monitor_ListaRegalos.php" onSubmit="">
+		             <!-- BEGIN Modulos -->
+		             <tr>
+		                <td style="width:40; height:25;" align="center" class="tabla_th">
+		                	<a href="printOT_Regalos.php?id_OT={ot_idList}" class="link1">{ot_idList}</a>
+		                </td>
+		                <td style="width:8;">&nbsp;</td>
+		                <td style="width:40; height:25;" align="center">{fec_creacion}</td>
+		                <td style="width:70; height:25;" align="center">{estado}</td>
+		                <td style="width:100; height:25;" align="center">{local}</td>            
+		          		<td style="width:160; height:25;" align="left">{invitado}</td>  
+		          		<td style="width:70; height:10;" align="left">{id_OS}</td>
+		             </tr>
+		             <!-- END Modulos -->
+		             <tr>
+		             	<th colspan="7">
+		             		&nbsp;
+		             	</th>
+		             </tr>
+				  </table>
+				  </td>
+				  </tr>
+				  
+				  <tr>
+					<td>
+						<table width="130"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+				           <tr>
+				             <td width="40">
+						     <a href="#" onClick="Accion_flecha_ant()"><img src="../img/anterior.gif" alt="prueba" width="23" height="23" border="0" title="Regresar"></a>
+						     </td>
+							 <td width="70">
+				                <div align="left">{Regresar}</div>
+				              </td>   
+				            </tr>
+				        </table>
+					</td>
+				   </tr>  
+				</table>
+			  </td>
+		      </tr>
+		    </table>
+	    </FORM>
+	  </td>
+	</tr>
+
+	<tr>
+	  <td>
+		<!--paginacion-->
+		<form NAME="form_paginas" METHOD="POST" ACTION="monitor_OTRegalos.php">
+		<input type="hidden" name="checkr1" value="{checkr1}">
+		<input type="hidden" name="checkr2" value="{checkr2}">
+		<input type="hidden" name="checkr3" value="{checkr3}">
+		<input type="hidden" name="rad_selec" value="{rad_selec}">
+		<input type="hidden" name="select_local" value="{select_local}"></input>
+		<input type="hidden" name="bus_List" value="{bus_List}"></input> 
+		<input type="hidden" name="idLista" value="{idLista}"></input>
+		{inicio}
+		</td>
+	</tr>
+	<tr style="width: 780" align="right">
+		<td colspan="3">
+			<table BORDER="0" cellspacing="0" cellpadding="0" align="right">
+	      		<tr>
+	 				<td align="right" class="textonormal">N&uacute;mero de página &nbsp;</td>
+					<td align="right">
+					<span class="userinput">
+						<select name="select_pag" Onchange="submit();">
+							<!-- BEGIN Paginas -->
+							<option value="{pag}" {selected}>{pag}&nbsp;</option>
+							<!-- END Paginas -->
+						{inicio}
+						</select>
+					</span>
+		    		</td>
+		  		</tr>
+			</form>
+		</td>
+	</tr>
+	<tr>
+	  <td>{fin}</td>
+  </tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+{Val_check1}
+-->
+</script>
+
+<table width="780">
+  <tr>
+   <td>	 
+     <div class="userinput">Usuario: {Usuario} | Local: {Local} | Fecha: {Fecha}</div>
+   </td>
+  </tr>
+</table>

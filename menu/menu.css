@@ -1,0 +1,86 @@
+/* --- menu styles ---
+note:
+	not all browsers render styles the same way so try out your style sheet
+	on different browsers before publishing;
+*/
+/* level 0 inner */
+.m0l0iout {
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-decoration: none;
+	text-align:center;
+	FONT-WEIGHT: normal; 
+	padding: 0px;
+	color: #000000;/* 0f3290 #FFFFFF;*/
+}
+.m0l0iover {
+	font: 10px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	text-align:center;
+	FONT-WEIGHT: normal; 
+	padding: 0px;
+	color: #000000; /* 0f3290 */
+}
+
+/* level 0 outer */
+.m0l0oout {
+	text-decoration : none;
+	border : 1px solid #c8c7c7; /*#4D4F86;*/
+	background: #ffe019; /*#4682B4;*/
+}
+.m0l0oover {
+	text-decoration : none;
+	border : 1px solid #677686; /*#4D4F86;*/
+	background: #EFEFEF; /* EFB505 #FFCC00;*/
+}
+
+/* level 1 inner */
+.m0l1iout {
+	font: 10px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-indent:4px;
+	text-decoration: none;
+	FONT-WEIGHT: normal; 
+	padding: 0px;
+	color: #000000; /* 0f3290 #FFFFFF;*/
+}
+.m0l1iover {
+	font: 10px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-indent:4px;
+	text-decoration : none;
+	FONT-WEIGHT: normal; 
+	padding: 0px;
+	color: #000000; /* 0f3290 #FFFFFF;*/
+}
+
+/* level 1 outer */
+.m0l1oout {
+	text-decoration : none;
+	border-bottom : 1px solid #CDCDCD; /*#4D4F86;*/
+	background: #DEDEDE;
+	filter: alpha(opacity=90);
+}
+.m0l1oover {
+	text-decoration : none;
+	border : 1px solid #677686; /* 677686 #4D4F86;*/
+	background: #EFEFEF; /*#FFCC00;*/
+}
+
+/* level 2 inner */
+.m0l2iover {
+	font: 10px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-decoration : none;
+	padding: 0px;
+	color: #000000;
+}
+
+/* level 2 outer */
+.m0l2oout {
+	text-decoration : none;
+	border : 1px solid #FFFFFF;
+	background: #B44646;
+}
+.m0l2oover {
+	text-decoration : none;
+	border : 1px solid #FFFFFF;
+	background: #E55A5A;
+}

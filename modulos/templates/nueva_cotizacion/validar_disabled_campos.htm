@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+      <title>Validar <?php echo $titulo;?></title>
+      <link href="../nueva_cotizacion/estilos.css" rel="stylesheet" type="text/css">
+      <script language="JavaScript" src="../../includes/ajax.js"></script>
+  
+
+      
+		<style type="text/css" media="screen">
+			.boton_cerrar {
+			  background-color:#FF0000;
+			  color:#221F1F;
+			  padding: 1em 1.5em;
+			  text-decoration: none;
+			  cursor: pointer;
+			}
+		</style>
+
+
+   </head>
+   <body>
+      <script language="JavaScript">
+                 
+        
+         	function autorizar()
+         	{
+         		if(document.form1.usuario.value == ''){
+         		alert('Usuario no puede Ser vacio');
+         		document.form1.usuario.focus();
+         		return false;
+         		}
+         		
+         		if(document.form1.contra.value == ''){
+         		alert('Cantrase\u00f1a no puede Ser vacio');
+         		document.form1.contra.focus();
+         		return false;
+         		}
+         			
+         	document.form1.submit();
+         	}
+         	
+         	
+         	function Cerrar()
+         	{				
+         		//window.close();	
+         		location.href='nueva_cotizacion_01.php?clie_rut={clie_rut}';
+         	}
+         
+         
+              
+          
+      </script>
+      <br>
+
+      <form name="form1" method="post" action="autorizar_desafields.php">
+         <div align="center" class="titulonormal">
+            <strong> Validaci&oacute;n de Supervisor para Desahabilitar Campos</strong>
+         </div>
+         <br>
+         <table width="222" border="0" align="center">
+            <tr>
+               <td width="85">
+                  <div align="right" class="textonormal">Usuario:</div>
+               </td>
+               <td width="127">
+                  <input name="usuario" type="text" id="usuario" size="15" maxlength="10" >
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <div align="right" class="textonormal">Contrase&ntilde;a:</div>
+               </td>
+               <td><input name="contra" type="password" id="contra" maxlength="10" ></td>
+            </tr>
+            <tr>
+               <td>
+                  <div align="right">
+                     <input type="button"  name="Validar" value="Autorizar"  class="btn btn-info" onClick="autorizar();" >
+                  </div>
+               </td>
+               <td>
+                  <div align="center">
+                     <input type="button"  name="Validar" value="Regresar"  class="btn btn-info" onClick="Cerrar();" >
+                     <!-- <a href="nueva_cotizacion_01.php?clie_rut={clie_rut}" class="boton_cerrar" role="button" >Cerrar</a> -->
+                  </div>
+               </td>
+            </tr>
+         </table>
+          <input name="clie_rut" type="hidden" id="clie_rut" size="15" value={clie_rut}>
+
+      </form>
+
+
+     
+	 </script>
+   </body>
+</html>

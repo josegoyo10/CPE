@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/template2.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Libreta de direcciones</title>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="javascript" src="../../includes/ajax.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+	window.name="Libreta2";
+
+	function validar_form(){
+		if( validar_obligatorio( libreta2.dire_nombre, "Nombre dirección es un Campo obligatorio" ))
+		return false;
+		if( validar_obligatorio( libreta2.dire_direccion, "Dirección  es un Campo obligatorio" ))
+		return false;
+		if( validar_obligatorio( libreta2.dire_telefono, "Teléfono  es un Campo obligatorio" ))
+		return false;
+		
+		document.libreta2.submit();
+	}
+
+	function abre_libreta1(){
+		document.jump.target = "Libreta2";
+		document.jump.action = 'libreta1.php?id_os={id_os}&accion=Listar';
+		document.jump.submit();
+	}
+
+	function nueva(){
+		document.jump.target = "Libreta2";
+		document.jump.action = 'libreta2.php?accion=Nueva&id_os={id_os}&clie_rut={clie_rut}';
+		document.jump.submit();
+	}
+
+
+
+/* AJAX PARA CIUDADES */
+function recargar(idCiudad)
+{
+	var selectDeparta=document.getElementById('departamento');
+	var dept=selectDeparta.options[selectDeparta.selectedIndex].value;
+	
+	var selectCiudad=document.getElementById(idCiudad);
+	var opcion=selectCiudad.options[selectCiudad.selectedIndex].value;	
+	
+	exec_AJAXRPC('POST','./nueva_cotizacion_01_ajax_buscarBarrio.php?id_ciudad=' + opcion + '&id_dept=' + dept,'desplegar_barrio');
+}
+
+function desplegar_barrio(text){
+	var Selectbarrios=document.getElementById('barrios');
+	Selectbarrios.parentNode.innerHTML = text;
+}
+
+
+
+/* AJAX PARA DEPARTAMENTOS */
+function recargarDept(idDept)
+{
+	var selectDept=document.getElementById(idDept);
+	var opcion=selectDept.options[selectDept.selectedIndex].value;
+	exec_AJAXRPC('POST','./nueva_cotizacion_01_ajax_buscarCiudad.php?id_Dept=' + opcion,'desplegar_ciudad');
+}
+
+function desplegar_ciudad(text2){
+	var SelectCiudad = document.getElementById('ciudad');
+	SelectCiudad.parentNode.innerHTML = text2;
+	
+	recargar('ciudad');
+}
+
+
+
+
+</SCRIPT>
+
+
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" -->
+
+<!-- InstanceEndEditable -->
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Libreta de Direcciones<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><!-- InstanceBeginEditable name="Cuerpo" -->
+
+<FORM NAME="jump" METHOD=POST ACTION="" TARGET="">
+</FORM>
+
+<FORM NAME="libreta2" METHOD="POST" ACTION="libreta2.php" onSubmit="return validar_form(this);" TARGET="Libreta2">
+<input type="hidden" name="accion" value="Guardar">
+<input type="hidden" name="clie_rut" value="{clie_rut}">
+<input type="hidden" name="id_direccion" value="{id_direccion}">
+<input type="hidden" name="id_os" value="{id_os}">
+<input type="hidden" name="dire_nombre" value="{dire_nombre}">
+    <table width="600" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"> <table width="480"  border="0" cellpadding="2" cellspacing="2" class="textonormal">
+      <tr>
+        <td width=100>Cliente</td>
+        <td>{clie_nombre}&nbsp;{clie_paterno}</td>
+      </tr>
+      <tr>
+        <td>Nombre direcci&oacute;n&nbsp;(*)</td>
+        <td valign=middle><input name="dire_nombre" type="text" value="{dire_nombre}" {valor} maxlength="20" class="userinput">&nbsp;&nbsp;(Ej: Casa, Trabajo, Amigo, etc.)</td>
+      </tr>
+      <tr>
+        <td>Direcci&oacute;n &nbsp;(*)</td>
+        <td><input name="dire_direccion" type="text" value="{dire_direccion}"  {valor1} maxlength="100" class="userinput"></td>
+        </tr>
+      
+      
+      
+      <tr>		  
+		  <td>Departamento&nbsp;(*)</td>
+		  <td>
+		  <select name="departamento" id="departamento" onChange="recargarDept(this.id); " {valor2} class="userinput">
+                     <!-- BEGIN Departamento -->
+                     <option value="{id_departamento}"{selected}>{nombre_departamento}</option>
+                     <!-- END Departamento -->
+                   </select>
+		  </td>      
+      </tr>
+      
+      
+      
+      <tr>		
+		<td>
+		<div align="left">Ciudad&nbsp;(*)</div>
+		</td>
+
+		<td>
+		<select name="ciudad" id="ciudad" onChange="recargar(this.id); " {valor2} class="userinput">							
+			<!-- BEGIN Ciudad -->
+			<option value="{id_ciudad}"{selected}>{nombre_ciudad}</option>
+			<!-- END Ciudad -->
+		</select>
+		</td>
+      </tr>
+      
+      
+      <tr>
+        <td>Barrio &nbsp;(*)</td>
+        <td><select name="barrios" id="barrios" {valor2} class="userinput">
+		<!-- BEGIN Barrios -->
+		<option value="{id_comuna}" {selected}>{comu_nombre}</option>
+		<!-- END Barrios -->
+		</select></td>
+      </tr>
+      
+      <tr>
+        <td>Tel&eacute;fono &nbsp;(*)</td>
+        <td> <input name="dire_telefono" {valor3} maxlength="20" type="text" value="{dire_telefono}" maxlength="20" class="userinput"> </td>
+      </tr>
+      <tr>
+        <td valign="top">Indicaci&oacute;n</td>
+        <td><textarea name="dire_observacion" {valor4} wrap="VIRTUAL" maxlength="200"  onBlur="Upper(this);" class="userinput">{dire_observacion}</textarea></td>
+        </tr>
+    </table>      
+    <br>
+    <table width="60%"  border="0" cellpadding="2" cellspacing="2" class="textonormal">
+	<table width="347"  border="0" cellpadding="2" cellspacing="2" class="textonormal">
+      <tr>
+        <td width="25%"><div align="center"><input type="button" name="Button" value="Guardar" onClick="validar_form()"></div></td>
+        <td width="25%"><div align="center"><input type="button" name="Submit2" value="Nueva" onClick="nueva()"></div></td>
+        <td width="25%"><div align="center"><input type="button" name="Submit2" value="Libreta" onClick="abre_libreta1();"></div></td>
+        <td width="27%"><div align="center"><input type="button" name="Submit2" value="Cerrar" onClick="window.close();"></div></td>
+      </tr>
+    </table>      
+</FORM>
+<script LANGUAGE="javascript">
+	window.document.libreta2.dire_nombre.onkeypress = KeyIsTexto;
+	window.document.libreta2.dire_direccion.onkeypress = KeyIsTexto ;
+	window.document.libreta2.dire_telefono.onkeypress = KeyIsTelefono;
+	window.document.libreta2.dire_observacion.onkeypress = KeyIsTexto;
+</script>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="450"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal"><tr>
+<td width="219">(*) Datos obligatorios.</td>
+</tr></table>
+</body>
+<!-- InstanceEnd -->
+</html>

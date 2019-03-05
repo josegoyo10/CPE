@@ -1,0 +1,148 @@
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript" src="../includes/funciones.js"></script>
+
+<script language="javascript">
+<!--
+
+function validar_search1(){
+    if( validar_obligatorio( document.form_search1.bus_1, "Campo obligatorio" ))
+        return false;
+    else
+        form_search1.submit();
+}
+function validar_search2(){
+    if( validar_obligatorio( document.form_search2.bus_2, "Campo obligatorio" ))
+        return false;
+    else
+        form_search2.submit();
+}
+-->
+</script>
+<body  onload="document.form_search1.bus_1.focus();"> 
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Administrador de Productos <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" height="81%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+        <tr>
+          <td valign="top"><fieldset>
+            <legend>B&uacute;squeda de Productos y Servicios </legend>
+            <form NAME="form_search1" METHOD="GET" ACTION="index.php" onSubmit="return validar_search1(this)">
+            <table border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+              <tr>
+                <td colspan="2">
+                <input name="radiobutton1" type="radio" value="1" {chec_rad1_1}>SAP  
+                <input name="radiobutton1" type="radio" value="2" {chec_rad1_2}>UPC
+                <input name="radiobutton1" type="radio" value="3" {chec_rad1_3}>Descripci&oacute;n</td>
+                </tr>
+              <tr>
+                <td><input name="bus_1" type="text" value="{bus_1}"></td>
+                <td><input type="submit" name="Button232" value="Buscar"></td>
+              </tr>
+            </table>
+            </form>
+          </fieldset></td>
+          <td colspan="7"><fieldset>
+            <legend>B&uacute;squedapor Proveedor</legend>
+            <form NAME="form_search2" METHOD="GET" ACTION="index.php" onSubmit="return validar_search2(this)">
+            <table border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+              <tr>
+                <td colspan="2">
+                    <input name="radiobutton2" type="radio" value="1" {chec_rad2_1}>Nombre
+                    <input name="radiobutton2" type="radio" value="2" {chec_rad2_2}>Cédula (sin DV) 
+                </td>
+                </tr>
+              <tr>
+                <td width="127"><input name="bus_2" type="text" value="{bus_2}"></td>
+                <td width="43"><input type="submit" name="Button22222" value="Buscar" ></td>
+              </tr>
+            </table>
+            </form>
+          </fieldset></td>
+        </tr>
+      </table>
+      <table BORDER="0" height="330" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td>
+            <!-- BEGIN Grilla -->
+                <table BORDER="0" height="330" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                        <td>
+                            <table width="636" border="0" align="left" cellpadding="2" cellspacing="0" class="tabla2">
+                                <tr>
+                                <th width="124">Cod SAP <a href="index.php?filtro=cod&orden={orden}&radiobutton1={radiobutton1}&radiobutton2={radiobutton2}&bus_1={bus_1}&bus_2={bus_2}&select_pag={select_pag}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+                                <th width="75">Tipo</th>
+                                <th width="104">Subtipo</th>
+                                <th width="240">Descripci&oacute;n <a href="index.php?filtro=des&orden={orden}&radiobutton1={radiobutton1}&radiobutton2={radiobutton2}&bus_1={bus_1}&bus_2={bus_2}&select_pag={select_pag}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+                                <th width="73">Acci&oacute;n</th>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="width: 668px; height: 330px; left: 49px; top: 353px; overflow: auto;">
+                                <table border="1" align="left" class="tabla2" cellspacing="0">
+                                <!-- BEGIN listado -->
+                                    <tr>
+                                        <td width="123">{cod_prod1} {espacio}</td>
+                                        <td width="75"><div align="center">{prod_tipo} {espacio}</div></td>
+                                        <td width="104"><div align="center">{prod_subtipo} {espacio}</div></td>
+                                        <td width="240"> {des_corta} {espacio}</td>
+                                        <td width="73" align="center">{link_info} {espacio}</td>
+                                    </tr>
+                                <!-- END listado -->
+                                </table>
+                            </div>		  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table BORDER="0" cellspacing="0" cellpadding="0" align="right">
+                                <tr>
+                                    <form NAME="form_paginas" METHOD="POST" ACTION="index.php">
+                                    <input type="hidden" name="radiobutton1" value="{radiobutton1}">
+                                    <input type="hidden" name="bus_1" value="{bus_1}">
+                                    <input type="hidden" name="radiobutton2" value="{radiobutton2}">
+                                    <input type="hidden" name="bus_2" value="{bus_2}">
+                                    <td class="textonormal">N&uacute;mero de la pagina &nbsp;</td>
+                                    <td><span class="userinput">
+                                        <select name="select_pag" Onchange="submit();">
+                                        <!-- BEGIN Paginas -->
+                                        <option value="{pag}" {selected}>{pag}&nbsp;</option>
+                                        <!-- END Paginas -->
+                                        </select></span>
+                                    </td>
+                                    </form>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            <!-- END Grilla -->
+            </td>
+        </tr>
+    </table>
+</td>
+</tr>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+    
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+    //window.document.forma1.precio.onkeypress = KeyIsNumber;
+    window.document.form_search1.bus_1.onkeypress = KeyIsTexto;
+    window.document.form_search2.bus_2.onkeypress = KeyIsTexto;
+-->
+</script>
+
+

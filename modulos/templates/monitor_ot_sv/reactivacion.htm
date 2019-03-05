@@ -1,0 +1,70 @@
+<SCRIPT LANGUAGE="JavaScript">
+	window.name="reactivacion";
+
+	function valida_form() {
+		document.form1.submit();
+	}
+</SCRIPT>
+
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" ID="js17">
+	var ayer = new Date();										//Fecha de Hoy
+	ayer.setDate(ayer.getDate() - 1);							//Fecha de ayer
+	var cal1 = new CalendarPopup("testdiv1", "reactivacion");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = -126;										
+	cal1.offsetY = 20;
+	cal1.addDisabledDates(null,formatDate(ayer,"yyyy-MM-dd"));	//Deshabilita las fechas anteriores a "ayer"
+</SCRIPT>  
+
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Cambio Fecha de Reactivaci&oacute;n <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="400"  border="0" align="left" cellpadding="2" cellspacing="2" class="textonormal">
+	  <FORM method="post" name="form1" target="reactivacion">
+	    <input type="hidden" name="accion" value="grabar">
+	    <input type="hidden" name="id_ot" value="{id_ot}">
+	    <input type="hidden" name="id_os" value="{id_os}">
+        <tr>
+          <td width="99">Fecha Reactivaci&oacute;n</td>
+          <td width="287">
+				<input name="ot_freactivacion" id="ot_freactivacion" type="text" value="{ot_freactivacion}" onClick="cal1.select(document.forms[0].ot_freactivacion,'anchor1','dd/MM/yyyy'); return false;">
+				<a href="#" onClick="cal1.select(document.forms[0].ot_freactivacion,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Reactivación"></a>
+				<DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+		  </td>
+        </tr>
+        <tr>
+          <td valign="top">Comentario</td>
+          <td><textarea name="ot_comentario" cols="40" rows="6" wrap="VIRTUAL" class="textonormal">{ot_comentario}</textarea></td>
+        </tr>
+	  </form>
+        <tr align="center">
+          <td height="27" colspan="2">&nbsp;</td>
+        </tr>
+        <tr align="center">
+          <td colspan="2"> <table width="198" border="0" cellpadding="2" cellspacing="2" class="textonormal">
+            <tr>
+              <td width="29"><a href="#" onClick="window.close()"><img src="../img/cancelar.gif" width="23" height="23" border="0"></a></td>
+              <td width="51">Cancelar</td>
+              <td width="5">&nbsp;</td>
+              <td width="52">Finalizar</td>
+              <td width="29"><a href="#" onClick="valida_form()"><img src="../img/siguiente.gif" width="23" height="23" border="0"></a></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+	window.document.form1.ot_comentario.onkeypress = KeyIsTexto ;
+</SCRIPT>

@@ -1,0 +1,109 @@
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<table width="650" height="403" border="0" cellpadding="0" cellspacing="0" style="border: 2px solid #000000;">
+  <tr>
+    <td height="69" valign="top">
+    <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td width="15%" height="49"><img src="../img/logo3.gif"></td>
+        <td width="84%" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" --> Picking OT &nbsp;#{id_ot} <!-- InstanceEndEditable --></td>
+      </tr>
+    </table>
+    </td>
+  </tr>  
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="90%" valign="top">
+            <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+              <tr>
+                <td><fieldset>
+                <legend>Datos OT </legend>
+                <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                  <tr>
+                        <td width="102">N&ordm; OT </td>
+                        <td width="244" class="userinput">{id_ot}</td>
+                        <td width="102">N&ordm; OS </td>
+                        <td width="244" class="userinput">{id_os}</td>
+                        <td width="109">Fecha de Generaci&oacute;n</td>
+                        <td width="244" class="userinput">{ot_fechacreacion}</td>
+                  </tr>
+                  <tr>
+                    <td>Tipo OT </td>
+                    <td class="userinput">{ot_tipo}</td>
+                    <td>Estado</td>
+                    <td class="userinput"> {esta_nombre} </td>
+                  </tr>
+                </table>
+                </fieldset></td>
+              </tr>
+              <tr>
+                <td><fieldset>
+                <legend>Datos de Servicio (Despacho, Instalaciones) </legend>
+                <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                  					<tr>
+						<td width="100">Nombre</td>
+                        <td width="245" class="userinput">{diredes_nombre} </td>
+                        <td width="103">Tel&eacute;fono</td>
+                        <td width="251" class="userinput">{diredes_telefono}</td>
+                      </tr>
+                      <tr>
+                        <td>Direcci&oacute;n</td>
+                        <td class="userinput">{diredes_direccion} </td>
+                        <td>Barrio</td>
+                        <td class="userinput">{diredes_comuna} </td>
+                      </tr>
+                      <tr>
+                        <td>Indicaci&oacute;n</td>
+                        <td class="userinput">{diredes_observacion}</td>
+                        <td>Tipo Despacho</td>
+                        <td class="userinput"><span class="titulonormal">{tipodespacho}</span></td>
+                      </tr>
+                </fieldset></td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0" class="tabla2">
+			  <tr>
+                <th width="80">UPC/(SKU)</th>
+                <th width="442">Descripci&oacute;n</th>
+                <th width="47">Precio Unitario </th>
+                <th width="54">Cantidad Solicitada </th>
+                <th width="83">Cantidad Pickeada</th>
+              </tr>
+	<!-- BEGIN LISTADO_OT -->
+			  <tr valign="top">
+			  <td><div align="center">{cod_barra}<br>({cod_sap})<br></div></td>
+              <td>{osde_descripcion}</td>
+              <td><div align="right">{osde_precio}</div></td>
+              <td><div align="right">{osde_cantidad}</div></td>
+              <td><div align="right">{cant_pickeada}&nbsp;</div></td>
+              </tr>
+ 	<!-- END LISTADO_OT -->
+			  <tr>
+              <td><div align="right">&nbsp;</div></td>
+              <td><div align="right">&nbsp;</div></td>
+              <td><div align="right">Total</div></td>
+              <td><div align="right">{total}</div></td>
+              <td><div align="right">&nbsp;</div></td>
+              </tr>
+			</table>
+            <br></td>
+        </tr>
+      </table>
+      <!-- InstanceEndEditable --></td>
+  </tr>
+</table>

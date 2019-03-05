@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<script language="javascript" src="../../includes/funciones.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+window.name="busqueda";
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+function volver(){
+	if('{acc}' == 'PE')
+	{
+	document.jump.target = "busqueda";
+	document.jump.action = 'nueva_cotizacion_0303.php?accion=apedido&flag=Cerrar';
+	}
+	else{
+	document.jump.target = "busqueda";		
+	document.jump.action = 'nueva_cotizacion_0303.php?accion={acc}&rad_producto={rad_producto}&producto={prod}&rad_servicio={rad_servicio}&servicio={servicio}';	
+	}
+	
+	document.jump.submit();
+}
+
+function ficha(){
+	document.jump.target = "busqueda";	
+	document.jump.action = 'nueva_cotizacion_0303.php?accion=ver&id_pro={id_producto}';
+	document.jump.submit();
+}
+function returnProducto(valor){
+	window.returnValue = valor;
+	window.close();
+}
+//-->
+</SCRIPT>
+<FORM NAME="jump" METHOD=POST ACTION="" TARGET="">
+</FORM>
+<table width="600"  border="0" cellpadding="0" cellspacing="0" bgcolor="#ECE9D8" class="textonormal">
+  <tr>
+    <td width="4%"><A HREF="#" onClick="imprimir();"><img src="../img/print.gif" width="73" height="29" border=0></A></td>
+    <td width="79%"><A HREF="#" onClick="window.close()">Cerrar</a></td>
+    <td width="17%">&nbsp;</td>
+  </tr>
+</table>
+<table width="600" height="20" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal">{TEXT_TITULO}</td>
+  </tr>
+</table>
+<div style=" width: 550px; height: 400px; overflow: auto">
+<table width="570" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>
+            <table border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>
+                    <td><div align="left">{TEXT_CAMPO_200}</div></td>
+                    <td class="userinput">{cod_prod1}</td>
+                </tr>
+                <tr>
+                    <td><div align="left">{TEXT_CAMPO_22}</div></td>
+                    <td class="userinput">{des_larga}</td>
+                </tr>
+                <tr>
+                    <td width="120" valign='top'><div align="left">{TEXT_CAMPO_11}</div></td>
+                    <td width="226" class="userinput">{nom_prov}</td>
+                </tr>
+            </table>
+            <table height="10" border="1" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>
+                    <td width="100" height="50" valign="top">
+					<img src="{img}" width="150" height="200">
+					</td>
+                    <td width="291" valign="top" class="userinput">
+                        &nbsp;&nbsp;{TEXT_CAMPO_201}<br>
+                        {espec_tecnicas}
+                    </td>
+                </tr>
+            </table>
+            <table border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>                
+                    <td><input type="button" name="Button22" value="Agregar" onClick="returnProducto('{cod_prod1}')"></td>
+                    
+                     
+                    <td><input type="button" name="Button222" value="Volver" onclick="volver()"></td>
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
+</body>

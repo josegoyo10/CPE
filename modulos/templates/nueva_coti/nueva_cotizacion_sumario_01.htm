@@ -1,0 +1,215 @@
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	function abre_Estado(){
+		if (popUpWindowModal('estado2.php?id_estado={id_estado}&id_os={id_os}&clie_rut={clie_rut}&id_proyecto={id_proyecto}&accion=update', 100, 100, 300, 200)=='refresh') 
+			window.location.reload();
+	}
+
+	function Paga_Cot(){
+		if ( "{esfechavalida}" == "0" ) {
+			if (!confirm("La cotización está fuera de fecha de validez (válido hasta {os_fechaestimacion}).\nDesea continuar de todas maneras?"))
+				return;
+		}
+
+		if ( "{eslocalcorrecto}" == "0" ) {
+			alert("La cotización no pertenece a este local. Esta no puede ser pagada");
+			return;
+		}
+						
+		if( "{id_estado}"=='SE' && popUpWindow('validar_pagoManual.php?id_estado={id_estado}&id_os={id_os}&clie_rut={clie_rut}&id_proyecto={id_proyecto}&accion=Ver', 180, 40, 510, 540)=='refresh') 
+			window.location.reload();
+	}
+
+	function duplica() {
+		if (confirm('Esta acción duplicará la OS actual con el estado \'OS En Trabajo\'.\n¿Desea continuar?')) {
+			window.location="nueva_cotizacion_sumario_01.php?id_os={id_os}&accion=dup";
+		}
+	}
+	function msg() {
+		alert("Usted no puede duplicar la cotización  por que no tiene local asignado");
+	}
+	//-->
+</SCRIPT>
+<!--menu--->
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->{NOMBRE_PAGINA}<!-- InstanceEndEditable --></td>
+    <td width="230" class="titulonormal"></td>
+    <td width="160" class="titulonormal" align="center" >{esta_nombre}</td>
+  </tr>
+
+</table>
+<!-- <div style="width:780; height:500; overflow:auto;"> -->
+<script language="JavaScript" type="text/JavaScript" src="popup.js"></script>
+<FORM NAME="nuevo_proy" METHOD="POST" ACTION="nueva_cotizacion_sumario_01.php" onSubmit="">
+<input type="hidden" name="clie_rut" value="{clie_rut}">
+<input type="hidden" name="id_estado" value="{id_estado}">
+<!--input type="hidden" name="id_estado_s" value="{id_estado_s}"-->
+<input type="hidden" name="accion" value="update">
+<table width="780" height="500" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                <tr>
+                  <td><fieldset>
+                  <legend>Datos de la Cotización</legend>
+                      <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                        <tr>
+                          <div width="100"><td width="19%">{TEXT_CAMPO_1}</td></div>
+                          <div width="250"><td width="25%" class="userinput">{id_os}</td></div>
+                          <div width="120"><td width="18%">{TEXT_CAMPO_2}</td></div>
+                          <div width="250"><td width="33%" class="userinput">{os_fechacotizacion}</td></div>
+                        </tr>
+                        <tr>
+                          <div width="100"><td>{TEXT_CAMPO_3}</td></div>
+                          <div width="250"><td class="userinput">{esta_nombre} </td></div>
+                          <div width="120"><td>{TEXT_CAMPO_4} </td></div>
+                          <div width="250"><td class="userinput">{atendido} </td></div>
+                        </tr>
+                        <tr>
+                          <div width="100"><td>{TEXT_CAMPO_5} </td></div>
+                          <div width="250"><td class="userinput">{nom_local}<td>V&aacute;lida hasta</div>
+                          <div width="120"><td class="userinput">{os_fechaestimacion}</td></div>
+                          <div width="250"><td width="3%"><td width="2%"></div>
+                        </tr>
+                        <tr>
+                          <div width="100"><td>Cotizaciones Cruzadas</td></div>
+                          <div width="250"><td  class="userinput">{os_cotizaciones_cruzadas}</td></div>
+                          <div width="250"><td>{TEXT_CAMPO_7} </td></div>
+                          <div width="120"><td class="userinput">{proy_nombre}</td></div>
+                        </tr>
+                        <tr>
+                          <td>{TEXT_CAMPO_8} </td>
+                          <td colspan="3" class="userinput">{os_comentarios} </td>
+                        </tr>
+                      </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos del Cliente</legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <div width="120"><td width="18%">{TEXT_CAMPO_9}</td></div>
+                        <div width="250"><td width="26%" class="userinput">{clie_rut}</td></div>
+                        <div width="120"><td width="18%">{TEXT_CAMPO_10}</td></div>
+                        <div width="250"><td width="38%" class="userinput">{clie_nombre}&nbsp;{clie_paterno}&nbsp;{clie_materno}</td></div>
+                      </tr>
+                      <tr>
+                        <div width="120"><td>{TEXT_CAMPO_11}</td></div>
+                        <div width="250"><td class="userinput">{dire_direccion_pri}</td></div>
+                        <div width="120"><td>{TEXT_CAMPO_12}</td></div>
+                        <div width="250"><td class="userinput">{comu_nombre_pri}</td></div>
+                      </tr>
+                      <tr>
+                        <div width="120"><td>{TEXT_CAMPO_13}</td></div>
+                        <div width="250"><td class="userinput">{dire_telefono_pri}</td></div>
+                        <div width="120">
+                          <td>Tel&eacute;fono Celular </td>
+                        </div>
+		                <div width="250"><td class="userinput">{telefono_celular}</td>
+		                </div>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Direcci&oacute;n de Servicio (Despacho e Instalaciones) </legend>
+					
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>                       
+                        <div width="120"><td width="18%">{TEXT_CAMPO_13}</td></div>
+                        <div width="250"><td width="26%" class="userinput">{dire_telefono}</td></div>						
+						<div width="120"><td width="18%">Departamento </td></div>
+                        <div width="250"><td width="38%" class="userinput">{departamento} </td></div>
+						
+                      </tr>
+                      <tr>
+                        <div width="120"><td>{TEXT_CAMPO_11}</td></div>
+                        <div width="250"><td class="userinput">{dire_direccion}</td></div>
+                        <div width="120"><td >Ciudad</td></div>
+                        <div width="250"><td class="userinput">{ciudad}</td></div>
+                      </tr>
+                      <tr>
+                        <div width="120"><td>{TEXT_CAMPO_14}</td></div>
+                        <div width="250"><td class="userinput">{dire_observacion} </td></div>
+                        <div width="120"><td>{TEXT_CAMPO_12}</td></div>
+                        <div width="250"><td class="userinput">{comu_nombre}</td></div>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                </tr>
+              </table>
+              <br>
+<!---include de os-detalle!-->
+              <table width="715" border="0" align="center" cellpadding="0" cellspacing="0" class="tabla2">
+            <tr>
+              <th width="55">C&oacute;digo</th>
+              <th width="38">Tipo</th>
+              <th width="277">Descripci&oacute;n</th>
+              <th width="75">Tipo Despacho</th>
+	          <th width="69">Fecha de Entrega</th>
+              <th width="66">Instalaci&oacute;n</th>
+			  <th width="59">Peso Kg</th>
+              <th width="39">Cantidad</th>
+			  <th width="65">Precio con Iva </th>
+              <th width="61">Total con Iva </th>
+            </tr>
+		 <!-- BEGIN Precio_Total -->
+		   <tr valign="top">
+                <td align="center">{cod_barra}<br>({cod_sap})</td>
+			    <td><div align="center">{osde_tipoprod}</div></td>
+                <td>{osde_descripcion}{especificacion}{osde_especificacion}</td>
+                <td>{tipo_nombre}</td>
+				<td><div align="center">{osde_fecha_entrega}</div>&nbsp;</td>
+	            <td><div align="center">{osde_instalacion}</div></td>
+				<td><div align="center">{peso}</div></td>
+                <td><div align="right">{osde_cantidad}</div></td>
+				<td><div align="center">{precioVacio}{osde_precio}</div></td>
+				<td><div align="right">{totalVacio}{Total}</div></td>
+		 <!-- END Precio_Total -->
+            <tr>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>&nbsp; </th>
+			  <th>Total</th>
+			  <th>&nbsp; </th>
+              <th><div align="center">&nbsp;</div></th>
+              <th>&nbsp;</th>
+              <th><div align="right">{TG}</div></th>
+            </tr>
+          </table>  
+        </td>
+        </tr>
+        <tr>
+          <td><table width="650" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+            <tr>
+              <th colspan="9">Acciones sobre la cotizaci&oacute;n </th>
+            </tr>
+            <script language="JavaScript" type="text/JavaScript" src="popup.js"></script>			  
+            <tr>
+              <td width="80"><div align="center">{editar_estado}</div></td>
+              <td width="80"><div align="center"><a href="{impre}{impre_borra}">Re-Imprimir Cotizaci&oacute;n </a></div></td>
+              <td width="80"><div align="center"><a href="../nueva_cotizacion/print_pdf_sum.php?id_os={id_os}" target='blank'>Imprimir PDF </a></div></td>
+              <td width="80"><div align="center"><a href="{codigo}">{code}</a></div></td>
+              <td width="80"><div align="center">
+	          <a href="#">Cambiar Estado</a>
+			  </div></td>
+              <td width="80"><div align="center">{pagar}&nbsp;</div></td>
+			  <td width="80"><div align="center">{duplica}</div></td>
+			  <td width="80"><div align="center"><a href="../nueva_cotizacion/tracking.php?id_os={id_os}&clie_rut={clie_rut}">Tracking OS</a></div></td>
+			  <td width="80"><div align="center"><a href="../nueva_cotizacion/vistaot.php?id_os={id_os}&clie_rut={clie_rut}">Ver OT's</a></div></td>
+			</tr>
+</Form>
+          </table></td>
+        </tr>
+      </table>
+      <!-- InstanceEndEditable -->
+<!---footer editable--->

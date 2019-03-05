@@ -1,0 +1,50 @@
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<table width="660" height="403" border="0" cellpadding="0" cellspacing="0" style="border: 2px solid #000000;">
+  <tr>
+    <td height="69" valign="top">
+    <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td width="15%" height="49"><img src="../img/logo2.jpg" width="49" height="45"></td>
+        <td width="84%" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" --> Listado de Picking al {fechaActual}<!-- InstanceEndEditable --></td>
+        <td width="6%">&nbsp;</td>
+      </tr>
+    </table>
+    </td>
+  </tr>  
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="90%" valign="top">
+		  <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0" class="tabla2">
+	<!-- BEGIN LISTADO_OT -->
+				{ot_id}
+                <tr valign="top">
+                  <td><div align="left">{cod_barra} / ({cod_sap}) / {id_os_detalle}</div></td>
+                  <td>{osde_descripcion}</td>
+                  <td><div align="right">{osde_precio}&nbsp;</div></td>
+                  <td><div align="right">{osde_cantidad}</div></td>
+                  <td><div align="right">{cant_pickeada}</div></td>
+                </tr>
+ 	<!-- END LISTADO_OT -->
+		  </table>
+		  </td>
+		</tr>
+      </table>
+	</td>
+  </tr>
+</table>
+

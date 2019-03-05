@@ -1,0 +1,1586 @@
+20122007 094000  => crea instancia soap_server .....wspoccp_os
+20122007 094000  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00001890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7804945001237</ean>
+  </detalle>
+  <detalle>
+    <precio>00001890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7804945001237</ean>
+  </detalle>
+</req>
+20122007 094000  => Graba_OS : Existe Local y rut
+20122007 094000  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 094000  => Graba_OS : Se verifica local ->42
+20122007 094000  => Verifica_rut -> Largo de rut correcto 8
+20122007 094000  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 094000  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 094000  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 094000  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 094004  => Graba_OS :No se verifica ean ->7804945001237 en CPE 
+20122007 094004  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 7804945001237 en CPE </desc></resp>
+20122007 094413  => crea instancia soap_server .....wspoccp_os
+20122007 094413  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00001890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7804945001237</ean>
+  </detalle>
+  <detalle>
+    <precio>00001890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7804945001237</ean>
+  </detalle>
+</req>
+20122007 094413  => Graba_OS : Existe Local y rut
+20122007 094413  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 094413  => Graba_OS : Se verifica local ->42
+20122007 094413  => Verifica_rut -> Largo de rut correcto 8
+20122007 094413  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 094413  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 094413  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 094413  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 094413  => Graba_OS :No se verifica ean ->7804945001237 en CPE 
+20122007 094413  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 7804945001237 en CPE </desc></resp>
+20122007 094558  => crea instancia soap_server .....wspoccp_os
+20122007 094558  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000025001198</ean>
+  </detalle>
+</req>
+20122007 094558  => Graba_OS : Existe Local y rut
+20122007 094558  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 094558  => Graba_OS : Se verifica local ->42
+20122007 094558  => Verifica_rut -> Largo de rut correcto 8
+20122007 094558  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 094558  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 094558  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 094558  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 094558  => busca_direccion -> No existe direccion para el rut  00002222
+20122007 094558  => inserta_nueva_direccion -> Inserta direccion para el rut  00002222
+20122007 094558  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42521  
+20122007 094559  => ERROR(20) : <?xml version="1.0"?><resp><os>42521</os>
+		<estado>0</estado>
+		<desc>20-No es posible insertar el producto =0000025001198 en el detalle de la OS 42521</desc></resp>
+20122007 102006  => crea instancia soap_server .....wspoccp_os
+20122007 102006  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+</req>
+20122007 102006  => Graba_OS : Existe Local y rut
+20122007 102006  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 102006  => Graba_OS : Se verifica local ->42
+20122007 102006  => Verifica_rut -> Largo de rut correcto 8
+20122007 102006  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 102006  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 102006  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 102006  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 102006  => Graba_OS :No se verifica ean ->0000001185263 en CPE 
+20122007 102006  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001185263 en CPE </desc></resp>
+20122007 102131  => crea instancia soap_server .....wspoccp_os
+20122007 102131  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+</req>
+20122007 102131  => Graba_OS : Existe Local y rut
+20122007 102131  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 102131  => Graba_OS : Se verifica local ->42
+20122007 102131  => Verifica_rut -> Largo de rut correcto 8
+20122007 102131  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 102131  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 102131  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 102131  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 102131  => Graba_OS :No se verifica ean ->0000001185263 en CPE 
+20122007 102131  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001185263 en CPE </desc></resp>
+20122007 102459  => crea instancia soap_server .....wspoccp_os
+20122007 102459  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+</req>
+20122007 102459  => Graba_OS : Existe Local y rut
+20122007 102459  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 102459  => Graba_OS : Se verifica local ->42
+20122007 102459  => Verifica_rut -> Largo de rut correcto 8
+20122007 102459  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 102459  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 102459  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 102459  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 102500  => Graba_OS :No se verifica ean ->0000001193930 en CPE 
+20122007 102500  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001193930 en CPE </desc></resp>
+20122007 102549  => crea instancia soap_server .....wspoccp_os
+20122007 102549  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+</req>
+20122007 102549  => Graba_OS : Existe Local y rut
+20122007 102549  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 102549  => Graba_OS : Se verifica local ->42
+20122007 102549  => Verifica_rut -> Largo de rut correcto 8
+20122007 102549  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 102549  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 102549  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 102549  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 102549  => Graba_OS :No se verifica ean ->0000001193930 en CPE 
+20122007 102549  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001193930 en CPE </desc></resp>
+20122007 102614  => crea instancia soap_server .....wspoccp_os
+20122007 102614  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+</req>
+20122007 102614  => Graba_OS : Existe Local y rut
+20122007 102614  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 102614  => Graba_OS : Se verifica local ->42
+20122007 102614  => Verifica_rut -> Largo de rut correcto 8
+20122007 102614  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 102614  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 102614  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 102614  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 102614  => Graba_OS :No se verifica ean ->0000001193930 en CPE 
+20122007 102614  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001193930 en CPE </desc></resp>
+20122007 102656  => crea instancia soap_server .....wspoccp_os
+20122007 102656  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+</req>
+20122007 102656  => Graba_OS : Existe Local y rut
+20122007 102656  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 102656  => Graba_OS : Se verifica local ->42
+20122007 102656  => Verifica_rut -> Largo de rut correcto 8
+20122007 102656  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 102656  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 102656  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 102656  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 102656  => Graba_OS :No se verifica ean ->0000001193930 en CPE 
+20122007 102656  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001193930 en CPE </desc></resp>
+20122007 102724  => crea instancia soap_server .....wspoccp_os
+20122007 102724  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+  <detalle>
+    <precio>00001050</precio>
+    <cantidad>00000500</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+</req>
+20122007 102724  => Graba_OS : Existe Local y rut
+20122007 102724  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 102724  => Graba_OS : Se verifica local ->42
+20122007 102724  => Verifica_rut -> Largo de rut correcto 8
+20122007 102724  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 102724  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 102724  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 102724  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 102724  => Graba_OS :No se verifica ean ->0000001193930 en CPE 
+20122007 102724  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001193930 en CPE </desc></resp>
+20122007 103052  => crea instancia soap_server .....wspoccp_os
+20122007 103052  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00002990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001191141</ean>
+  </detalle>
+  <detalle>
+    <precio>00002990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001191141</ean>
+  </detalle>
+</req>
+20122007 103052  => Graba_OS : Existe Local y rut
+20122007 103052  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 103052  => Graba_OS : Se verifica local ->42
+20122007 103052  => Verifica_rut -> Largo de rut correcto 8
+20122007 103052  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 103052  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 103052  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 103052  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 103053  => Graba_OS :No se verifica ean ->0000001191141 en CPE 
+20122007 103053  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001191141 en CPE </desc></resp>
+20122007 103243  => crea instancia soap_server .....wspoccp_os
+20122007 103243  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>15415683</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001191141</ean>
+  </detalle>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001191141</ean>
+  </detalle>
+</req>
+20122007 103243  => Graba_OS : Existe Local y rut
+20122007 103243  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 103243  => Graba_OS : Se verifica local ->42
+20122007 103243  => Verifica_rut -> Largo de rut correcto 8
+20122007 103243  => Graba_OS : Se verifica Rut, rut correcto ->15415683
+20122007 103243  => verifica_cliente -> No existe cliente rut 15415683 Se debe ingresar al sistema
+20122007 103243  => verifica_cliente ->Se agrego satisfactoriamente el rut 15415683 en tabla clientes CPE
+20122007 103243  => Graba_OS : Se obtiene Rut Cliente ->15415683
+20122007 103243  => Graba_OS :No se verifica ean ->0000001191141 en CPE 
+20122007 103243  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001191141 en CPE </desc></resp>
+20122007 103421  => crea instancia soap_server .....wspoccp_os
+20122007 103421  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+</req>
+20122007 103421  => Graba_OS : Existe Local y rut
+20122007 103421  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 103421  => Graba_OS : Se verifica local ->42
+20122007 103421  => Verifica_rut -> Largo de rut correcto 8
+20122007 103421  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 103421  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 103421  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 103421  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 103421  => Graba_OS :No se verifica ean ->0000001185263 en CPE 
+20122007 103421  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001185263 en CPE </desc></resp>
+20122007 103447  => crea instancia soap_server .....wspoccp_os
+20122007 103447  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+</req>
+20122007 103447  => Graba_OS : Existe Local y rut
+20122007 103447  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 103447  => Graba_OS : Se verifica local ->42
+20122007 103447  => Verifica_rut -> Largo de rut correcto 8
+20122007 103447  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 103447  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 103447  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 103447  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 103447  => Graba_OS :No se verifica ean ->0000001185263 en CPE 
+20122007 103447  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001185263 en CPE </desc></resp>
+20122007 103540  => crea instancia soap_server .....wspoccp_os
+20122007 103540  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00010082</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001190748</ean>
+  </detalle>
+</req>
+20122007 103540  => Graba_OS : Existe Local y rut
+20122007 103540  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 103540  => Graba_OS : Se verifica local ->42
+20122007 103540  => Verifica_rut -> Largo de rut correcto 8
+20122007 103540  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 103540  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 103540  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 103540  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 103541  => Graba_OS :No se verifica ean ->0000001190748 en CPE 
+20122007 103541  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001190748 en CPE </desc></resp>
+20122007 103613  => crea instancia soap_server .....wspoccp_os
+20122007 103613  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00010082</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001190748</ean>
+  </detalle>
+</req>
+20122007 103613  => Graba_OS : Existe Local y rut
+20122007 103613  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 103613  => Graba_OS : Se verifica local ->42
+20122007 103613  => Verifica_rut -> Largo de rut correcto 8
+20122007 103613  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 103613  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 103613  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 103613  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 103613  => Graba_OS :No se verifica ean ->0000001190748 en CPE 
+20122007 103613  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001190748 en CPE </desc></resp>
+20122007 103826  => crea instancia soap_server .....wspoccp_os
+20122007 103826  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00006990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185478</ean>
+  </detalle>
+  <detalle>
+    <precio>00006990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185478</ean>
+  </detalle>
+</req>
+20122007 103826  => Graba_OS : Existe Local y rut
+20122007 103826  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 103826  => Graba_OS : Se verifica local ->42
+20122007 103826  => Verifica_rut -> Largo de rut correcto 8
+20122007 103826  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 103826  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 103826  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 103826  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 103827  => Graba_OS :No se verifica ean ->0000001185478 en CPE 
+20122007 103827  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001185478 en CPE </desc></resp>
+20122007 103949  => crea instancia soap_server .....wspoccp_os
+20122007 103949  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00006990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185478</ean>
+  </detalle>
+  <detalle>
+    <precio>00006990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185478</ean>
+  </detalle>
+</req>
+20122007 103949  => Graba_OS : Existe Local y rut
+20122007 103949  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 103949  => Graba_OS : Se verifica local ->42
+20122007 103949  => Verifica_rut -> Largo de rut correcto 8
+20122007 103949  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 103949  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 103949  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 103949  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 103949  => Graba_OS :No se verifica ean ->0000001185478 en CPE 
+20122007 103949  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001185478 en CPE </desc></resp>
+20122007 104101  => crea instancia soap_server .....wspoccp_os
+20122007 104101  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00002490</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0601500040406</ean>
+  </detalle>
+</req>
+20122007 104101  => Graba_OS : Existe Local y rut
+20122007 104101  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 104101  => Graba_OS : Se verifica local ->42
+20122007 104101  => Verifica_rut -> Largo de rut correcto 8
+20122007 104101  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 104101  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 104101  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 104101  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 104102  => busca_direccion -> No existe direccion para el rut  00002222
+20122007 104102  => inserta_nueva_direccion -> Inserta direccion para el rut  00002222
+20122007 104102  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42522  
+20122007 104102  => ERROR(20) : <?xml version="1.0"?><resp><os>42522</os>
+		<estado>0</estado>
+		<desc>20-No es posible insertar el producto =0601500040406 en el detalle de la OS 42522</desc></resp>
+20122007 104139  => crea instancia soap_server .....wspoccp_os
+20122007 104139  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00002490</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0601500040406</ean>
+  </detalle>
+</req>
+20122007 104139  => Graba_OS : Existe Local y rut
+20122007 104139  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 104139  => Graba_OS : Se verifica local ->42
+20122007 104139  => Verifica_rut -> Largo de rut correcto 8
+20122007 104139  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 104139  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 104139  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 104139  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 104139  => busca_direccion -> No existe direccion para el rut  13924695
+20122007 104139  => inserta_nueva_direccion -> Inserta direccion para el rut  13924695
+20122007 104139  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42523  
+20122007 104139  => ERROR(20) : <?xml version="1.0"?><resp><os>42523</os>
+		<estado>0</estado>
+		<desc>20-No es posible insertar el producto =0601500040406 en el detalle de la OS 42523</desc></resp>
+20122007 104223  => crea instancia soap_server .....wspoccp_os
+20122007 104223  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001188189</ean>
+  </detalle>
+</req>
+20122007 104223  => Graba_OS : Existe Local y rut
+20122007 104223  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 104223  => Graba_OS : Se verifica local ->42
+20122007 104223  => Verifica_rut -> Largo de rut correcto 8
+20122007 104223  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 104223  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 104223  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 104223  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 104224  => Graba_OS :No se verifica ean ->0000001188189 en CPE 
+20122007 104224  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001188189 en CPE </desc></resp>
+20122007 104306  => crea instancia soap_server .....wspoccp_os
+20122007 104306  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001188189</ean>
+  </detalle>
+</req>
+20122007 104306  => Graba_OS : Existe Local y rut
+20122007 104306  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 104306  => Graba_OS : Se verifica local ->42
+20122007 104306  => Verifica_rut -> Largo de rut correcto 8
+20122007 104306  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 104306  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 104306  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 104306  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 104306  => Graba_OS :No se verifica ean ->0000001188189 en CPE 
+20122007 104306  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001188189 en CPE </desc></resp>
+20122007 104334  => crea instancia soap_server .....wspoccp_os
+20122007 104334  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00010082</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001190748</ean>
+  </detalle>
+</req>
+20122007 104334  => Graba_OS : Existe Local y rut
+20122007 104334  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 104334  => Graba_OS : Se verifica local ->42
+20122007 104334  => Verifica_rut -> Largo de rut correcto 8
+20122007 104334  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 104334  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 104334  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 104334  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 104334  => Graba_OS :No se verifica ean ->0000001190748 en CPE 
+20122007 104334  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001190748 en CPE </desc></resp>
+20122007 112339  => crea instancia soap_server .....wspoccp_os
+20122007 112339  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000235</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001191141</ean>
+  </detalle>
+  <detalle>
+    <precio>00000235</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001191141</ean>
+  </detalle>
+</req>
+20122007 112339  => Graba_OS : Existe Local y rut
+20122007 112339  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 112339  => Graba_OS : Se verifica local ->42
+20122007 112339  => Verifica_rut -> Largo de rut correcto 8
+20122007 112339  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 112339  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 112339  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 112339  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 112339  => Graba_OS :No se verifica ean ->0000001191141 en CPE 
+20122007 112339  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001191141 en CPE </desc></resp>
+20122007 112455  => crea instancia soap_server .....wspoccp_os
+20122007 112455  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>00002222</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000499</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000000000024</ean>
+  </detalle>
+</req>
+20122007 112455  => Graba_OS : Existe Local y rut
+20122007 112455  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 112455  => Graba_OS : Se verifica local ->42
+20122007 112455  => Verifica_rut -> Largo de rut correcto 8
+20122007 112455  => Graba_OS : Se verifica Rut, rut correcto ->00002222
+20122007 112455  => verifica_cliente -> No existe cliente rut 00002222 Se debe ingresar al sistema
+20122007 112455  => verifica_cliente ->Se agrego satisfactoriamente el rut 00002222 en tabla clientes CPE
+20122007 112455  => Graba_OS : Se obtiene Rut Cliente ->00002222
+20122007 112455  => Graba_OS :No se verifica ean ->0000000000024 en CPE 
+20122007 112455  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000000000024 en CPE </desc></resp>
+20122007 112644  => crea instancia soap_server .....wspoccp_os
+20122007 112644  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>VITRI</texto>
+</req>
+20122007 112644  => busqueda_prec : Se verifica local ->E502
+20122007 112646  => busqueda_prec : Trae codigos ean para producto descripcion->VITRI
+20122007 112646  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>VITRIFICANTE POLPARQUET 1 COMPON 0.75 LT</desc>
+<codigo>
+<ean>2082000029043</ean>
+<precio>3090</precio>
+</codigo>
+</producto>
+<producto><desc>VITRIFICANTE POLPARQUET 1 COMPON 0.75 LT</desc>
+<codigo>
+<ean>2000000810584</ean>
+<precio>3090</precio>
+</codigo>
+</producto>
+<producto><desc>SELLADOR VITRIFICANTE STONE LACK 1 GALON</desc>
+<codigo>
+<ean>7805212142790</ean>
+<precio>8990</precio>
+</codigo>
+</producto>
+<producto><desc>CERRADURA VITRINA 501-18140-NI</desc>
+<codigo>
+<ean>7806805001296</ean>
+<precio>1480</precio>
+</codigo>
+</producto>
+<producto><desc>BARNIZ VITRIFICANTE SEMI-BRILLANTE 1/4GL</desc>
+<codigo>
+<ean>7805362000070</ean>
+<precio>6589</precio>
+</codigo>
+</producto>
+<producto><desc>BARNIZ VITRIFICANTE SEMI-BRILLANTE 1/4GL</desc>
+<codigo>
+<ean>2082000031213</ean>
+<precio>6589</precio>
+</codigo>
+</producto>
+<producto><desc>BARNIZ VITRIFICANTE SEMI-BRILLANTE 1 GL</desc>
+<codigo>
+<ean>7805362000063</ean>
+<precio>19141</precio>
+</codigo>
+</producto>
+<producto><desc>BARNIZ VITRIFICANTE BRILLANTE 1/4 GALON</desc>
+<codigo>
+<ean>7805362000056</ean>
+<precio>6589</precio>
+</codigo>
+</producto>
+<producto><desc>BARNIZ VITRIFICANTE BRILLANTE 1/4 GALON</desc>
+<codigo>
+<ean>2082000031046</ean>
+<precio>6589</precio>
+</codigo>
+</producto>
+<producto><desc>BARNIZ VITRIFICANTE BRILLANTE 1 GALON</desc>
+<codigo>
+<ean>7805362000049</ean>
+<precio>19190</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 114053  => crea instancia soap_server .....wspoccp_os
+20122007 114053  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>CERA</texto>
+</req>
+20122007 114053  => busqueda_prec : Se verifica local ->E502
+20122007 114053  => busqueda_prec : Trae codigos ean para producto descripcion->CERA
+20122007 114053  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CERA LIQUIDA COLOR NEGRO T-186</desc>
+<codigo>
+<ean>2082000127206</ean>
+<precio>2998</precio>
+</codigo>
+</producto>
+<producto><desc>CERA LIQUIDA COLOR AZUL T-187</desc>
+<codigo>
+<ean>74660011874</ean>
+<precio>2990</precio>
+</codigo>
+</producto>
+<producto><desc>CERA LIQUIDA COLOR AZUL T-187</desc>
+<codigo>
+<ean>2082000127138</ean>
+<precio>2990</precio>
+</codigo>
+</producto>
+<producto><desc>CERA LIQUIDA COLOR BLANCO T-185</desc>
+<codigo>
+<ean>74660011850</ean>
+<precio>2998</precio>
+</codigo>
+</producto>
+<producto><desc>CERA LIQUIDA COLOR BLANCO T-185</desc>
+<codigo>
+<ean>2082000126995</ean>
+<precio>2998</precio>
+</codigo>
+</producto>
+<producto><desc>CERA LIQUIDA AUTOMOVIL T-127</desc>
+<codigo>
+<ean>746601311274</ean>
+<precio>3240</precio>
+</codigo>
+</producto>
+<producto><desc>CERA LIQUIDA AUTOMOVIL T-127</desc>
+<codigo>
+<ean>2082000127145</ean>
+<precio>3240</precio>
+</codigo>
+</producto>
+<producto><desc>CERA PASTA CARNAUBA T-225</desc>
+<codigo>
+<ean>74660012222</ean>
+<precio>4010</precio>
+</codigo>
+</producto>
+<producto><desc>CERA PASTA CARNAUBA T-225</desc>
+<codigo>
+<ean>2082000126988</ean>
+<precio>4010</precio>
+</codigo>
+</producto>
+<producto><desc>2 ANGELES CERAM 15X8X27CM ROJO</desc>
+<codigo>
+<ean>612962058502</ean>
+<precio>4690</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 114114  => crea instancia soap_server .....wspoccp_os
+20122007 114114  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>CAR</texto>
+</req>
+20122007 114114  => busqueda_prec : Se verifica local ->E502
+20122007 114115  => busqueda_prec : Trae codigos ean para producto descripcion->CAR
+20122007 114115  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CORREA TRINCAR 8MX50MM.</desc>
+<codigo>
+<ean>4004575992131</ean>
+<precio>4000</precio>
+</codigo>
+</producto>
+<producto><desc>CORREA TRINCAR 2TL8MX50</desc>
+<codigo>
+<ean>4004575992148</ean>
+<precio>32990</precio>
+</codigo>
+</producto>
+<producto><desc>1/2 MDF MEL BLANCA 1CARA 15X1830X2500MM</desc>
+<codigo>
+<ean>2082001025822</ean>
+<precio>12609</precio>
+</codigo>
+</producto>
+<producto><desc>1/2 MDF MEL BLANCA 1 CARA 18X2500X1830MM</desc>
+<codigo>
+<ean>2082001025839</ean>
+<precio>13611</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 MDF MEL BLANCA 1 CARA 18X2500X1830MM</desc>
+<codigo>
+<ean>2082001024979</ean>
+<precio>7102</precio>
+</codigo>
+</producto>
+<producto><desc>1/4 MDF MEL BLANCA 1CARA 15X1830X2500MM</desc>
+<codigo>
+<ean>2082001024962</ean>
+<precio>6578</precio>
+</codigo>
+</producto>
+<producto><desc>PRENSA SARGENTO CARPINTERO 48" RECORD</desc>
+<codigo>
+<ean>734442033844</ean>
+<precio>21290</precio>
+</codigo>
+</producto>
+<producto><desc>PRENSA SARGENTO CARPINTERO 42" RECORD</desc>
+<codigo>
+<ean>734442033721</ean>
+<precio>20590</precio>
+</codigo>
+</producto>
+<producto><desc>PRENSA SARGENTO CARPINTERO 36" RECORD</desc>
+<codigo>
+<ean>734442033608</ean>
+<precio>19990</precio>
+</codigo>
+</producto>
+<producto><desc>GUANTE DESCARNE CHANCHO SIN FORRO</desc>
+<codigo>
+<ean>7809827960718</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 114132  => crea instancia soap_server .....wspoccp_os
+20122007 114132  => Cons_SAP Ingresa XML -><req>
+  <sap>119074</sap>
+</req>
+20122007 114132  => Cons_SAP : el numero sap buscado cumple con los parametros->119074
+20122007 114132  => Cons_SAP : Trae codigos ean para producto SAP ->119074
+20122007 114132  => Cons_SAP : Trae codigos ean -><ean>7809606500197</ean>
+<ean>2082000363741</ean><ean>2050000137112</ean>
+<ean>2000000701394</ean>
+
+20122007 114132  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7809606500197</ean>
+<ean>2082000363741</ean><ean>2050000137112</ean>
+<ean>2000000701394</ean>
+
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+20122007 114443  => crea instancia soap_server .....wspoccp_os
+20122007 114443  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>CLOSET</texto>
+</req>
+20122007 114443  => busqueda_prec : Se verifica local ->E502
+20122007 114443  => busqueda_prec : Trae codigos ean para producto descripcion->CLOSET
+20122007 114443  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>BARRA CLOSET OVALADA DORADA 1.80MTS.</desc>
+<codigo>
+<ean>2082000488680</ean>
+<precio>5490</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA CLOSET ECONOMICA 1.50MT CAFE</desc>
+<codigo>
+<ean>7809890005866</ean>
+<precio>1890</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA CLOSET ECONOMICA 1.50MT CAFE</desc>
+<codigo>
+<ean>2082000488727</ean>
+<precio>1890</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA CLOSET ECONOMICA 1.50MT BLANCO</desc>
+<codigo>
+<ean>7809890005859</ean>
+<precio>1890</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA CLOSET ECONOMICA 1.50MT BLANCO</desc>
+<codigo>
+<ean>2082000488710</ean>
+<precio>1890</precio>
+</codigo>
+</producto>
+<producto><desc>BARRA CLOSET OVALADA DORADA 1.20MTS.</desc>
+<codigo>
+<ean>2082000488734</ean>
+<precio>3690</precio>
+</codigo>
+</producto>
+<producto><desc>ASA EMBUT CLOSET 200MM</desc>
+<codigo>
+<ean>7809818910432</ean>
+<precio>1990</precio>
+</codigo>
+</producto>
+<producto><desc>ASA EMBUT CLOSET 200MM</desc>
+<codigo>
+<ean>2082000124946</ean>
+<precio>1990</precio>
+</codigo>
+</producto>
+<producto><desc>ACCESORIO MULTIUSO INSTA CLOSET</desc>
+<codigo>
+<ean>7703450100032</ean>
+<precio>605</precio>
+</codigo>
+</producto>
+<producto><desc>ACCESORIOS MULTI TAPA 2UNID INSTA CLOSET</desc>
+<codigo>
+<ean>7703450100049</ean>
+<precio>605</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 114517  => crea instancia soap_server .....wspoccp_os
+20122007 114517  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>CADENA 1520</texto>
+</req>
+20122007 114517  => busqueda_prec : Se verifica local ->E502
+20122007 114517  => Error (verifica_codprec) No hay respuesta para este texto 
+20122007 114517  => ERROR(07) : <?xml version="1.0" ?><resp><producto/>
+		<estado>0 </estado>
+		<desc>07-No se verifica en CPE el texto CADENA 1520</desc></resp>
+20122007 114526  => crea instancia soap_server .....wspoccp_os
+20122007 114526  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>CADENA</texto>
+</req>
+20122007 114526  => busqueda_prec : Se verifica local ->E502
+20122007 114526  => busqueda_prec : Trae codigos ean para producto descripcion->CADENA
+20122007 114526  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CADENA LAMPARA LATON 20X10MM</desc>
+<codigo>
+<ean>4004575277313</ean>
+<precio>1160</precio>
+</codigo>
+</producto>
+<producto><desc>CADENA LAMPARA LATONAA 30</desc>
+<codigo>
+<ean>4004575277412</ean>
+<precio>1790</precio>
+</codigo>
+</producto>
+<producto><desc>CADENA LAMPARA BALNC EPOX2</desc>
+<codigo>
+<ean>4004575026331</ean>
+<precio>1910</precio>
+</codigo>
+</producto>
+<producto><desc>CADENA LAMPARA AZULADA 30X12</desc>
+<codigo>
+<ean>4004575277436</ean>
+<precio>1790</precio>
+</codigo>
+</producto>
+<producto><desc>CADENA LAMPARA AZUL 20X10X50MM</desc>
+<codigo>
+<ean>4004575277337</ean>
+<precio>1040</precio>
+</codigo>
+</producto>
+<producto><desc>CADENA BOLITA CROMADA 3.6MM</desc>
+<codigo>
+<ean>4004575277153</ean>
+<precio>2030</precio>
+</codigo>
+</producto>
+<producto><desc>CADENA APRETADA NIQ. 10X7MM</desc>
+<codigo>
+<ean>4004575277207</ean>
+<precio>1320</precio>
+</codigo>
+</producto>
+<producto><desc>CADENA ADORN NIQ.7.2X5.6X1.2</desc>
+<codigo>
+<ean>4004575277252</ean>
+<precio>1520</precio>
+</codigo>
+</producto>
+<producto><desc>CADENA ADORN.LATON 7.3X5.6X1.2</desc>
+<codigo>
+<ean>4004575277269</ean>
+<precio>1520</precio>
+</codigo>
+</producto>
+<producto><desc>*CADENA BRONCE HS 68CM</desc>
+<codigo>
+<ean>2050000480713</ean>
+<precio>5490</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 114602  => crea instancia soap_server .....wspoccp_os
+20122007 114602  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>L TITAN</texto>
+</req>
+20122007 114602  => busqueda_prec : Se verifica local ->E502
+20122007 114602  => busqueda_prec : Trae codigos ean para producto descripcion->L TITAN
+20122007 114602  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>APLIQUE 1L TITANIO V/TRANSPARENTE  ARADO</desc>
+<codigo>
+<ean>7807332232795</ean>
+<precio>5390</precio>
+</codigo>
+</producto>
+<producto><desc>APLIQUE 1L TITANIO V/ARENADO OPAL ARADO</desc>
+<codigo>
+<ean>7807332232696</ean>
+<precio>5390</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 114619  => crea instancia soap_server .....wspoccp_os
+20122007 114619  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>CEM</texto>
+</req>
+20122007 114619  => busqueda_prec : Se verifica local ->E502
+20122007 114619  => busqueda_prec : Trae codigos ean para producto descripcion->CEM
+20122007 114619  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>BASE P/QUITASOL CEMENTO 45X38CM, VERDE</desc>
+<codigo>
+<ean>3267078415601</ean>
+<precio>11990</precio>
+</codigo>
+</producto>
+<producto><desc>BASE P/QUITASOL CEMENTO 45X38CM, NATURAL</desc>
+<codigo>
+<ean>3267078015603</ean>
+<precio>11990</precio>
+</codigo>
+</producto>
+<producto><desc>BAJADA PVC CEMENTAR, BLANCO</desc>
+<codigo>
+<ean>7805502005477</ean>
+<precio>2820</precio>
+</codigo>
+</producto>
+<producto><desc>BAJADA PVC CEMENTAR, BLANCO</desc>
+<codigo>
+<ean>7805502000540</ean>
+<precio>2820</precio>
+</codigo>
+</producto>
+<producto><desc>BAJADA PVC CEMENTAR, ARENA</desc>
+<codigo>
+<ean>7805502105429</ean>
+<precio>3284</precio>
+</codigo>
+</producto>
+<producto><desc>BAJADA PVC CEMENTAR, MARRON</desc>
+<codigo>
+<ean>7805502205488</ean>
+<precio>2409</precio>
+</codigo>
+</producto>
+<producto><desc>ADHESIVO CEMENT EXTRA FUERTE 5KG</desc>
+<codigo>
+<ean>7805295000383</ean>
+<precio>2060</precio>
+</codigo>
+</producto>
+<producto><desc>ADHESIVO CEMENT EXTRA FUERTE 5KG</desc>
+<codigo>
+<ean>7807576610052</ean>
+<precio>2060</precio>
+</codigo>
+</producto>
+<producto><desc>ADHESIVO CEMENT EXTRA FUERTE 5KG</desc>
+<codigo>
+<ean>2082000827748</ean>
+<precio>2060</precio>
+</codigo>
+</producto>
+<producto><desc>FLANGE VOLANTE 200MMX8" CEM 38318*</desc>
+<codigo>
+<ean>2050000101861</ean>
+<precio>14861</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 114702  => crea instancia soap_server .....wspoccp_os
+20122007 114702  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>MALLA</texto>
+</req>
+20122007 114702  => busqueda_prec : Se verifica local ->E502
+20122007 114702  => busqueda_prec : Trae codigos ean para producto descripcion->MALLA
+20122007 114702  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>BROCHE MALLA SOMBRA 25UNID</desc>
+<codigo>
+<ean>2000000904559</ean>
+<precio>1290</precio>
+</codigo>
+</producto>
+<producto><desc>BROCHE MALLA SOMBRA 25UN</desc>
+<codigo>
+<ean>2082000961039</ean>
+<precio>790</precio>
+</codigo>
+</producto>
+<producto><desc>BROCHE BISAGRA P/MALLA SOMBRA 25UNID</desc>
+<codigo>
+<ean>2000000906645</ean>
+<precio>1090</precio>
+</codigo>
+</producto>
+<producto><desc>BOLSO MOCHILA C/MALLA COLORES</desc>
+<codigo>
+<ean>7805329614975</ean>
+<precio>490</precio>
+</codigo>
+</producto>
+<producto><desc>BANDEJA ENTRA-SALIDA MALLA METAL B80098</desc>
+<codigo>
+<ean>28783</ean>
+<precio>1290</precio>
+</codigo>
+</producto>
+<producto><desc>BANDEJA ENTRA-SALIDA MALLA METAL B80098</desc>
+<codigo>
+<ean>27991</ean>
+<precio>1290</precio>
+</codigo>
+</producto>
+<producto><desc>BANDEJA ENTRA-SALIDA MALLA METAL B80098</desc>
+<codigo>
+<ean>2082000722180</ean>
+<precio>1290</precio>
+</codigo>
+</producto>
+<producto><desc>A PE ARTISTIC MALLA 4.8 X 4.8 SET 3 UN</desc>
+<codigo>
+<ean>7809560719796</ean>
+<precio>16000</precio>
+</codigo>
+</producto>
+<producto><desc>A PE ARTISTIC MALLA 4.8 X 30  SET 3 UN</desc>
+<codigo>
+<ean>7809560719789</ean>
+<precio>10600</precio>
+</codigo>
+</producto>
+<producto><desc>ACCESORIO MALLA GLOBO P/ESTUFAS STANDARD</desc>
+<codigo>
+<ean>7805901000141</ean>
+<precio>1990</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 160820  => crea instancia soap_server .....wspoccp_os
+20122007 160820  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>16020873</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000420</precio>
+    <cantidad>00000200.00</cantidad>
+    <ean>0033849374759</ean>
+  </detalle>
+  <detalle>
+    <precio>00000420</precio>
+    <cantidad>00000200.00</cantidad>
+    <ean>0033849374759</ean>
+  </detalle>
+</req>
+20122007 160820  => Graba_OS : Existe Local y rut
+20122007 160820  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 160820  => Graba_OS : Se verifica local ->42
+20122007 160820  => Verifica_rut -> Largo de rut correcto 8
+20122007 160820  => Graba_OS : Se verifica Rut, rut correcto ->16020873
+20122007 160820  => verifica_cliente -> No existe cliente rut 16020873 Se debe ingresar al sistema
+20122007 160820  => verifica_cliente ->Se agrego satisfactoriamente el rut 16020873 en tabla clientes CPE
+20122007 160820  => Graba_OS : Se obtiene Rut Cliente ->16020873
+20122007 160820  => busca_direccion -> No existe direccion para el rut  16020873
+20122007 160820  => inserta_nueva_direccion -> Inserta direccion para el rut  16020873
+20122007 160820  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42524  
+20122007 160820  => ERROR(20) : <?xml version="1.0"?><resp><os>42524</os>
+		<estado>0</estado>
+		<desc>20-No es posible insertar el producto =0033849374759 en el detalle de la OS 42524</desc></resp>
+20122007 172616  => crea instancia soap_server .....wspoccp_os
+20122007 172616  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+20122007 172616  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+20122007 172617  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+20122007 172617  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+20122007 172617  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+20122007 173221  => crea instancia soap_server .....wspoccp_os
+20122007 173221  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+20122007 173221  => busqueda_prec : Se verifica local ->E502
+20122007 173222  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+20122007 173222  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 173253  => crea instancia soap_server .....wspoccp_os
+20122007 173253  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA MEC</texto>
+</req>
+20122007 173253  => busqueda_prec : Se verifica local ->E502
+20122007 173253  => busqueda_prec : Trae codigos ean para producto descripcion->PALA MEC
+20122007 173253  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 173343  => crea instancia soap_server .....wspoccp_os
+20122007 173343  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+20122007 173343  => busqueda_prec : Se verifica local ->E502
+20122007 173343  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+20122007 173343  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+20122007 173420  => crea instancia soap_server .....wspoccp_os
+20122007 173420  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+20122007 173420  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+20122007 173420  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+20122007 173420  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+20122007 173420  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+20122007 173451  => crea instancia soap_server .....wspoccp_os
+20122007 173451  => Cons_SAP Ingresa XML -><req>
+  <sap>102880</sap>
+</req>
+20122007 173451  => Cons_SAP : el numero sap buscado cumple con los parametros->102880
+20122007 173451  => Cons_SAP : Trae codigos ean para producto SAP ->102880
+20122007 173451  => Cons_SAP : Trae codigos ean -><ean>7805560001084</ean>
+<ean>2082000031190</ean>
+20122007 173451  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>7805560001084</ean>
+<ean>2082000031190</ean>
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+20122007 175425  => crea instancia soap_server .....wspoccp_os
+20122007 175425  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004100</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0033849374759</ean>
+  </detalle>
+  <detalle>
+    <precio>00004100</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0033849374759</ean>
+  </detalle>
+</req>
+20122007 175425  => Graba_OS : Existe Local y rut
+20122007 175425  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 175425  => Graba_OS : Se verifica local ->42
+20122007 175425  => Verifica_rut -> Largo de rut correcto 8
+20122007 175425  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 175425  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 175425  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 175425  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 175425  => busca_direccion -> No existe direccion para el rut  13924695
+20122007 175425  => inserta_nueva_direccion -> Inserta direccion para el rut  13924695
+20122007 175425  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42525  
+20122007 175425  => ERROR(20) : <?xml version="1.0"?><resp><os>42525</os>
+		<estado>0</estado>
+		<desc>20-No es posible insertar el producto =0033849374759 en el detalle de la OS 42525</desc></resp>
+20122007 180738  => crea instancia soap_server .....wspoccp_os
+20122007 180738  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+  <detalle>
+    <precio>00004692</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0000001193930</ean>
+  </detalle>
+</req>
+20122007 180738  => Graba_OS : Existe Local y rut
+20122007 180738  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 180738  => Graba_OS : Se verifica local ->42
+20122007 180738  => Verifica_rut -> Largo de rut correcto 8
+20122007 180738  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 180738  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 180738  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 180738  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 180738  => Graba_OS :No se verifica ean ->0000001193930 en CPE 
+20122007 180738  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001193930 en CPE </desc></resp>
+20122007 180948  => crea instancia soap_server .....wspoccp_os
+20122007 180948  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13924695</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000499</precio>
+    <cantidad>00000001.00</cantidad>
+    <ean>0000000000024</ean>
+  </detalle>
+</req>
+20122007 180948  => Graba_OS : Existe Local y rut
+20122007 180948  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+20122007 180948  => Graba_OS : Se verifica local ->42
+20122007 180948  => Verifica_rut -> Largo de rut correcto 8
+20122007 180948  => Graba_OS : Se verifica Rut, rut correcto ->13924695
+20122007 180948  => verifica_cliente -> No existe cliente rut 13924695 Se debe ingresar al sistema
+20122007 180948  => verifica_cliente ->Se agrego satisfactoriamente el rut 13924695 en tabla clientes CPE
+20122007 180948  => Graba_OS : Se obtiene Rut Cliente ->13924695
+20122007 180948  => Graba_OS :No se verifica ean ->0000000000024 en CPE 
+20122007 180948  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000000000024 en CPE </desc></resp>

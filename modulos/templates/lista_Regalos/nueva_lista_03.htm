@@ -1,0 +1,259 @@
+<link rel="stylesheet" href="menu/menu.css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="javascript" src="../../includes/popup.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript" src="../../includes/ajax.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></script>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</script>
+
+<script language="javascript">
+<!--
+var cal1 = new CalendarPopup("testdiv1");	//Se asigna la respuesta a la ventana actual
+cal1.offsetX = -77;										
+cal1.offsetY = +20;
+
+function validar_form(){
+	if(document.nueva_lista_03.festejado.value == '')
+	{
+		alert('La Lista de Regalos no tiene festejado(s).');
+		return false;
+	}
+	if(document.nueva_lista_03.fecha_event.value == '')
+	{
+		alert('La Lista de Regalos no tiene asignada Fecha del evento.');
+		return false;
+	}
+	if(document.nueva_lista_03.idDireccion.value == '')
+	{
+		alert('La Lista de regalos no tiene direccion de Depaccho.');
+		return false;
+	}
+	if(document.nueva_lista_03.carga_List.value == '')
+	{
+		alert('\tLa Lista de regalos no contiene Productos. \n Por favor cargue los Productos para esta Lista de Regalos');
+		return false;
+	}
+	if(document.nueva_lista_03.carga_List.value != '')
+	{
+		archivo = document.nueva_lista_03.carga_List.value;
+		extension = (archivo.substring(archivo.lastIndexOf("."))).toLowerCase();
+		if(extension != '.txt'){	
+			alert("No se pueden cargar archivos de Productos \n        con extencion diferente a '.txt'");
+			return false;
+		}
+	}
+	
+document.nueva_lista_03.accion.value='guardar';
+document.nueva_lista_03.submit();	
+}
+
+function nuevo_evento(){
+	if (popUpWindowMod('nuevo_event.php?clie_rut={clie_rut}', 100, 100, 350, 200)=='refresh')
+		window.location.reload();
+
+	else
+		document.nueva_lista_03.select_evento.selectedIndex=0;
+}
+
+function validar_libreta(){
+	libreta = nueva_lista_03.clie_rut.value;
+	popUpWindowMod('libreta2.php?clie_rut='+libreta+'&accion=editar&idLista={idLista}', 100, 100, 570, 350);
+}
+	
+function selec_dire(){	
+	rescatado=nueva_lista_03.select_direcciones.options[nueva_lista_03.select_direcciones.selectedIndex].value;	
+	document.nueva_lista_03.idDireccion.value=nueva_lista_03.select_direcciones.options[nueva_lista_03.select_direcciones.selectedIndex].value;
+	document.nueva_lista_03.act_Dir.value='act_Dir';
+	document.nueva_lista_03.submit();		
+}
+
+function Accion_flecha_ant(){
+	location.href='nueva_lista_02.php?clie_rut={clie_rut}&clie_tipo=p';
+}
+
+function cargaProd(){
+	w = new ActiveXObject("WScript.Shell");
+	w.run('CS1504Mgr.exe');
+}
+//-->
+</script>
+
+<table width="780" height="20" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">Paso 4/5 - {TEXT_TITULO}</td>
+    <td width="390" class="titulonormal">
+      <table  border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="../img/1a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/2a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/3a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/4b.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/5a.gif" width="40" height="40"></td>
+        </tr>
+      </table>
+	</td>
+  </tr>
+</table>
+
+
+<FORM NAME="nueva_lista_03" METHOD="POST" enctype="multipart/form-data" ACTION="nueva_lista_03.php">
+<input type="hidden" name="idLista" value="{idLista}"/>
+<input type="hidden" name="act_Dir" value=""/>
+<input type="hidden" name="accion" value=""/>
+<input type="hidden" name="idDireccion" value="{idDireccion}"/>
+<input type="hidden" name="clie_rut" value="{clie_rut}"/>
+<table width="850">
+<tr>
+	<td class="titulonormal">{TEXT_CAMPO_18} {idLista}</td>
+</tr>
+<tr>
+	<td>
+		<fieldset class="textoespecial1">
+			<legend class="subtitulonormal">Datos de Entrega de Regalos</legend>					
+              <table style="width: 100%" class="textonormal" border="0" cellspacing="2">
+                <tr>
+                  <td height="10" colspan="4"></td>
+                </tr>
+                <tr>
+                  <td>{TEXT_CAMPO_10}</td>
+                  <td colspan="3" class="userinput">
+					<select name="select_direcciones" onChange="selec_dire(this.form)" >
+				     <option title="Seleccione la Direccion de Entrega" disabled="disabled" value="">Seleccione la Direccion de Entrega</option>
+				    <!-- BEGIN Direcciones -->
+				      <option value="{id_direccion}" {selected}>{dire_nombre}&nbsp;({dire_direcciond},&nbsp;{comu_nombred})</option>
+				    <!-- END Direcciones -->                        
+					</select>
+                    <input type="button" name="BotonEd" id="BotonEd" value="Editar" onClick="validar_libreta();">
+                  </td>
+                </tr>
+                                      
+                <tr>
+                  <td width="120">{TEXT_CAMPO_6}</td>
+                  <td width="245" class="userinput">{nom_direccion}</td>
+                  <td width="106">{TEXT_CAMPO_15}</td>
+                  <td width="251" class="userinput">{departamento}</td>
+                </tr>
+                <tr>
+                  <td>{TEXT_CAMPO_7}</td>
+                  <td class="userinput">{dire_direccion_des}</td>
+                  <td>{TEXT_CAMPO_16}</td>
+                  <td class="userinput">{ciudad}</td>
+                </tr>
+                <tr>
+                  <td>{TEXT_CAMPO_14}</td>
+				  <td  colspan="0" class="userinput">{dire_observacion_des}</td>
+				  <td>{TEXT_CAMPO_8}</td>
+                  <td class="userinput">{comu_nombre_des}</td>
+                </tr>
+              </table>
+            </fieldset>
+          </td>
+  </tr>
+  
+  <tr>
+	<td>	
+	  <table style="width: 100%" align="center">
+  		<tr>
+    	  <td>	
+			<table style="width: 100%" align="center">
+		  		<tr>
+		    		<td>
+					<fieldset class="textoespecial1">
+					<legend class="subtitulonormal">Datos del Evento</legend>					
+		              <table style="width: 100%" class="textonormal">
+		                <tr>
+		                  <td width="150">
+		                    {TEXT_CAMPO_1}
+		                    <select name="select_evento" onChange="if(this.value==0) nuevo_evento();" onClick="if(this.length==1) nuevo_evento();" class="userinput">
+							<!-- BEGIN Eventos -->
+							  <option value="{idEvento}" {selected}>{nombre}</option>
+							<!-- END Eventos -->							
+							  <option value="0" >{TEXT_CAMPO_2}</option>
+		                    </select> 
+						  </td>
+						  <td width="150">
+					        {TEXT_CAMPO_4}
+							<textarea name="festejado" id="festejado" cols="30" rows="2" onkeyup="Upper(this)">{festejado}</textarea>
+						  </td>
+						  <td width="150">
+						    {TEXT_CAMPO_3}
+							<a href="#" onclick="cal1.select(document.forms[0].fecha_event,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1">
+							  <img src="../img/cal.gif" width="16" height="16" border="0" title="Fecha de Evento">
+							</a>
+							<input name="fecha_event" id="fecha_event" type="text" size="10" maxlength="12" value="{fecha_event}" onclick="cal1.select(document.forms[0].fecha_event,'anchor1','dd/MM/yyyy'); return false;" readonly="readonly"/>
+						  </td>
+					    </tr>
+		             </table>
+		           </fieldset>
+			     </td>
+		       </tr>
+		     </table>
+			</td>
+      	</tr>
+      </table>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <table style="width: 100%" align="center">
+        <tr>
+          <td>
+            <fieldset class="textoespecial1">
+			<legend class="subtitulonormal">Carga de Productos</legend>					
+              <table style="width: 100%" class="textonormal" border="0" cellspacing="2">
+                <tr>
+                  <td height="10"></td>
+                </tr>
+                <tr>
+                  <td width="100">
+                    {TEXT_CAMPO_17}
+                  </td>
+                  <td>
+                    <input type="file" name="add_List" onclick="cargaProd()" onchange='document.getElementById("carga_List").value=this.value' />
+                    <input type="hidden" name="carga_List" id="carga_List" /> 
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </td>
+        </tr>
+      </table>
+    <td>
+  </tr>
+  
+  <tr>
+  </tr>
+    <td>
+    	<div style="width: 850; height: 50;"></div>
+    </td>
+   <tr>
+   		<td>
+   		
+        </td>
+     </tr>
+</table>             		
+</FORM>
+
+<table width="219" height="23" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+	<tr>
+		<td width="33">
+			<a onClick="Accion_flecha_ant();"><img src="../img/anterior.gif" alt="prueba" width="23" height="23" border="0" title="Anterior"/></a></td>
+		<td width="59">Anterior</td>
+		<td width="70">
+		<div align="right">Siguiente </div></td>
+		<td width="31">
+			<a onclick="validar_form()"><img src="../img/siguiente.gif" alt="prueba" width="23" height="23" border="0" title="Siguiente"/></a></td>
+	</tr>
+</table>
+                  		
+<DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+
+<script LANGUAGE="javascript">
+	window.document.nueva_lista_03.festejado.onkeypress = KeyIsAlfaNumeric;
+	window.document.nueva_lista_03.select_evento.focus();
+</script>

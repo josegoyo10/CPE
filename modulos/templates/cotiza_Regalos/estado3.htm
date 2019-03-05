@@ -1,0 +1,97 @@
+
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+
+<link href="../nueva_cotizacion/estilos.css" rel="stylesheet" type="text/css">
+
+
+
+	<SCRIPT language="javascript" type="text/javascript">
+	
+	function nombre(){
+	window.name="estado3";
+	}
+	
+	function cerrar() {
+	window.close();
+	}
+			
+	function validar_form(){
+		
+		if( validar_obligatorio(estado.os_codbarras, "Código de Barras es obligatorio" ))
+		return false;
+			
+		var os_codbarras = document.estado.os_codbarras.value;	
+		os_codbarras = os_codbarras.substr(0,32);	
+	location.href='estado3.php?id_estado={id_estado}&id_os={id_os}&clie_rut={clie_rut}&id_proyecto={id_proyecto}&accion=visualizar&os_codbarras=' + os_codbarras;
+	}
+	
+	
+	</SCRIPT>
+
+<body onLoad="setTimeout('cerrar()',120*1000)">
+
+
+<table width="276" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="276" class="titulonormal">Cambio de Estado Cotizaci&oacute;n -&gt; Pagada</td>
+  </tr>
+</table>
+<FORM NAME="estado" METHOD="POST"  ACTION="estado3.php" onSubmit="" >
+<input type="hidden" name="clie_rut" value="{clie_rut}">
+<input type="hidden" name="id_os" value="{id_os}">
+<input type="hidden" name="id_estado" value="{id_estado}">
+<input type="hidden" name="accion" value="visualizar">
+
+<table width="275" border="0" cellspacing="0" cellpadding="0" >
+  <tr>
+    <td width="275" height="122" valign="top">      
+	<table width="448"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+        <tr>
+          <td width="103">N&deg; Cotizaci&oacute;n</td>
+          <td width="263"><span class="userinput">{id_os}</span></td>
+        </tr>
+        <tr>
+          <td>Estado Actual </td>
+          <td class="userinput" value="p" >{esta_nombre}</td>
+        </tr>
+        <tr>
+          <td>Nuevo Estado </td>
+          <td class="userinput" value="p" >Cotización Pagada</td>
+        </tr>
+        <tr>
+          <td>C&oacute;digo de Barras &nbsp;(*) </td>
+          <td class="userinput">
+		  <input name="os_codbarras" type="file" id="os_codbarras" size="40"  maxlength="41" onclick="return false;" ></td>
+		  
+        </tr>
+		
+		
+        <tr align="center">
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr align="center">
+          <td colspan="2"><input type="button" name="Button" value="Visualizar" ONCLICK="validar_form()"> 
+          <input type="button" name="Button" value="Cancelar" onClick="window.returnValue = 'none'; window.close();"></td>
+        </tr>
+	  </table>  
+	
+    <div align="center"  id="layer" style="position:absolute; left:338px; top:110px; z-index:1; width: 124px;">
+	    <div align="left"><img src="../templates/img/img_13.JPG" width="126" height="30" ></div>
+  	</div>
+  
+    </form>
+	<script LANGUAGE="javascript">
+		campo = document.getElementById('os_codbarras');	
+		campo.focus();
+		window.document.estado.os_codbarras.onkeypress = KeyIsBoleta;		
+	</script>
+	<p><table width="450"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal"><tr><td width="219">(*) Datos obligatorios.</td></tr></table>
+	
+	</p></td>
+  </tr>
+</table>
+
+</body>
+</html>

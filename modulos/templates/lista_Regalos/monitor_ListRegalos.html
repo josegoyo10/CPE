@@ -1,0 +1,416 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="../estilos.css"></link>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="javascript" src="../../includes/popup.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function selecCliente(){
+		popUpWindow('../seleccionar_cliente/seleccionar_vendedor.php', 100, 100, 710, 500);
+}
+
+function validaAnl(idLista){
+	if(confirm('¿Está seguro que desea Anular la Lista de Regalos número ' + idLista + '?')) {
+		popUpWindow('./valida_subAdmin.php?accion=Anl&idLista='+idLista+'&clie_rut=List', 100, 100, 300, 200);
+	}
+}
+
+<!--- Inicia Seleccion Todos los CheckBox
+var checkflag = "false";
+function check(field) {
+	if (checkflag == "false") {
+		for (i = 0; i < field.length; i++) {
+			field[i].checked = true;
+			}
+		checkflag = "true";
+		return "Uncheck All"; 
+		}
+	else {
+	for (i = 0; i < field.length; i++) {
+		field[i].checked = false; 
+		}
+	checkflag = "false";
+	return "Check All"; 
+	}
+}
+// Finaliza seleccion -->
+
+function selectedCheck(){
+	var checkboxes = document.getElementById("monitorCheck").lista;
+	var cadena='';
+	for (var x=0; x < checkboxes.length; x++) {
+		if (checkboxes[x].checked){
+			valor = checkboxes[x].value;
+			if(x < checkboxes.length)
+				cadena = cadena + valor  + ',';	
+			else
+				cadena = cadena + valor ;		
+		}
+	}
+
+	var longitud= cadena.length;
+	var cadena2 = '';
+    cadena2 = cadena.substring(0,longitud-1);
+	
+	return(cadena2);
+}
+
+<!--- Funcion obtiene Reporte de Compras de las Listas seleccionadas -->
+function reporteCompra(Listas){
+	if (Listas != 0 && Listas != ''){
+		location.href='../rep_Compras/reporteCompras.php?idLista='+Listas+'';
+	}else{
+		alert('Debe seleccionar por lo menos una Lista de Regalos\n           para obtener el Reporte de Compras');
+	}
+}
+<!--- Fin de impresion de Guias de despacho seleccionadas -->
+//-->
+</SCRIPT>
+</head>
+<body>
+<table style="width:780; height:30;" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="width:390;" class="titulonormal">{SUBTITULO1}</td>
+    <td style="width:390;" class="titulonormal"></td>
+  </tr>
+</table>
+
+<table style="width:780; height:auto;" border="0" cellpadding="0" cellspacing="0" class="textonormal">
+<tr><td>
+<table style=" width: 72%;" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+       <td style="width:5cm;">
+		  <table border="0" align="right" cellpadding="0" cellspacing="0" class="textonormal">
+            <tr>
+              <td>
+              <form NAME="form_search1" METHOD="POST" ACTION="monitor_ListRegalos.php">
+                <input type="hidden" name="accion" value="search"></input>
+                <input type="hidden" name="select_estado" value="{select_estado}"></input>
+                <input type="hidden" name="select_local" value="{select_local}"></input>
+                <input type="hidden" name="select_evento" value="{select_evento}"></input>
+                <input type="hidden" name="bus_List" value="{bus_List}"></input>
+                <input type="hidden" name="select_fecha" value="{select_fecha}"></input>
+                
+		        <fieldset style=" width: 180; height: 50;">
+                <legend>{TEXT_CAMPO_3}</legend>
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><span class="userinput">
+                       <select name="select_estado">
+                          <option value="0">Todos</option>
+                          <!-- BEGIN Estados -->
+                          <option value="{id_estado}" {selected}>{estado}</option>
+                          <!-- END Estados -->
+                       </select>
+                       </span>&nbsp;<input type="submit" value="Filtrar"></input>
+                     </td>
+			         
+			   	  </tr>
+                </table>
+                </fieldset>
+                </form>
+		        </td>
+			 </tr>
+			</table>
+		</td>
+		<td style="width:8cm;">
+		  <table border="0" align="center" cellpadding="0" cellspacing="0" class="textonormal">
+            <tr>
+              <td>
+			    <form NAME="form_search2" METHOD="POST" ACTION="monitor_ListRegalos.php">
+		    	<input type="hidden" name="accion" value="search"></input>
+                <input type="hidden" name="select_estado" value="{select_estado}"></input>
+                <input type="hidden" name="select_local" value="{select_local}"></input>
+		        <input type="hidden" name="bus_List" value="{bus_List}"></input>
+		        <input type="hidden" name="select_evento" value="{select_evento}"><fieldset>
+		        <input type="hidden" name="select_fecha" value="{select_fecha}"></input>
+		        
+                <legend>{TEXT_CAMPO_9}</legend>
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><span class="userinput">
+                      <select name="select_local">
+						<option value="0">Todos</option>
+						<!-- BEGIN Locales -->
+                            <option value="{id_local}" {selected}>{nom_local}</option>
+                            <!-- END Locales -->
+                            </select>
+                            </span>&nbsp;<input type="submit" value="Filtrar"></input>
+			        </td>
+                  </tr>
+                </table>
+              </fieldset>
+            </form>
+          </td>
+        <tr>
+	  </table>
+	  </td>
+	  <td style="width:5cm;">
+	  	<table border="0" align="right" cellpadding="0" cellspacing="0" class="textonormal">
+            <tr>
+              <td>
+              <form NAME="form_search4" METHOD="POST" ACTION="monitor_ListRegalos.php">
+                <input type="hidden" name="accion" value="search"></input>
+                <input type="hidden" name="select_estado" value="{select_estado}"></input>
+                <input type="hidden" name="select_local" value="{select_local}"></input>
+                <input type="hidden" name="select_evento" value="{select_evento}"></input>
+                <input type="hidden" name="bus_List" value="{bus_List}"></input>
+                
+		        <fieldset style=" width: 180; height: 50;">
+                <legend>{TEXT_CAMPO_7}</legend>
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><span class="userinput">
+                       <select name="select_evento">
+                         {todosEv}
+                          <!-- BEGIN Eventos -->
+                          <option value="{idEvento}" {selected}>{nombre}</option>
+                          <!-- END Eventos -->
+                       </select>
+                       </span>&nbsp;<input type="submit" value="Filtrar"></input>
+                     </td>
+			         
+			   	  </tr>
+                </table>
+                </fieldset>
+                </form>
+		        </td>
+			 </tr>
+			</table>
+	  </td> 
+  </tr>
+  <tr>
+    <td style="width:5cm;">
+      <table border="0" align="right" cellpadding="0" cellspacing="0" class="textonormal">
+        <tr>
+          <td>
+            <form name="vendedor" METHOD="POST" ACTION="monitor_ListRegalos.php">
+		 	<input type="hidden" name="accion" value="search">
+			<input type="hidden" name="select_estado" value="{select_estado}"/>
+        	<input type="hidden" name="select_local" value="{select_local}"/>
+			<input type="hidden" name="bus_List" value="{bus_List}"/>
+			<input type="hidden" name="select_evento" value="{select_evento}"></input>
+			<input type="hidden" name="select_fecha" value="{select_fecha}"></input>
+			
+            <fieldset style=" width: 180; height: 60;">
+			<legend>{TEXT_CAMPO_10}</legend>
+			  <table border="0" cellspacing="0" cellpadding="0">
+			    <tr>
+				  <td><span class="userinput">
+				    <input name="clien" id="clien" type="text" size="12" maxlength="135" value="{clien}" style="width: 155px" disabled="disabled"/>
+  					<input type="button" name="Button" value="Selec.Vendedor" onclick="selecCliente()"/>
+					<input type="submit" value="Filtrar"></input>
+					<input name="rut"  value="{rut}" type="hidden" size="12" maxlength="135" style="width: 38px"/>
+				  </span></td>
+				</tr>
+			  </table>
+			  </fieldset>
+		    </form>
+		  </td>
+		</tr>
+      </table>
+    </td>
+    <td style="width:15cm; height: 2cm;">
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="textonormal">
+        <tr>
+          <td>
+            <form NAME="form_search3" METHOD="POST" ACTION="monitor_ListRegalos.php">
+            <input type="hidden" name="accion" value="search"></input>
+            <input type="hidden" name="select_estado" value="{select_estado}"></input>
+            <input type="hidden" name="select_local" value="{select_local}"></input>
+            <input type="hidden" name="select_evento" value="{select_evento}"></input>
+            <input type="hidden" name="bus_List" value="{bus_List}"></input>
+            <input type="hidden" name="select_fecha" value="{select_fecha}"></input>
+            
+            <fieldset style=" width: 250; height: 50;">
+            <legend>{TEXT_CAMPO_15} </legend>
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="100%"><span class="userinput">
+                    <input name="rad_selec" value='1' type="radio" {checkr1} />Lista
+                    <input name="rad_selec" value='2' type="radio" {checkr2} />Nombre
+                    <input name="rad_selec" value='3' type="radio" {checkr3} />Apellido
+                    <input name="rad_selec" value='4' type="radio" {checkr4} />Cédula
+                  </span></td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                <td><span class="userinput">
+                  <input name="bus_List" value='{bus_List}' type="text" size="20" maxlength='40'></input>
+                  </span>
+                  <input type="submit" value="Filtrar"></input>
+                </td>
+                </tr>
+                </table>
+              </fieldset>
+            </form>   
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>
+	  <table border="0" align="left" cellpadding="0" cellspacing="4" class="textonormal">
+            <tr>
+              <td>
+              <form NAME="fec_Evento" METHOD="POST" ACTION="monitor_ListRegalos.php">
+                <input type="hidden" name="accion" value="search"></input>
+                <input type="hidden" name="select_estado" value="{select_estado}"></input>
+                <input type="hidden" name="select_local" value="{select_local}"></input>
+                <input type="hidden" name="select_evento" value="{select_evento}"></input>
+                <input type="hidden" name="select_fecha" value="{select_fecha}"></input>
+                <input type="hidden" name="bus_List" value="{bus_List}"></input>
+		        
+				        <fieldset style=" width: 180; height: 50;">
+                <legend>{TEXT_CAMPO_16}</legend>
+                <table  border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><span class="userinput">
+                       <select name="select_fecha">
+                          {todasFec}
+                          <!-- BEGIN Fec_entrega -->
+                          <option value="{fec_Evento}" {selected}>{fecha}</option>
+                          <!-- END Fec_entrega -->
+                       </select>
+                     </span><input type="submit" value="Filtrar"></input></td>     
+			   	  </tr>
+                </table>
+              </fieldset>
+              </form>
+		    </td>
+	     </tr>
+	  </table>
+</td></tr>
+</table>
+
+<table BORDER="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td >
+          <table align="center" style="width:780;" border="0" bordercolor="#000000"  cellpadding="0" cellspacing="0" class="tabla2">
+             <tr>
+                <th style="width:5;" align="center">
+                  <div style="width: 20">&nbsp;</div>
+                </th>
+                <th style="width:40;" align="center">{TEXT_CAMPO_1} <a href="monitor_ListRegalos.php?filtro=Listas&orden={orden}&select_estado={select_estado}&select_local={select_local}&bus_List={bus_List}&select_fecha={select_fecha}&select_evento={select_evento}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+                <th style="width:80;" align="center">{TEXT_CAMPO_2}</th>
+                <th style="width:50;" align="center">{TEXT_CAMPO_4}</th>
+                <th style="width:70;" align="center">{TEXT_CAMPO_7}</th>
+                <th style="width:70;" align="center">{TEXT_CAMPO_13}</th>
+                <th style="width:70;" align="center">{TEXT_CAMPO_12}</th>            
+                <th style="width:70;" align="center">{TEXT_CAMPO_14}</th>
+                <th style="width:170;" align="center">{TEXT_CAMPO_5}</th>
+                <th style="width:70;" align="center">{TEXT_CAMPO_6}</th>             
+                <th style="width:10;" align="center">{TEXT_CAMPO_3}</th>
+                <th style="width:50;" align="center">{TEXT_CAMPO_8}</th>
+             </tr>
+		  </table>
+		</td>
+	 </tr>
+	 <tr>
+		<td>
+		  <table align="center" style="width:780;" border="0" cellpadding="0" cellspacing="0" class="tabla2">
+            <FORM id="monitorCheck" NAME="monitor" METHOD="POST" ACTION="monitor_ListaRegalos.php" onSubmit="">
+             <!-- BEGIN Modulos -->
+             <tr>
+             	<td style="width:1; height:20;" align="left" class="tabla_th">
+				 <input type="checkbox" name="lista" id="{idLista}" value="{idLista}" >
+				</td>
+                <td style="width:40; height:20; {DiasEvent}" align="center" class="tabla_th">{idLista}</td>
+                <td style="width:80; height:20; {DiasEvent}" align="center">{fec_creacion}</td>
+                <td style="width:50; height:20; {DiasEvent}" align="center">{local}</td>
+                <td style="width:70; height:20; {DiasEvent}" align="center">{evento}</td>
+                <td style="width:70; height:20; {DiasEvent}" align="left">{festejado}</td>
+                <td style="width:70; height:20; {DiasEvent}" align="center">{fec_entrega}</td>            
+                <td style="width:70; height:20;{DiasEvent}" align="center">{clie_rut}</td>
+                <td style="width:170; height:20; {DiasEvent}" align="left">{cliente}</td>
+                <td style="width:70; height:20; {DiasEvent}" align="center">{telefono}</td>             
+                <td style="width:10; height:20; {DiasEvent}" align="center">{estado}</td>
+                <td style="width:50; height:20; {DiasEvent}" align="center">
+				  <a href="nueva_lista_sumario_01.php?idLista={idLista}">Ver</a>
+				  {accion}
+				</td>
+             </tr>
+             <!-- END Modulos -->
+        	 <tr>
+				<th>
+					<input type="checkbox" id="SLT_ALL" name="SLT_ALL" value="Check All" onClick="this.value=check(this.form.lista)">
+				</th>
+				<th colspan="3">&nbsp; Seleccione Todas las Listas.</th>
+				<th colspan="3">&nbsp;</th>
+				<th colspan="2">&nbsp;</th>
+				<th colspan="3" align="right">
+				  <input type="button" value="Reporte de Compras" onclick="reporteCompra(selectedCheck())"></input>
+			    </th>
+			</tr>
+		  </table>
+		  </td>
+		  </tr>
+		</table>
+	  </td>
+      </tr>
+    </table>
+    </FORM>
+  </td>
+</tr>
+
+<tr>
+  <td>
+	<!--paginacion-->
+	<form NAME="form_paginas" METHOD="POST" ACTION="monitor_ListRegalos.php">
+	<input type="hidden" name="select_estado" value="{select_estado}">
+	<input type="hidden" name="select_local" value="{select_local}">
+	<input type="hidden" name="checkr1" value="{checkr1}">
+	<input type="hidden" name="checkr2" value="{checkr2}">
+	<input type="hidden" name="checkr3" value="{checkr3}">
+	<input type="hidden" name="rad_selec" value="{rad_selec}">
+	<input type="hidden" name="rut" value="{rut}">
+	<input type="hidden" name="bus_rut" value="{bus_rut}">
+	<input type="hidden" name="bus_List" value="{bus_List}">
+	<input type="hidden" name="select_evento" value="{select_evento}"></input>
+	{inicio}
+	</td>
+</tr>
+<tr style="width: 780" align="right">
+	<td colspan="3">
+		<table BORDER="0" cellspacing="0" cellpadding="0" align="right">
+      		<tr>
+ 				<td align="right" class="textonormal">N&uacute;mero de página &nbsp;</td>
+				<td align="right">
+				<span class="userinput">
+					<select name="select_pag" Onchange="submit();">
+						<!-- BEGIN Paginas -->
+						<option value="{pag}" {selected}>{pag}&nbsp;</option>
+						<!-- END Paginas -->
+					{inicio}
+					</select>
+				</span>
+	    		</td>
+	  		</tr>
+		</form>
+	</td>
+</tr>
+<tr>
+  <td>{fin}</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+{Val_check1}
+-->
+</script>
+
+<table width="780">
+  <tr>
+   <td>	 
+     <div class="userinput">Usuario: {usr_login} | Local: {local_name} | Fecha: {fecha_hoy}</div>
+   </td>
+  </tr>
+</table>

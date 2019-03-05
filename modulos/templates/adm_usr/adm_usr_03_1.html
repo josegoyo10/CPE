@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>{PAGETITLE}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+
+<script>
+
+	function validar_form( form ) {
+		if( validar_obligatorio( form.nombre_in, "{CAMPO_OBLIGATORIO}" ) ) return false;
+		if( validar_obligatorio( form.descripcion_in, "{CAMPO_OBLIGATORIO}" ) ) return false;
+		return true;
+	}
+
+</script>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<SPAN class=titulo>{TEXT_AGREGAR_TITULO_PERUSR} {TEXT_AGREGAR_CAMPO_PERFIL}</SPAN>
+
+<br>
+<br>
+
+<form action="adm_usr_03.php" method="post" name="form_agregar" onSubmit="return validar_form(this);">
+<INPUT TYPE="hidden" NAME="action" VALUE="addperfil">
+<INPUT TYPE="hidden" NAME="id_padre" VALUE="{ID_PADRE}">
+<table border="0" align=center class="form_g">
+	<tr valign=top>
+		<td >{TEXT_AGREGAR_CAMPO_PERFIL_1}</td>
+		<td > : </td>
+		<td>
+			
+			<INPUT TYPE="text" NAME="nombre_in" VALUE="" SIZE="30" MAXLENGTH="200" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);">
+			
+		</td>
+	</tr>
+	<tr valign=top>
+		<td >{TEXT_AGREGAR_CAMPO_PERFIL_2}</td>
+		<td > : </td>
+		<td>
+			<TEXTAREA NAME="descripcion_in" ROWS="4" COLS="29" onFocus="cambiar_color_on(this);" onBlur="cambiar_color_off(this);"></TEXTAREA>
+		</td>
+	</tr>
+</table>
+<center>
+<br>
+<INPUT TYPE="submit" value="{BOTON_AGREGAR_PERFIL}">
+</center>
+</form>
+
+</body>
+
+</html>
+

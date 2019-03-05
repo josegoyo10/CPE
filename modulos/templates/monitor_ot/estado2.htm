@@ -1,0 +1,69 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+window.name="estado2";
+var arrfinal = new Array();
+
+function validar_form(){
+	if (arrfinal[document.estado2.select_estado2[document.estado2.select_estado2.selectedIndex].value]) {
+		if (confirm('Al cambiar a estado \'' + document.estado2.select_estado2[document.estado2.select_estado2.selectedIndex].text + '\' no podrá volver atrás.\n¿Desea continuar de todas maneras?'))
+			document.estado2.submit();
+		else
+			document.estado2.reset();
+	}
+	else
+		document.estado2.submit();
+}
+//-->
+</SCRIPT>
+
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<table width="265" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="265" class="titulonormal">Cambio de Estado Orden de trabajo</td>
+  </tr>
+</table>
+<FORM NAME="estado2" METHOD="POST" ACTION="estado2.php" onSubmit="" target="estado2">
+<input type="hidden" name="accion" value="update">
+<input type="hidden" name="id_ot" value="{id_ot}">
+<input type="hidden" name="id_os" value="{is_os}">
+<table width="265" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="400" height="122" valign="top"><table width="241"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+        <tr>
+          <td width="108">Estado Actual </td>
+          <td width="119"><span class="userinput" >{esta_actual}</span></td>
+        </tr>
+        <tr>
+          <td>Nuevo Estado </td>
+          <td class="userinput"><select name="select_estado2" ONCHANGE="validar_form()">
+		<!-- BEGIN Estados -->
+		<option value="{id_estado}" {selected}>{esta_nombre}</option>
+		<script>arrfinal['{id_estado}'] = '{estadoterminal}';</script>
+		<!-- END Estados -->
+          </select></td>
+        </tr>
+        <tr align="center">
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr align="center">
+          <td colspan="2">
+			<input type="button" name="Button" value="Cancelar" onClick="window.close();"></td>
+        </tr>
+      </table>      <p>&nbsp;</p></td>
+  </tr>
+  </form>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+	function deshabilita_elementos(formulario) {
+		for (i=0;i<formulario.elements.length;i++){
+			if (formulario.elements[i].type == 'checkbox' || formulario.elements[i].type == 'select' || formulario.elements[i].type == 'select-one' || formulario.elements[i].type == 'text' || formulario.elements[i].type == 'textarea' || formulario.elements[i].type == 'password' || formulario.elements[i].type == 'radio'){
+				formulario.elements[i].disabled = true;
+			}
+		}
+	}
+	if ("{estado_terminal}")
+		alert('Esta OT no puede ser modificada debido a que se encuentra en estado \'{esta_actual}\'');
+
+	if (arrfinal[document.estado2.select_estado2[document.estado2.select_estado2.selectedIndex].value])
+		deshabilita_elementos(document.estado2);
+</SCRIPT>

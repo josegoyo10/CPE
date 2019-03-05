@@ -1,0 +1,52 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function validar_form2(formulario){
+	if (formulario.elements["com_id"].options[formulario.elements["com_id"].selectedIndex].value == 0){
+		return false;
+	}
+	return true;
+}
+//-->
+</SCRIPT>	  
+	  <table width="500" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+		<tr>
+		  <form NAME="form_2" METHOD="POST" ACTION="adm_instal.php" OnSubmit="return validar_form2(this);">
+		  <td valign="top"><p class="userinput">
+			  <input type="hidden" name="req" value="addcom">
+			  <input type="hidden" name="inst_id" value="{inst_id}">
+			  <fieldset>
+			  <legend>Asociar Barrios de Trabajo al Instalador</legend>
+			  <table border="0" cellspacing="0" cellpadding="0" class="textonormal" align="center">
+				<tr>
+				  <td>s&nbsp;</td>
+				  <td><span class="userinput">
+					<select name="com_id">
+					<option value="0">-- Seleccione una Barrio --</option>
+					<!-- BEGIN Comunas -->
+						<option value="{id_comuna}" {selected}>{comu_nombre}</option>
+					<!-- END Comunas -->
+					</select></span>
+				  </td>
+				  <td>&nbsp;<input type="submit" value="Agregar Barrio"></td>
+				</tr>
+			  </table>
+			  <br>
+			  <table border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+				<tr>
+				  <th width="250">Barrio </th>
+				  <th width="50">Acción</th>
+				  </tr>
+				<!-- BEGIN listado -->
+				<tr valign="top">
+				  <td><div align="left">{desc_comuna}</div></td>
+				  <td><div align="center">{ACCION}</div></td>
+				</tr>
+				<!-- END listado -->
+			  </table>            
+			  </fieldset>
+		  </td>
+		  </form>
+		</tr>
+	  </table>
+	  <br>
+	  <table width="728" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">

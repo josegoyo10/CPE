@@ -1,0 +1,2 @@
+INSERT INTO direcciones (dire_direccion,clie_rut,dire_telefono,dire_observacion, id_departamento, id_ciudad, id_localidad, id_comuna, dire_activo,dire_defecto,dire_nombre, id_provincia, dire_localizacion ) VALUES('CL 6 SUR N 5 1 - 1 4',5470120,'5828325','CLIENTE YANERVIS',27, 063, 000, 000, 1,'p','Principal',
+            001, 27001063000000)

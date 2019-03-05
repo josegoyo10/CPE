@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<!-- <script language="javascript" src="../../includes/funciones.js"></script> -->
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+window.name="busqueda";
+
+function volver(){
+	document.jump.target = "busqueda";
+	document.jump.action = 'nueva_cotizacion_0303.php';
+	document.jump.submit();
+}
+function Cerrar(){
+window.close();
+}
+function ficha(valor){
+	document.jump.target = "busqueda";	
+	document.jump.action = 'nueva_cotizacion_0303.php?accion=ver&id_pro='+valor+'&producto={prod}&rad_producto={rad_producto}&rad_servicio={rad_servicio}&servicio={servicio}&acc={acc}';
+	document.jump.submit();
+}
+function returnProducto(valor){
+	window.returnValue = valor;
+	window.close();
+}
+//-->
+</SCRIPT>
+<FORM NAME="jump" METHOD=POST ACTION="" TARGET="">
+</FORM>
+
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal">{TEXT_TITULO}</td>
+  </tr>
+</table>
+
+<table width="560" border="0" align="left" cellpadding="2" cellspacing="1" class="tabla2">
+	<tr>
+		<!--th width="60">{TEXT_CAMPO_20}</th-->
+		<th width="80">{TEXT_CAMPO_21}</th>
+		<th width="*">{TEXT_CAMPO_22}</th>
+		<!--th width="">{TEXT_CAMPO_23}</th-->
+		<th width="80">{TEXT_CAMPO_24}</th>
+		<th width="100">{TEXT_CAMPO_25}</th>
+	</tr>
+</table>
+<br>
+<div style="width: 590px; height: 250px; overflow: auto">
+<table width="560" border="0" align="left" cellpadding="2" cellspacing="1" class="tabla2">
+	<!-- BEGIN producto -->
+	<tr>
+		<!--td align='right' width="60">{id_producto}</td-->
+		<td align='right' width="80">{cod_prod1}</td>
+		<td><div align="left" width="*">{des_corta}</div></td>
+		<!--td align='{ALINEACION}' width="">{prec_costo}</td-->
+		<td align='{ALINEACION2}' width="80">{prec_valor}</td>
+		<td align="center" width="100"> <a href="#" onclick="ficha('{id_producto}')">Ver Ficha</a> | <a href="#" onClick="returnProducto('{cod_prod1}')">Agregar</a></td>
+	</tr>
+	<!-- END producto -->
+</table>
+</div>
+<br>
+<table border="0" width="560" align="center" colspan="2" class="textonormal">
+	<tr>
+			<td>{msg}{cuantosp}{msg1}{msg2}</td>
+	</tr>
+	<tr>
+		<td align='center'><input type="button" name="Button222" value="{flag}" onclick="{flag}()"></td>
+		</tr>
+</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+
+<SCRIPT language="javascript" src="../../includes/funciones.js"></SCRIPT>
+<SCRIPT language="JavaScript" src="checkfield.js"></SCRIPT>
+<SCRIPT language="JavaScript" SRC="popup.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" ID="js17">											
+	var ayer = new Date();
+
+ 	dia=ayer.getDate() - 15;
+	mes=ayer.getMonth();
+	anio=ayer.getYear();		
+	var ayer = new Date (anio, mes, dia);
+	var cal1 = new CalendarPopup("testdiv1");
+	cal1.offsetX = 20;
+	cal1.offsetY = 20;
+	cal1.addDisabledDates(null,formatDate(ayer,"yyyy-MM-dd"));
+</SCRIPT>
+
+<SCRIPT language="javascript" type="text/javascript">		
+	function nombre(){
+	window.name="estado3";
+	}
+	
+	function cerrar() {
+	window.close();
+	}
+			
+	function validar_form(){
+		
+	if( validar_obligatorio(estado.os_codbarras, "Código de Barras es obligatorio" ))
+		return false;
+			
+		var os_codbarras = document.estado.os_codbarras.value;		
+	location.href='estado3.php?id_estado={id_estado}&id_os={id_os}&clie_rut={clie_rut}&id_proyecto={id_proyecto}&accion=visualizar&os_codbarras=' + os_codbarras;
+	}
+	
+	function genera_Str()
+	{
+		document.getElementById("string_pago").style.visibility='visible';
+		document.getElementById("os_codbarras").style.visibility='hidden';
+	}
+	
+	function genera_String(){
+		F_pago = "";
+		Terminal = "";
+		Transac = "";
+		
+		F_pago = window.document.string_pago.f_pago.value;
+		Terminal = window.document.string_pago.terminal.value;
+		Transac = window.document.string_pago.transac.value;
+		
+		if ( (F_pago == "" || Terminal== "" || Transac== "") ||  (F_pago == 0 || Terminal== 0 || Transac== 0))
+		{
+			alert("No ingrese campos Vacios o en Cero");
+			window.document.string_pago.f_pago.focus();
+		}
+		else
+		{
+			location.href='estado3.php?id_estado={id_estado}&id_os={id_os}&clie_rut={clie_rut}&F_pago='+F_pago+'&Terminal='+Terminal+'&Transac='+Transac+'&accion=genera_Pago';				
+		}
+		
+	}
+	
+	function KeyIsNumber(evt)
+	{
+	var isNav = (navigator.appName.indexOf("Netscape") != -1)
+	var isIE = (navigator.appName.indexOf("Microsoft") != -1)
+	
+		if (isNav) {
+			if ( evt.which == 13 || evt.which == 8 || (evt.which >= 48 &&  evt.which <=57) )
+			return true;
+		return false;
+		}
+		else if (isIE)
+			{evt = window.event;
+			if ( evt.keyCode == 13 || evt.keyCode == 8 || (evt.keyCode >= 48 && evt.keyCode <= 57) )
+				return true;
+			return false;
+			}
+		else {
+			alert("Su browser no es soportado por esta aplicación")
+		}
+		return false
+	}	
+</SCRIPT>
+</head>
+
+<body onLoad="setTimeout('cerrar()',120*1000)">
+
+<table width="276" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="276" class="titulonormal">Cambio de Estado Cotizaci&oacute;n -&gt; Pagada</td>
+  </tr>
+</table>
+<FORM NAME="estado" METHOD="POST"  ACTION="estado3.php" onSubmit="" >
+<input type="hidden" name="clie_rut" value="{clie_rut}">
+<input type="hidden" name="id_os" value="{id_os}">
+<input type="hidden" name="id_estado" value="{id_estado}">
+<input type="hidden" name="accion" value="visualizar">
+
+<table border="0" cellspacing="0" cellpadding="0" >
+  <tr>
+    <td>      
+	<table width="450"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+        <tr>
+          <td width="103">N&deg; Cotizaci&oacute;n</td>
+          <td width="263"><span class="userinput">{id_os}</span></td>
+        </tr>
+        <tr>
+          <td>Estado Actual </td>
+          <td class="userinput" value="p" >{esta_nombre}</td>
+        </tr>
+        <tr>
+          <td>Nuevo Estado </td>
+          <td class="userinput" value="p" >Cotización Pagada</td>
+        </tr>
+        <tr>
+          <td>C&oacute;digo de Barras &nbsp;(*) </td>
+          <td class="userinput">
+		  <input name="os_codbarras" type="file" id="os_codbarras" size="40"  maxlength="41" onclick="return false;"></td>
+        </tr>
+		
+		
+        <tr align="center">
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr align="center">
+          <td colspan="2"><input type="button" name="Button" value="Visualizar" ONCLICK="validar_form()"> 
+          <input type="button" name="Button" value="Cancelar" onClick="window.returnValue = 'none'; window.close();"></td>
+        </tr>
+        <tr align="center">
+          <td colspan="2"><input type="button" name="Button" value="Pago sin Tirilla" onclick="genera_Str()"></td>         
+        </tr>
+	  </table>  
+	
+    <div align="center"  id="layer" style="position:absolute; left:345px; top:122px; z-index:1; width: 124px;">
+	    <div align="left"><img src="../templates/img/img_13.JPG" width="126" height="30" ></div>
+  	</div>
+  
+    </form>
+	<script LANGUAGE="javascript">
+		campo = document.getElementById('os_codbarras');	
+		campo.focus();		
+	</script>
+	<p><table width="450"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal"><tr><td width="219">(*) Datos obligatorios.</td></tr></table>
+	
+	</p></td>
+  </tr>
+</table>
+
+<form name="string_pago" style="visibility: hidden;">
+<table width="350" style="margin-top: 20px;" align="center">
+  <tr>
+    <td class="userinput">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Fecha&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Terminal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Transacción &nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td class="userinput" align="center">  	
+	  <img name="botonfecha1" id="botonfecha1" src="../img/lib/cal.gif" onClick="cal1.select(document.string_pago.f_pago,'botonfecha1','dd/MM/yyyy'); " />
+      <input type="text" size="15" maxlength="8" name="f_pago" readonly="readonly">
+      <input type="text" size="12" maxlength="3" name="terminal">
+      <input type="text" size="12" maxlength="4" name="transac">
+      &nbsp;&nbsp;
+      <input type="button" value="Generar" onclick="genera_String()">
+    </td>
+  </tr>
+</table>
+</form>
+
+<DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+ 
+<SCRIPT LANGUAGE="JavaScript">
+	window.document.string_pago.f_pago.onkeypress = KeyIsNumber;
+	window.document.string_pago.terminal.onkeypress = KeyIsNumber;
+	window.document.string_pago.transac.onkeypress = KeyIsNumber;
+</script>
+	
+</body>
+</html>

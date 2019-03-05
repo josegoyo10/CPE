@@ -1,0 +1,164 @@
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript" src="../includes/funciones.js"></script>
+
+<script language="javascript">
+<!--
+
+function validar_search4(){
+    if( validar_obligatorio( document.form_search4.bus_os, "Campo obligatorio" ))
+        return false;
+    else
+        form_search4.submit();
+}
+-->
+</script>
+<body  onload="document.form_search4.bus_os.focus();"> 
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Monitor de OT de Pedidos de Stock <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --><!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="31%" valign="top">
+          <table border="0" align="center" cellpadding="0" cellspacing="4" class="textonormal">
+            <tr>
+              <form NAME="form_search1" METHOD="POST" ACTION="index.php">
+              <td valign="top">
+			  <input type="hidden" name="req" value="">
+			  <fieldset>
+              <legend>Tipo de Despacho </legend>
+			  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td colspan=2 height="21">&nbsp;</td>
+				</tr>
+                <tr>
+                  <td><span class="userinput">
+                    <select name="select_tipo">
+						<!-- BEGIN Despacho -->
+						<option value="{id_tipodespacho}" {selected}>{nombre}</option>
+						<!-- END Despacho -->
+					</select>
+                  </span></td>
+                  <td>&nbsp;<input type="submit" name="Button22" value="Filtrar"></td>
+                </tr>
+              </table>
+			  </fieldset></td>
+              </form>
+              <form NAME="form_search2" METHOD="POST" ACTION="index.php">
+              <td valign="top"><p class="userinput">              
+				  <input type="hidden" name="req" value="">
+				  <fieldset>
+                  <legend>Local</legend>
+                  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+					<tr>
+					  <td colspan=2 height="21">&nbsp;</td>
+					</tr>
+                    <tr>
+                      <td><span class="userinput">
+                        <select name="select_local">
+								{ALL}
+							<!-- BEGIN Locales -->
+                            <option value="{id_local}" {selected}>{nom_local}</option>
+                            <!-- END Locales -->
+                        </select>
+                      </span></td>
+                      <td>&nbsp;<input type="submit" name="Button2" value="Filtrar"></td>
+                    </tr>
+                  </table>
+                  </fieldset>
+              </td>
+			  </form>
+			  <form NAME="form_search3" METHOD="POST" ACTION="index.php">
+              <td valign="top">
+			  <input type="hidden" name="req" value="">
+			  <fieldset>
+              <legend>Estado</legend>
+              <table  border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td colspan=2 height="21">&nbsp;</td>
+				</tr>
+                <tr>
+                  <td><span class="userinput">
+					  <select name="select_estado">
+						<!-- BEGIN Estados -->
+						<option value="{id_estado}" {selected}>{estado}</option>
+						<!-- END Estados -->
+					  </select>
+                  </span></td>
+                  <td>&nbsp;<input type="submit" name="Button232" value="Filtrar"></td>
+                </tr>
+              </table>
+              </fieldset></td>
+			  </form>
+              <form NAME="form_search4" METHOD="POST" ACTION="index.php">
+              <td valign="top">
+			  <input type="hidden" name="req" value="">
+			  <fieldset>
+              <legend>N&deg; OT/OS</legend>
+              <table  border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td><span class="userinput">
+                    <input name="chec_ot_os" type="radio" value="1" {checked1}> OT 
+                    <input name="chec_ot_os" type="radio" value="2" {checked2}> OS </span></td>
+				</tr>
+				<tr>
+                  <td><span class="userinput"><input name="bus_os" type="text" size="10"></span></td>
+                  <td><input type="button" name="Button23" value="Filtrar" onclick="validar_search4()"></td>
+                </tr>
+              </table>
+              </fieldset></td>
+			  </form>
+			</tr>
+          </table>
+		<table BORDER="0" cellspacing="0" cellpadding="0" align="center">
+		<tr>
+		  <td>
+		  <table width="750" border="0" align="left" cellpadding="2" cellspacing="0" class="tabla2">
+            <tr>
+              <th width="70" >N&ordm; OT <a href="index.php?filtro=ot&orden={orden}&select_tipo={select_tipo}&select_local={select_local}&bus_os={bus_os}&chec_ot_os={chec_ot_os}&select_estado={select_estado}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+              <th width="70" >N&ordm; OS <a href="index.php?filtro=os&orden={orden}&select_tipo={select_tipo}&select_local={select_local}&bus_os={bus_os}&chec_ot_os={chec_ot_os}&select_estado={select_estado}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+              <th width="120">Tipo Despacho </th>
+              <th width="200">Tienda</th>
+              <th width="110">Fecha Creaci&oacute;n <a href="index.php?filtro=fc&orden={orden}&select_tipo={select_tipo}&select_local={select_local}&bus_os={bus_os}&chec_ot_os={chec_ot_os}&select_estado={select_estado}" class="link1"><IMG src='{BOTON_ARROW}' border=0 align=middle></a></th>
+              <th width="110">Estado</th>
+              <th width="70" >Acci&oacute;n</th>
+            </tr>
+		  </table>
+	      </td>
+		</tr>
+		<tr>
+		  <td>
+		  <div style="width: 770px; height: 330px; left: 49px; top: 353px; overflow: auto;"> 
+			<table width="750" border="1" align="left" class="tabla2" cellspacing="0">
+			<!-- BEGIN listado -->
+            <tr>
+              <td width="70" align="center">{id_ot}&nbsp;</td>
+              <td width="70" align="center">{id_os}&nbsp;</td>
+              <td width="120"><div align="center">{despacho}&nbsp;</div></td>
+              <td width="200" align=center>{local}&nbsp;</td>
+              <td width="110"><div align="center">{ot_fechacreacion}&nbsp;</div></td>
+              <td width="110" align=center>{esta_nombre}&nbsp;</td>
+              <td width="70" ><div align="center"><a href="../picking_tienda/index.php?req=sum&id_ot={id_ot}">Ver</a></div></td>
+            </tr>
+			<!-- END listado -->
+          </table>
+		  
+	</div>		  
+ 	</td>
+    </tr>
+    </table>
+		  </td>
+        </tr>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.form_search4.bus_os.onkeypress = KeyIsNumber;
+-->
+</script>

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+window.name="busqueda";
+
+function volver(){
+	document.jump.target = "busqueda";
+	document.jump.action = 'nueva_cotizacion_0303.php?accion=PE&rad_proveedor={rad_proveedor}&proveedor={prov}';
+	document.jump.submit();
+}
+function ver_productos(){
+	document.jump.target = "busqueda";
+	document.jump.action = 'nueva_cotizacion_0303.php?accion=verprod&id_prov={id_proveedor}&rad_proveedor={rad_proveedor}&proveedor={prov}';
+	document.jump.submit();
+}
+
+//-->
+</SCRIPT>
+<FORM NAME="jump" METHOD=POST ACTION="" TARGET="">
+</FORM>
+
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal">{TEXT_TITULO}</td>
+  </tr>
+</table>
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>
+            <!-- BEGIN proveedor -->
+            <table border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>
+                    <td width="135">{TEXT_CAMPO_108}</td>
+                    <td width="236" class="userinput">{nom_prov}</td>
+                </tr>
+                <tr>
+                    <td width="135">{TEXT_CAMPO_100}</td>
+                    <td width="236" class="userinput">{rut_prov}</td>
+                </tr>
+                <tr>
+                    <td>{TEXT_CAMPO_101}</td>
+                    <td class="userinput">{razsoc_prov}</td>
+                </tr>
+                <tr>
+                    <td>{TEXT_CAMPO_102}</td>
+                    <td class="userinput">{fonocto_prov}</td>
+                </tr>
+                <tr>
+                    <td>{TEXT_CAMPO_104}</td>
+                    <td class="userinput">{nombcto_prov}</td>
+                </tr>
+                <tr>
+                    <td>{TEXT_CAMPO_105}</td>
+                    <td class="userinput">{emailcto_prov}</td>
+                </tr>
+                <!--tr>
+                    <td>{TEXT_CAMPO_106}</td>
+                    <td class="userinput">{prov_direccion}</td>
+                </tr>
+                <tr>
+                    <td>{TEXT_CAMPO_107}</td>
+                    <td class="userinput">{comu_nombre}</td>
+                </tr-->
+            </table>
+            <table border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>
+                    <td><input type="button" name="Button22" value="Ver Productos" onClick="ver_productos();"></td>
+                    <td><input type="button" name="Button222" value="Volver" onclick="volver();"></td>
+                </tr>
+            </table>
+            <!-- END proveedor -->
+        </td>
+    </tr>
+</table>
+</body>

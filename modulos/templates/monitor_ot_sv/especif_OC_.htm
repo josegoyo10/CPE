@@ -1,0 +1,140 @@
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+</head>
+
+<table width="600" height="403" border="0" cellpadding="0" cellspacing="0" style="border: 2px solid #000000;">
+  <tr>
+    <td height="69" valign="top">
+    <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td width="10%" height="49"><img src="../img/logo2.jpg" width="49" height="45"></td>
+        <td width="84%" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" --> Especificaciones O/C <!-- InstanceEndEditable --></td>
+        <td width="6%">&nbsp;</td>
+      </tr>
+    </table>
+    </td>
+  </tr>  
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+{inicio}
+				<tr>
+                  <td><fieldset>
+                    <legend>Datos Instalador </legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="102">Nombre </td>
+                        <td width="244" class="userinput">{nombre}</td>
+                        <td width="109">C&eacute;dula</td>
+                        <td width="244" class="userinput">{inst_rut}</td>
+                      </tr>
+                      <tr>
+                        <td>teléfono</td>
+                        <td class="userinput">{inst_telefono}</td>
+                        <td colspan="1">Dirección</td>
+                        <td class="userinput">{direccion}</td>
+                      </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+{fin}
+				<tr>
+                  <td><fieldset>
+                    <legend>Datos OT </legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="102">N&ordm; OT CP </td>
+                        <td width="244" class="userinput">{id_ot}</td>
+                        <td width="109">Fecha de Generaci&oacute;n</td>
+                        <td width="244" class="userinput">{ot_fechacreacion}</td>
+                      </tr>
+                      <tr>
+                        <td>Tipo OT </td>
+                        <td class="userinput">SV - Servicio </td>
+                        <td colspan="2">N&deg; OC/SAP: _____________ &nbsp; N&deg;REC/SAP: _____________ </td>
+                      </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos Cotizaci&oacute;n</legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td>N&ordm; Cotizaci&oacute;n</td>
+                        <td class="userinput">{id_os}</td>
+                        <td>Fecha de Cotizaci&oacute;n </td>
+                        <td class="userinput">{os_fechacotizacion}</td>
+                      </tr>
+                      <tr>
+                        <td>Estado</td>
+                        <td class="userinput"> {esta_nombre}</td>
+                        <td>Atendido Por </td>
+                        <td class="userinput">{atendido}</td>
+                      </tr>
+                      <tr>
+                        <td>Tienda</td>
+                        <td class="userinput">{nom_local}</td>
+                          <td>Válido hasta </td>
+                          <td class="userinput">{os_fechaestimacion}</td>
+                      </tr>
+                      <tr>
+                        <td width="100">Descripci&oacute;n OS </td>
+                        <td width="239" class="userinput">{os_descripcion} </td>
+                        <td width="100">Proyecto</td>
+                        <td width="244" class="userinput">{proy_nombre}</td>
+                      </tr>
+                      <tr>
+                        <td>Comentarios</td>
+                        <td colspan="3" class="userinput">{os_comentarios}</td>
+                      </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+            </table>
+              <br>
+      <!---include de os-detalle!-->
+              <table width="600" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+            <tr>
+              <th width="55">UPC/(SKU)</th>
+              <th width="38">Tipo</th>
+              <th width="277">Descripci&oacute;n</th>
+              <th width="69">Despacho</th>
+              <th width="66">Instalaci&oacute;n</th>
+              <th width="39">Cant</th>
+			  <th width="65">Precio</th>
+              <th width="61">Total</th>
+            </tr>
+		 <!-- BEGIN Precio_Total -->
+		   <tr valign="top">
+                <td align="center">{cod_barra}<br>({cod_sap})</td>
+			    <td><div align="center">{osde_tipoprod}</div></td>
+                <td>{osde_descripcion}{especificacion}{osde_especificacion}</td>
+                <td>{tipo_nombre}</td>
+	            <td><div align="center">{osde_instalacion}</div></td>
+                <td><div align="right">{osde_cantidad}</div></td>
+				<td><div align="right">{precioVacio}{osde_precio}</div></td>
+				<td><div align="right">{totalVacio}{Total}</div></td>
+		 <!-- END Precio_Total -->
+          </table> 
+          <br></td>
+        </tr>
+      </table>

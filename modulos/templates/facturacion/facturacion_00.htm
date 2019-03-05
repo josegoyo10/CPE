@@ -1,0 +1,130 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function checkDV( ){
+	if( validar_obligatorio( factura_rut.inst_rut, "Cédula es obligatorio" ))
+			return false;
+	  crut = '';
+	  mcrut= factura_rut.inst_rut.value;
+	  
+	  for(i=0; i<mcrut.length; ++i)
+		if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-'){
+		 crut = crut + mcrut.charAt(i);
+		}
+	  largo = crut.length;
+	  if ( largo < 2 ){
+		alert("Debe ingresar la Cédula completa.");
+		document.factura_rut.inst_rut.focus();
+		document.factura_rut.inst_rut.select();
+		return false;
+	  }
+
+	  if ( largo > 2 )
+		rut = crut.substring(0, largo - 1);
+	  else
+		rut = crut.charAt(0);
+
+		dv = crut.charAt(largo-1);
+
+	  //checkCDV( dv );
+	  /*
+	  if ( rut == null || dv == null )
+	   return 0;
+	   var dvr = '0';
+	   suma = 0;
+	   mul  = 2;
+
+	  for (i= rut.length -1 ; i >= 0; i--){
+	   suma = suma + rut.charAt(i) * mul;
+		if (mul == 7)
+			mul = 2;
+		else
+			mul++;
+	  }
+	  res = suma % 11;
+	  if (res==1)
+		dvr = 'k';
+	  else if (res==0)
+		dvr = '0';
+	  else{
+		dvi = 11-res;
+		dvr = dvi + "";
+	  }
+	  */
+	  
+	  /* Validación Digito de verificación
+	  if ( dvr != dv.toLowerCase() ){
+		alert("La Cédula ingresada es incorrecta.");
+		document.factura_rut.inst_rut.focus();
+		document.factura_rut.inst_rut.select();
+		return false;
+	  }
+	  */
+	  
+	  //document.factura_rut.inst_rut.value = crut.substr(0, crut.length-1); 
+	  //digito=crut.substr(crut.length-1, 1).toUpperCase();
+	  window.document.factura_rut.inst_rut.onkeypress = KeyIsEnter ;
+	  document.factura_rut.submit();
+	  return true;
+ 
+}
+
+function valida_form(){
+	valor3=false;
+	f=document.factura_rut;
+	valor3=checkDV();
+	if (valor3){
+		rut=document.factura_rut.inst_rut.value;
+		f.submit();
+	}
+	return false;
+}
+
+//-->
+</SCRIPT>
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Creaci&oacute;n de Lote de Facturaci&oacute;n Instalador <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<div style="width:780; height:90%; overflow:auto;">
+<table width="780" height="90%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+	<FORM NAME="factura_rut" METHOD="POST" action="facturacion_00.php">
+	<input type="hidden" name="accion" value="validar">
+	<input type="hidden" name="rut" value="{rut}">
+	  <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+              <br>
+              <table width="443" border="0" align="center" cellpadding="0" cellspacing="2" class="textonormal">
+	           <tr>
+              <td valign="top">Cédula Instalador </td>
+              <td width="324" valign="top"><input name="inst_rut" type="text" value="{rut}">
+                <input type="button" name="Button" value="Buscar" onClick="valida_form();">
+			 </td>
+              </tr>
+				<tr><td width="31%" valign="top">&nbsp;&nbsp;&nbsp; </td> </tr>
+				<tr><td width="31%" valign="top">&nbsp;&nbsp;&nbsp; </td> </tr>
+				<tr><td width="31%" valign="top">&nbsp;&nbsp;&nbsp; </td> </tr>
+				<tr><td width="31%" valign="top">&nbsp;&nbsp;&nbsp; </td> </tr>
+			  </table>                            
+			</td>
+			</tr>
+	  </table>
+	  </form>
+	<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</div>
+<SCRIPT LANGUAGE="JavaScript">
+	window.document.factura_rut.inst_rut.onkeypress = KeyIsRut;
+</script>

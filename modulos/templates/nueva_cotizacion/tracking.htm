@@ -1,0 +1,113 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+function Valid(){
+	if( validar_obligatorio(tracking.hist_descripcion, "Debe ingresar descripción del evento" ))
+		return false;
+	document.tracking.submit();
+}
+</SCRIPT>
+
+<script language="JavaScript" src="../checkfield.js"></script>
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Tracking OS #{id_os} <!-- InstanceEndEditable --></td>
+		<td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --><!-- InstanceEndEditable --></td>
+	</tr>
+</table>
+<table width="780" height="400" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+			<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="31%" valign="top" align=center>
+						<table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+							<tr>
+								<td>
+									<fieldset>
+									<legend>Datos OS</legend>
+									<table border="0" width="90%" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+										<tr>
+											<td width="35%">OS: &nbsp;&nbsp;{id_os} </td>
+											<td width="45%">Cliente: &nbsp;&nbsp;{clie_nombre}</td>
+											<td width="20%">Tel&eacute;fono: &nbsp;&nbsp;{dire_telefono}</td>
+										</tr>
+										<tr>
+											<td colspan = "3">Dir Despacho: &nbsp;&nbsp;{dire_direccion}, {comu_nombre}</td>
+										</tr>
+									</table>
+									</fieldset>
+								</td>
+							</tr>
+						</table>
+						<FORM NAME="tracking" METHOD="POST">
+						<input type="hidden" name="clie_rut" value="{clie_rut}">
+						<input type="hidden" name="accion" value="Agregar">
+						<input type="hidden" name="id_os" value="{id_os}">
+						<table width="393" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+							<tr>
+								<th width="385"><div align="left">Ingresar Nuevo Evento </div></th>
+							</tr>
+							<tr valign="top">
+								<td>
+									<textarea name="hist_descripcion" cols="60"></textarea>
+								</td>
+							</tr>
+							<tr valign="top">
+								<td align=center><input type="button" name="Button" value="Ingresar" onClick="Valid()"></td>
+							</tr>
+						</table>      
+						</FORM>
+
+						<TABLE width="650" border="0" align="center" cellpadding="0" cellspacing="0">
+						<TR>
+							<TD>
+								<table width="700" border="0" align="left" cellpadding="0" cellspacing="1" class="tabla1">
+									<tr>
+										<th width="100">Fecha </th>
+										<th width="130">Usuario</th>
+										<th width="60">Tip. Evento</th>
+										<th width="410">Descripci&oacute;n</th>
+									</tr>
+								</table>            
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<div style="width:720; height:150; overflow:auto;">
+								<table width="700" border="0" align="left" cellpadding="0" cellspacing="1" class="tabla1">
+									<!-- BEGIN Tracking -->
+									<tr valign="top">
+										<td width="102">{hist_fecha}</td>
+										<td width="132" align=center>{hist_usuario}</td>
+										<td width="65" align=center>{his_tipo}</td>
+										<td width="400">{hist_descripcion} </td>
+									</tr>
+									<!-- END Tracking -->
+								</table>            
+								</div>
+							</TD>
+						</TR>
+						</TABLE>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="74" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+							<tr>
+								<td width="37">Volver</td>
+								<td width="23"><a href="nueva_cotizacion_sumario_01.php?clie_rut={clie_rut}&id_os={id_os}"><img src="../img/anterior.gif" width="23" height="23" border="0"></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+<!-- InstanceEndEditable -->
+		</td>
+	</tr>
+</table>
+
+<script LANGUAGE="javascript">
+	window.document.tracking.hist_descripcion.onkeypress = KeyIsTexto;
+</script>

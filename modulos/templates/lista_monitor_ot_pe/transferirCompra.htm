@@ -1,0 +1,103 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<style type="text/css">
+<!--
+body {
+	background-color: #F2F4F4;
+}
+-->
+</style>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+window.name="compra_pe";
+function valida_form(){
+	f=document.compra_pe;
+		if( validar_obligatorio(f.noc_sap, "Debe ingresar el número de la Transferencia" )){
+			valor1=false;
+			return false;
+			}
+	f.submit();
+}
+</SCRIPT>
+<SCRIPT language="JavaScript" src="../checkfield.js"></SCRIPT>
+
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal">Proceso de Compra de PE </td>
+  </tr>
+</table>
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+<form NAME="compra_pe" METHOD="POST" onSubmit="" target="compra_pe">
+<input type="hidden" name="select_prov" value="{id_proveedor}">
+<input type="hidden" name="id_ot" value="{id_ot}">
+<input type="hidden" name="idLista" value="{idLista_enc}">
+<input type="hidden" name="accion" value="revisar">
+  <tr>
+    <td>
+      <table width="400"  border="0" align="left" cellpadding="2" cellspacing="2" class="textonormal">
+        <tr>
+          <td width="99">Lista de Regalos creada en Tienda</td>
+          <td width="287" class="userinput">
+			  <select id="select_origen" name="select_origen">
+				  <!-- BEGIN tienda_org -->
+				  <option value="{tiendaOrigen}" {selected}>{nomLocal_Origen}</option>
+				  <!-- END tienda_org -->
+	          </select>
+	          <input name="Local_Origen" value="{nomLocal_Origen}" readonly="readonly" style="visibility: hidden;">
+	          <input name="Local_Pago" value="{nomLocal_Pago}" readonly="readonly" style="visibility: hidden;">
+          </td>
+		</tr>
+		<tr>
+          <td width="99">Transferir OT a Tienda</td>
+          <td width="287" class="userinput">
+			  <select id="select_destino" name="select_destino">
+				  <!-- BEGIN tienda_org -->
+				  <option value="{tiendaOrigen}" {selected}>{nomLocal_Origen}</option>
+				  <!-- END tienda_org -->
+	          </select>
+          </td>
+		</tr>
+        <tr>
+          <td>N&deg;. Transferencia SAP </td>
+          <td class="userinput"><input type="text" name="noc_sap" id="noc_sap"></td>
+        </tr>
+		 </tr>
+          <td valign="top">Comentario</td>
+          <td><textarea  id="comentario" name="comentario" cols="40" rows="4" wrap="VIRTUAL" class="textonormal">{ot_comentario}</textarea></td>
+        </tr>
+        <tr align="center">
+          
+        </tr>
+        <tr align="center">
+          <td colspan="2"> <table width="198" border="0" cellpadding="2" cellspacing="2" class="tabla2">
+            <tr>
+              <td width="29"><a href="#"  onClick="window.close()"><img src="../img/cancelar.gif" width="23" height="23" border="0"></a></td>
+              <td width="51">Cancelar</td>
+              <td width="5">&nbsp;</td>
+              <td width="52">Finalizar</td>
+              <td width="29"><a href="#" onClick="valida_form()"><img src="../img/siguiente.gif" width="23" height="23" border="0"></a></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+	</td>
+  </tr>
+  </form>
+</table>
+</body>
+</html>
+<SCRIPT LANGUAGE="JavaScript">
+	window.document.compra_pe.comentario.onkeypress = KeyIsTexto ;
+	window.document.compra_pe.noc_sap.onkeypress = KeyIsNumber ;
+</SCRIPT>

@@ -1,0 +1,1099 @@
+<link rel="stylesheet" href="menu/menu.css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript" src="../../includes/ajax.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+	function enviar_formulario()
+	{
+		document.addprod.accion.value = 'entrega';
+		document.addprod.submit();
+	}
+
+	function show_mult_cod_bar(text) {
+
+		var texto = new Array();
+
+		var elemento = document.getElementById("multi_barra");
+
+		texto = text.split(';');
+
+		for (i=0; i<texto.length-1; ++i) {
+
+			ftexto = texto[i].split('-');
+
+			document.formbar.multi_codigos.options[i] = new Option(texto[i], ftexto[0]);
+
+			if (i==0){ 
+				document.formbar.multi_codigos.options[i].style.color = 'green';
+				//document.formbar.multi_codigos.options[i].selected = true;
+			}
+		}
+
+		elemento.style.visibility = 'visible';
+
+		document.formbar.multi_codigos.focus();
+
+	}
+
+
+
+	function guardar_barra(elemento, ocultar){
+
+
+
+		var limpiar_select = 0;
+
+		if (window.event.keyCode==13){ 
+
+			document.addprod.textfield4.focus();
+
+			document.addprod.textfield4.select();
+
+			addprod.textfield_codbarra.value = elemento.options[elemento.selectedIndex].value;
+
+			limpiar_select = 1;
+
+		}
+
+		if (window.event.keyCode==27){ 
+
+			document.addprod.textfield2.focus();
+
+			document.addprod.textfield2.select();
+
+			limpiar_select = 1;
+
+		}
+
+		if (ocultar) {
+
+			limpiar_select = 1;
+
+		}
+
+
+
+		if (limpiar_select && document.getElementById("multi_barra").style.visibility == 'visible') {
+
+			document.getElementById("multi_barra").style.visibility = 'hidden';
+
+			var texto = new Array();
+
+			var elemento = document.getElementById("multi_barra");
+
+			texto = text.split(';');
+
+			for (i=0; i<texto.length-1; ++i) {
+
+				document.formbar.multi_codigos.options[i] =  null;
+
+			}
+
+		}
+
+	}
+
+
+
+	function deshabilita_elementos(formulario) {
+
+		for (i=0;i<formulario.elements.length;i++){
+
+			if (formulario.elements[i].type == 'checkbox' || formulario.elements[i].type == 'select' || formulario.elements[i].type == 'text' || formulario.elements[i].type == 'textarea' || formulario.elements[i].type == 'password' || formulario.elements[i].type == 'radio' ||  formulario.elements[i].type == 'button' ){
+
+				formulario.elements[i].disabled = true;
+
+			}
+
+		}
+
+	}
+
+
+
+	function busca_codigo(elem) {
+
+
+
+		if (elem.value) {
+
+			if (elem.value!=codant) {
+
+				for (index = 0; index < document.addprod.tipocod.length; index++)
+
+				{
+
+					if (document.addprod.tipocod[index].checked)
+
+						radio_choice = document.addprod.tipocod[index].value; 
+
+				}
+
+               /*alert('SKU:' + elem.value);
+               alert('Tipo COD:' + radio_choice);
+               alert('COD Local:' + {USR_LOCAL});*/
+
+				document.codesearch.location='nueva_cotizacion_0301.php?sku='+elem.value+'&tipocod='+radio_choice+'&idl={USR_LOCAL}';
+				
+			// window.open(document.codesearch.location='nueva_cotizacion_0301.php?sku='+elem.value+'&tipocod='+radio_choice+'&idl={USR_LOCAL}');
+
+			}
+
+		}
+
+		else {
+
+			document.addprod.textfield2.value = '';
+
+			document.addprod.textfield3.value = '';
+
+			document.addprod.textfield5.value = '';
+
+			document.addprod.textfield5.disabled = true;
+
+			document.addprod.textfield4.value = '1';
+
+			document.addprod.textfield6.value = '0';
+
+			document.addprod.select_despacho.selectedIndex = 0;
+
+			document.addprod.select_instalacion.selectedIndex = 1;
+
+		}
+
+
+
+		codant = elem.value;
+
+		barra = '';
+
+	}
+
+
+
+	function calcula_total() {
+		
+		if (!document.addprod.textfield4.value)
+			document.addprod.textfield4.value = 0;
+
+		if (document.addprod.textfield5.value)
+			document.addprod.textfield6.value=parseFloat(parent.addprod.textfield5.value)*parseFloat(parent.addprod.textfield4.value);
+		else
+			document.addprod.textfield6.value = 0;
+
+	}
+
+	function resultado_consulta(text){
+	document.addprod.retira_cliente.value = text;
+	}
+
+	function validar_form(){
+
+		exec_AJAXRPC('POST','./ajax_validar_retira_cliente.php?id_os2={IDOS2}', 'resultado_consulta');
+		
+		if( nueva_cotizacion_03.select_proyecto3.value == '0' ) {
+			alert('La OS no tiene proyecto asignado');
+			nueva_cotizacion_03.select_proyecto3.focus();
+			return false;
+		}
+		
+		if( addprod.cantreg.value == '0' || addprod.cantreg.value == '') {
+			alert('Debe agregar productos a la OS de Cotización');
+			addprod.textfield2.focus();
+			return false;
+		}
+		
+		
+		
+		if(confirm('Va a terminar la Cotización\nDesea Continuar?'))
+		{		
+			if(document.addprod.retira_cliente.value == 2)
+			{
+				alert('Una cotización No Puede tener solo Fletes');
+				return false;
+			} 
+			
+			
+			if(document.addprod.retira_cliente.value == 13)
+			{
+				alert('Una cotización Retira Cliente o de Servicios No debe tener Fletes');
+				return false;
+			}		
+		
+		document.nueva_cotizacion_03.accion.value = 'productos';				
+		document.nueva_cotizacion_03.submit();
+		
+		}
+		
+		
+		//document.nueva_cotizacion_03.accion.value = 'productos';				
+		//document.nueva_cotizacion_03.submit();
+		
+	}
+
+
+
+	function validar_form2(){
+	
+	if(document.addprod.textfield_tipoprod.value == 'SV')
+	{	
+	document.addprod.select_instalacion.value = 0;	
+	}
+	
+	if(document.addprod.textfield_tipoprod.value == 'PE')
+	{
+	if(!confirm('El tipo de producto es de Pedido Especial y no esta en el Stock'))
+	return false;
+	}
+	
+	if(document.addprod.select_despacho.value == 2 && document.addprod.textfield_tipoprod.value == 'PE')
+	{	
+	alert('Para Pedido Especial no se Permite seleccionar el Tipo de Despacho Express \n\t Por este motivo se cambia A  D. Programado');
+	document.addprod.select_despacho.value = 1;	
+	}
+
+	if(document.addprod.select_despacho.value == 4 && document.addprod.textfield_tipoprod.value == 'PE')
+	{	
+	alert('Para Pedido Especial no se Permite seleccionar el Tipo de Despacho Retira Inmediato \n\t Por este motivo se cambia A  D. Programado');
+	document.addprod.select_despacho.value = 1;	
+	}
+	
+	if((document.addprod.select_despacho.value == 5 || document.addprod.select_despacho.value == 6) && document.addprod.textfield_tipoprod.value == 'SV')
+	{	
+	alert('Para Servicios no se Permite seleccionar el Tipo de Despacho Desp.Proveedor. \n\t Porfavor seleccione otro tipo de Despacho');
+	exit();
+	}
+	
+		if (addprod.textfield2.value && !addprod.textfield3.value)  //por si no se ha cargado el producto
+
+			busca_codigo(addprod.textfield2);
+
+		if( validar_obligatorio( addprod.textfield2, "No ha seleccionado un producto" )) {
+
+			addprod.textfield2.focus();
+
+			return false;
+
+		}
+
+		if( validar_obligatorio_sin_focus( addprod.textfield3, "El producto no existe en el catálogo" )) {
+
+			addprod.textfield2.focus();
+
+			addprod.textfield2.select();
+
+			return false;
+
+		}
+
+		if (addprod.textfield_precio_req.value==0 && addprod.textfield5_aux.value.length==0) { 
+
+			alert('No se puede agregar este producto, es requisito que registre precio en el sistema. Contáctese con el administrador.');
+
+			return false;
+
+		}
+
+		if (addprod.textfield_precio_req.value==1 && addprod.textfield5_aux.value.length > 0){
+
+
+		if (!addprod.textfield_codbarra.value) {
+
+			alert('El producto no tiene código de barra. No puede ser agregado');
+			return false;
+
+		}
+
+		if( validar_obligatorio( addprod.textfield4, "Debe ingresar la cantidad de producto" ))
+
+			return false;
+
+		if( validar_numero( addprod.textfield4, "El valor debe ser numérico o decimal" ))
+
+			return false;
+
+		if( parseFloat(addprod.textfield4.value)==0) {
+
+			alert('La cantidad debe ser mayor a cero');
+
+			addprod.textfield4.focus();
+
+			addprod.textfield4.select();
+
+			return false;
+
+		}
+
+		if (!addprod.textfield5.value && !confirm('El producto requiere precio de venta. ¿Desea agregar el producto sin precio?')) 
+
+			return false;
+
+		if (addprod.textfield_valid_stock.value == '1' && addprod.textfield_stock_prov.value.length > 0) {
+
+			if (parseFloat(addprod.textfield_stock_prov.value) == 0) {
+
+        if (!confirm('No hay stock disponible para este producto.\nDesea continuar de todas maneras?')){
+
+					addprod.textfield4.focus();
+
+					addprod.textfield4.select();
+
+					return false;
+
+				}
+
+			}elseif (parseFloat(addprod.textfield_stock_prov.value)<parseFloat(addprod.textfield4.value))}  {
+
+				if (!confirm('La cantidad ingresada ('+addprod.textfield4.value+' unidades) es mayor al stock disponible de producto ('+addprod.textfield_stock_prov.value+' unidades).\nDesea continuar de todas maneras?')){
+
+					addprod.textfield4.focus();
+
+					addprod.textfield4.select();
+
+					return false;
+
+				}
+
+			}
+
+		}
+
+
+		addprod.textfield5_aux.value = addprod.textfield5.value;
+
+		document.addprod.accion.value = 'np';
+
+		document.addprod.submit();
+
+	}
+
+
+
+	function abre_pop(){
+
+		if (popUpWindowModal('nuevo_proy.php?clie_rut={clie_rut}', 100, 100, 350, 200)=='refresh')
+
+			window.location.reload();
+
+		else
+
+			document.nueva_cotizacion_03.select_proyecto3.selectedIndex=0;
+
+	}
+
+
+
+	function nueva_cot(){
+
+			os_descripcion=nueva_cotizacion_03.os_descripcion.value; 
+
+			os_comentarios=nueva_cotizacion_03.os_comentarios.value; 
+
+			id_proyecto=nueva_cotizacion_03.select_proyecto3.options[nueva_cotizacion_03.select_proyecto3.selectedIndex].value;
+
+			location.href='nueva_cotizacion_03.php?clie_rut='+{clie_rut}+'&os_comentarios='+os_comentarios+'&os_descripcion='+os_descripcion+'&id_proyecto='+id_proyecto+'&accion=Nueva';
+
+	}
+
+
+
+	function eliminar() {
+
+		if (document.productos.IndexSelected != -1) {
+
+			addprod.textfield2.disabled = false;
+
+			addprod.tipocod[0].disabled = false;
+
+			addprod.tipocod[1].disabled = false;
+
+			addprod.textfield2.value = '';
+
+			busca_codigo(addprod.textfield2);
+
+			addprod.textfield2.focus();
+
+			addprod.Button2.value = 'Agregar ';
+
+			addprod.accionsec.value = '';
+
+			document.productos.location = "nueva_cotizacion_0302.php?id_os={IDOS}&clie_rut={clie_rut}&accion=eli&IndexSelected=" + document.productos.IndexSelected;
+
+		}
+
+	}
+
+
+
+	function eliminartodos() {
+
+		if (confirm('¿Desea eliminar TODOS los productos del listado?')) {
+
+			addprod.textfield2.disabled = false;
+
+			addprod.tipocod[0].disabled = false;
+
+			addprod.tipocod[1].disabled = false;
+
+			addprod.textfield2.value = '';
+
+			busca_codigo(addprod.textfield2);
+
+			addprod.textfield2.focus();
+
+			addprod.Button2.value = 'Agregar ';
+
+			addprod.accionsec.value = '';
+
+			document.productos.location = "nueva_cotizacion_0302.php?id_os={IDOS}&clie_rut={clie_rut}&accion=elitod";
+
+		}
+
+	}
+
+
+
+	function editar() {
+
+	
+
+		if (document.productos.IndexSelected != -1) 
+
+			document.productos.location = "nueva_cotizacion_0302.php?id_os={IDOS}&clie_rut={clie_rut}&accion=mod&IndexSelected=" + document.productos.IndexSelected;
+
+	}
+
+
+
+/*boton busqueda avanzada*/
+
+	function busqueda(loc) {
+
+			returnval = popUpWindowModal('nueva_cotizacion_0303.php?id_os={IDOS}&clie_rut={clie_rut}',  100, 100, 600, 400);
+
+	}
+
+	function editar_espec() {
+
+		if (document.productos.IndexSelected != -1) {
+
+			returnval = popUpWindowModal('editar_especificaciones.php?id_os={IDOS}&clie_rut={clie_rut}&IndexSelected=' + document.productos.IndexSelected, 100, 100, 400, 230);
+
+			if (returnval == "reload") {
+
+				addprod.textfield2.disabled = false;
+
+				addprod.tipocod[0].disabled = false;
+
+				addprod.tipocod[1].disabled = false;
+
+				addprod.textfield2.value = '';
+
+				busca_codigo(addprod.textfield2);
+
+				addprod.textfield2.focus();
+
+				addprod.Button2.value = 'Agregar ';
+
+				addprod.accionsec.value = '';
+
+				document.productos.location = "nueva_cotizacion_0302.php?id_os={IDOS}&clie_rut={clie_rut}";
+
+			}
+
+		}
+
+	}
+
+
+
+	function editar_espec2() {
+
+		returnval = popUpWindowModal('editar_especificaciones.php?id_os={IDOS}&clie_rut={clie_rut}&IndexSelected=0', 100, 100, 400, 230);
+
+		if (returnval == "reload") {
+
+			addprod.textfield2.disabled = false;
+
+			addprod.tipocod[0].disabled = false;
+
+			addprod.tipocod[1].disabled = false;
+
+			addprod.textfield2.value = '';
+
+			busca_codigo(addprod.textfield2);
+
+			addprod.textfield2.focus();
+
+			addprod.Button2.value = 'Agregar ';
+
+			addprod.accionsec.value = '';
+
+			document.productos.location = "nueva_cotizacion_0302.php?id_os={IDOS}&clie_rut={clie_rut}";
+
+		}
+
+	}
+
+
+
+	function cond_comer() {
+
+		if (document.productos.IndexSelected != -1) {
+
+			returnval = popUpWindowModal('condiciones_comerciales.php?id_os={IDOS}&clie_rut={clie_rut}&IndexSelected=' + document.productos.IndexSelected, 100, 100, 250, 230);
+
+			if (returnval == "reload") {
+
+				addprod.textfield2.disabled = false;
+
+				addprod.tipocod[0].disabled = false;
+
+				addprod.tipocod[1].disabled = false;
+
+				addprod.textfield2.value = '';
+
+				busca_codigo(addprod.textfield2);
+
+				addprod.textfield2.focus();
+
+				addprod.Button2.value = 'Agregar ';
+
+				addprod.accionsec.value = '';
+
+				document.productos.location = "nueva_cotizacion_0302.php?id_os={IDOS}&clie_rut={clie_rut}";
+
+			}
+
+		}
+
+	}
+
+
+
+	function nuevo() {
+
+		addprod.textfield2.disabled = false;
+
+		addprod.tipocod[0].disabled = false;
+
+		addprod.tipocod[1].disabled = false;
+
+		addprod.textfield2.value = '';
+
+		busca_codigo(addprod.textfield2);
+
+		addprod.textfield2.focus();
+
+		addprod.Button2.value = 'Agregar ';
+
+		addprod.accionsec.value = '';
+
+		document.productos.location = "nueva_cotizacion_0302.php?id_os={IDOS}&clie_rut={clie_rut}";
+
+	}
+
+	/*boton busqueda avanzada*/
+
+	function busqueda() {
+
+			returnval = popUpWindowModal('nueva_cotizacion_0303.php?id_os={IDOS}&clie_rut={clie_rut}',  100, 100, 600, 400);
+
+	}
+	
+</SCRIPT>
+
+
+
+
+
+<!-- InstanceEndEditable -->
+
+<link href="../runtime/styles/xp/grid.css" rel="stylesheet" type="text/css" ></link>
+
+<script src="../runtime/lib/grid.js"></script>
+
+<table width="780" height="20" border="0" cellpadding="0" cellspacing="0">
+
+  <tr>
+
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Paso 4/5 - {TEXT_TITULO} <!-- InstanceEndEditable --></td>
+
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" -->
+
+      <table  border="0" align="right" cellpadding="0" cellspacing="0">
+
+        <tr>
+
+          <td><img src="../img/1a.gif" width="40" height="40"></td>
+
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+
+          <td><img src="../img/2a.gif" width="40" height="40"></td>
+
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+
+          <td><img src="../img/3a.gif" width="40" height="40"></td>
+
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+
+          <td><img src="../img/4b.gif" width="40" height="40"></td>
+
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+
+          <td><img src="../img/5a.gif" width="40" height="40"></td>
+
+        </tr>
+
+      </table>
+
+    <!-- InstanceEndEditable -->
+
+	</td>
+
+  </tr>
+
+</table>
+
+<table width="780" border="0" cellpadding="0" cellspacing="0">
+
+	<FORM NAME="nueva_cotizacion_03" METHOD="POST" ACTION="nueva_cotizacion_03.php">
+
+	<input type="hidden" name="clie_rut" value="{clie_rut}">
+
+	<input type="hidden" name="accion" value="">
+
+	<input type="hidden" name="ultimoID" value="{ultimoID}">
+
+	<input type="hidden" name="id_os" value="{id_os}">
+
+	<input type="hidden" name="id_direccion" value="{id_direccion}">
+
+  <tr>
+
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+
+        <tr>
+
+          <td><table width="760"  border="0" align="center" cellpadding="1" cellspacing="1" class="textonormal">
+
+            <tr>
+
+              <td><fieldset><legend>Datos OS</legend>
+
+                  <table border="0" align="left" class="textonormal">
+
+                    <tr>
+
+                      <td colspan = 5>
+
+					  {TEXT_CAMPO_1}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+					  {TEXT_CAMPO_4}</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td width=150>
+
+					    <span class="userinput">
+
+                        <select name="select_proyecto3" onChange="if (this.value==0) abre_pop();" onClick="if (this.length==1)  abre_pop();">
+
+							<!-- BEGIN Proyectos -->
+							<option value="{id_proyecto}" {selected}>{proy_nombre}</option>
+							<!-- END Proyectos -->							
+							
+							<option value="0" >Nuevo Proyecto ...</option>
+
+                        </select>
+
+                        </span>
+
+					  </td>
+
+                      <td>
+					<!--
+					    <input name="os_descripcion" type="text" value="{os_descripcion}" maxlength="100" onBlur="Upper(this);"></td>
+					-->
+					
+						<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+
+						<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+
+						<SCRIPT LANGUAGE="JavaScript" ID="js17">						
+
+						
+
+						var ayer = new Date();
+
+						var cal1 = new CalendarPopup("testdiv1");
+
+						cal1.offsetX = 20;
+						cal1.offsetY = -172;
+						cal1.addDisabledDates(null,formatDate(ayer,"yyyy-MM-dd"));
+
+						</SCRIPT>  
+
+								
+                      <td>
+			
+					 <!-- Mi TexArea  -->
+						<textarea name="os_comentarios" id="os_comentarios" cols="30" rows="3" onkeypress="if (event.keyCode == 13) { aler('Hola'); }" onBlur="Upper(this);">{os_comentarios}</textarea>
+					  </td>
+                    <tr>
+
+					  <td>&nbsp;&nbsp;(*) Datos obligatorios</td></tr>
+
+					
+                  </table>
+
+              </fieldset>
+				 
+			  </td>
+
+            </tr>
+
+  </FORM>
+
+            <tr>
+
+              <td valign="top"><fieldset><legend>Detalle de Productos
+                   
+              </legend>
+
+        		 <input type="button" name="boton1" value="Búsq. Avanzada" onClick="if ((valor = popUpWindowModal('nueva_cotizacion_0303.php', 100, 100, 600, 400))>0) {nuevo();addprod.textfield2.value = valor; document.addprod.tipocod[1].checked = true; busca_codigo(addprod.textfield2)}; ">
+
+				 <input type="button" name="boton1" value="Instalaciones" onClick="if ((valor = popUpWindowModal('nueva_cotizacion_0303.php?accion=instalaciones&flag=Cerrar', 100, 100, 600, 400))>0) {nuevo();addprod.textfield2.value = valor; document.addprod.tipocod[1].checked = true; busca_codigo(addprod.textfield2)}; ">
+
+        		 <input type="button" name="boton1" value="Despachos" onClick="if ((valor = popUpWindowModal('nueva_cotizacion_0303.php?accion=despachos&flag=Cerrar', 100, 100, 600, 400))>0) {nuevo();addprod.textfield2.value = valor; document.addprod.tipocod[1].checked = true; busca_codigo(addprod.textfield2)}; ">
+
+				 <input type="button" name="boton1" value="Visitas" onClick="if ((valor = popUpWindowModal('nueva_cotizacion_0303.php?accion=visitas&flag=Cerrar', 100, 100, 600, 400))>0) {nuevo();addprod.textfield2.value = valor; document.addprod.tipocod[1].checked = true; busca_codigo(addprod.textfield2)}; ">
+
+				 <input type="button" name="boton1" value="Arr.Herr" onClick="if ((valor = popUpWindowModal('nueva_cotizacion_0303.php?accion=arriendo&flag=Cerrar', 100, 100, 600, 400))>0) {nuevo();addprod.textfield2.value = valor; document.addprod.tipocod[1].checked = true; busca_codigo(addprod.textfield2)};">
+
+				 <input type="button" name="boton1" value="Seguro.Ext" onClick="if ((valor = popUpWindowModal('nueva_cotizacion_0303.php?accion=seguro&flag=Cerrar', 100, 100, 600, 400))>0) {nuevo();addprod.textfield2.value = valor; document.addprod.tipocod[1].checked = true; busca_codigo(addprod.textfield2)};">
+
+				 <input type="button" name="boton1" value="Ped.Especial" onClick="if ((valor = popUpWindowModal('nueva_cotizacion_0303.php?accion=apedido&flag=Cerrar', 100, 100, 600, 400))>0) {nuevo();addprod.textfield2.value = valor; document.addprod.tipocod[1].checked = true; busca_codigo(addprod.textfield2)}; ">
+				 
+				 <input type="submit" name="boton3" value="Despacho" disabled onClick="popUpWindowModalscroll('../templates/despachos/despacho_{codlocal}.htm', 100, 100, 600, 600)">
+
+				 <!-- <input type="submit" name="boton3" value="Costo Visita" disabled onClick="popUpWindowModalscroll('../templates/visitas/Visitas.htm', 100, 100, 700, 400)"> -->
+				  
+				 <input type="submit" name="boton4" value="Inventario" onClick="popUpWindowMod('consulta_inventario.php?menu=0', 30, 30, 860, 700)">
+				 
+                <table width="743" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ECE9D8" class="textonormal">
+
+				  <form name="addprod" method="post" target="productos" action="nueva_cotizacion_0302.php?id_os={IDOS}">
+			
+			<input type="hidden" name="retira_cliente" value="2">
+			
+			<strong>Selecione Tipo de Entrega: </strong>
+				<select name="tipo_entrega" id="tipo_entrega" onChange="enviar_formulario();">
+               		<option value="">Seleccione</option>
+					<!-- BEGIN Despacho -->
+							<option value="{id_tipodespacho}">{nombre}</option>
+					<!-- END Despacho -->
+             	</select>
+             
+
+
+
+
+				  <input type="hidden" name="accion" value="">
+
+				  <input type="hidden" name="accionsec" value="">
+
+				  <input type="hidden" name="IndexSelected2" value="">
+
+				  <input type="hidden" name="cantreg" value="0">
+
+				  <input type="hidden" name="clie_rut" value="{clie_rut}">
+
+				  <input type="hidden" name="textfield_idprod" value="">
+
+				  <input type="hidden" name="textfield_codbarra" value="">
+
+				  <input type="hidden" name="textfield_tipoprod" value="">
+
+				  <input type="hidden" name="textfield_subtipoprod" value="">
+
+				  <input type="hidden" name="textfield_preccosto" value="">
+
+				  <input type="hidden" name="textfield_precio_req" value="">
+
+				  <input type="hidden" name="textfield_precio_mod" value="">
+
+				  <input type="hidden" name="textfield_valid_stock" value="">
+
+				  <input type="hidden" name="textfield_stock_prov" value="">
+
+				  <input type="hidden" name="textfield2_aux" value="">
+
+				  <input type="hidden" name="textfield3_aux" value="">
+
+				  <input type="hidden" name="textfield5_aux" value="">
+
+                  <tr>
+
+                    <td colspan=10><img src="../img/1x1trans.gif" height="10" border="0"></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td width="94"><input name="tipocod" type="radio" value="UPC" checked onClick="if (this.checked && addprod.textfield2.value) busca_codigo(addprod.textfield2)">
+
+                      {TEXT_CAMPO_5}
+
+                        <input name="tipocod" type="radio" value="SAP" onClick="if (this.checked && addprod.textfield2.value) busca_codigo(addprod.textfield2)">
+
+                      {TEXT_CAMPO_6}
+
+					</td>
+
+                    <td width="14">&nbsp;</td>
+
+                    <td width="86">{TEXT_CAMPO_7}</td>
+
+                    <td width="72">{TEXT_CAMPO_8}</td>				
+				
+				<!--
+					<td width="124" colspan="2">Fecha Entrega</td>
+				-->
+				
+				   <td width="61">{TEXT_CAMPO_9}</td>
+
+                    <td width="40">{TEXT_CAMPO_10}</td>
+
+                    <td width="22">{TEXT_CAMPO_11}</td>
+
+                    <td width="40">&nbsp;&nbsp;{TEXT_CAMPO_12}</td>
+
+                    <td width="97">&nbsp;</td>
+
+                  </tr>
+
+                  <script language="JavaScript" type="text/JavaScript" src="popup.js"></script>
+
+                  <tr>
+
+                    <td colspan="2"><input name="textfield2" type="text" value="" size="18"  maxlength="20" onChange="busca_codigo(this);" onKeyUp="if (window.event.keyCode==13){ busca_codigo(this)};"></td>
+
+                    <td><input name="textfield3" type="text" value="" disabled size = 34></td>
+
+                    <td>
+
+                        <select name="select_despacho">
+
+						<!-- BEGIN Despacho -->
+
+							<option value="{id_tipodespacho}">{nombre}</option>
+
+						<!-- END Despacho -->
+
+                        </select>
+
+					</td>
+					
+					
+					<!--
+					<td>
+						<input name="os_fechaestimada"   id="os_fechaestimada" type="text" size=8 maxlength=10 readonly="true" value="" > 
+					</td>
+					-->
+					
+					
+					
+
+                    <td align=center>
+
+					  <select name="select_instalacion">
+
+                        <option value=1 >S&iacute;</option>
+
+                        <option value=0 selected>No</option>
+
+                      </select>
+
+					</td>
+
+                    <td><input name="textfield5" type="text" value="" size="8" disabled onChange="calcula_total()" maxlength="10" onKeyUp="if (window.event.keyCode==13){ validar_form2()};"></td>
+
+                    <td><input name="textfield4" type="text" value="1" size="3" onChange="calcula_total()" maxlength="4" onKeyUp="if (window.event.keyCode==13){ validar_form2()};"></td>
+
+                    <td><input name="textfield6" type="text" disabled value="0" size="10"></td>
+
+                    <td>
+
+                      <input type="button" name="Button2" value="Agregar " onClick="validar_form2()">
+
+                    </td>
+
+                  </tr>
+
+                </table>
+
+              </fieldset>
+
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+
+                  <tr>
+
+                    <td height=100>
+					
+			
+					
+      <!-- neo -->
+
+
+
+           <iframe src="nueva_cotizacion_0302.php?clie_rut={clie_rut}&id_os={IDOS}&accion=relprice" name="productos" width="100%" height="180" FRAMEBORDER=0 leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" scrolling="">
+          
+           </iframe>
+		   
+		
+		 		  
+		   
+		   
+		   
+
+					</td>
+
+                  </tr>
+
+                </table>                
+
+				<table width="100%"  border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#ECE9D8">
+
+                  <tr>
+
+                    <td width="70%"><div align="left" class="textonormal">Para modificar un producto, selecciónelo en la grilla y presione alguna de las opciones del menú</div></td>
+
+					<td width="18%"><div align="right">Total con Iva $</div></td>
+
+                    <td width="15%"><div align="right"><input name="total" class="textoespecial1" type="text" readonly value="0" size="10"></div></td>
+
+                    <td width="5%">&nbsp;</td>
+
+                  </tr>
+
+                </table>                
+
+                <table width="600"  border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+
+                  <tr>
+
+                    <td width="16%"><div align="center"><a href="#" onClick="nuevo()">Nuevo Producto </a></div></td>
+
+                    <td width="16%"><div align="center"><a href="#" onClick="editar()">Editar Producto </a></div></td>
+
+                    <td width="16%"><div align="center"><a href="#" onClick="eliminar()">Eliminar Producto </a></div></td>
+
+                    <td width="16%"><div align="center"><a href="#" onClick="eliminartodos()">Eliminar Todos </a></div></td>
+
+                    <td width="16%"><div align="center"><a href="#" onClick="editar_espec()">Observaciones al Producto </a></div></td>
+				
+				<!--
+                    <td width="16%"><div align="center"><a href="#" onClick="cond_comer()">Condiciones Comerciales </a></div></td>
+				-->
+				
+                  </tr>
+
+                </table></td>
+
+	 </form>
+
+            </tr>
+
+</table></td>
+
+        </tr>
+
+        <tr>
+
+          <td valign="top"><table width="219"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+
+            <tr>
+
+              <td width="33"><a href="nueva_cotizacion_02.php?clie_rut={clie_rut}"><img src="../img/anterior.gif" width="23" height="23" border="0"></a></td>
+
+              <td width="59">Anterior</td>
+
+              <td width="70">
+
+                <div align="right">Siguiente </div></td>
+
+              <td width="31">
+
+				<a href="#" onClick="validar_form()"><img src="../img/siguiente.gif" alt="prueba" width="23" height="23" border="0" title="Siguiente" ></a>			  
+
+			  </td>
+
+            </tr>
+
+          </table>
+		  </td>
+		  </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+</table>
+
+
+			
+
+
+<iframe name="codesearch" width="600" height="0" src="blanco.htm" scrolling="no" frameborder="0"></iframe>
+
+<DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+
+
+
+<div ID="multi_barra" style="position:absolute;visibility:hidden; left:130px; top:295px; width:120px; height:40px; background-color:#ffffff; overflow:no;">
+
+	<FORM METHOD=POST ACTION="" NAME="formbar">
+
+		<SELECT NAME="multi_codigos" size=3 onKeyUp="guardar_barra(this, 0)" onClick="guardar_barra(this, 0)" onBlur="guardar_barra(this, 1)" style="font-weight: bolder">
+
+		</SELECT>
+
+	</FORM>
+
+</div>
+
+
+
+<script LANGUAGE="javascript">
+
+	//window.document.nueva_cotizacion_03.os_descripcion.onkeypress = KeyIsTexto ;
+
+	window.document.nueva_cotizacion_03.os_comentarios.onkeypress = KeyIsTexto ;
+
+	window.document.addprod.textfield2.onkeypress = KeyIsNumber ;
+
+	window.document.addprod.textfield5.onkeypress = KeyIsNumber ;
+
+	window.document.addprod.textfield4.onkeypress = KeyIsDecimalP ;
+
+	//document.nueva_cotizacion_03.os_descripcion.focus();
+
+
+
+	text = ''; //Variable que almacena el listado de los códigos de barra de un producto multicodigo
+
+	codant = ''; //Variable que almacena el código del anterior producto buscado
+
+	
+</script>
+
+

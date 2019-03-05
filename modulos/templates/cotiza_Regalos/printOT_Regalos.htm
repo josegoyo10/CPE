@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>{PAGETITLE}</title>
+</head>
+<script language="javascript" src="../../includes/popup.js"></script>
+<script type="text/javascript">
+	function print_OT(){
+		if ({NumImp} == '0'){
+			popUpWindowMod('print_OT.php?id_OT={ot_idList}',100,50,750,700);
+			location.href = 'monitor_OTRegalos.php?idLista={idLista_enc}&clie_rut={clie_Rut}';
+		}
+		else{
+			if(confirm('La Orden de Trabajo ya fue impresa. \n         Desea Re-imprimirla?'))
+				popUpWindowMod('../lista_Regalos/valida_subAdmin.php?accion=Imp&idLista={ot_idList}&clie_rut=OT',300,300,300,170);
+		}
+	}
+	
+	function Accion_flecha_ant(){
+		location.href='../lista_Regalos/nueva_lista_sumario_01.php?idLista={idLista}';
+	}
+</script>
+<body>
+<div align="left" style="margin-top: 5;" class="titulonormal">{TEXT_TITULO}</div>
+<table border="0" align="center" style="width: 780; margin-top: 0;">
+	<tr>
+		<td style="height: 50" align="center">
+			<!-- <div id="Impr"><a href="#" title="Imprimir" onclick="print_OT()"><img src="../img/ico_print.gif" border="0" style="width:36; height: 36;"></a></div> -->
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table border="0" align="center" style="width: 700;">
+				<tr>
+				  	<td colspan="3">
+				  		<table border="0" align="center" style="width: 700; margin-top: 0;">
+				  			<tr>
+								<td align="left" style="width: 150"><img src="../img/logo3.gif" border="0" style="width:95; height: 55;"></td>
+								<td>
+									<table width="550">
+									  <tr>
+									    <td class="subtitulonormal">{TEXT_CAMPO_1}  {ot_idList}</td>
+									  </tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_4}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_5}</td>
+								<td style="width: 250;" class="userinput">{ot_idList}</td>
+								<td style="width: 120;" class="textonormal">{TEXT_CAMPO_9}</td>
+								<td style="width: 150;" class="userinput">{idLista_OS}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_6}</td>
+								<td style="width: 250;" class="userinput">{ot_listFeccrea}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_10}</td>
+								<td style="width: 150;" class="userinput">{fec_Evento}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_7}</td>
+								<td style="width: 250;" class="userinput">{tipoOT}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_11}</td>
+								<td style="width: 150;" class="userinput">{estado}</td>
+							</tr>
+							<tr>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_8}</td>
+								<td style="width: 150;" class="userinput">{local}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_35}</td>
+								<td style="width: 150;" class="userinput">{idLista}</td>
+							</tr>
+						</table>
+						</fieldset>
+					</td>			
+				</tr>
+				<tr>
+					<td colspan="3">
+						<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_12}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_13}</td>
+								<td style="width: 250;" class="userinput">{festejado}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_17}</td>
+								<td style="width: 150;" class="userinput">{telefono}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_14}</td>
+								<td style="width: 250;" class="userinput">{direccion}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_18}</td>
+								<td style="width: 150;" class="userinput">{barrio}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_15}</td>
+								<td style="width: 250;" class="userinput">{tipDespacho}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_19}</td>
+								<td style="width: 150;" class="userinput">{ciudad}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_16}</td>
+								<td style="width: 250;" class="userinput">{descripcion}</td>
+								<td style="width: 100;" class="textonormal">{TEXT_CAMPO_20}</td>
+								<td style="width: 150;" class="userinput">{departamento}<br>{localidad}</td>
+							</tr>
+						</table>
+						</fieldset>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<table class="tabla1">
+							<tr>
+								<th style="width: 140;">{TEXT_CAMPO_21}</th>
+								<th style="width: 320;">{TEXT_CAMPO_22}</th>
+								<th style="width: 110;">{TEXT_CAMPO_23}</th>
+								<th style="width: 90;">{TEXT_CAMPO_24}</th>
+								<th style="width: 90;">{TEXT_CAMPO_25}</th>
+							</tr>
+							<!-- BEGIN Productos -->
+							<tr>
+								<td style="width: 120;">{cod_ean}<br>({cod_Easy})</td>
+								<td style="width: 350;">{descripcion}</td>
+								<td style="width: 120;" align="right">{list_precio}</td>
+								<td style="width: 70;" align="right">{OS_cantidad}</td>
+								<td style="width: 70;" align="center">
+									<div style="width: 35px; margin-top: 12;"align="center">_________</div>
+								</td>
+							</tr>
+							<!-- END Productos -->
+							<tr>
+								<td colspan="2"></td>
+								<th style="width: 120;" align="right">{TEXT_CAMPO_26}</th>
+								<th style="width: 70;" align="right">{Total}</th>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" align="center" style="width: 100; margin-top: 15;" class="textonormal">
+	<tr>
+		<td>
+			<a href="#" onClick="Accion_flecha_ant();"><img src="../img/anterior.gif"  alt="prueba" width="23" height="23" border="0" title="Anterior" ></a>
+		<td>
+		<td>{TEXT_CAMPO_30}</td>
+	</tr>
+</table>
+</body>
+</html>

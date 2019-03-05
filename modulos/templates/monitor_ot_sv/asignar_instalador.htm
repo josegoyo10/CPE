@@ -1,0 +1,258 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="JavaScript" src="menu/menu.js"></script>
+<script language="JavaScript" src="menu/menu_tpl.js"></script>
+<script language="JavaScript" src="menu/menu_items.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<script language="javascript" src="../../includes/ajax.js"></script>
+
+<style type="text/css">
+<!--
+body {
+	background-color: #F2F4F4;
+}
+-->
+</style>
+<SCRIPT LANGUAGE="JavaScript">
+////chekea el rut
+function checkDV( ){
+ /*
+	if( validar_obligatorio( asigna_sv.inst_rut, "Cédula es obligatorio" ))
+			return false;
+	  crut = '';
+	  mcrut= asigna_sv.inst_rut.value;
+	  for(i=0; i<mcrut.length; ++i)
+		if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-'){
+		 crut = crut + mcrut.charAt(i);
+		}
+	  largo = crut.length;
+	  if ( largo < 2 ){
+		alert("Debe ingresar la Cédula completa.");
+		document.asigna_sv.inst_rut.focus();
+		document.asigna_sv.inst_rut.select();
+		return false;
+	  }
+
+	  if ( largo > 2 )
+		rut = crut.substring(0, largo - 1);
+	  else
+		rut = crut.charAt(0);
+
+		dv = crut.charAt(largo-1);
+
+	  //checkCDV( dv );
+	  if ( rut == null || dv == null )
+	   return 0;
+	   var dvr = '0';
+	   suma = 0;
+	   mul  = 2;
+
+	  for (i= rut.length -1 ; i >= 0; i--){
+	   suma = suma + rut.charAt(i) * mul;
+		if (mul == 7)
+			mul = 2;
+		else
+			mul++;
+	  }
+	  res = suma % 11;
+	  if (res==1)
+		dvr = 'k';
+	  else if (res==0)
+		dvr = '0';
+	  else{
+		dvi = 11-res;
+		dvr = dvi + "";
+	  }
+	  
+	 
+	 
+	  */
+	  
+	  //document.asigna_sv.inst_rut.value = crut.substr(0, crut.length); 
+	  //digito=crut.substr(crut.length-1, 1).toUpperCase();
+	  //window.document.asigna_sv.inst_rut.onkeypress = KeyIsEnter ;
+	  return true;
+ 
+}
+///// estados
+/*
+function checkestado(f,v){
+        if(v=='ins'){
+                f.inst_rut.disabled = true;
+                f.select_inst.disabled = false;
+        }
+        if(v=='inr'){
+				//f.select_inst.options[f.select_inst.selectedIndex].value = '0';
+				f.select_inst.disabled = true;
+                f.inst_rut.disabled = false;
+		}
+}
+*/
+
+///
+window.name="asigna_sv";
+function valida_form(){
+	var rf;
+	valor1=true;
+	valor2=true;
+	valor3=false;
+	rf=false;
+	f=document.asigna_sv;
+	
+	/*
+	if (!f.inst_rut.disabled){
+		valor3=checkDV();
+	}
+	*/
+	
+	/*
+	if ((f.inst_rut.disabled)){
+		if (f.select_inst.options.length == 0) {
+			alert ("No se han asignado instaladores del Barrio de despacho");
+			f.select_inst.disabled = true;
+			f.inst_selec[1].checked=true;
+            f.inst_rut.disabled = false;
+			return false;
+		}
+	rf=true;
+	}
+	*/
+
+rf=true;
+
+	if ((valor3)||(rf)){
+		if( validar_obligatorio(f.ot_freactivacion, "Debe ingresar Fecha de Reactivación" )){
+			return false;
+		}
+	valor1=true;
+	}
+	if ( ((rf)&&(valor1))||((valor3)&&(valor1)) ){
+		f.submit();
+	}
+
+	return false;
+}
+
+
+/* AJAX PARA DEPARTAMENTOS */
+function recargarEmp(idEmp)
+{
+	var selectDept=document.getElementById(idEmp);
+	var opcion=selectDept.options[selectDept.selectedIndex].value;
+	exec_AJAXRPC('POST','asignar_instalador_01_ajax_buscarInstalador.php?id_Emp=' + opcion,'desplegar_instalador');
+}
+
+function desplegar_instalador(text2){
+	var SelectCiudad = document.getElementById('select_inst');
+	SelectCiudad.parentNode.innerHTML = text2;
+}
+
+
+
+
+</SCRIPT>
+
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" ID="js17">
+	var ayer = new Date();										//Fecha de Hoy
+	ayer.setDate(ayer.getDate() - 1);							//Fecha de ayer
+	var cal1 = new CalendarPopup("testdiv1", "asigna_sv");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = -126;										
+	cal1.offsetY = 20;
+	cal1.addDisabledDates(null,formatDate(ayer,"yyyy-MM-dd"));	//Deshabilita las fechas anteriores a "ayer"
+</SCRIPT>  
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal">Proceso Asignación servicio </td>
+  </tr>
+</table>
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+<form NAME="asigna_sv" METHOD="POST" onSubmit="" target="asigna_sv">
+<input type="hidden" name="id_ot" value="{id_ot}">
+<input type="hidden" name="destino" value="{destino}">
+<input type="hidden" name="accion" value="asignar">
+  <tr>
+    <td>
+      <table width="370"  border="0" align="left" cellpadding="3" cellspacing="3" class="textonormal">
+        <tr>
+          <td width="10"><div align="right">EMPRESA</div></td>
+
+          <!--
+		  <td >&nbsp;</td>
+		  -->
+		  
+         <td width="10"><select name="select_emp" id="select_emp"  onChange="recargarEmp(this.id);" >
+				<!-- BEGIN Empresa -->
+				<option value="{id_empresa_instaladora}" {selected}>{descripcion} </option>
+				<!-- END Empresa -->
+			</select></td>	
+		 </tr>
+        <tr>
+          <td>INSTALADOR</td>
+          
+		  <!--
+		  <td ><input id="inst_selec" name="inst_selec" type="radio" value="ins" {checkedno} >
+            Por Nombre&nbsp; </td>
+		  -->
+			
+          <td><select name="select_inst" id="select_inst" {disabled}>
+              <!-- BEGIN instalador -->
+              <option value="{id_instalador}" {selected}>{inst_rut}&nbsp;&nbsp;{inst_nombre}&nbsp;{inst_paterno}</option>
+              <!-- END instalador -->
+          </select></td>
+        </tr>
+   
+	<!--
+        <tr>
+          <td width="10">&nbsp;</td>
+          <td width="99"><input name="inst_selec" type="radio" value="inr" {checked} onclick="checkestado(document.asigna_sv,'inr')">Por Cédula&nbsp;</td>
+         <td width="10"><input type="text" name="inst_rut" id="inst_rut" value="{rut}" {disabledr}></td>	
+        </tr>
+	-->
+	
+</table>
+      <tr>
+	  
+ <table width="370"  border="0" align="left" cellpadding="3" cellspacing="3" class="textonormal">
+        <tr>
+          <td width="68" >Fecha Reactivaci&oacute;n</td>
+          <td align="left"  >
+				<input name="ot_freactivacion" id="ot_freactivacion" type="text" value="{ot_freactivacion}" onClick="cal1.select(document.forms[0].ot_freactivacion,'anchor1','dd/MM/yyyy'); return false;">
+				<a href="#" onClick="cal1.select(document.forms[0].ot_freactivacion,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/lib/cal.gif" width="16" height="16" border="0" title="Fecha Reactivación"></a>
+				<DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+		  </td>
+        </tr>
+          <td valign="top">Comentario</td>
+          <td width="68"><textarea id="comentario" name="comentario" cols="20" wrap="VIRTUAL">{ot_comentario}</textarea></td>
+        </tr>
+        <tr align="center">
+          <td height="27" colspan="3">&nbsp;</td>
+        </tr>
+        <tr align="center">
+          <td colspan="3"> 
+		  <table width="198" border="0" cellpadding="2" cellspacing="2" class="tabla2">
+            <tr>
+              <td width="29"><a href="#"  onClick="window.close()"><img src="../img/cancelar.gif" width="23" height="23" border="0"></a></td>
+              <td width="51">Cancelar</td>
+              <td width="5">&nbsp;</td>
+              <td width="52">Finalizar</td>
+              <td width="29"><a href="#" onClick="valida_form()"><img src="../img/siguiente.gif" width="23" height="23" border="0"></a></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+	</td>
+  </tr>
+  </form>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+	window.document.asigna_sv.comentario.onkeypress = KeyIsTexto;
+	//window.document.asigna_sv.inst_rut.onkeypress = KeyIsRut;
+</script>

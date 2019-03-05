@@ -1,0 +1,164 @@
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript" src="../includes/funciones.js"></script>
+
+<script language="javascript">
+<!--
+
+function valida(campo,form){
+	var cadena = new Array(); 
+	var cadena = campo.value.split(',');
+	for(i = 0; i < cadena.length; i++) {
+		if (cadena[i].length>10){
+			alert('Error en ingreso \''+cadena[i]+'\'. El código no debe ser de largo mayor que 10');
+			return false;
+		}
+	}
+	document.servicios.submit();
+}
+
+-->
+</script>
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Administrador de Servicios <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" height="81%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="760" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+      <form NAME="servicios" METHOD="POST" ACTION="adm_instalacion.php" onSubmit="">
+
+		<!--
+		<tr>
+          <td valign="top"><fieldset>
+            <legend>Instalación - Precio Requerido (IR)/ Categorías  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="ir_categoria" wrap="VIRTUAL" rows="5" cols="78">{ir_categoria}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(servicios.ir_categoria,servicios)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr>
+		-->
+		<tr>
+          <td valign="top"><fieldset>
+            <legend>Instalación - Precio Requerido (IR) / Códigos Sap  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="ir_sap" wrap="VIRTUAL" rows="5" cols="78">{ir_sap}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(servicios.ir_sap,servicios)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr>
+		<!--
+        <tr>
+          <td valign="top"><fieldset>
+            <legend>Instalación - Instalación Normal (IN)/ Categorías  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="in_categoria" wrap="VIRTUAL" rows="5" cols="78">{in_categoria}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(servicios.in_categoria,servicios)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr>
+		-->
+		<tr>
+          <td valign="top"><fieldset>
+            <legend>Instalación -Instalación Normal (IN) / Códigos Sap  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="in_sap" wrap="VIRTUAL" rows="5" cols="78">{in_sap}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(servicios.in_sap,servicios)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr>
+		<!--
+		<tr>
+          <td valign="top"><fieldset>
+            <legend>Servicio - Visitas (VI)/ Categorías  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="vi_categoria" wrap="VIRTUAL" rows="5" cols="78">{vi_categoria}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(servicios.vi_categoria,servicios)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr>
+		-->
+		<tr>
+          <td valign="top"><fieldset>
+            <legend>Servicio - Visitas (VI) / Códigos Sap  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="vi_sap" wrap="VIRTUAL" rows="5" cols="78">{vi_sap}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(servicios.vi_sap,servicios)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr>
+	   <!--- Para Arriendo y para seguros!-->
+
+		<tr>
+          <td valign="top"><fieldset>
+            <legend>Servicio - Arriendo Herramientas (AR) / Códigos Sap  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="ar_sap" wrap="VIRTUAL" rows="5" cols="78">{ar_sap}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(servicios.ar_sap,servicios)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr>
+		<tr>
+          <td valign="top"><fieldset>
+            <legend>Servicio - Seguro Extendido (SE) / Códigos Sap  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="se_sap" wrap="VIRTUAL" rows="5" cols="78">{se_sap}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(servicios.se_sap,servicios)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr>
+		<!--
+		<tr>
+          <td valign="top"><fieldset>
+            <legend>Servicio - Despacho (DE)/ Categorías  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="de_categoria" wrap="VIRTUAL" rows="5" cols="78">{de_categoria}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(servicios.de_categoria,servicios)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr>
+		-->
+		<tr>
+          <td valign="top"><fieldset>
+            <legend>Instalación -Despacho (DE) / Códigos Sap  </legend>
+            <table border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <td><textarea name="de_sap" wrap="VIRTUAL" rows="5" cols="78">{de_sap}</textarea></td>
+				<td><input type="button" value="Actualizar" onClick="valida(servicios.de_sap,servicios)"></td>
+              </tr>
+            </table>
+          </fieldset></td>
+        </tr>
+      </form>
+      </table>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+    
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	//window.document.servicios.ir_categoria.onkeypress = KeyIsNumberCo;
+	window.document.servicios.ir_sap.onkeypress = KeyIsNumberCo;
+	//window.document.servicios.in_categoria.onkeypress = KeyIsNumberCo;
+	window.document.servicios.in_sap.onkeypress = KeyIsNumberCo;
+	//window.document.servicios.vi_categoria.onkeypress = KeyIsNumberCo;
+	window.document.servicios.vi_sap.onkeypress = KeyIsNumberCo;
+	//window.document.servicios.de_categoria.onkeypress = KeyIsNumberCo;
+	window.document.servicios.de_sap.onkeypress = KeyIsNumberCo;
+	window.document.servicios.ar_sap.onkeypress = KeyIsNumberCo;
+	window.document.servicios.de_sap.onkeypress = KeyIsNumberCo;
+-->
+</script>
+
+

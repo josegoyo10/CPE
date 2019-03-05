@@ -1,0 +1,97 @@
+<script language="JavaScript" src="checkfield.js"></script>
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Consulta de Productos y Precios	 <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" height="85%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+
+
+
+      <table width="697" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+        <tr>
+          <td width="372" valign="top"><fieldset><legend>Datos del Producto</legend>
+              <table width="372" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <tr>
+                  <td width="95" valign="top">C&oacute;digo SAP</td>
+                  <td width="25" valign="top"><div align="center">:</div></td>
+                  <td width="196" colspan="7" class="userinput">{cod_prod1}</td>
+                </tr>
+                <tr>
+                  <td valign="top">C&oacute;digos Barra </td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput"><p>
+                    <!-- BEGIN Codigos_barra -->
+                    {cod_barra}<br>
+                    <!-- END Codigos_barra -->
+                  </p></td>
+				</tr>
+				<tr>
+                  <td valign="top">Unidad de Medida </td>
+                  <td valign="top"><div align="center">:</div></td>
+				  <td colspan="7" class="userinput"><p>{unid_med}</p></td>
+                </tr>
+
+                <tr>
+                  <td valign="top">Tipo</td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput">{prod_tipo}</td>
+                </tr>
+                <tr>
+                  <td valign="top">Subtipo</td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput">{prod_subtipo}</td>
+                </tr>
+                <tr>
+                  <td valign="top">Nombre</td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput">{des_corta}</td>
+                </tr>
+                <tr>
+                  <td valign="top">Descripci&oacute;n</td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput">{des_larga}</td>
+                </tr>
+                <tr>
+                  <td valign="top">Estado</td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput">{estadoactivo}</td>
+                </tr>
+              </table>
+          </fieldset></td>
+          <td width="294" valign="top"><fieldset><legend>Precios por Tienda</legend>
+              <table border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <tr>
+                  <td width="42" valign="top" class="userinput">Tienda</td>
+                  <td width="170" valign="top" class="userinput">Nombre</td>
+                  <td width="40" valign="top" class="userinput">Precio</td>
+                  <!--td width="40" valign="top" class="userinput">Stock</td-->
+                </tr>
+            <!-- BEGIN Precios -->
+                <tr>
+                  <td valign="top">{cod_local}<br></td>
+                  <td valign="top">{nom_local}</td>
+                  <td valign="top"><div align="right">{prec_valor}</div></td>
+                  <!--td valign="top"><div align="right">{stock}</div></td-->
+                </tr>
+            <!-- END Precios -->
+              </table>
+          </fieldset>&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+
+	<TABLE align="center">
+	<TR>
+		<TD><INPUT TYPE="button" value="Nueva Consulta" onClick="location.href='index.php';"></TD>
+	</TR>
+	</TABLE>
+
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>

@@ -1,0 +1,304 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0" background="../img/bg_pattern_002.jpg">
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Consulta Ventas Mensuales <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="../CalendarPopup.js"></SCRIPT>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+	var cal1 = new CalendarPopup("testdiv1");	//Se asigna la respuesta a la ventana actual
+	cal1.offsetX = -77;
+	cal1.offsetY = +20;
+
+//Valida que los campos de fecha no esten vacios y la diferencia de fechas no sea superior a 30 dias
+	function fechaNovacia(){
+		var Fini = document.viaje.fecha_desde.value
+		var FFin = document.viaje.fecha_hasta.value;
+		
+		if(Fini != '' && FFin != '')
+			fechaMayor30();
+
+		else if(Fini != '' && FFin == '')
+			alert("Debe ingresar Fecha Final");
+
+		else if(Fini == '' && FFin != '')
+			alert("Debe ingresar Fecha de Inicio");
+
+		else
+			alert("Debe ingresar Fecha de Inicio y Fecha Final");
+	}
+
+//Valida que los campos de fecha no esten vacios y la diferencia de fechas no sea superior a 30 dias
+function fechaMayor30(){	
+		var Fini = document.viaje.fecha_desde.value
+		var FFin = document.viaje.fecha_hasta.value;
+	
+			str1 = Fini.split("/");
+			str2 = FFin.split("/");
+						
+			var anomn = str1[2];
+			var anomy = str2[2];
+			
+			var mesmn =  str1[1];
+			var mesmy =  str2[1];
+					
+			var diamn =  str1[0];
+			var diamy =  str2[0];
+			
+			var evalano = ((anomy - anomn) * 360);
+			var evalmes = ((mesmy *30) - (mesmn *30));
+			var evaldia = diamy - diamn;		
+			var totaldias = evaldia + evalmes + evalano;	
+				
+			if(totaldias <= 365){
+				Buscar();
+			}
+			else{
+				alert("Debe seleccionar un rango de fechas menor o igual a 365 días");
+				}
+	}
+
+	function Buscar(){
+		fecha_desde = document.viaje.fecha_desde.value;
+		fecha_hasta = document.viaje.fecha_hasta.value;
+
+		formatof=true;
+		if(fecha_desde || fecha_hasta){
+			formatof=FormatoFechas(fecha_desde,fecha_hasta);
+		}
+
+		valor = EvaluaFechas(fecha_desde,fecha_hasta);
+		if(formatof){
+			if(valor==false){
+				alert('Fecha Desde mayor que Fecha Hasta');
+				document.viaje.fecha_desde.select();
+				return false;
+			}
+		}
+		else{
+			alert('Debe ingresar Formato Correcto en Fecha');
+		}
+		accion();
+	}
+
+	function accion(){
+		document.viaje.accion.value="update";
+		document.viaje.submit();
+	}
+
+	function FormatoFechas(fi,ft){
+		var str1 = fi;
+		var str2 = ft;
+		fechaArr1 = new Array;
+		fechaArr2 = new Array;
+
+		fechaArr1 = str1.split("/");
+		fechaArr2 = str2.split("/");
+		if (((str1.substring(2,3))=="/")&&((str1.substring(5,6))=="/")){
+			f1correcta=true;
+		}else{
+			f1correcta=false;
+		}
+
+		if (((str2.substring(2,3))=="/")&&((str2.substring(5,6))=="/")){
+			f2correcta=true;
+		}else{
+			f2correcta=false;
+		}
+		if (f1correcta && f1correcta){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	function EvaluaFechas(fi,ft){
+		var fecha1=new Date()
+		var fecha2=new Date()
+		var str1 = fi;
+		var str2 = ft;
+
+		fechaArr1 = new Array;
+		fechaArr2 = new Array;
+
+		fechaArr1 = str1.split("/");
+		fechaArr2 = str2.split("/");
+
+		/* convierte la fecha a número comparable*/
+		fecha1.setFullYear(fechaArr1[2],fechaArr1[1]-1,fechaArr1[0])
+		fecha2.setFullYear(fechaArr2[2],fechaArr2[1]-1,fechaArr2[0])
+
+		if (fecha1>fecha2){
+		  return false;
+		}
+		if (fecha1 == fecha2){
+		  return true;
+		}
+		if (fecha1 < fecha2){
+		  return true;
+		}
+	}
+
+	function selecCliente(){
+		popUpWindowMod('../seleccionar_cliente/seleccionar_cliente.php', 200, 300, 710, 500);
+	}
+</SCRIPT>
+<!--  Función que realiza la operación de Exportar a Excel -->
+<!-- Si se genera error en la ejecucion de este JavaScript, por favor habilite la ejecucion de controles ActiveX
+     en su navegador, (Menú - Herramientas - Opciones de Internet - Seguridad) -->
+<script LANGUAGE=javascript>
+function exportToXL(eSrc) {
+var oExcel;
+var oExcelSheet;
+var oWkBooks;
+var cols;
+oExcel = new ActiveXObject('Excel.Application');
+oWkBooks = oExcel.Workbooks.Add;
+oExcelSheet = oWkBooks.Worksheets(1);
+oExcelSheet.Activate();
+if (eSrc.tagName != 'TABLE') {
+alert('No ha sido posible exportar la tabla a excell');
+return false;
+}
+cols = Math.ceil(eSrc.cells.length / eSrc.rows.length);
+for (var i = 0; i < eSrc.cells.length; i ++)
+{
+var c, r;
+r = Math.ceil((i+1) / cols);
+c = (i+1)-((r-1)*cols)
+if (eSrc.cells(i).tagName == 'TH') {
+oExcel.ActiveSheet.Cells(r,c).Font.Bold = true;
+oExcel.ActiveSheet.Cells(r,c).Interior.Color = 14474460;
+}
+if (eSrc.cells(i).childNodes.length > 0 && eSrc.cells(i).childNodes(0).tagName == "B")
+oExcel.ActiveSheet.Cells(r,c).Font.Bold = true;
+oExcel.ActiveSheet.Cells(r,c).Value = eSrc.cells(i).innerText;
+}
+oExcelSheet.Application.Visible = true;
+}
+</script>
+
+<table border="0" cellpadding="0" cellspacing="0" align="center">
+<FORM NAME="viaje" METHOD="POST" ACTION="reporteVentas.php" onSubmit="">
+  <tr>
+    <td valign="top">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+			<table border="0" align="center" cellpadding="0" cellspacing="0" class="textonormal">
+				<tr>
+					<!-- Elemento Locales -->
+
+				<td align="center" >
+						<fieldset style="width: 140px; height: 50px;">
+							<legend>Tienda</legend>
+							<table border="0"   align="center" height="20" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="bottom">
+											<span class="userinput">
+											<select name="idCentroDespacho" id="idCentroDespacho" class="select1">
+												<!-- BEGIN Bloque_centro_despacho -->
+												<option value="{id_local}" selected_local="">{nombre_local}</option>
+												<!-- END Bloque_centro_despacho -->
+										 	</select>
+										</span>
+									</td>
+								</tr>
+							</table>
+						</fieldset></td>
+					<td align="center">
+						<fieldset style="height: 70px;">
+							<legend>&nbsp;
+							Fecha Inicio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							Fecha Fin
+							&nbsp;</legend>
+							<table border="0" cellspacing="5" cellpadding="0">
+								<tr>
+									<td class="textonormal" class="titulonormalnegro">*Desde&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="#" onClick="cal1.select(document.forms[0].fecha_desde,'anchor1','dd/MM/yyyy'); return false;" name="anchor1" id="anchor1"><img src="../img/cal.gif" width="16" height="16" border="0" title="Fecha Desde "></a>
+									 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+									<input name="fecha_desde" id="fecha_desde" type="text" size="12" maxlength="12" value="{fecha_desde}" onClick="cal1.select(document.forms[0].fecha_desde,'anchor1','dd/MM/yyyy'); return false;" readonly="readonly">
+								  </td>
+									<td>
+										&nbsp;&nbsp;&nbsp;
+									</td>
+									<td class="textonormal" class="titulonormalnegro">*Hasta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="#" onClick="cal1.select(document.forms[0].fecha_hasta,'anchor','dd/MM/yyyy'); return false;" name="anchor" id="anchor"><img src="../img/cal.gif" width="16" height="16" border="0" title="Fecha Hasta "></a>
+									 <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+									<input name="fecha_hasta" id="fecha_hasta" type="text" size="12" maxlength="12" value="{fecha_hasta}" onClick="cal1.select(document.forms[0].fecha_hasta,'anchor','dd/MM/yyyy'); return false;" readonly="readonly">
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+					</td>
+					<!-- Elemento Dise&ntilde;ador -->
+					</tr>
+				<tr>
+				<td colspan="2" height="15px"></td>
+				</tr>
+				<tr>
+				<td colspan="2" align="center"><input type="button" name="Button" value="&nbsp;Consultar&nbsp;" onclick="fechaNovacia()"><br><br><input name="accion" id="accion" type="hidden" value="">{Export}</td>
+				</tr>
+				<tr height="5px"><td colspan="2"></td></tr>
+			</table>
+
+			<!-- BEGIN Grilla -->
+			<table width="80%" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1" >
+			    <tr>
+					<td align="center" colspan="9" class="titulonormalnegro">
+						<span>* Campos de carácter obligatorio</span>
+							{alert}&nbsp;{prueba}
+					</td>
+				</tr>
+				<tr style="color:#FF0000">
+					<th colspan="9" align="center">{Encabezado}</th>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td><div style="visibility: {visible}">
+					<iframe width="650px" height="300px" src="reporteGrafico.php?fecha_desde={fecha_desde}&fecha_hasta={fecha_hasta}&idLocal={idLocal}" name="contenido" FRAMEBORDER="0" BORDER=0 allowtransparency="true" style="background-color: transparent;" scrolling="no"></iframe>
+					</div>
+					</td>
+				</tr>
+			</table>
+			<table id=idTable width="50%" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+				<tr>
+					<th>N°</th>
+					<th>Año</th>
+					<th>Mes</th>
+					<th>Venta Total</th>
+				</tr>
+				<!-- BEGIN Bloque_Resultados -->
+				<tr>
+					<td align="center">{No}</td>
+					<td align="left">{Ano}</td>
+					<td align="left">{Mes}</td>
+					<td align="right">{Total}</td>
+				</tr>
+				<!-- END Bloque_Resultados -->
+			</table>
+			<!-- END Grilla -->
+
+			</FORM>
+
+		</td>
+        </tr>
+      </table>
+	</td>
+  </tr>
+
+<!-- InstanceEndEditable -->
+</table>
+</body>
+<!-- InstanceEnd -->
+</html>

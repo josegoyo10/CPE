@@ -1,0 +1,162 @@
+<script language="JavaScript" src="checkfield.js"></script>
+<script language="javascript" src="../../includes/funciones.js"></script>
+
+<script>
+<!--
+function validar_form( form ) {
+    if( validar_obligatorio( form.stock_proveedor, "El Campo Stock Proveedor es obligatorio" ) ) return false;
+//     if( validar_obligatorio( form.nombre, "Campo obligatorio" ) ) return false;
+    return true;
+}
+-->
+</script>
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Administrador de Productos - Detalle <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --> <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<table width="780" height="85%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+
+
+
+      <table width="697" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+        <tr>
+          <td width="372" valign="top"><fieldset><legend>Datos del Producto</legend>
+              <table width="372" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <tr>
+                  <td width="95" valign="top">C&oacute;digo SAP</td>
+                  <td width="25" valign="top"><div align="center">:</div></td>
+                  <td width="196" colspan="7" class="userinput">{cod_prod1}</td>
+                </tr>
+                <tr>
+                  <td valign="top">C&oacute;digos Barra </td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput"><p>
+                    <!-- BEGIN Codigos_barra -->
+                    {cod_barra}<br>
+                    <!-- END Codigos_barra -->
+                  </p></td>
+                </tr>
+                <tr>
+                  <td valign="top">Tipo</td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput">{prod_tipo}</td>
+                </tr>
+                <tr>
+                  <td valign="top">Subtipo</td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput">{prod_subtipo}</td>
+                </tr>
+                <tr>
+                  <td valign="top">Nombre</td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput">{des_corta}</td>
+                </tr>
+                <tr>
+                  <td valign="top">Descripci&oacute;n</td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput">{des_larga}</td>
+                </tr>
+                <form NAME="form_precios" METHOD="POST" ACTION="index.php" Onsubmit="return validar_form(this);">
+                <input type="hidden" name="req" value="upd">
+                <input type="hidden" name="id_prod" value="{id_producto}">
+                <tr>
+                  <td valign="top">Stock Proveedor </td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput"><input type="text" name="stock_proveedor" value="{stock_proveedor}"></td>
+                </tr>
+                <tr>
+                  <td valign="top">Estado </td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput">{estadoactivo}</td>
+                </tr>
+                <tr>
+                  <td valign="top">Especificaciones </td>
+                  <td valign="top"><div align="center">:</div></td>
+                  <td colspan="7" class="userinput"><textarea name="espec_tecnicas" cols="30" rows="5" wrap="VIRTUAL">{espec_tecnicas}</textarea></td>
+                </tr>
+                <tr>
+                  <td valign="top">&nbsp;</td>
+                  <td valign="top">&nbsp;</td>
+                  <td colspan="7" class="userinput">
+                  <input type="submit" name="Button2" value="Actualizar">
+                  <input type="button" name="Button2" value="Volver" onClick="location.href='index.php'"></td>
+                </tr>
+                </form>
+              </table>
+          </fieldset></td>
+          <td width="294" valign="top"><fieldset>
+          <legend>Imágen Producto </legend>
+              <form action="index.php" enctype="multipart/form-data" method="post" name="form_imagen">
+                <input type="hidden" name="req" value="img_edit">
+                <input type="hidden" name="id_prod" value="{id_producto}">
+              <table width="268" border="0" cellpadding="2" cellspacing="2" class="textonormal">
+                <tr>
+                  <td width="260" align="center"><img src="{imagen}" width="200" height="240"></td>
+                </tr>
+                <tr>
+                  <td>Subir o reemplazar im&aacute;gen</td>
+                </tr>
+                <tr>
+                  <td>
+                    <INPUT TYPE="file" NAME="serfile" value="examinar"> 
+                    <input type="submit" name="submit" value="Enviar"> 
+                  </td>
+                </tr>
+              </table>
+              </form>
+          </fieldset></td>
+        </tr>
+        <tr>
+          <td valign="top"><fieldset><legend>Proveedores del Producto</legend>
+          <table width="372" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+            <tr>
+              <td width="80" valign="top" class="userinput">C&eacute;dula</td>
+              <td width="127" valign="top" class="userinput">Raz&oacute;n</td>
+              <td width="46" colspan="7" class="userinput">&nbsp;</td>
+            </tr>
+            <!-- BEGIN Proveedores -->
+            <tr>
+              <td valign="top">{rut_prov}&nbsp;</td>
+              <td valign="top">{razsoc_prov}&nbsp;</td>
+              <td colspan="7" class="userinput">&nbsp;</td>
+            </tr>
+            <!-- BEGIN Proveedores -->
+          </table></fieldset></td>
+          <td valign="top"><fieldset><legend>Precios por Tienda</legend>
+              <table border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#FFFFFF" class="textonormal">
+                <tr>
+                  <td width="42" valign="top" class="userinput">Tienda</td>
+                  <td width="170" valign="top" class="userinput">Nombre</td>
+                  <td width="40" valign="top" class="userinput">Precio</td>
+                  <td width="40" valign="top" class="userinput">Stock</td>
+                </tr>
+            <!-- BEGIN Precios -->
+                <tr>
+                  <td valign="top">{cod_local}<br></td>
+                  <td valign="top">{nom_local}</td>
+                  <td valign="top"><div align="right">{prec_valor}</div></td>
+                  <td valign="top"><div align="right">{stock}</div></td>
+                </tr>
+            <!-- END Precios -->
+              </table>
+          </fieldset>&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<script LANGUAGE="javascript">
+<!--
+    window.document.form_precios.stock_proveedor.onkeypress = KeyIsNumber;
+    //window.document.forma1.precio.onkeypress = KeyIsNumber;
+    //window.document.forma1.obs.onkeypress = KeyIsTexto;
+-->
+</script>

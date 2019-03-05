@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+window.name="busqueda";
+
+function volver(){
+	document.jump.target = "busqueda";
+	document.jump.action = 'nueva_cotizacion_0303.php';
+	document.jump.submit();
+}
+function ficha(){
+	document.jump.target = "busqueda";	
+	document.jump.action = 'nueva_cotizacion_0303.php?accion=verprov&id_prov={id_proveedor}&proveedor={prov}&rad_proveedor={rad_proveedor}';
+	document.jump.submit();
+}
+function producto(){
+	document.jump.target = "busqueda";	
+	document.jump.action = 'nueva_cotizacion_0303.php?accion=verprod&id_prov={id_proveedor}&proveedor={prov}&rad_proveedor={rad_proveedor}';
+	document.jump.submit();
+}
+
+//-->
+</SCRIPT>
+
+<FORM NAME="jump" METHOD=POST ACTION="" TARGET="">
+</FORM>
+
+
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="titulonormal">{TEXT_TITULO}</td>
+  </tr>
+</table>
+
+
+            <table width="560" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <table width="560" border="0" align="left" cellpadding="2" cellspacing="1" class="tabla2">
+                            <tr>
+                                <th width="70">{TEXT_CAMPO_10}</th>
+                                <th width="*">{TEXT_CAMPO_11}</th>
+                                <th width="130">{TEXT_CAMPO_12}</th>
+                            </tr>
+						</table>
+						<br>
+						<div style="width: 580px; height: 250px; overflow: auto">
+                        <table width="560" border="0" align="left" cellpadding="2" cellspacing="1" class="tabla2">
+                            <!-- BEGIN proveedor -->
+                            <tr>
+                                <td align='right' width="70">{rut_prov}</td>
+                                <td width="*">{nom_prov}</td>
+                                <td width="130"><div align="center"><a href="#" onclick="ficha()">Ficha</a> | <a href="#" onclick="producto()">Productos</a></div></td>
+                            </tr>
+                            <!-- END proveedor -->
+                        </table>
+						</div>
+                    </td>
+                </tr>
+            </table>      
+            
+			<table border="0" width="560" align="center" colspan="2" class="textonormal">
+                <tr>
+				<td>{msg}{cuantos}{msg1}{msg2}</td>
+				</tr>
+			<tr>
+			<td align='center'><input type="button" name="Button222" value="Volver" onclick="volver()"></td>
+			</tr>
+			</table>
+
+
+
+
+</body>

@@ -1,0 +1,1896 @@
+15122007 104204  => crea instancia soap_server .....wspoccp_os
+15122007 104204  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PP</texto>
+</req>
+15122007 104204  => busqueda_prec : Se verifica local ->E502
+15122007 104207  => busqueda_prec : Trae codigos ean para producto descripcion->PP
+15122007 104207  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>HOJA CALAR MAD.4P 10DPP 5 HOJAS D & D</desc>
+<codigo>
+<ean>28874537101</ean>
+<precio>7290</precio>
+</codigo>
+</producto>
+<producto><desc>HOJA CALAR MAD.4P SDPP 5HOJAS B & D</desc>
+<codigo>
+<ean>28874537033</ean>
+<precio>7690</precio>
+</codigo>
+</producto>
+<producto><desc>HOJA CALAR MELAM.4P 10DPP 5HOJAS B & D</desc>
+<codigo>
+<ean>28874537125</ean>
+<precio>7290</precio>
+</codigo>
+</producto>
+<producto><desc>HOJA CALAR MET.3P 36DPP 5HOJAS B & D</desc>
+<codigo>
+<ean>28874537286</ean>
+<precio>6330</precio>
+</codigo>
+</producto>
+<producto><desc>HOJA CALAR MET.3P 14 DPP 5HOJAS B & D</desc>
+<codigo>
+<ean>28874537200</ean>
+<precio>6330</precio>
+</codigo>
+</producto>
+<producto><desc>SET DECO FLORERO 41925 POPPY</desc>
+<codigo>
+<ean>4002541419255</ean>
+<precio>4075</precio>
+</codigo>
+</producto>
+<producto><desc>SET DECO FLORERO 41925 POPPY</desc>
+<codigo>
+<ean>2082000528348</ean>
+<precio>4075</precio>
+</codigo>
+</producto>
+<producto><desc>PUPPY MEDIUM CACHORRO 15</desc>
+<codigo>
+<ean>2082000479060</ean>
+<precio>41290</precio>
+</codigo>
+</producto>
+<producto><desc>PUPPY MEDIUM CACHORRO 7.5</desc>
+<codigo>
+<ean>2082000479053</ean>
+<precio>21690</precio>
+</codigo>
+</producto>
+<producto><desc>PUPPY MEDIUM CACHORRO 3</desc>
+<codigo>
+<ean>2082000479046</ean>
+<precio>10590</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 104230  => crea instancia soap_server .....wspoccp_os
+15122007 104230  => Cons_SAP Ingresa XML -><req>
+  <sap>11</sap>
+</req>
+15122007 104230  => Cons_SAP : el numero sap buscado cumple con los parametros->11
+15122007 104231  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 11</desc></resp>
+15122007 104243  => crea instancia soap_server .....wspoccp_os
+15122007 104243  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>UU</texto>
+</req>
+15122007 104243  => busqueda_prec : Se verifica local ->E502
+15122007 104244  => busqueda_prec : Trae codigos ean para producto descripcion->UU
+15122007 104244  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>PROTECTOR CILINDRO UNIV EEUU</desc>
+<codigo>
+<ean>2000000125176</ean>
+<precio>950</precio>
+</codigo>
+</producto>
+<producto><desc>HOJA SIERRA SABLE W-CSR UU30</desc>
+<codigo>
+<ean>759621364779</ean>
+<precio>4062</precio>
+</codigo>
+</producto>
+<producto><desc>HOJA SIERRA SABLE W-CSR UU15</desc>
+<codigo>
+<ean>759621364755</ean>
+<precio>1978</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 104305  => crea instancia soap_server .....wspoccp_os
+15122007 104305  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 104305  => busqueda_prec : Se verifica local ->E502
+15122007 104306  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 104306  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 104857  => crea instancia soap_server .....wspoccp_os
+15122007 104857  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 104857  => busqueda_prec : Se verifica local ->E502
+15122007 104857  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 104857  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 104916  => crea instancia soap_server .....wspoccp_os
+15122007 104916  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 104916  => busqueda_prec : Se verifica local ->E502
+15122007 104916  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 104916  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 104941  => crea instancia soap_server .....wspoccp_os
+15122007 104941  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut></rut>
+  </encabezado>
+  <detalle>
+    <precio>00000990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805614014329</ean>
+  </detalle>
+</req>
+15122007 104941  => ERROR(03) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>03-tag RUT vacio en xml</desc></resp>
+15122007 105011  => crea instancia soap_server .....wspoccp_os
+15122007 105011  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 105011  => busqueda_prec : Se verifica local ->E502
+15122007 105011  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 105011  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 105208  => crea instancia soap_server .....wspoccp_os
+15122007 105208  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 105208  => busqueda_prec : Se verifica local ->E502
+15122007 105208  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 105208  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 105807  => crea instancia soap_server .....wspoccp_os
+15122007 105807  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 105807  => busqueda_prec : Se verifica local ->E502
+15122007 105807  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 105807  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 105820  => crea instancia soap_server .....wspoccp_os
+15122007 105820  => Cons_SAP Ingresa XML -><req>
+  <sap>111</sap>
+</req>
+15122007 105820  => Cons_SAP : el numero sap buscado cumple con los parametros->111
+15122007 105820  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 111</desc></resp>
+15122007 110302  => crea instancia soap_server .....wspoccp_os
+15122007 110302  => Cons_SAP Ingresa XML -><req>
+  <sap>1111</sap>
+</req>
+15122007 110302  => Cons_SAP : el numero sap buscado cumple con los parametros->1111
+15122007 110302  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 1111</desc></resp>
+15122007 110939  => crea instancia soap_server .....wspoccp_os
+15122007 110939  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 110939  => busqueda_prec : Se verifica local ->E502
+15122007 110939  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 110939  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 110957  => crea instancia soap_server .....wspoccp_os
+15122007 110957  => Cons_SAP Ingresa XML -><req>
+  <sap>123</sap>
+</req>
+15122007 110957  => Cons_SAP : el numero sap buscado cumple con los parametros->123
+15122007 110957  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 123</desc></resp>
+15122007 111157  => crea instancia soap_server .....wspoccp_os
+15122007 111157  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>15456111</rut>
+  </encabezado>
+  <detalle>
+    <precio>00019890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001187700</ean>
+  </detalle>
+</req>
+15122007 111157  => Graba_OS : Existe Local y rut
+15122007 111157  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 111157  => Graba_OS : Se verifica local ->42
+15122007 111157  => Verifica_rut -> Largo de rut correcto 8
+15122007 111157  => Graba_OS : Se verifica Rut, rut correcto ->15456111
+15122007 111157  => verifica_cliente -> No existe cliente rut 15456111 Se debe ingresar al sistema
+15122007 111157  => verifica_cliente ->Se agrego satisfactoriamente el rut 15456111 en tabla clientes CPE
+15122007 111157  => Graba_OS : Se obtiene Rut Cliente ->15456111
+15122007 111200  => Graba_OS :No se verifica ean ->0000001187700 en CPE 
+15122007 111200  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001187700 en CPE </desc></resp>
+15122007 111358  => crea instancia soap_server .....wspoccp_os
+15122007 111358  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>15456111</rut>
+  </encabezado>
+  <detalle>
+    <precio>00019890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001187700</ean>
+  </detalle>
+</req>
+15122007 111358  => Graba_OS : Existe Local y rut
+15122007 111358  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 111358  => Graba_OS : Se verifica local ->42
+15122007 111358  => Verifica_rut -> Largo de rut correcto 8
+15122007 111358  => Graba_OS : Se verifica Rut, rut correcto ->15456111
+15122007 111358  => verifica_cliente -> No existe cliente rut 15456111 Se debe ingresar al sistema
+15122007 111358  => verifica_cliente ->Se agrego satisfactoriamente el rut 15456111 en tabla clientes CPE
+15122007 111358  => Graba_OS : Se obtiene Rut Cliente ->15456111
+15122007 111358  => Graba_OS :No se verifica ean ->0000001187700 en CPE 
+15122007 111358  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001187700 en CPE </desc></resp>
+15122007 111550  => crea instancia soap_server .....wspoccp_os
+15122007 111550  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>15456111</rut>
+  </encabezado>
+  <detalle>
+    <precio>00019890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001187700</ean>
+  </detalle>
+  <detalle>
+    <precio>00019890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001187700</ean>
+  </detalle>
+</req>
+15122007 111550  => Graba_OS : Existe Local y rut
+15122007 111550  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 111550  => Graba_OS : Se verifica local ->42
+15122007 111550  => Verifica_rut -> Largo de rut correcto 8
+15122007 111550  => Graba_OS : Se verifica Rut, rut correcto ->15456111
+15122007 111550  => verifica_cliente -> No existe cliente rut 15456111 Se debe ingresar al sistema
+15122007 111550  => verifica_cliente ->Se agrego satisfactoriamente el rut 15456111 en tabla clientes CPE
+15122007 111550  => Graba_OS : Se obtiene Rut Cliente ->15456111
+15122007 111550  => Graba_OS :No se verifica ean ->0000001187700 en CPE 
+15122007 111550  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001187700 en CPE </desc></resp>
+15122007 112444  => crea instancia soap_server .....wspoccp_os
+15122007 112444  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>15456111</rut>
+  </encabezado>
+  <detalle>
+    <precio>00019890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001187700</ean>
+  </detalle>
+</req>
+15122007 112444  => Graba_OS : Existe Local y rut
+15122007 112444  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 112444  => Graba_OS : Se verifica local ->42
+15122007 112444  => Verifica_rut -> Largo de rut correcto 8
+15122007 112444  => Graba_OS : Se verifica Rut, rut correcto ->15456111
+15122007 112444  => verifica_cliente -> No existe cliente rut 15456111 Se debe ingresar al sistema
+15122007 112444  => verifica_cliente ->Se agrego satisfactoriamente el rut 15456111 en tabla clientes CPE
+15122007 112444  => Graba_OS : Se obtiene Rut Cliente ->15456111
+15122007 112444  => Graba_OS :No se verifica ean ->0000001187700 en CPE 
+15122007 112444  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001187700 en CPE </desc></resp>
+15122007 112705  => crea instancia soap_server .....wspoccp_os
+15122007 112705  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>15456111</rut>
+  </encabezado>
+  <detalle>
+    <precio>00019890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001187700</ean>
+  </detalle>
+</req>
+15122007 112705  => Graba_OS : Existe Local y rut
+15122007 112705  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 112705  => Graba_OS : Se verifica local ->42
+15122007 112705  => Verifica_rut -> Largo de rut correcto 8
+15122007 112705  => Graba_OS : Se verifica Rut, rut correcto ->15456111
+15122007 112705  => verifica_cliente -> No existe cliente rut 15456111 Se debe ingresar al sistema
+15122007 112705  => verifica_cliente ->Se agrego satisfactoriamente el rut 15456111 en tabla clientes CPE
+15122007 112705  => Graba_OS : Se obtiene Rut Cliente ->15456111
+15122007 112705  => Graba_OS :No se verifica ean ->0000001187700 en CPE 
+15122007 112705  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001187700 en CPE </desc></resp>
+15122007 113715  => crea instancia soap_server .....wspoccp_os
+15122007 113715  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 113715  => busqueda_prec : Se verifica local ->E502
+15122007 113715  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 113715  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 113739  => crea instancia soap_server .....wspoccp_os
+15122007 113739  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 113739  => busqueda_prec : Se verifica local ->E502
+15122007 113739  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 113739  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 120056  => crea instancia soap_server .....wspoccp_os
+15122007 120056  => Cons_SAP Ingresa XML -><req>
+  <sap>111</sap>
+</req>
+15122007 120056  => Cons_SAP : el numero sap buscado cumple con los parametros->111
+15122007 120056  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 111</desc></resp>
+15122007 120346  => crea instancia soap_server .....wspoccp_os
+15122007 120346  => Cons_SAP Ingresa XML -><req>
+  <sap>1</sap>
+</req>
+15122007 120346  => Cons_SAP : el numero sap buscado cumple con los parametros->1
+15122007 120347  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 1</desc></resp>
+15122007 130133  => crea instancia soap_server .....wspoccp_os
+15122007 130133  => Cons_SAP Ingresa XML -><req>
+  <sap>1111</sap>
+</req>
+15122007 130133  => Cons_SAP : el numero sap buscado cumple con los parametros->1111
+15122007 130133  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 1111</desc></resp>
+15122007 130157  => crea instancia soap_server .....wspoccp_os
+15122007 130157  => Cons_DESC -><req>
+  <texto>PALA</texto>
+</req>
+15122007 130157  => ERROR(01) : <?xml version="1.0" ?><resp><producto/>
+		<estado>0 </estado>
+		<desc>01-tag LOCAL vacio en xml</desc></resp>
+15122007 130212  => crea instancia soap_server .....wspoccp_os
+15122007 130212  => Cons_DESC -><req>
+  <texto>PALA</texto>
+</req>
+15122007 130212  => ERROR(01) : <?xml version="1.0" ?><resp><producto/>
+		<estado>0 </estado>
+		<desc>01-tag LOCAL vacio en xml</desc></resp>
+15122007 130427  => crea instancia soap_server .....wspoccp_os
+15122007 130427  => Cons_DESC -><req>
+  <local>E999</local>
+  <texto>PALA</texto>
+</req>
+15122007 130427  => verifica_local -> No existe local para  E999
+15122007 130427  => busqueda_prec :No se verifica local
+15122007 130427  => ERROR(03) : <?xml version="1.0" ?><resp><producto/>
+		<estado>0 </estado>
+		<desc>03-No se verifica local para codlocal E999</desc></resp>
+15122007 130653  => crea instancia soap_server .....wspoccp_os
+15122007 130653  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 130653  => busqueda_prec : Se verifica local ->E502
+15122007 130653  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 130653  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 130726  => crea instancia soap_server .....wspoccp_os
+15122007 130726  => Cons_SAP Ingresa XML -><req>
+  <sap>2534</sap>
+</req>
+15122007 130726  => Cons_SAP : el numero sap buscado cumple con los parametros->2534
+15122007 130726  => Cons_SAP : Trae codigos ean para producto SAP ->2534
+15122007 130726  => Cons_SAP : Trae codigos ean -><ean>2082001064456</ean>
+
+15122007 130726  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>2082001064456</ean>
+
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+15122007 130802  => crea instancia soap_server .....wspoccp_os
+15122007 130802  => Cons_SAP Ingresa XML -><req>
+  <sap>2568</sap>
+</req>
+15122007 130802  => Cons_SAP : el numero sap buscado cumple con los parametros->2568
+15122007 130802  => Cons_SAP : Trae codigos ean para producto SAP ->2568
+15122007 130802  => Cons_SAP : Trae codigos ean -><ean>2082001062919</ean>
+
+15122007 130802  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>2082001062919</ean>
+
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+15122007 130815  => crea instancia soap_server .....wspoccp_os
+15122007 130815  => Cons_SAP Ingresa XML -><req>
+  <sap>4444</sap>
+</req>
+15122007 130815  => Cons_SAP : el numero sap buscado cumple con los parametros->4444
+15122007 130815  => Cons_SAP : Trae codigos ean para producto SAP ->4444
+15122007 130815  => Cons_SAP : Trae codigos ean -><ean>2082001077616</ean>
+
+15122007 130815  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>2082001077616</ean>
+
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+15122007 130928  => crea instancia soap_server .....wspoccp_os
+15122007 130928  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>15456111</rut>
+  </encabezado>
+  <detalle>
+    <precio>00019890</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001187700</ean>
+  </detalle>
+</req>
+15122007 130928  => Graba_OS : Existe Local y rut
+15122007 130928  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 130928  => Graba_OS : Se verifica local ->42
+15122007 130928  => Verifica_rut -> Largo de rut correcto 8
+15122007 130928  => Graba_OS : Se verifica Rut, rut correcto ->15456111
+15122007 130928  => verifica_cliente -> No existe cliente rut 15456111 Se debe ingresar al sistema
+15122007 130928  => verifica_cliente ->Se agrego satisfactoriamente el rut 15456111 en tabla clientes CPE
+15122007 130928  => Graba_OS : Se obtiene Rut Cliente ->15456111
+15122007 130928  => Graba_OS :No se verifica ean ->0000001187700 en CPE 
+15122007 130928  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001187700 en CPE </desc></resp>
+15122007 131018  => crea instancia soap_server .....wspoccp_os
+15122007 131018  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 131018  => busqueda_prec : Se verifica local ->E502
+15122007 131018  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 131018  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 131102  => crea instancia soap_server .....wspoccp_os
+15122007 131102  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut></rut>
+  </encabezado>
+  <detalle>
+    <precio>00000990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805614014329</ean>
+  </detalle>
+</req>
+15122007 131102  => ERROR(03) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>03-tag RUT vacio en xml</desc></resp>
+15122007 131130  => crea instancia soap_server .....wspoccp_os
+15122007 131130  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 131130  => busqueda_prec : Se verifica local ->E502
+15122007 131130  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 131130  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 131244  => crea instancia soap_server .....wspoccp_os
+15122007 131244  => Cons_SAP Ingresa XML -><req>
+  <sap>777571</sap>
+</req>
+15122007 131244  => Cons_SAP : el numero sap buscado cumple con los parametros->777571
+15122007 131244  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 777571</desc></resp>
+15122007 131301  => crea instancia soap_server .....wspoccp_os
+15122007 131301  => Cons_SAP Ingresa XML -><req>
+  <sap>777570</sap>
+</req>
+15122007 131301  => Cons_SAP : el numero sap buscado cumple con los parametros->777570
+15122007 131301  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 777570</desc></resp>
+15122007 131320  => crea instancia soap_server .....wspoccp_os
+15122007 131320  => Cons_SAP Ingresa XML -><req>
+  <sap>777570001</sap>
+</req>
+15122007 131320  => Cons_SAP : el numero sap buscado cumple con los parametros->777570001
+15122007 131320  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 777570001</desc></resp>
+15122007 131333  => crea instancia soap_server .....wspoccp_os
+15122007 131333  => Cons_SAP Ingresa XML -><req>
+  <sap>720280</sap>
+</req>
+15122007 131333  => Cons_SAP : el numero sap buscado cumple con los parametros->720280
+15122007 131334  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 720280</desc></resp>
+15122007 131350  => crea instancia soap_server .....wspoccp_os
+15122007 131350  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 131350  => busqueda_prec : Se verifica local ->E502
+15122007 131350  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 131350  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 131956  => crea instancia soap_server .....wspoccp_os
+15122007 131956  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 131956  => busqueda_prec : Se verifica local ->E502
+15122007 131956  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 131956  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 132058  => crea instancia soap_server .....wspoccp_os
+15122007 132058  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>15456111</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805614014329</ean>
+  </detalle>
+</req>
+15122007 132058  => Graba_OS : Existe Local y rut
+15122007 132058  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 132058  => Graba_OS : Se verifica local ->42
+15122007 132058  => Verifica_rut -> Largo de rut correcto 8
+15122007 132058  => Graba_OS : Se verifica Rut, rut correcto ->15456111
+15122007 132058  => verifica_cliente -> No existe cliente rut 15456111 Se debe ingresar al sistema
+15122007 132058  => verifica_cliente ->Se agrego satisfactoriamente el rut 15456111 en tabla clientes CPE
+15122007 132058  => Graba_OS : Se obtiene Rut Cliente ->15456111
+15122007 132059  => busca_direccion -> No existe direccion para el rut  15456111
+15122007 132059  => inserta_nueva_direccion -> Inserta direccion para el rut  15456111
+15122007 132059  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42513  
+15122007 132100  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42513</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+15122007 132522  => crea instancia soap_server .....wspoccp_os
+15122007 132522  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>15456111</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805614014329</ean>
+  </detalle>
+  <detalle>
+    <precio>00000990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805614014329</ean>
+  </detalle>
+  <detalle>
+    <precio>00000990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805614014329</ean>
+  </detalle>
+  <detalle>
+    <precio>00000990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805614014329</ean>
+  </detalle>
+  <detalle>
+    <precio>00000990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805614014329</ean>
+  </detalle>
+</req>
+15122007 132522  => Graba_OS : Existe Local y rut
+15122007 132522  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 132522  => Graba_OS : Se verifica local ->42
+15122007 132522  => Verifica_rut -> Largo de rut correcto 8
+15122007 132522  => Graba_OS : Se verifica Rut, rut correcto ->15456111
+15122007 132522  => Graba_OS : Se obtiene Rut Cliente ->15456111
+15122007 132522  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42514  
+15122007 132522  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42514</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+15122007 135636  => crea instancia soap_server .....wspoccp_os
+15122007 135636  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13233733</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000235</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+</req>
+15122007 135636  => Graba_OS : Existe Local y rut
+15122007 135636  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 135636  => Graba_OS : Se verifica local ->42
+15122007 135636  => Verifica_rut -> Largo de rut correcto 8
+15122007 135636  => Graba_OS : Se verifica Rut, rut correcto ->13233733
+15122007 135636  => verifica_cliente -> No existe cliente rut 13233733 Se debe ingresar al sistema
+15122007 135636  => verifica_cliente ->Se agrego satisfactoriamente el rut 13233733 en tabla clientes CPE
+15122007 135636  => Graba_OS : Se obtiene Rut Cliente ->13233733
+15122007 135637  => Graba_OS :No se verifica ean ->0000001185263 en CPE 
+15122007 135637  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001185263 en CPE </desc></resp>
+15122007 140506  => crea instancia soap_server .....wspoccp_os
+15122007 140506  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13233733</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000235</precio>
+    <cantidad>00000001</cantidad>
+    <ean>0000001185263</ean>
+  </detalle>
+</req>
+15122007 140506  => Graba_OS : Existe Local y rut
+15122007 140506  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 140506  => Graba_OS : Se verifica local ->42
+15122007 140506  => Verifica_rut -> Largo de rut correcto 8
+15122007 140506  => Graba_OS : Se verifica Rut, rut correcto ->13233733
+15122007 140506  => verifica_cliente -> No existe cliente rut 13233733 Se debe ingresar al sistema
+15122007 140506  => verifica_cliente ->Se agrego satisfactoriamente el rut 13233733 en tabla clientes CPE
+15122007 140506  => Graba_OS : Se obtiene Rut Cliente ->13233733
+15122007 140506  => Graba_OS :No se verifica ean ->0000001185263 en CPE 
+15122007 140506  => ERROR(18) : <?xml version="1.0"?><resp><os></os>
+		<estado>0</estado>
+		<desc>18-No se verifica ean = 0000001185263 en CPE </desc></resp>
+15122007 140613  => crea instancia soap_server .....wspoccp_os
+15122007 140613  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 140613  => busqueda_prec : Se verifica local ->E502
+15122007 140613  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 140613  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 140656  => crea instancia soap_server .....wspoccp_os
+15122007 140656  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13233733</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805614014329</ean>
+  </detalle>
+</req>
+15122007 140656  => Graba_OS : Existe Local y rut
+15122007 140656  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 140656  => Graba_OS : Se verifica local ->42
+15122007 140656  => Verifica_rut -> Largo de rut correcto 8
+15122007 140656  => Graba_OS : Se verifica Rut, rut correcto ->13233733
+15122007 140656  => verifica_cliente -> No existe cliente rut 13233733 Se debe ingresar al sistema
+15122007 140656  => verifica_cliente ->Se agrego satisfactoriamente el rut 13233733 en tabla clientes CPE
+15122007 140656  => Graba_OS : Se obtiene Rut Cliente ->13233733
+15122007 140656  => busca_direccion -> No existe direccion para el rut  13233733
+15122007 140656  => inserta_nueva_direccion -> Inserta direccion para el rut  13233733
+15122007 140656  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42515  
+15122007 140656  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42515</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+15122007 140914  => crea instancia soap_server .....wspoccp_os
+15122007 140914  => Cons_SAP Ingresa XML -><req>
+  <sap>1111</sap>
+</req>
+15122007 140914  => Cons_SAP : el numero sap buscado cumple con los parametros->1111
+15122007 140914  => ERROR(04) : <?xml version="1.0"?><resp><producto><codigo/></producto>
+<estado>0 </estado>
+<desc>04-No se verifica en CPE el codigo SAP 1111</desc></resp>
+15122007 140919  => crea instancia soap_server .....wspoccp_os
+15122007 140919  => Cons_SAP Ingresa XML -><req>
+  <sap>2356</sap>
+</req>
+15122007 140919  => Cons_SAP : el numero sap buscado cumple con los parametros->2356
+15122007 140919  => Cons_SAP : Trae codigos ean para producto SAP ->2356
+15122007 140919  => Cons_SAP : Trae codigos ean -><ean>2082001061035</ean>
+
+15122007 140919  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>2082001061035</ean>
+
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+15122007 142239  => crea instancia soap_server .....wspoccp_os
+15122007 142239  => Cons_SAP Ingresa XML -><req>
+  <sap>2356</sap>
+</req>
+15122007 142239  => Cons_SAP : el numero sap buscado cumple con los parametros->2356
+15122007 142239  => Cons_SAP : Trae codigos ean para producto SAP ->2356
+15122007 142239  => Cons_SAP : Trae codigos ean -><ean>2082001061035</ean>
+
+15122007 142239  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>2082001061035</ean>
+
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+15122007 144118  => crea instancia soap_server .....wspoccp_os
+15122007 144118  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 144118  => busqueda_prec : Se verifica local ->E502
+15122007 144118  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 144118  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 144143  => crea instancia soap_server .....wspoccp_os
+15122007 144143  => Cons_DESC -><req>
+  <local>E502</local>
+  <texto>PALA</texto>
+</req>
+15122007 144143  => busqueda_prec : Se verifica local ->E502
+15122007 144143  => busqueda_prec : Trae codigos ean para producto descripcion->PALA
+15122007 144143  => Cons_DESC : respuesta Finaliza con <?xml version="1.0"?>
+	<resp><producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>8851022390615</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>CAMION CONSTRUCCION C/PALA MEC CT-39061</desc>
+<codigo>
+<ean>2082000061029</ean>
+<precio>4990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA ROMMEL</desc>
+<codigo>
+<ean>2000002177340</ean>
+<precio>1190</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614014329</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502898</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 20LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324926</ean>
+<precio>990</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>7805614800724</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000502904</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>SET BASURERO 34LT+PALA C/MANGO</desc>
+<codigo>
+<ean>2082000324933</ean>
+<precio>1590</precio>
+</codigo>
+</producto>
+<producto><desc>A PE CUB GRANITO NEGRO IMPALA</desc>
+<codigo>
+<ean>2082001012273</ean>
+<precio>190400</precio>
+</codigo>
+</producto>
+<estado>1 </estado>
+	<desc></desc>
+	</resp>
+15122007 144201  => crea instancia soap_server .....wspoccp_os
+15122007 144201  => Cons_SAP Ingresa XML -><req>
+  <sap>2356</sap>
+</req>
+15122007 144201  => Cons_SAP : el numero sap buscado cumple con los parametros->2356
+15122007 144201  => Cons_SAP : Trae codigos ean para producto SAP ->2356
+15122007 144201  => Cons_SAP : Trae codigos ean -><ean>2082001061035</ean>
+
+15122007 144201  => Cons_SAP : Finaliza con <?xml version="1.0" ?>
+	<resp>
+		<producto>
+			<codigo>
+			<ean>2082001061035</ean>
+
+			</codigo>
+		</producto>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>
+15122007 144227  => crea instancia soap_server .....wspoccp_os
+15122007 144227  => Inicia Graba_OS xml entrada-><req>
+  <encabezado>
+    <local>E502</local>
+    <rut>13233733</rut>
+  </encabezado>
+  <detalle>
+    <precio>00000990</precio>
+    <cantidad>00000001</cantidad>
+    <ean>7805614014329</ean>
+  </detalle>
+</req>
+15122007 144227  => Graba_OS : Existe Local y rut
+15122007 144227  => Graba_OS : cumple con 2 parametros de encabezado  y con al menos un detalle
+15122007 144227  => Graba_OS : Se verifica local ->42
+15122007 144227  => Verifica_rut -> Largo de rut correcto 8
+15122007 144227  => Graba_OS : Se verifica Rut, rut correcto ->13233733
+15122007 144227  => Graba_OS : Se obtiene Rut Cliente ->13233733
+15122007 144227  => inserta_os_encabezado : EXITO! al realizar la operacion nueva OS: 42516  
+15122007 144227  => Graba_OS : Finaliza con <?xml version="1.0"?>
+		<resp>
+		<os>42516</os>
+		<estado>1 </estado>
+		<desc></desc>
+	</resp>

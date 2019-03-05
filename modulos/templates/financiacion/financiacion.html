@@ -1,0 +1,176 @@
+<title>{TEXT_TITULO}</title>
+
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="javascript" src="../../includes/ajax.js"></script>
+
+<script language="javascript">
+function calculaInteres(){
+	inicialMin = document.financia.inicialMin.value;
+	interesCheq = document.financia.interesCheq.value;
+	maxCheq = document.financia.maxCheq.value;
+	
+	total = parseFloat(document.financia.Total.value);
+	cuotaInit = parseFloat(document.financia.cuotaIni.value);
+	cheques = parseInt(document.financia.cheques.value);
+
+	if(cuotaInit < (inicialMin*total)){
+		document.financia.cuotaIni.value = '';
+		document.financia.cheques.value = '';
+		alert('El valor de la cuota inicial no puede ser inferior al '+inicialMin*100+'% del Total Cotizado.');
+		document.financia.cuotaIni.focus();
+		return false;
+	}
+	if (cuotaInit < 0.0 || cheques <= 0 || isNaN(cuotaInit) || isNaN(cheques)) {
+		document.financia.cuotaIni.value = '';
+		document.financia.cheques.value = '';
+		alert('El valor de la cuota inicial y el numero de cheques son requeridos.');
+		document.financia.cuotaIni.focus();
+		return false;
+	}
+	if(cheques > maxCheq){
+		document.financia.cuotaIni.value = '';
+		document.financia.cheques.value = '';
+		alert("El máximo número de cheques permitidos es: "+maxCheq);
+		document.financia.cuotaIni.focus();
+		return false;
+	}
+	if(cuotaInit > total){
+		document.financia.cuotaIni.value = '';
+		document.financia.cheques.value = '';
+		alert("La cuota inicial debe ser inferior al valor del Total Cotizado.");
+		document.financia.cuotaIni.focus();
+		return false;
+	}
+	
+	exec_AJAXRPC('GET','../financiacion/Financial.php?total='+total+'&cuotaInit='+cuotaInit+'&cheques='+cheques, 'resultado_financiacion');
+}
+
+function resultado_financiacion(text){
+	var cadena = text.split('|');
+	document.financia.response.value = cadena;
+	document.financia.valFin.value = cadena[3];
+	document.financia.interes.value = cadena[4];
+	document.financia.valCheque.value = cadena[5]; 
+	document.getElementById('imprimir').style.display = 'block';
+}
+
+function cerrar(){
+	window.close();
+}
+
+function printForm(){
+	id_os = document.financia.id_os.value;
+	cadena = document.financia.response.value;
+	vars = cadena+","+id_os;
+
+	window.open('../financiacion/imprimeFormFinancia.php?vars='+vars,'imprimir', 'width=20,height=20,resizable=NO,maximize=NO');
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+
+<table width="592" height="10%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="border : 1px solid #677686;">
+  <tr>
+    <td width="73" height="55" bgcolor="ee1b24"><img src="../img/logo3.gif" width="95" height="55"></td>
+    <td width="383" bgcolor="ee1b24">&nbsp;</td>
+    <td width="324" align="center" bgcolor="ee1b24"><img src="../img/logo5.jpg" width="324" height="55"></td>
+  </tr>
+</table>
+
+<table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">{TEXT_TITULO}</td>
+    <td width="390" class="titulonormal"></td>
+  </tr>
+</table>
+
+<form name="financia">
+<table width="100%" height="70%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+  	<td></td>
+  </tr>
+  <tr>
+    <td valign="top">
+    	<table align="center" width="50%" border="0" cellpadding="0" cellspacing="0">
+    		<tr>
+    			<td colspan="3" class="titulonormalnegro" align="center">{TEXT_CAMPO_0}</td>
+    		</tr>
+    		<tr>
+    			<td colspan="3" align="center">
+    				<input type="hidden" name="inicialMin" value="{inicialMin}">
+    				<input type="hidden" name="interesCheq" value="{interesCheq}">
+    				<input type="hidden" name="maxCheq" value="{maxCheq}">
+    				<input type="hidden" name="total" value="{Total}">
+    				<input type="hidden" name="id_os" value="{id_os}">
+    				<input type="hidden" name="response">
+    				<input type="text" name="Total" value="{TotalFormat}" class="input1" {WriteTotal}>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td align="center">
+    			<fieldset class="fieldset">
+ 					<legend class="fieldsetLegend">{TEXT_CAMPO_1}</legend>   
+ 					<table align="center">
+ 					<tr>
+ 						<td align="center" class="titulonormalnegro">{TEXT_CAMPO_2}</td>
+ 						<td width="5%"></td>
+ 						<td align="center" class="titulonormalnegro">{TEXT_CAMPO_3}</td>
+ 					</tr>
+ 					<tr>
+ 						<td align="center"><input type="text" name="cuotaIni" class="input1" value="{inicial}"></td>
+ 						<td width="5%"></td>
+ 						<td align="center"><input type="text" name="cheques" class="input1"></td>
+    				</tr>
+    				</table>
+    			</fieldset>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>
+    			<fieldset class="fieldset">
+ 					<legend class="fieldsetLegend">{TEXT_CAMPO_4}</legend>   
+ 					<table align="center">
+ 					<tr>
+ 						<td align="center" class="titulonormalnegro">{TEXT_CAMPO_5}</td>
+ 						<td width="5%"></td>
+ 						<td align="center" class="titulonormalnegro">{TEXT_CAMPO_6}</td>
+ 						<td width="5%"></td>
+ 						<td align="center" class="titulonormalnegro">{TEXT_CAMPO_7}</td>
+ 					</tr>
+ 					<tr>
+ 						<td align="center"><input type="text" name="valFin" class="input1" readonly></td>
+ 						<td width="5%"></td>
+ 						<td align="center" class="fieldsetLegend"><input type="text" name="interes" class="input1" readonly style="width: 100px;">%</td>
+ 						<td width="5%"></td>
+ 						<td align="center"><input type="text" name="valCheque" class="input1" readonly></td>
+    				</tr>
+    				 <tr>
+ 						<td colspan="5" align="center"><input type="button" name="calcula" value="Calcular" class="input" style="margin-top: 10px;" onclick="calculaInteres()"></td>
+    				</tr>
+    				</table>
+    			</fieldset>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td align="center">
+    				<table cellpadding="4" cellspacing="20" border="0">
+    					<tr>
+    						<td><a href="#" onclick="cerrar()"><img src="../../modulos/img/cancel_f2.png" style="border:0;" title="Cerrar"></a></td>
+    						<td>{print}</td>
+    					</tr>
+    				</table>
+    			</td>
+    		</tr>
+    	</table>
+    </td>
+  </tr>
+</table>
+</form>
+    
+<SCRIPT LANGUAGE="JavaScript">
+	window.document.financia.Total.onkeypress = KeyIsNumber;
+	window.document.financia.cuotaIni.onkeypress = KeyIsNumber;
+	window.document.financia.cheques.onkeypress = KeyIsNumber;
+</script>
+
+

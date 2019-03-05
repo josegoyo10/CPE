@@ -1,0 +1,23 @@
+<despacho>
+                    <direccion>cll 65 a # 71 f 16</direccion>
+                    <idDepartamento>11</idDepartamento>
+                    <idMunicipio>1</idMunicipio>
+                    <idCentroPoblado>0</idCentroPoblado>
+                    <idLocalidad>10</idLocalidad>
+                    <idBarrio>55</idBarrio>
+                </despacho>
+	        <centroSuministro>
+                    <idLocal>7</idLocal>
+                    <idDepartamento>11</idDepartamento>
+                    <idMunicipio>001</idMunicipio>
+                    <idCentroPoblado>000</idCentroPoblado>
+                    <idLocalidad>015</idLocalidad>
+                    <idBarrio>018</idBarrio>
+                </centroSuministro>
+	        <entregaProductos>
+                    <lstTipoDespacho>
+                            <codigoTipo>2</codigoTipo>
+                            <peso>0.6820000</peso>
+                    </lstTipoDespacho>
+	        </entregaProductos>
+                <codEmpresaTransportadora>0</codEmpresaTransportadora>

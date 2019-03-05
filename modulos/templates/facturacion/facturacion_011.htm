@@ -1,0 +1,130 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+function validabuscar() {
+	checkDV('buscar');
+}
+function checkDV( maccion ){
+	if( validar_obligatorio( ingreso_facturas.rut, "Cédula es obligatoria" ))
+			return false;
+
+	  crut = '';
+	  mcrut= ingreso_facturas.rut.value;
+	  
+	  /*
+	  for(i=0; i<mcrut.length; ++i)
+		if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-'){
+		 crut = crut + mcrut.charAt(i);
+		}
+		*/
+		
+	  largo = crut.length;
+	  if ( largo < 2 ){
+		alert("Debe ingresar la Cédula completa.");
+		document.ingreso_facturas.rut.focus();
+		document.ingreso_facturas.rut.select();
+		return false;
+	  }
+	  
+	  /*
+	  if ( largo > 2 )
+		rut = crut.substring(0, largo - 1);
+	  else
+		rut = crut.charAt(0);
+	  */
+		
+		/*
+		dv = crut.charAt(largo-1);
+	  if ( rut == null || dv == null )
+	   return 0;
+	   var dvr = '0';
+	   suma = 0;
+	   mul  = 2;
+
+	  
+	  
+	  for (i= rut.length -1 ; i >= 0; i--){
+	   suma = suma + rut.charAt(i) * mul;
+		if (mul == 7)
+			mul = 2;
+		else
+			mul++;
+	  }
+	  res = suma % 11;
+	  if (res==1)
+		dvr = 'k';
+	  else if (res==0)
+		dvr = '0';
+	  else{
+		dvi = 11-res;
+		dvr = dvi + "";
+	  }
+	  */
+	  
+	  /* Validación Digito de verificación	  
+	  if ( dvr != dv.toLowerCase() ){
+		alert("La Cédula ingresada es incorrecta.");
+		document.ingreso_facturas.rut.focus();
+		document.ingreso_facturas.rut.select();
+		return false;
+	  }
+	  */
+	  
+	  //document.ingreso_facturas.rut.value = crut.substr(0, crut.length-1); 
+	  window.document.ingreso_facturas.rut.onkeypress = KeyIsEnter ;
+	 
+	  if (maccion == undefined )
+		  document.ingreso_facturas.accion.value = 'buscar';
+	  else
+		  document.ingreso_facturas.accion.value = maccion;
+		  
+	  document.ingreso_facturas.submit();
+	  return false;
+}
+//-->
+</SCRIPT>
+
+<table width="780" height="20" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">Creaci&oacute;n de Lote de Facturaci&oacute;n Instalador</td>
+    <td width="390" class="titulonormal"></td>
+  </tr>
+</table>
+<!--div style="width:780; height:490; overflow:auto;"-->
+<table width="780" height="90%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+			<form name="ingreso_facturas" method="post">
+			<INPUT TYPE="hidden" name="accion">
+			<INPUT TYPE="hidden" name="id_instalador" value="{id_instalador}">
+			<INPUT TYPE="hidden" name="ot_id" value="{ot_id}">
+              <table width="430" border="0" align="center" cellpadding="0" cellspacing="2" class="textonormal">
+            <tr>
+              <td width="124" valign="top">Cédula Instalador </td>
+              <td width="300" valign="top"><input name="rut" type="text" value="{rut}">
+                <input type="button" name="Submit" value="Buscar" onClick="validabuscar()"></td>
+              </tr>
+			<tr>
+              <td valign="top">Nombre/Raz&oacute;n</td>
+              <td valign="top"><div align="left">
+			<input name="textfield" type="text" value="{nombre}" class="selectleft" readonly size="50"></div></td>
+            </tr>
+            <tr>
+              <td valign="top">Saldo Cta Cte: </td>
+              <td valign="top"><input name="ctacte" type="text" value="{cuenta}" class="selectleft" readonly size="50"></td>
+            </tr>
+
+		      <tr>
+              <td valign="top"></td>
+			  <td valign="top">	{mensaje} </td>
+            </tr>  
+		  		
+		  
+		  </table>                            
+</form>
+<SCRIPT LANGUAGE="JavaScript">
+window.document.ingreso_facturas.rut.onkeypress = KeyIsRut;
+</SCRIPT>

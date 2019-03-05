@@ -1,0 +1,518 @@
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() { 
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+<style type="text/css">
+<!--
+.Estilo1 {font-size: 11px}
+.Estilo2 {
+	font-size: 12px;
+	color: #454f69;
+}
+.Estilo6 {color: #454F69}
+.Estilo7 {color: #454f69}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table width="650" height="403" border="1" cellpadding="0" cellspacing="0" style="border: 2px solid #ffffff;">
+  <tr>
+    <td height="69" valign="top">
+    <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td width="" height=""><img src="../img/logo3.gif" width="95" height="55"></td>
+        <td width="" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" --> Borrador de la Cotizaci&oacute;n N&ordm; {id_os} <!-- InstanceEndEditable --></td>
+        <td width="6%">{cod_barra_os}</td><td width="6%">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+    </table>
+    </td>
+  </tr>  
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="97%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos de la Cotizaci&oacute;n</legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                     
+					  <tr>
+                        <td width="154">N&ordm; Cotizaci&oacute;n</td>
+                        <td width="320" class="userinput">{id_os}</td>
+                        <td width="151">Fecha de Cotizaci&oacute;n </td>
+                        <td width="364" class="userinput">{os_fechacotizacion}</td>
+                      </tr>
+					  
+                      <tr>
+                        <td width="154">Estado</td>
+                        <td width="320" class="userinput"> {esta_nombre}</td>
+                        <td width="151">Atendido Por </td>
+                        <td width="364" class="userinput">{atendido}</td>
+                      </tr>
+                      
+					  <tr>
+                        <td width="154">Tienda</td>
+                        <td width="320" class="userinput">{nom_local}</td>
+                        <td width="151"><strong>Válido hasta</strong></td>
+                        <td width="364" class="userinput">{os_fechaestimacion}</td>                      
+					  </tr>
+					  
+                      <tr>
+                        <td width="154">Cotizaciones Cruzadas</td>
+                        <td width="320" class="userinput">{os_cotizaciones_cruzadas}&nbsp;</td>
+                        <td width="151">Proyecto</td>
+                        <td width="364" class="userinput">{proy_nombre}</td>
+                      </tr>
+					  
+					  
+					   <tr>
+                        <td width="154" >Observaciones</td>
+                        <td colspan="3" class="userinput">{os_comentarios}</td>				
+						
+						
+								
+                      </tr>
+					  
+                  </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Datos del Cliente</legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+                        <td width="183">C&eacute;dula</td>
+                        <td width="344" class="userinput">{clie_rut}</td>
+                        <td width="167">Nombre</td>
+                        <td width="295" class="userinput">{clie_nombre}&nbsp;{clie_paterno}&nbsp;{clie_materno}</td>
+                      </tr>
+                      <tr>
+                        <td width="183">Direcci&oacute;n</td>
+                        <td width="344" class="userinput">{dire_direccion_pri} </td>
+                        <td width="167">Barrio</td>
+                        <td width="295" class="userinput">{comu_nombre_pri}</td>
+                      </tr>
+                      <tr>
+                        <td width="183">Tel&eacute;fono</td>
+                        <td width="344" class="userinput">{clie_telefonocasa}</td>
+                        <td width="167">Tel&eacute;fono Celular </td>
+						<td width="295" class="userinput">{telefono_celular}</td>
+                      </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                    <legend>Direcci&oacute;n de Servicio (Despacho e Instalaciones) </legend>
+                    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                      <tr>
+
+                        <td width="155">Tel&eacute;fono</td>
+                        <td width="342" class="userinput">{dire_telefono_des}</td>
+						<td width="140">Departamento</td>
+                        <td width="352" class="userinput">{departamento}</td>
+                      </tr>
+                      <tr>
+                        <td width="155">Direcci&oacute;n</td>
+                        <td width="342" class="userinput">{dire_direccion_des}</td>
+                        <td width="140">Ciudad</td>
+                        <td width="352" class="userinput">{ciudad}</td>
+                      </tr>
+                      <tr>
+                        <td>Indicaciones</td>
+                        <td colspan="0" class="userinput">{dire_observacion_des} </td>
+                       	<td width="140">Barrio</td>
+                        <td width="352" class="userinput">{comu_nombre_des}</td>
+                      </tr>
+                    </table>
+                  </fieldset></td>
+                </tr>
+            </table>
+              <br>
+      <!---include de os-detalle!-->
+	  <table width="659" border="0" align="center">
+	  <tr>
+	  <td>
+              <table width="628" border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+            <tr>
+              <th width="55">C&oacute;digo</th>
+              <th width="38">Tipo</th>
+              <th width="277">Descripci&oacute;n</th>
+              <th width="69">Tipo de Despacho </th>
+              <th width="66">Fecha de Entrega </th>
+              <th width="66">Instalaci&oacute;n</th>
+               <th width="46">Peso Kg</th>
+              <th width="39">Cantidad</th>
+			  <th width="95">Precio con IVA </th>
+              <th width="61">Total con IVA</th>
+            </tr>
+		 <!-- BEGIN Precio_Total -->
+		   <tr valign="top">
+                <td align="center">{cod_barra}<br>({cod_sap})</td>
+			    <td><div align="center">{osde_tipoprod}</div></td>
+                <td>{osde_descripcion}{especificacion}{osde_especificacion}</td>
+                <td>{tipo_nombre}</td>
+	            <td>{osde_fecha_entrega}&nbsp;</td>
+	            <td><div align="center">{osde_instalacion}</div></td>
+					<td><div align="center">&nbsp;{peso}</div></td>
+                <td><div align="right">{osde_cantidad}</div></td>
+				<td><div align="right">{precioVacio}{osde_precio}</div></td>
+				<td><div align="right">{totalVacio}{Total}</div></td>
+		 <!-- END Precio_Total -->
+            </table> 
+					 
+		  <table width="626" border="0" align="center" cellpadding="2" cellspacing="2" > 
+		    <tr>
+              <td width="32" bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="32" bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="32" bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="32" bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="32" bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="32" bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="149" bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="143" class="tabla2"><div align="left" class="subtitulonormal Estilo1 Estilo6">Sub-Total</div></td>
+              <td width="86" class="tabla2"><div align="right">{TG}</div></td>
+		    </tr>
+			
+            <tr>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="143" class="tabla2"><div align="left" class="subtitulonormal Estilo1 Estilo6">Descuentos</div></td>
+              <td class="tabla2"><div align="right"></div></td>
+            </tr>
+			
+            <tr>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="143" class="tabla2"><div align="left" class="subtitulonormal Estilo1 Estilo6">Valor IVA</div></td>
+              <td class="tabla2"><div align="right">{Total_iva}&nbsp;</div></td>
+            </tr>
+            <tr>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal" >&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal" >&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal" >&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal" >&nbsp;</td>
+              <td width="143" class="tabla2"><div align="left" class="subtitulonormal Estilo1 Estilo6">Total Fletes</div></td>
+              <td class="tabla2"><div align="right">{Total_fletes}</div></td>
+            </tr>
+            <tr>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal" >&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal" >&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal" >&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal" >&nbsp;</td>
+              <td  width="143" class="tabla2"><div align="left" class="subtitulonormal Estilo1 Estilo7">Valor Retenci&oacute;n Renta</div></td>
+              <td class="tabla2"><div align="right"></div></td>
+            </tr>
+            <tr>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="143" class="tabla2"><div align="left" class="subtitulonormal Estilo1 Estilo7">Valor Retenci&oacute;n IVA</div></td>
+              <td class="tabla2"><div align="right"></div></td>
+            </tr>
+            <tr>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td width="143" class="tabla2"><div align="left" class="subtitulonormal Estilo2">Valor Retenci&oacute;n ICA</div></td>
+              <td class="tabla2"><div align="right"></div></td>
+            </tr>
+			
+            <tr>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp;</td>
+              <td bordercolor="#FFFFFF" class="textonormal">&nbsp; </td>
+              <td bordercolor="#FFFFFF" class="textonormal"><div align="center">&nbsp;</div></td>
+              <td width="143" class="tabla2"><div align="left" class="subtitulonormal Estilo1 Estilo6">TOTAL</div></td>
+              <td class="tabla2"><div align="right">{TG}</div></td>
+            </tr>
+          </table>  
+			
+			</td>
+		</tr>  
+  </table> 
+  
+		  <br>
+<form name="forma" id="forma">   
+		  
+		      <table width="626" border="0" align="center" class="textonormal">
+                <tr>
+                  <td class="subtitulonormal"><div align="center">{Mensaje_1}</div></td>
+                </tr>
+            </table>
+
+			 			  
+	          <table width="589" border="1" align="center" class="tabla1">
+                <tr>
+                  <td colspan="4"><div align="center"><strong>DETALLE DE IVA INCLUIDO EN LA COTIZACI&Oacute;N</strong></div></td>
+                  
+                </tr>
+                <tr>
+                  <td width="205"><div align="center"><strong>Descripci&oacute;n IVA </strong></div></td>
+                 
+                  <td width="132"><div align="center"><strong>Base IVA </strong></div></td>
+                  <td width="123"><div align="center"><strong>Valor IVA </strong></div></td>
+                </tr>
+              <!-- BEGIN Impuestos -->
+				<tr>
+                  <td><div align="center">{Descripcion_iva}&nbsp;%</div></td>
+                  
+                  <td><div align="center">{Base_iva}&nbsp;</div></td>
+                  <td><div align="right">{Valor_iva}&nbsp;</div></td>
+                </tr>
+			  <!-- END Impuestos -->
+            </table>
+            			
+			
+			
+						
+			<table width='589' border='1' align='center' class='tabla1' id='tabla_renta'>
+                <tr>
+                  <td colspan='4'><div align='center'><strong>DETALLE DE RENTA INCLUIDO EN LA COTIZACI&Oacute;N 
+                    
+                  </strong></div></td>
+                  
+                </tr>
+                <tr>
+                  <td width='205'><div align='center'><strong>Descripci&oacute;n Rete Fuente </strong></div></td>                 
+                  <td width='132'><div align='center'><strong>Base Rete Fuente </strong></div></td>
+                  <td width='123'><div align='center'><strong>Valor Rete Fuente </strong></div></td>
+                </tr>
+              <!-- BEGIN Impuestos_renta -->
+				<tr>
+                  <td><div align='center'>{Descripcion_renta}&nbsp;%</div></td>                  
+                  <td><div align='center'>{Base_renta}&nbsp;</div></td>
+                  <td><div align='right'>{Valor_renta}&nbsp;</div></td>
+                </tr>
+			  <!-- END Impuestos_renta -->
+            </table>
+           <input name="renta" type="hidden" id="renta" value="{Contar_renta}" >
+			  
+	          <table width="589" border="1" align="center" class="tabla1" id="tabla_ica">
+                <tr>
+                  <td colspan="4"><div align="center"><strong>DETALLE DE ICA INCLUIDO EN LA COTIZACI&Oacute;N</strong></div></td>
+                  
+                </tr>
+                <tr>
+                  <td width="205"><div align="center"><strong>Descripci&oacute;n Rete ICA </strong></div></td>
+                  <td width="132"><div align="center"><strong>Base Rete ICA </strong></div></td>
+                  <td width="123"><div align="center"><strong>Valor Rete ICA </strong></div></td>
+                </tr>
+              <!-- BEGIN Impuestos_ica -->
+				<tr>
+                  <td><div align="center">{Descripcion_ica}&nbsp;%</div></td>
+                  <td><div align="center">{Base_ica}&nbsp;</div></td>
+                  <td><div align="right">{Valor_ica}&nbsp;</div></td>
+                </tr>
+			  <!-- END Impuestos_ica -->
+            </table>
+            <input name="ica" type="hidden" id="ica" value="{Contar_ica}" >
+			
+			</form>
+			
+			
+			<br>
+			
+			  <table width="626" border="0" align="center" class="textonormal">
+                <tr>
+                  <td class="subtitulonormal"><div align="center">{Mensaje_2}</div></td>
+                </tr>
+            </table>
+            <br>
+		  
+		   
+			  <table width="626" border="0" align="center" class="textonormal">
+                <tr>
+                  <td class="subtitulonormal"><div align="center">{Mensaje_3}</div></td>
+                </tr>
+            </table>
+            <br>
+		  
+		  
+		  <table width="626" border="0" align="center" class="textonormal">
+                <tr>
+                  <td class="subtitulonormal"><div align="center">{Mensaje_4}</div></td>
+                </tr>
+				
+				 <tr>
+                  <td><div align="center">{Mensaje_5}</div></td>
+                </tr>
+				
+				 <tr>
+                  <td><div align="center">{Mensaje_6}</div></td>
+                </tr>
+				
+				 <tr>
+                  <td><div align="center"><strong>{Mensaje_7}</strong></div></td>
+                </tr>
+           </table>
+		  
+		  
+		  <br>
+		  
+		  <table width="626" border="0" align="center" class="textonormal">
+                <tr>
+                  <td class="subtitulonormal"><div align="center">{Mensaje_8}</div></td>
+                </tr>
+                <tr>
+                  <td>1. {Mensaje_18}</td>
+                </tr>
+                <tr>
+                  <td>2. {Mensaje_19}</td>
+                </tr>
+                <tr>
+                  <td>3. {Mensaje_20}</td>
+                </tr>
+                <tr>
+                  <td>4. {Mensaje_21}</td>
+                </tr>
+                <tr>
+                  <td>5. {Mensaje_22}</td>
+                </tr>
+                <tr>
+                  <td>6. {Mensaje_23}</td>
+                </tr>
+                <tr>
+                  <td>7. {Mensaje_24}</td>
+                </tr>
+                <tr>
+                  <td><div align="center">&nbsp;</div></td>
+                </tr>
+								
+				 <tr>
+                  <td class="subtitulonormal"><div align="center">{Mensaje_9}</div></td>
+                 </tr>
+				
+				 <tr>
+                  <td><div align="left">{Mensaje_10} {Mensaje_11}</div></td>
+                </tr>
+				
+				 <tr>
+                  <td><div align="left">{Mensaje_12} {Mensaje_13} </div> </td>				  
+                </tr>
+				
+				<tr>
+                  <td><div align="left">{Mensaje_14} {Mensaje_15}</div></td>
+                </tr>
+				
+				<tr>
+                  <td><div align="left">{Mensaje_16} {Mensaje_17}</div></td>
+                </tr>
+			
+		<tr>              
+                  <td class="subtitulonormal"><div align="center"><b>{Mensaje_25}</b></div></td>
+                 </tr>
+                 
+                <tr>
+                  <td><div align="justify">{Mensaje_26}{Mensaje_27}</div></td>
+                </tr>
+                
+                <tr>
+                  <td><div align="justify">{Mensaje_28}</div></td>
+                </tr> 
+				
+				
+            </table>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+      <table width="630" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+		   <td>
+		   </td>
+       </table> 
+		  
+		  
+		  </td>
+        </tr>
+      </table>
+      <!-- InstanceEndEditable --></td>
+  </tr>
+   <tr>
+    <td valign="top" class="textonormal"><!-- InstanceBeginEditable name="Footer" -->
+      <!-- InstanceEndEditable --></td>
+  </tr> 
+</table>
+</body>
+<!-- InstanceEnd -->
+
+<script>
+
+
+var valor;
+valor = parseInt(document.forma.renta.value);
+
+if(valor <= 1)
+{
+var i;
+valor = valor + 3;
+
+	for(i=0; i<valor; i++)
+	{	 
+  	tab = document.getElementById('tabla_renta');
+  	tab.deleteRow(0);
+  	}
+}
+
+
+var valor_ica = parseInt(document.forma.ica.value);
+
+if(valor_ica <= 1)
+{
+var i;
+valor_ica = valor_ica + 3;
+
+	for(i=0; i<valor_ica; i++)
+	{	 
+  	tab = document.getElementById('tabla_ica');
+  	tab.deleteRow(0);
+  	}
+}
+
+
+
+</script>
+
+</html>

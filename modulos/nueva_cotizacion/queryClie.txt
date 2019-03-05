@@ -1,0 +1,12 @@
+SELECT 
+                         clie_rut, 
+                         clie_nombre, 
+                         clie_paterno, 
+                         clie_materno, 
+                         clie_email, 
+                         clie_telefonocasa,
+                         clie_telcontacto1,
+                         clie_telcontacto2,
+                         clie_localizacion 
+                     FROM clientes 
+                      where clie_rut=14440244 and clie_tipo='p'

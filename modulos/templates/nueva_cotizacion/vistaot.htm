@@ -1,0 +1,98 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+function Valid(){
+	if( validar_obligatorio(tracking.hist_descripcion, "Debe ingresar Descripcion " ))
+		return false;
+	document.tracking.submit();
+}
+</SCRIPT>
+
+<script language="JavaScript" src="../checkfield.js"></script>
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->OT's de OS #{id_os} <!-- InstanceEndEditable --></td>
+		<td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" --><!-- InstanceEndEditable --></td>
+	</tr>
+</table>
+<table width="780" height="400" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+			<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="31%" valign="top" align=center>
+						<table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+							<tr>
+								<td>
+									<fieldset>
+									<legend>Datos OS</legend>
+									<table border="0" width="90%" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+										<tr>
+											<td width="35%">OS: &nbsp;&nbsp;{id_os} </td>
+											<td width="45%">Cliente: &nbsp;&nbsp;{clie_nombre}</td>
+											<td width="20%">Tel&eacute;fono: &nbsp;&nbsp;{dire_telefono}</td>
+										</tr>
+										<tr>
+											<td colspan = "3">Dir Servicio: &nbsp;&nbsp;{dire_direccion}, {comu_nombre}</td>
+										</tr>
+									</table>
+									</fieldset>
+								</td>
+							</tr>
+						</table>
+						<br>
+						<table width="200" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+							<tr>
+								<th width="385"><div align="left">Número total de OT: &nbsp;&nbsp;&nbsp;<strong>{num_otes}</strong> </div></th>
+							</tr>
+						</table>      
+						<TABLE width="530" border="0" align="center" cellpadding="0" cellspacing="0">
+						<TR>
+							<TD>
+								<table width="500" border="0" align="left" cellpadding="0" cellspacing="1" class="tabla1">
+									<tr>
+										<th width="50">N° OT</th>
+										<th width="60" align=center>Tipo OT</th>
+										<th width="140">Tipo Despacho</th>
+										<th width="100">Fecha Creación</th>
+										<th width="100">Estado</th>
+									</tr>
+								</table>            
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<div style="width:520; height:270; overflow:auto;">
+								<table width="500" border="1" align="left" cellpadding="0" cellspacing="1" class="tabla1">
+									<!-- BEGIN Otes -->
+									<tr valign="top">
+										<td width="53" align=center>{ot_id}</td>
+										<td width="63" align=center>{ot_tipo}</td>
+										<td width="138" align=center>{ot_despacho}</td>
+										<td width="100" align=center>{ot_fechacreacion}</td>
+										<td width="100" align=center>{esta_nombre}</td>
+									</tr>
+									<!-- END Otes -->
+								</table>            
+								</div>
+							</TD>
+						</TR>
+						</TABLE>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="74" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+							<tr>
+								<td width="37">Volver</td>
+								<td width="23"><a href="nueva_cotizacion_sumario_01.php?clie_rut={clie_rut}&id_os={id_os}"><img src="../img/anterior.gif" width="23" height="23" border="0"></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+<!-- InstanceEndEditable -->
+		</td>
+	</tr>
+</table>

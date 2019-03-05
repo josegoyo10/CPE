@@ -1,0 +1,90 @@
+[]<2007-07-23 11:10:40> --> procesaC1 : La cotizacion 42151 esta vencida
+[]<2007-07-23 11:10:59> --> procesaC1 : La cotizacion 42150 esta vencida
+[]<2007-07-23 11:11:10> --> procesaC1 : La cotizacion 42149 esta vencida
+[]<2007-07-23 11:11:17> --> procesaC1 : La cotizacion 42140 no proviene de un local valido[95]
+[]<2007-07-23 11:11:57> --> procesaC1 : La cotizacion 42144 no proviene de un local valido[95]
+[]<2007-07-23 11:12:34> --> procesaC1 : La cotizacion 42140 no proviene de un local valido[95]
+[]<2007-07-24 00:24:28> --> so_close close : errno = (9)
+[]<2007-08-25 12:24:57> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 1
+[]<2007-08-25 12:24:57> --> procesaC1 : La cotizacion 1 no proviene de un local valido[95]
+[]<2007-08-26 00:37:42> --> so_close close : errno = (9)
+[]<2007-08-26 19:51:40> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 243875
+[]<2007-08-26 19:51:40> --> procesaC1 : La cotizacion 243875 no proviene de un local valido[95]
+[]<2007-08-26 19:59:19> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 243875
+[]<2007-08-26 19:59:19> --> procesaC1 : La cotizacion 243875 no proviene de un local valido[95]
+[]<2007-08-26 20:04:36> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 243875
+[]<2007-08-26 20:04:36> --> procesaC1 : La cotizacion 243875 no proviene de un local valido[95]
+[]<2007-08-26 20:05:50> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 243875
+[]<2007-08-26 20:05:50> --> procesaC1 : La cotizacion 243875 no proviene de un local valido[95]
+[]<2007-08-27 00:38:22> --> so_close close : errno = (9)
+[]<2007-08-27 12:09:23> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 243875
+[]<2007-08-27 12:09:23> --> procesaC1 : La cotizacion 243875 no proviene de un local valido[95]
+[]<2007-08-28 00:37:57> --> so_close close : errno = (9)
+[]<2007-08-28 13:41:03> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 214563
+[]<2007-08-28 13:41:03> --> procesaC1 : La cotizacion 214563 no proviene de un local valido[95]
+[]<2007-08-29 00:06:46> --> so_close close : errno = (9)
+[]<2007-09-07 12:02:02> --> so_close close : errno = (9)
+[]<2007-09-08 00:05:33> --> so_close close : errno = (9)
+[]<2007-09-11 00:14:41> --> so_close close : errno = (9)
+[]<2007-09-11 09:38:21> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 0
+[]<2007-09-11 09:38:21> --> procesaC1 : La cotizacion 0 no proviene de un local valido[95]
+[]<2007-09-11 11:46:09> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 12
+[]<2007-09-11 11:46:09> --> procesaC1 : La cotizacion 12 no proviene de un local valido[95]
+[]<2007-09-11 12:06:08> --> procesaC1 : La cotizacion 4238 no proviene de un local valido[95]
+[]<2007-09-12 00:10:15> --> so_close close : errno = (9)
+[]<2007-09-12 15:03:44> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 4
+[]<2007-09-12 15:03:44> --> procesaC1 : La cotizacion 4 no proviene de un local valido[95]
+[]<2007-09-12 17:06:05> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 2147483647
+[]<2007-09-12 17:06:05> --> procesaC1 : La cotizacion 2147483647 no proviene de un local valido[95]
+[]<2007-09-13 00:15:05> --> so_close close : errno = (9)
+[]<2007-09-14 00:03:41> --> so_close close : errno = (9)
+[]<2007-09-14 09:48:20> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 1
+[]<2007-09-14 09:48:20> --> procesaC1 : La cotizacion 1 no proviene de un local valido[95]
+[]<2007-09-14 12:18:52> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 0
+[]<2007-09-14 12:18:52> --> procesaC1 : La cotizacion 0 no proviene de un local valido[95]
+[]<2007-09-14 15:00:58> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 2147483647
+[]<2007-09-14 15:00:58> --> procesaC1 : La cotizacion 2147483647 no proviene de un local valido[95]
+[]<2007-09-14 15:01:53> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 2147483647
+[]<2007-09-14 15:01:53> --> procesaC1 : La cotizacion 2147483647 no proviene de un local valido[95]
+[]<2007-09-14 18:46:48> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 423753
+[]<2007-09-14 18:46:48> --> procesaC1 : La cotizacion 423753 no proviene de un local valido[95]
+[]<2007-09-15 00:14:20> --> so_close close : errno = (9)
+[]<2007-09-25 14:54:02> --> procesaC1 : La cotizacion 4239 no proviene de un local valido[95]
+[]<2007-09-26 00:08:29> --> so_close close : errno = (9)
+[]<2007-09-27 00:08:52> --> so_close close : errno = (9)
+[]<2007-09-27 12:08:09> --> procesaC1 : La cotizacion 42407 esta vencida
+[]<2007-09-27 12:08:20> --> procesaC1 : La cotizacion 42384 esta vencida
+[]<2007-09-28 00:11:13> --> so_close close : errno = (9)
+[]<2007-10-11 00:11:29> --> so_close close : errno = (9)
+[]<2007-10-17 15:16:41> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 78
+[]<2007-10-17 15:16:41> --> procesaC1 : La cotizacion 78 no proviene de un local valido[95]
+[]<2007-10-17 16:45:15> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 1
+[]<2007-10-17 16:45:15> --> procesaC1 : La cotizacion 1 no proviene de un local valido[95]
+[]<2007-10-17 16:48:12> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 1
+[]<2007-10-17 16:48:12> --> procesaC1 : La cotizacion 1 no proviene de un local valido[95]
+[]<2007-10-17 16:48:52> --> procesaC1 : La cotizacion 542 no proviene de un local valido[95]
+[]<2007-10-17 17:49:43> --> procesaC1 : La cotizacion 1234 no proviene de un local valido[95]
+[]<2007-10-17 18:34:20> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 42779
+[]<2007-10-17 18:34:20> --> procesaC1 : La cotizacion 42779 no proviene de un local valido[95]
+[]<2007-10-23 16:13:07> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 0
+[]<2007-10-23 16:13:07> --> procesaC1 : La cotizacion 0 no proviene de un local valido[95]
+[]<2007-10-23 23:59:33> --> so_close close : errno = (9)
+[]<2007-10-26 00:00:01> --> so_close close : errno = (9)
+[]<2007-10-29 10:58:59> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 45222
+[]<2007-10-29 10:58:59> --> procesaC1 : La cotizacion 45222 no proviene de un local valido[95]
+[]<2007-10-29 11:01:03> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 42555
+[]<2007-10-29 11:01:03> --> procesaC1 : La cotizacion 42555 no proviene de un local valido[95]
+[]<2007-10-30 00:01:21> --> so_close close : errno = (9)
+[]<2007-12-12 17:09:15> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 118818
+[]<2007-12-12 17:09:15> --> procesaC1 : La cotizacion 118818 no proviene de un local valido[98]
+[]<2007-12-13 00:01:30> --> so_close close : errno = (9)
+[]<2007-12-13 12:27:14> --> procesaC1 : La cotizacion 23215 no proviene de un local valido[98]
+[]<2007-12-13 23:58:29> --> so_close close : errno = (9)
+[]<2007-12-17 09:00:57> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 200002
+[]<2007-12-17 09:00:57> --> procesaC1 : La cotizacion 200002 no proviene de un local valido[98]
+[]<2007-12-17 10:11:22> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 0
+[]<2007-12-17 10:11:22> --> procesaC1 : La cotizacion 0 no proviene de un local valido[98]
+[]<2007-12-17 23:58:15> --> so_close close : errno = (9)
+[]<2007-12-20 18:15:11> --> verifica_local : filas retornadas = 0 no puede verificar la cotizacion 0
+[]<2007-12-20 18:15:11> --> procesaC1 : La cotizacion 0 no proviene de un local valido[98]
+[]<2007-12-21 00:01:53> --> so_close close : errno = (9)

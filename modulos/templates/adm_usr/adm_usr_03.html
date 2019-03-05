@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>{PAGETITLE}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+
+<SPAN class=titulo>{TEXT_AGREGAR_TITULO}</SPAN>
+
+<p>{TEXT_AGREGAR_TEXT_1}</p>
+
+<form action="adm_usr_03.php" method="post" name="form_agregar">
+<INPUT TYPE="hidden" NAME="action" VALUE="addperusr">
+<INPUT TYPE="hidden" NAME="sec" VALUE="agregar">
+<INPUT TYPE="hidden" NAME="id_padre" VALUE="{ID_PADRE}">
+<table border="0" align=center class="form_g">
+    <tr>
+        <td ><INPUT TYPE="radio" NAME="tipo" value="1">{TEXT_AGREGAR_CAMPO_PERFIL}</td>
+		<td ><INPUT TYPE="radio" NAME="tipo" value="2" checked>{TEXT_AGREGAR_CAMPO_USUARIO}</td>
+    </tr>
+</table>
+
+<br>
+<CENTER><INPUT TYPE="submit" value="{BOTON_CONTINUAR}"></CENTER>
+</form>
+
+</body>
+
+</html>

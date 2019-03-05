@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>{PAGETITLE}</title>
+</head>
+<script language="javascript" src="../../includes/popup.js"></script>
+<script type="text/javascript">
+	function print_Bono(){
+		if ({numImp} == '0'){
+			popUpWindowMod('print_Bono.php?idLista={idLista}',100,50,750,700);
+		}
+		else{
+			alert('El Bono N°.{idBono} ya fue impreso');
+			cerrar();
+		}
+	}
+	
+	function cerrar(){
+		window.close();
+	}
+</script>
+<body>
+<div align="left" style="margin-top: 5;" class="titulonormal">{TEXT_TITULO}</div>
+<table border="0" align="center" style="width: 780; margin-top: 0;">
+	<tr>
+		<td style="height: 50" align="center">
+			<input type="hidden" name="numImp" value="{numImp}">
+			<div id="Impr">
+				<a href="#" title="Imprimir" onclick="print_Bono()">
+				<img src="../img/ico_print.gif" border="0" style="width:36; height: 36;">
+				</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table border="0" align="center" style="width: 700;">
+				<tr>
+				  	<td colspan="3">
+				  		<table border="0" align="center" style="width: 700; margin-top: 0;">
+				  			<tr>
+								<td align="left" style="width: 150"><img src="../img/logo3.gif" border="0" style="width:95; height: 55;"></td>
+								<td>
+									<table width="550">
+									  <tr>
+									    <td class="subtitulonormal" align="left">{TEXT_CAMPO_1}{idLista}  </td>
+									  </tr>
+									  <tr>
+									    <td class="subtitulonormal" align="left">{TEXT_CAMPO_2}  </td>
+									  </tr>
+									  <tr>
+									    <td class="subtitulonormal" align="left">{TEXT_CAMPO_3}{idBono}</td>
+									  </tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_4}</legend>
+						<table>
+							<tr>
+								<td style="width: 80;" class="textonormal">{TEXT_CAMPO_5}</td>
+								<td style="width: 300;" class="userinput">{idBono}</td>
+								<td style="width: 80;" class="textonormal">{TEXT_CAMPO_6}</td>
+								<td style="width: 150;" class="userinput">{fecImpre}</td>
+							</tr>		
+							<tr>
+							</tr>
+						</table>
+						</fieldset>
+					</td>	
+				</tr>
+				<tr>	
+					<td>
+					<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_7}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_8}</td>
+								<td style="width: 250;" class="userinput">{idLista}</td>
+								<td style="width: 80;" class="textonormal"></td>
+								<td style="width: 150;" class="userinput"></td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_9}</td>
+								<td style="width: 250;" class="userinput">{tienda}</td>
+								<td style="width: 80;" class="textonormal">{TEXT_CAMPO_10}</td>
+								<td style="width: 150;" class="userinput">{fec_crea}</td>
+							</tr>		
+							</tr>
+						</table>
+					</fieldset>
+					</td>				
+				</tr>
+				</tr>
+				<tr>	
+					<td>
+					<fieldset>
+						<legend class="fieldsetLegend">{TEXT_CAMPO_11}</legend>
+						<table>
+							<tr>
+								<td style="width: 130;" class="textonormal">{TEXT_CAMPO_12}</td>
+								<td style="width: 250;" class="userinput">{clie_rut}</td>
+								<td style="width: 80;" class="textonormal">{TEXT_CAMPO_13}</td>
+								<td style="width: 150;" class="userinput">{nom_cliente}</td>
+							</tr>
+							<tr>
+								<td style="width: 130;" class="textonormal"></td>
+								<td style="width: 250;" class="userinput"></td>
+								<td style="width: 80;" class="textonormal">{TEXT_CAMPO_14}</td>
+								<td style="width: 150;" class="userinput">{telefono}</td>
+							</tr>		
+							</tr>
+						</table>
+					</fieldset>
+					</td>			
+				</tr>
+				
+				<tr>
+					<td colspan="3">
+						<table width="100%" class="tabla1">
+						
+							<tr>
+								<td style="width: 100%; font-size:30px; font-weight:700; height: 80;" align="center">
+									$ {vlrBono}
+								</td>	
+							</tr>
+	
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" align="center" style="width:90; margin-top: 15;" class="tabla1">
+	<tr>
+		<th align="center">{TEXT_CAMPO_24}</th>
+	</tr>
+	<tr>
+		
+		
+		
+		<td align="center" width="80">
+			<a href="#" onClick="cerrar();">{TEXT_CAMPO_20}</a>
+		</td>
+		
+		
+		</tr>
+</table>
+
+</body>
+</html>

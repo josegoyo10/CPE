@@ -1,0 +1,176 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+<link href="estilos.css" rel="stylesheet" type="text">
+<SCRIPT LANGUAGE="JavaScript">
+
+function VerEstado(e,id_lote,id_instalador){
+	if (e=='P'){
+		if (confirm('¿Está seguro que desea Deshacer este lote número '+id_lote+' ?')) {
+				document.jump.accion.value = 'Deshacer';
+				document.jump.id_lote.value = id_lote;
+				document.jump.id_instalador.value = id_instalador;
+				document.jump.submit();	
+		}
+	}else{
+		alert('Este lote no se puede deshacer dado que esta en estado Facturado');
+	}
+}
+function GeneraFactura(e,id_lote,id_instalador,inst_rut){
+	if (e=='P'){
+				document.jump1.accion.value = 'buscar1';
+				document.jump1.id_lote.value = id_lote;
+				document.jump1.id_instalador.value = id_instalador;
+				document.jump1.rut.value =inst_rut;
+				document.jump1.submit();	
+	}else{
+		alert('No puede Generar Factura, este lote ya está facturado');
+	}
+}
+//-->
+</SCRIPT>
+<FORM NAME="jump" METHOD="POST" action ="facturacion_03.php" TARGET="">
+	<input type="hidden" name="id_lote" value="">
+	<input type="hidden" name="accion" value="">
+	<input type="hidden" name="id_instalador" value="">
+</FORM>
+<FORM NAME="jump1" METHOD="POST" action ="facturacion_02.php" TARGET="">
+	<input type="hidden" name="id_lote" value="">
+	<input type="hidden" name="accion" value="">
+	<input type="hidden" name="id_instalador" value="">
+	<input type="hidden" name="rut" value="">
+</FORM>
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">Lote  de Facturaci&oacute;n Instalador N&deg;{id_lote}</td>
+    <td width="390" class="titulonormal"></td>
+  </tr>
+</table>
+<!--div style="width:780; height:490; overflow:auto;"-->
+<table width="780" height="90%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                <tr>
+                  <td><fieldset>
+                  <legend>Datos Instalador </legend>
+                  <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                    <tr>
+                      <td width="53">Cédula:</td>
+                      <td width="79" class="userinput">{rut}</td>
+                      <td width="53">Nombre: </td>
+                      <td width="236" class="userinput">{nombre} </td>
+                      <td width="46">Tel&eacute;fono:</td>
+                      <td width="222" class="userinput">{telefono}</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td class="userinput">&nbsp;</td>
+                      <td>Direcci&oacute;n:</td>
+                      <td class="userinput">{direccion}</td>
+                      <td>Mail:</td>
+                      <td class="userinput">{email}</td>
+                    </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                  <legend>Datos Lote </legend>
+                  <table width="720" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                    <tr>
+                      <td width="76">N&ordm; Lote:</td>
+                      <td width="56" class="userinput">{id_lote}</td>
+                      <td width="52" class="textonormal">Estado:</td>
+                      <td width="238" class="userinput">{estadofac}</td>
+                      <td width="135">Fecha de Generaci&oacute;n Lote: </td>
+                      <td width="132" class="userinput">{fechageneracion} </td>
+                    </tr>
+                    <tr>
+                      <td>N&deg; Factura:</td>
+                      <td class="userinput">&nbsp;{num_factura}</td>
+                      <td class="textonormal">&nbsp;</td>
+                      <td class="userinput">&nbsp;</td>
+                      <td>Usuario genera: </td>
+                      <td class="userinput">{usuarioingreso}</td>
+                    </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+              </table>
+				<table width="728" border="0" align="center" cellpadding="2" cellspacing="0" class="tabla2">
+                <tr>
+                  <th width="58"><div align="left">N&ordm; OT</div></th>
+                  <th width="60">Tipo OT <br>                      </th>
+                  <th width="300"><div align="left">Detalle</div></th>
+                  <th width="94"><div align="right">Costo Servicio </div></th>
+                  <th width="96"><div align="right">Porcentaje a<br>Pagar</div></th>
+                  <th width="94"><div align="right">Sub Total  </div></th>
+                </tr>
+				<!-- BEGIN detalle_lote -->
+				<tr>
+                  <td>{ot_id}</td>
+                  <td><div align="center">{ot_tipo}</div></td>
+                  <td>{osde_descripcion} </td>
+                  <td><div align="right">{osde_precio_round}</div></td>
+                  <td><div align="right">{margenapagar}&nbsp;%</div></td>
+                  <td><div align="right">{subtotalapagar}</div></td>
+                </tr>
+				<!-- END detalle_lote -->
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td><strong>SUB TOTAL</strong></td>
+                  <td>&nbsp;</td>
+	              <td><div align="right">&nbsp;</div></td>
+                  <td><div align="right"><strong>{subtotal}</strong></div></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>RETENCIÓN FONDO GARANTÍA</td>
+                  <td>&nbsp;</td>
+                  <td><div align="right">&nbsp;</div></td>               
+		          <td><div align="right">{retencion_lote}</div></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td><strong>TOTAL A PAGAR </strong></td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                 <td><div align="right"><strong>{monto_factura}</strong></div></td>
+                </tr>
+              </table>
+              <br>
+              <table border="0" align="center" cellpadding="2" cellspacing="2" class="tabla1">
+                <tr>
+                  <th colspan="5">Acciones</th>
+                </tr>
+                <script language="JavaScript" type="text/JavaScript" src="popup.js"></script>
+                <tr>
+                  <td width="80"><div align="center"><a href="javascript:popUpWindowModal('printframe_pf.php?id_lote={id_lote}', 100, 100,710, 500);">Imprimir Pre-Factura </a></div></td>
+                  <td width="80"><div align="center"><a href="javascript:VerEstado('{id_estado}',{id_lote},{id_instalador});">Deshacer Lote</a></div></td>
+				  <td width="80"><div align="center"><a href="javascript:popUpWindowModal('datos_oc.php?id_lote={id_lote}', 100, 100,250, 200);">Datos O/C </a></div></td>
+				  <td width="80"><div align="center"><a href="factura_pdf.php?id_lote={id_lote}" target="blank">Imprimir PDF</a></div></td>
+                  <td width="80"><div align="center"><a href="javascript:GeneraFactura('{id_estado}',{id_lote},{id_instalador},{inst_rut});">Ingresar Factura</a> </div></td>
+				</tr>
+              </table>
+            </td>
+        </tr>
+        <tr>
+          <td><div align="center">          </div></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</div>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Crear Nuevo Proyecto</title>
+<script language="javascript" src="../../includes/funciones.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	window.name="Nuevo_event";
+	function validar_form(){
+		if( validar_obligatorio(nuevo_evento.nombre, "Nombre del proyecto es un Campo obligatorio" ))
+			return false;
+		document.nuevo_evento.submit();
+	}
+	//-->
+	</SCRIPT>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table width="320" border="0" cellspacing="0" cellpadding="0" class="simpleSection">
+   <tr>
+		<td height="70" align="center" class="titulonormal"> Ingreso de Nuevo Evento</td>
+  </tr>
+  <tr>
+    <td valign="top">
+	<FORM NAME="nuevo_evento" METHOD="GET" ACTION="nuevo_event.php" onSubmit="" target="Nuevo_event">
+	<input type="hidden" name="clie_rut" value="{clie_rut}">
+	<input type="hidden" name="accion" value="guardar">
+ 
+ 	<table width="320" border="0" cellspacing="0" cellpadding="0">
+  		<tr>
+    		<td valign="top"> 
+    
+      			<table width="90%"  border="0" cellpadding="2" cellspacing="2" class="titulonormalnegro">
+        			<tr>
+         				<td width="17%">Evento</td>
+        				<td width="83%">
+        					<input name="nombre" type="text" value="{nombre}"size="40" maxlength="30" class="userinput" onkeyup="Upper(this)">{nombre}
+        				</td>
+        			</tr>
+      			</table>
+            </td>
+   		</tr>
+   		<tr>
+   			<td height="20"></td>
+   		</tr>
+   		<tr>     
+   			<td> 
+				<table width="100"  border="0" cellpadding="2" cellspacing="2" align="center" class="tabla3">
+	   				<tr>
+	     				<td align="center">
+	     					<input type="button" name="Button" value="Guardar" ONCLICK="validar_form()">
+						</td>
+						<td></td>
+						<td align="center">	
+							<input type="button" name="Submit" value="Cancelar" onClick="window.close();">
+						</td>
+	   				</tr>
+				</table>
+			</td>
+ 		</tr>
+</table>
+</Form>
+</body>
+</html>

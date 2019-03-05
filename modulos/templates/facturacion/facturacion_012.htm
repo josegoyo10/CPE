@@ -1,0 +1,315 @@
+<SCRIPT LANGUAGE="JavaScript">
+	var caja_{id_local}=new Array();
+	var c=0;
+
+function cambia_margen(ot, id_local){
+	var rango=false;
+	total=0;
+	cero=0;
+	mg='document.factura_'+id_local+'.margen_'+ot+'.value';
+    if( validar_obligatorio( mg, "Cédula es obligatorio" )){
+			return false;
+	}
+	/* toma el valor ingresado en margen*/
+	mrg=eval('document.factura_'+id_local+'.margen_'+ot+'.value');
+	rango=valida_margen(ot,id_local,mrg);
+
+	/*calcula el porcentaje*/
+	chekm=eval('document.factura_'+id_local+'.caja_'+ot+'.checked');
+	/* tomo el valor antes ddel calculo de % para ver despues la diferencia*/
+	old_sbt=parseInt(eval('document.factura_'+id_local+'.subtotalapagar_'+ot+'.value'));
+	if(rango){
+		eval('document.factura_'+id_local+'.subtotalapagar_'+ot+'.value = parseInt(parseInt(document.factura_'+id_local+'.osdeprecioround_'+ot+'.value) * parseInt(document.factura_'+id_local+'.margen_'+ot+'.value)/100)');
+		if (chekm){
+			subtap=parseInt(eval('document.factura_'+id_local+'.subtotalapagar_'+ot+'.value'));	
+			/* b-sub_total*/
+			tot=parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value'));	
+			/*agrega o saca diferencias al total*/ 
+			diferencia= (subtap)-(old_sbt);
+			total=tot+diferencia;
+			parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value='+total));
+		}else{
+			if (
+			parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value'))){
+				parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value'));
+			}else{
+				parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value='+0));
+			}
+			
+		}
+		if (chekm){
+			ret=parseInt(eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value'));
+				if(val=monto_retencion(id_local,ret,total)){
+					return true;
+				}
+		}
+	}
+
+}
+
+function cambia_lote(ot,id_local){
+/* valor para retencion b_monto_ret*/
+v1=eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value');
+/*if (parseInt(v1)||parseInt(v1==0)){
+	alert('paso');
+}else{
+			alert('Retención Fondo Garantía es un dato obligatorio');
+			eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value='+0);
+			eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.select()');
+			return false;
+}*/
+vret=eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value');
+/*se Multiplica por 1 en el caso de que la cifra empiece con 0*/
+vret=vret*1;
+	//vret=parseInt(eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value'));
+	if(vret>=0){
+		st=parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value'));
+		eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value='+vret)
+		if (re=monto_retencion(id_local,vret,st)){
+			return true;
+		}
+	}else{
+		/*si el valor viene con cero se acepta*/
+		if (vret!=0){
+			alert('Retención Fondo Garantía es un dato obligatorio');
+			eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value='+0);
+			eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.select()');
+			/*eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.onFocus');*/
+			return false;
+		}
+	}
+}
+
+function valida_margen(ot,id_local,mg){
+parseInt(eval('document.factura_'+id_local+'.margen_'+ot+'.value='+mg*1));
+nom_local=eval('document.factura_'+id_local+'.nom_local.value');
+	if ( (parseInt(mg)>=parseInt(0)) && (parseInt(mg)<=100)){
+		return true;
+	}else{
+		alert('El porcentaje a pagar para la OT '+ot+ ' del local '+nom_local+' debe ser un número entre 0 y 100');
+		eval('document.factura_'+id_local+'.margen_'+ot+'.select()');
+		eval('document.factura_'+id_local+'.margen_'+ot+'.onFocus');
+		return false;
+	}
+}
+function monto_retencion(id_local,vret,sumasub){
+nom_local=eval('document.factura_'+id_local+'.nom_local.value');
+/* para el caso que venga con NaN*/
+		if(sumasub){
+			sumasub=sumasub;
+		}else{
+			sumasub=0;
+		}
+
+		if ((vret)>=0 && (vret<=sumasub)){
+			v=sumasub-vret;
+			parseInt(eval('document.factura_'+id_local+'.b_total_lote'+id_local+'.value ='+v));
+			return true;
+		}else{
+			eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.onFocus');
+			alert('La Retención Fondo Garantía para el local '+nom_local+' no puede ser mayor a ' +sumasub);
+			parseInt(eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value='+sumasub));
+			parseInt(eval('document.factura_'+id_local+'.b_total_lote'+id_local+'.value='+0));
+			eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.select()');
+			return false;
+		}
+}
+
+function check_Cantidad(ot,id_local){
+	var suma,vmargen,ret;
+	chek=false;
+	suma=0;
+	chek=eval('document.factura_'+id_local+'.caja_'+ot+'.checked');
+	if(chek){
+		vmargen=valida_margen(ot,id_local,eval('document.factura_'+id_local+'.margen_'+ot+'.value'));
+		if (vmargen){
+		/*por si es NAN*/
+			if (parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value'))){
+				suma=parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value'))+parseInt(eval('document.factura_'+id_local+'.subtotalapagar_'+ot+'.value'));
+			}else{
+				suma=parseInt(eval('document.factura_'+id_local+'.subtotalapagar_'+ot+'.value'));
+			}
+		}else{
+			eval('document.factura_'+id_local+'.caja_'+ot+'.checked=""');
+			return false;
+		}
+	}else{
+		vmargen=valida_margen(ot,id_local,eval('document.factura_'+id_local+'.margen_'+ot+'.value'));
+		if (vmargen){
+			suma=parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value'))-parseInt(eval('document.factura_'+id_local+'.subtotalapagar_'+ot+'.value'));
+		}else{
+			return false;
+		}
+	}
+	parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value ='+suma));
+		if (suma>=0){
+			ret =parseInt(eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value'));
+		}
+	rango_ret=monto_retencion(id_local,ret,suma);
+		if (rango_ret){
+			total_final=(parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value'))-ret);
+			eval('document.factura_'+id_local+'.b_total_lote'+id_local+'.value ='+total_final)
+		}
+}
+
+function Genera_factura(id_local,f){
+	var rango_ret=false;
+	aviso=false
+	val_mg=false
+	suma=0;
+	rango=false;
+	for (i=0;i<eval('caja_'+id_local+'.length');i++){
+		num_ot=(eval('caja_'+id_local+'['+i+']'+'.value'));
+		che=eval('caja_'+id_local+'['+i+']'+'.checked');
+		val_mg=valida_margen(num_ot,id_local,eval('document.factura_'+id_local+'.margen_'+num_ot+'.value'))
+		if (!val_mg){
+		/*si el rango del margen esta mal en alguna linea*/
+			return false;
+		}
+		if (che){
+			aviso=true;
+			if (val_mg){
+				suma=suma+parseInt(eval('document.factura_'+id_local+'.subtotalapagar_'+num_ot+'.value'));
+				v=true;
+			}else{
+				return false;
+			}			
+		}else{	
+			if (!val_mg){
+				suma=suma-parseInt(eval('document.factura_'+id_local+'.subtotalapagar_'+num_ot+'.value'));
+			}		
+		}
+	}
+	if (!aviso){
+		alert('Debe seleccionar al menos  una orden de trabajo');
+		return false;
+	}
+	//asigno a subtotal la suma de lo chekeado
+	eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value='+suma);
+	sub_total=parseInt(eval('document.factura_'+id_local+'.b_sub_total'+id_local+'.value='+suma));
+	//valida para retencion
+	//ret =parseInt(eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value'));
+	ret =eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value');
+	ret=ret*1;
+	eval('document.factura_'+id_local+'.b_monto_ret'+id_local+'.value='+ret);
+	rango_ret=monto_retencion(id_local,ret,sub_total);
+	if (rango_ret){
+		total_final=(sub_total-ret);
+		parseInt(eval('document.factura_'+id_local+'.b_total_lote'+id_local+'.value ='+total_final));
+		eval('document.factura_'+id_local+'.submit()');
+	}
+
+//	eval('document.factura_'+id_local+'.submit()');
+}
+//-->
+</SCRIPT>{mensaje}
+<table width="733" border="0" align="center" cellpadding="2" cellspacing="0" class="tabla2">
+	<form NAME="factura_{id_local}" METHOD="POST" action ="facturacion_01.php" onSubmit="">
+	<INPUT TYPE="hidden" name="id_local" value="{id_local}">
+	<INPUT TYPE="hidden" name="nom_local" value="{nom_local}">
+	<INPUT TYPE="hidden" name="id_instalador" value="{id_instalador}">
+	<INPUT TYPE="hidden" name="accion" value="generar">
+	<tr>{mensaje}
+		<th>&nbsp;</th>
+		<th>&nbsp;<br></th>
+		<th>&nbsp;</th>
+		<th colspan='3'>{nom_local}</th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+	</tr>	
+	<tr>
+		  <th width="51">N&ordm; OT</th>
+		  <th width="51">Tipo OT <br></th>
+		  <th width="151">Detalle</th>
+		  <th width="81"><div align="right">Costo Servicio</div> </th>
+		  <th width="81">Porcentaje<br> a Pagar</th>
+		  <th width="111"><div align="center">Sub Total<br>a Pagar</div> </th>
+		  <th width="101">Fecha Aprobaci&oacute;n </th>
+		  <th width="61"><div align="center">Estado</div></th>
+		  <th width="41"><div align="center"> Lote</div></th>
+    </tr>
+	<!-- BEGIN detalle_factura -->
+	<INPUT TYPE="hidden" name="ot_id" value="{id_ot}">
+	<INPUT TYPE="hidden" name="elementos[]" value="{id_ot}">
+	<INPUT TYPE="hidden" name="osdeprecioround[]" value="{totpagar}">
+	<tr>
+		<td><div align="left">{id_ot}</div></td>
+		<td><div align="left">{ot_tipo}</div></td>
+		<td>{osde_descripcion}</td>
+		<td><div align="right"><input name="osdeprecioround_{id_ot}" type="text" value="{osde_precio_round}" size="8" maxlength="10" class="select3"></div></td>
+		<td><div align="right"><input name="margen_{id_ot}" type="text" value="{MARGEN}" onchange="cambia_margen({id_ot},{id_local})" size="2" maxlength="3" maxlength="10">%</div></td>
+		<td><div align="right"><input name="subtotalapagar_{id_ot}" type="text" value="{totpagar}" size="8" maxlength="10" class="select3" readonly></div></td>
+		<td><div align="center">{ot_ftermino}</div></td>
+		<td><div align="center">{esta_nombre}</div></td>
+		<td><div align="center">
+		<input name="caja[]" id="caja_{id_ot}" type="checkbox" value="{id_ot}" {checked} onclick="check_Cantidad({id_ot},{id_local})"></div></td>
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+		caja_{id_local}[c++]=document.getElementById('caja_{id_ot}');
+		eval('document.factura_'+{id_local}+'.margen_'+{id_ot}+'.onkeypress ='+KeyIsNumber);
+	//-->
+   </SCRIPT>
+	</tr>
+	<!-- END detalle_factura -->
+<table width="733" border="0" align="center" cellpadding="2" cellspacing="0" class="tabla2">
+	<tr>
+	<td>
+		<tr>
+				  <td width="51">&nbsp;</td>
+				  <td width="61">&nbsp;</td>
+                  <td width="161"><strong>SUB TOTAL</strong></td>
+				  <td width="96"><div align="right">&nbsp;&nbsp;{total_nocalulado}</div></td>
+				  <td width="85">&nbsp;</td>
+                  <td width="120"><div align="right">
+				  <input name="{b_sub_total}" type="text" value="{nada}" class="selectright" size="10"  readonly>
+				  <td width="50">&nbsp;</td>
+                  <td width="10">&nbsp;</td>
+                  <td width="10">&nbsp;</td>
+		</tr>
+		<tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+				  <td><strong>RETENCIÓN FONDO GARANTÍA</strong></td>
+				  <td>&nbsp;</div></td>
+				  <td>&nbsp;</td>
+                  <td ><div align="right">
+                  <input name="{b_monto_ret}" type="text" value="{MONTO_RETENCION}" onchange="cambia_lote({id_ot},{id_local})" size="10" maxlength="10"></div></td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+        </tr>
+         <tr>
+<SCRIPT LANGUAGE="JavaScript">
+	<!--
+		eval('document.factura_'+{id_local_an}+'.b_monto_ret'+{id_local_an}+'.onkeypress ='+KeyIsNumber);
+	//-->
+</SCRIPT>
+				  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+				  <td><strong>TOTAL LOTE </strong></td>
+				  <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+                  <td><div align="right"><strong><input name="{b_total_lote}" type="text" value="{nada}" class="selectright" size="10" readonly></strong></div></td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+                  </tr>
+      <tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+                  <td valign="top" colspan='3'><div align="right">
+                    <input type="button" name="Submit2" value="Generar Facturaci&oacute;n"  onClick="Genera_factura({id_local},this)">
+                  </div></td>
+                </tr>
+		</td>
+	<tr>
+</form>
+</table>
+	

@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<!-- Esta instruccion es para que se recargue la página cada 30 segundos -->
+<META HTTP-EQUIV=REFRESH CONTENT=50>
+<!-- ################################################################### -->
+<title>{PAGETITLE}</title>
+</head>
+
+<link href="../../estilos.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="javascript" src="../../includes/popup.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+function validar_osot(){
+var valorE,radioE,elec;
+    if ( validar_numero( document.busca_osot.texto_osot , "Debe ingresar valor numérico" ) )
+        return false;
+    
+    for (i=0;i<document.busca_osot.radioE.length;i++){ 
+       if (document.busca_osot.radioE[i].checked){ 
+          valor = document.busca_osot.radioE[i].value;
+		  elec=valor;
+		  break;
+       }
+    }          
+	texto_osot =document.busca_osot.texto_osot.value;
+    radioE =elec;
+    document.busca_osot.submit();
+}
+
+<!-- Estas funciones permiten seleccinar las OT que se quieren imprimir -->
+
+var arreglo = new Array();
+var count=0;
+var cadena = '';
+
+
+function selectedCheck(){
+	var checkboxes = document.getElementById("monitorCheck").lista;
+	var cadena='';
+	for (var x=0; x < checkboxes.length; x++) {
+		if (checkboxes[x].checked){
+			valor = checkboxes[x].value;
+			if(x < checkboxes.length)
+				cadena = cadena + valor  + ',';	
+			else
+				cadena = cadena + valor ;		
+		}
+	}
+
+	var longitud= cadena.length;
+	var cadena2 = '';
+    cadena2 = cadena.substring(0,longitud-1);
+	
+	return(cadena2);
+}
+
+<!--- Inicia Seleccion Todos los CheckBox
+var checkflag = "false";
+function check(field) {
+	if (checkflag == "false") {
+		for (i = 0; i < field.length; i++) {
+			field[i].checked = true;
+			}
+		checkflag = "true";
+		return "Uncheck All"; 
+		}
+	else {
+	for (i = 0; i < field.length; i++) {
+		field[i].checked = false; 
+		}
+	checkflag = "false";
+	return "Check All"; 
+	}
+}
+// Finaliza seleccion -->
+<!--- Funcion imprime las ordenes de Picking seleccionadas -->
+function PrintPickin(Id_ot){
+var reImp = ' ';
+var Imp = ' ';
+var todos = ' ';
+	if (Id_ot != ' '){
+		cadenaOT = Id_ot.split(',');
+		for (var i in cadenaOT)
+			{
+			   var impName = "numImp_" + cadenaOT[i];
+			   var numImp = document.getElementById(impName).value;
+			   var no_Ot = document.getElementById(cadenaOT[i]).value;
+			   todos = todos+no_Ot+",";
+			   
+			   if(numImp > 0){ 		
+			   		reImp = reImp+no_Ot+",";
+			   }
+			   else{
+			   		Imp = Imp+no_Ot+",";
+			   }
+			}
+			
+			reImp = reImp.substr(0, (reImp.length-1));
+			Imp = Imp.substr(0, (Imp.length-1));
+			todos = todos.substr(0, (todos.length-1));
+			
+			if (reImp){
+				if(confirm("La(Las)  OT "+reImp+" ya fueron impresas. \n Desea reimprimirlas?")){
+					popUpWindowMod('../lista_Regalos/valida_subAdmin.php?accion=Imp&idLista='+todos+'&clie_rut=OT',300,300,300,170);
+				}
+			}
+			if(Imp){
+				window.open('print_OT.php?id_OT='+Imp, 1,0,0,0,0,1,1);
+			}
+		}
+		else{
+			alert('Debe seleccionar por lo menos una OT del listado para impresion');
+		}
+		
+
+}
+<!-- Fin de impresion de ordenes de Picking seleccionadas -->
+
+<!-- Refresca la página -->
+function refrescar(){
+	window.location.reload();
+}
+
+<!-- Fin  -->
+</SCRIPT>
+
+<script language="JavaScript" >
+window.onerror = new Function("return true")
+</script> 
+
+<style type="text/css">
+<!--
+.Estilo1 {color: #006633; font-weight:bold}
+.Estilo2 {color: #FF9900; font-weight:bold}
+.Estilo3 {color: #FF0000; font-weight:bold}
+-->
+</style>
+
+<table width="780" height="5%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">{TEXT_TITULO}</td>
+    <td width="390" class="titulonormal">&nbsp;</td>
+  </tr>
+</table>
+
+<table width="780" border="0" height="85%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top">
+	<!-- tabla que contiene las 2 busquedas-->
+      <table width="50%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <td width="100%">
+			 <table width="100%" border="0" align="right" cellpadding="0" cellspacing="0" class="textonormal">
+			
+			<form NAME="busca_osot" id="busca_osot" METHOD="POST" ACTION="monitor_Picking.php" onSubmit="return validar_osot(this);">
+				<input type="hidden" name="select4" value="{orden}">
+				  <tr>
+	              <td width="343"><fieldset>
+	              <legend>{TEXT_CAMPO_1}</legend>
+	              <span class="userinput">
+					<input name="radioE" type="radio" value="ot" {checkedT}>{TEXT_CAMPO_2}
+					<input name="radioE" type="radio" value="os" {checkedS}>{TEXT_CAMPO_3}
+					<input type="text" name="texto_osot" value="">
+					<input type="submit" value="Filtrar">
+	              </span>
+	              </fieldset></td>
+			</form>
+			
+		  </table> 
+	    </td>
+	<td width="50%">
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="2" class="textonormal">
+		<form NAME="ordenar" METHOD="POST" ACTION="monitor_Picking.php" onSubmit="">
+		<input type="hidden" name="texto_osot" value="{texto_osot}">
+		<input type="hidden" name="radioE" value="{radioE}">
+			   <td>
+			   <fieldset>
+			  <legend>{TEXT_CAMPO_4}</legend>
+				<table border="0" align="center" cellspacing="0" cellpadding="0">
+				<tr>
+                  <td><span class="userinput">
+				<select name="select4" onChange="submit();">
+				<option value="{TEXT_CAMPO_5}" {selected1}>{TEXT_CAMPO_5}</option>
+				<option value="{TEXT_CAMPO_6}" {selected2}>{TEXT_CAMPO_6}</option>
+				<option value="{TEXT_CAMPO_7}" {selected3}>{TEXT_CAMPO_7}</option>
+				<option value="{TEXT_CAMPO_8}" {selected4}>{TEXT_CAMPO_8}</option>
+				<option value="{TEXT_CAMPO_9}" {selected5}>{TEXT_CAMPO_9}</option>
+				<option value="{TEXT_CAMPO_10}" {selected6}>{TEXT_CAMPO_10}</option>
+			   </select>
+                </span></td>
+                </tr>
+              </table>
+              </fieldset></td>
+		</form>
+		</table>
+	</td>  
+	<tr></tr>
+</table>	
+<!-- cierra tabla que contiene las 2 busquedas-->
+
+<table BORDER="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td>
+
+<!-- tabla Madre-->
+<table width="750"  border="0" bordercolor="#000000" align="left" cellpadding="2" cellspacing="0" class="tabla2">
+<FORM id="monitorCheck" NAME="monitor" METHOD="POST" ACTION="monitor_Picking.php" onSubmit="">
+<input type="hidden" name="texto_osot" value="{texto_osot}">
+<input type="hidden" name="radioE" value="{radioE}">
+<input type="hidden" name="select4" value="{orden}">
+            <tr>
+              <th width="5%" align="center">{TEXT_CAMPO_11}</th>
+              <th width="8%" align="center">{TEXT_CAMPO_12}</th>
+              <th width="14%" align="center">{TEXT_CAMPO_13}</th>
+              <th width="15%" align="center">{TEXT_CAMPO_14}</th>
+              <th width="16%" align="center">{TEXT_CAMPO_15}</th>
+              <th width="16%" align="center">{TEXT_CAMPO_16}</th>
+              <th width="16%" align="center">{TEXT_CAMPO_10}</th>
+              <th width="15%" align="left">{TEXT_CAMPO_17}</th>
+            </tr>
+</table>
+</td>
+</tr>
+ <tr>
+ <td valign="top">
+ 
+<div style="width: auto; height: auto; left: 100px; top: 353px; overflow: auto;">    
+<table width="750" border="0" cellpadding="1" cellspacing="0" align="left" class="tabla2">
+			
+			<!-- BEGIN Lista_OT -->
+			<input type="hidden" name="numImp_{ot_idList}" id="numImp_{ot_idList}" value="{NumImp}">
+            <tr class="{estilo}" >
+			  <td width="23" align=center>
+		  	  <input type="checkbox" name="lista" id="{ot_idList}" value="{ot_idList}"></td>
+			  
+              <td width="12%" align=center>{ot_idList}</td>
+              <td width="10%" align=center>{id_OS}</td>
+              <td width="17%" align="center">{OT_tipo}</td>
+			  <td width="15%">{nombre_despacho}</span></td>
+              <td width="20%"><div align="center" >{fec_creacion}</div></td>
+			  <td width="14%"><font color="{color}">{estado}</font></td>
+			  <td width="8%">{ver}</td>
+		  </tr>
+			<!-- END Lista_OT -->
+			<tr>
+				<th width="23" align="left">
+					<input type="checkbox" id="SLT_ALL" name="SLT_ALL" value="Check All" onClick="this.value=check(this.form.lista)">
+				</th>
+				<th colspan="7" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{TEXT_CAMPO_18}</b>
+			</tr>
+</table>
+</div>
+</table>
+
+<div align="center">
+	<table border="0" align="center" cellpadding="5" cellspacing="5" class="tabla1">
+	<tr>
+		<th colspan="6">{TEXT_CAMPO_19}</th>
+	</tr>
+	<tr>
+		<td width="80">
+			<input type='button' name='Button' value='Imprimir Ordenes de Picking' onClick='PrintPickin(selectedCheck()); refrescar();' style='color: rgb(255, 0, 0); display:compact;'>
+		</td>
+		<td width="80">
+			<input type="button" name="Button" value="Refrescar Listado" onclick="refrescar();" style="color: rgb(255, 0, 0); display:compact;">
+		</td>
+	  </tr>
+	  <tr>
+	  	<td colspan="3" height="20"></td>
+	  </tr>
+	</table>
+	<!--paginacion-->
+	{inicio}			
+
+	<table BORDER="0" cellspacing="0" cellpadding="0" align="right" style="margin-top: -50">
+		<tr>
+			<td>
+			<form NAME="form_paginas" METHOD="POST" ACTION="monitor_despacho.php">
+			<input type="hidden" name="select4" value="{orden}">
+			<input type="hidden" name="orden" value="orden">
+			<input type="hidden" name="select_tipo" value="{select_tipo}">
+			<input type="hidden" name="select_des" value="{select_des}">
+			<input type="hidden" name="select_fecha" value="{select_fecha}">
+			<input type="hidden" name="select_estado" value="{select_estado}">
+			<td align="right" class="textonormal">N&uacute;mero de página &nbsp;</td>
+			<td align="right">
+				<span class="userinput">
+				<select name="select_pag" Onchange="submit();">
+				   
+				   <!-- BEGIN Paginas -->
+					 <option value="{pag}" {selected}>{pag}&nbsp;</option>
+				   <!-- END Paginas -->
+				
+				{inicio}</select>
+				</span>
+			</td>
+		</tr>
+		</form>
+	</table>
+   	{fin}
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+	document.busca_osot.texto_osot.onkeypress = NumberIsKey ;
+-->
+</SCRIPT>
+</div>
+</td>
+</tr>
+</table>
+</html>

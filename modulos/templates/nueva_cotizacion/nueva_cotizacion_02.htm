@@ -1,0 +1,211 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	function Accion_flecha_ant(){	
+		tipo=nueva_cotizacion_02.clie_tipo.value;
+		if (tipo=='p')
+			location.href='nueva_cotizacion_01.php?clie_rut={clie_rut}';
+		if (tipo=='e')
+			location.href='nueva_cotizacion_empresa_01.php?clie_rut={clie_rut}';
+	}
+	function validadel(id_os, url_os) {
+		if(confirm('¿Está seguro que desea borrar la OS en trabajo número ' + id_os + '?')) {
+			location.href=url_os;
+		}
+	}
+	//-->
+	</SCRIPT>
+
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<!--menu--->
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="Titulo" -->Paso 3/5 - {NOMBRE_PAGINA} <!-- InstanceEndEditable --></td>
+    <td width="390" class="titulonormal"><!-- InstanceBeginEditable name="BarraAuxiliar2" -->
+      <table  border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="../img/1a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/2a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/3b.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/4a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/5a.gif" width="40" height="40"></td>
+        </tr>
+      </table> 
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<!--div style="width:780; height:500; overflow:auto;"-->
+<table width="780" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="31%" valign="top">
+<FORM NAME="nueva_cotizacion_02" METHOD="POST" ACTION="nueva_cotizacion_02.php" onSubmit="">
+<input type="hidden" name="accion" value="editar">
+<input type="hidden" name="clie_rut" value="{clie_rut}">
+<input type="hidden" name="clie_tipo" value="{clie_tipo}">
+<input type="hidden" name="id_comuna" value="{id_comuna}">
+            <table width="670" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+              <tr>
+                <td><fieldset><legend>Datos del Cliente</legend>
+                  <table width="100%" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+                    <tr>
+                      <td width="95">{TEXT_CAMPO_2}</td>
+                      <td width="223" class="userinput">{clie_nombre}&nbsp;{clie_paterno}&nbsp;{clie_materno} </td>
+                      <td width="89">{TEXT_CAMPO_1}</td>
+                      <td width="229" class="userinput">{clie_rut}</td>
+                    </tr>
+                    <tr>
+                      <td>{TEXT_CAMPO_5}</td>
+                      <td class="userinput">{dire_direccion}</td>
+                      <td>{TEXT_CAMPO_6}</td>
+                      <td class="userinput">{comu_nombre}</td>
+                    </tr>
+                    <tr>
+                      <td>{TEXT_CAMPO_7} </td>
+                      <td class="userinput">{clie_telefonocasa}</td>
+                      <td>{TEXT_CAMPO_8}</td>
+                      <td class="userinput">{clie_telcontacto1} </td>
+                    </tr>
+                    <tr>
+                      <td>{TEXT_CAMPO_9}</td>
+                      <td class="userinput">{clie_telcontacto2}</td>
+                      <td>{TEXT_CAMPO_10}</td>
+                      <td class="userinput">{dire_observacion}</td>
+                    </tr>
+                    <tr>
+                      <td colspan=4 align=center><input type="button" name="EditDire" value="Editar" onClick="submit()"></td>
+                    </tr>
+                  </table>
+<!--- Cierro el from que edita los datos del cliente!-->
+
+                </fieldset></td>
+				</form>
+                </tr>
+            </table>
+
+            <table border="0" align="center" cellpadding="0" cellspacing="2" class="textonormal">
+              <tr>
+                <FORM NAME="nueva_cotizacion_02_filtra_estado" METHOD="POST" ACTION="nueva_cotizacion_02.php" onSubmit="">
+                <input type="hidden" name="accion" value="enblanco">
+                <input type="hidden" name="clie_rut" value="{clie_rut}">
+                <td valign="top"><p class="userinput">
+                    <fieldset>
+                        <legend>Crear OS </legend>
+                        <script language="JavaScript" type="text/JavaScript" src="popup.js"></script>
+                        <table  border="0" cellspacing="2" cellpadding="2">
+                            <tr>
+                                <td align="left"><input type="button" id="blanco"  name="Button3" value="Crear cotizaci&oacute;n en Blanco" onClick="submit();"><!--input type="button" name="Button" value="Usar Template" onClick="popUpWindow('template1.php', 100, 100, 600, 400);"--></td>
+                            </tr>
+                            </table>
+                    </fieldset>
+                </td>
+                </form>
+                <FORM NAME="nueva_cotizacion_02_filtra_proy" METHOD="POST" ACTION="nueva_cotizacion_02.php" onSubmit="">
+                <input type="hidden" name="accion" value="filtra_proy">
+                <input type="hidden" name="clie_rut" value="{clie_rut}">
+                <td valign="top"><fieldset>
+                  <legend>Proyecto</legend>
+                  <table  border="0" cellspacing="2" cellpadding="2">
+                    <tr>
+                      <td><span class="userinput">
+                        <select name="select_proyecto">
+						{raya}
+						{todos}
+						<!-- BEGIN Proyectos -->
+							<option value="{id_proyecto}" {selected}>{proy_nombre}</option>
+						<!-- END Proyectos -->
+                        </select></span></td>
+                      <td><input type="button" name="Button232" value="Filtrar"  onClick="submit();"></td>
+                    </tr>
+                  </table>
+                </fieldset></td>
+                </form>
+                <FORM NAME="nueva_cotizacion_02_filtra_estado" METHOD="POST" ACTION="nueva_cotizacion_02.php" onSubmit="">
+                <input type="hidden" name="accion" value="filtra_esta">
+                <input type="hidden" name="clie_rut" value="{clie_rut}">
+                <td valign="top">
+                <p class="userinput">
+                    <fieldset>
+                    <legend>Estado</legend>
+                        <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+                        <tr>
+                            <td><span class="userinput">
+                            <select name="select_estado">
+                                                    {todosE}
+                                                    <!-- BEGIN Estados -->
+                                                            <option value="{id_estado}" {selected}>{esta_nombre}</option>
+                                                    <!-- END Estados -->
+                            </select></span></td>
+                            <td><input type="button" name="accion" value="Filtrar"  onClick="submit();"></td>
+                        </tr>	
+                        </table>
+                    </fieldset>
+                </td>
+                </form>
+              </tr>
+            </table> 
+		
+		<table BORDER="0" cellspacing="0" cellpadding="0" align="center">
+		<tr>
+		  <td>
+
+			<table align="left" width="630" border="1" bordercolor="#000000"  cellpadding="2" cellspacing="0" class="tabla2">
+              <tr>
+                <th width="60" >{TEXT_CAMPO_11}</th>
+                <th width="120" align=left>{TEXT_CAMPO_12}</th>
+                <th width="150" align=left>{TEXT_CAMPO_13}</th>
+                <th width="100">Fecha Creación </th>
+                <th width="100">{TEXT_CAMPO_15}</th>
+                <th width="100">Acciones</th>
+              </tr>
+			</table>
+			</td>
+		  </tr>
+		<tr>
+		  <td>
+			<div style="width: 650px; height: 130px; left: 49px; top: 353px; overflow: auto;">      
+			<table width="630" border="1" align="left" class="tabla2" cellspacing="0">
+			<!-- BEGIN OS -->
+				  <tr>
+						<td width="60"  align="center">{id_os}</td>
+						<td width="120" >{proy_nombre_os}</td>
+						<td width="150" >{os_descripcion}&nbsp; </td>
+						<td width="100" align="center">&nbsp;{os_fechacreacion}</td>
+						<td width="100" align="left">{esta_nombre_os}</td>
+						<td width="100" align="center"><a href="nueva_cotizacion_sumario_01.php?id_os={id_os}">Ver</a>{editar}{eliminar}</td>
+					  </tr>
+			<!-- END OS -->    
+			</table>
+			</div>		  
+			</td>
+		  </tr>
+		</table>
+		  </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><table width="219"  height="23"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+            <tr>
+              <td width="33">
+			  	  <a href="#"  onClick="Accion_flecha_ant();"><img src="../img/anterior.gif"  alt="prueba" width="23" height="23" border="0" title="Anterior" ></a></td>
+              <td width="59">Anterior</td>
+              <td width="70">
+                <div align="right">Siguiente </div></td>
+              <td width="31">
+			  <a href="nueva_cotizacion_03.php?clie_rut={clie_rut}" ><img src="../img/siguiente.gif" alt="prueba" width="23" height="23" border="0" title="Siguiente" ></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+    <!-- InstanceEndEditable -->
+<!-- foter identificado--!>
+<!-- InstanceEnd --></html>

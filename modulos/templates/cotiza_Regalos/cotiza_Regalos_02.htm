@@ -1,0 +1,234 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="../estilos.css"></link>
+<script language="javascript" src="../../../includes/funciones.js"></script>
+<script language="javascript" src="../../includes/popup.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// Valida el Formulario antes de enviarlo
+function valida(idLista, clie_rut){
+	if(confirm('¿Está que desea Cotizar los productos para la Lista de Regalos  N°.' + {idLista} + '?')) {
+		cadena = selectedCheck();
+		prods = cadena.split(",");
+		tot_prod = 0;
+		
+		if(prods==''){
+			var id = 'regalar_{idLista_det}';
+			tot_prod = document.getElementById(id).value;
+			cadena = {idLista_det};
+		}
+		else{
+			for (var i in prods){
+				var id = 'regalar_'+prods[i];
+				cant_prod = document.getElementById(id).value;
+				tot_prod = parseInt(cant_prod) + parseInt(tot_prod);
+			}
+		}
+
+		if (tot_prod==0){
+			alert("No se han seleccionado productos de la Lista de Regalos");
+			return false;
+		}
+		if( document.monitorRegalos.invitado.value == ''){
+			alert("No se han ingresado los datos del Invitado para la Lista de Regalos");
+			document.monitorRegalos.invitado.focus();
+			return false;
+		}
+
+		document.monitorRegalos.cadenaLista.value = cadena;
+		document.monitorRegalos.accion.value = 'crear';
+		document.monitorRegalos.submit();
+	}
+}
+
+//Deshabilita los Check Uno a Uno
+function estCheck(id){
+	id = id.value;
+	c_reg = 'regalar_'+id;
+	document.getElementById(c_reg).disabled=false;
+	document.getElementById(c_reg).style.backgroundColor = '#fff';
+}
+
+// Habilita o Deshabilita todos los Checkbox
+var checkflag = "false";
+function check(field) {
+	if (checkflag == "false") {
+		for (i = 0; i < field.length; i++) {
+			field[i].checked = true;
+			c_reg = 'regalar_'+field[i].value;
+			document.getElementById(c_reg).disabled=false;
+			document.getElementById(c_reg).style.backgroundColor = '#fff';
+			}
+		checkflag = "true";
+		return "Uncheck All"; 
+		}
+	else {
+	for (i = 0; i < field.length; i++) {
+		field[i].checked = false; 
+		c_reg = 'regalar_'+field[i].value;
+		document.getElementById(c_reg).value='';
+		document.getElementById(c_reg).disabled=true;
+		document.getElementById(c_reg).style.backgroundColor = '#eef';
+		}
+	checkflag = "false";
+	return "Check All"; 
+	}
+}
+
+// Obtiene los CheckBox Seleccionados y su respectivo id de Lista
+function selectedCheck(){
+	var checkboxes = document.getElementById("monitorRegalos").lista;
+	var cadena='';
+	for (var x=0; x < checkboxes.length; x++) {
+		if (checkboxes[x].checked){
+			valor = checkboxes[x].value;
+			
+			if(x < checkboxes.length)
+				cadena = cadena + valor  + ',';	
+			else
+				cadena = cadena + valor ;		
+		}
+	}
+
+	var longitud= cadena.length;
+	var cadena2 = '';
+    cadena2 = cadena.substring(0,longitud-1);
+	
+	return(cadena2);
+}
+
+// Valida el ingreso de solo datos númericos
+function onlyNumbers(evt)
+{
+   	var keyPressed = (evt.which) ? evt.which : event.keyCode
+   	return !(keyPressed > 31 && (keyPressed < 48 || keyPressed > 57));
+}
+
+// Obtiene y calcula las cantidades de productos ingresadas
+function calculaCant(id){
+	var list_pick;
+	
+	id = id.name;
+	idVal = id.split("_");
+	idVal = idVal['1'];
+	
+	c_com = 'cantidad_'+idVal;
+	c_reg = 'regalar_'+idVal;
+	
+	v_com = document.getElementById(c_com).value;
+	v_reg = document.getElementById(c_reg).value;
+
+	nva_cant = (v_com - v_reg);
+	if (nva_cant < 0){
+		alert("¡ La cantidad a regalar debe ser menor o igual a la cantidad Disponible !");;
+		document.getElementById(c_reg).value = '0';
+	}
+	else{
+		document.getElementById(c_reg).value = v_reg;
+		document.getElementById(c_com).value = nva_cant;
+	}
+}
+
+// Back - ir a la pagina anterior
+function Accion_flecha_ant(){
+	location.href='../lista_Regalos/nueva_lista_sumario_01.php?idLista={idLista}';
+}
+//-->
+</SCRIPT>
+
+</head>
+<body>
+
+<table width="780" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390" class="titulonormal">Paso 3/3 - {NOMBRE_PAGINA}</td>
+    <td width="390" class="titulonormal">
+      <table  border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="../img/1a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/2a.gif" width="40" height="40"></td>
+          <td><img src="../img/redarrow.gif" width="24" height="20"></td>
+          <td><img src="../img/3b.gif" width="40" height="40"></td>
+        </tr>
+      </table> 
+    </td>
+  </tr>
+</table>
+
+<table style="width=98%; margin-top: 20;" align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>      
+    <td>
+	  <table style="width:100%;" border="0" cellpadding="0" cellspacing="0" class="tabla2">
+	    <tr>
+	      <th style="width:55; height: 30;" align="center">&nbsp;</th>
+		  <th style="width:100; height: 30;" align="center">{TEXT_CAMPO_1}</th>
+		  <th style="width:300; height: 30;" align="center">{TEXT_CAMPO_2}</th>
+		  <th style="width:75; height: 30;" align="center">{TEXT_CAMPO_3}</th>
+		  <th style="width:50; height: 30;" align="center">{TEXT_CAMPO_4}</th>
+		  <th style="width:50; height: 30;" align="center">{TEXT_CAMPO_5}</th>
+		</tr>		
+	  </table>
+	</td>
+  </tr>
+		
+  <tr>
+    <td>
+	  <table style="width:100%;" border="0" cellpadding="1" cellspacing="3"  class="tabla2">
+	    <FORM NAME="monitorRegalos" METHOD="POST" ACTION="cotiza_Regalos_02.php">
+		<!-- BEGIN Productos -->
+		<tr>
+		  <td style="width:20; height:20;" align="left">
+		    <input type="checkbox" name="lista" value="{idLista_det}" onclick="estCheck(this)">{idLista_det}
+		  </td>
+		  <td style="width:100; height:20;" align="left">{codigo}</td>
+		  <td style="width:290; height:20;" align="left">{descripcion}</td>
+		  <td style="width:70; height:20;" align="right">{precio}</td>
+		  <td style="width:50; height:20;" align="center">
+		  <input id="cantidad_{idLista_det}" name="cantidad_{idLista_det}" type="text" class="userinput" style="width:40; height:20; text-align: right;" readonly="readonly" value="{list_cantprod}"></input>
+		  </td> 
+		  <td style="width:50; height:20;" align="center">
+		    <input id="regalar_{idLista_det}" name="regalar_{idLista_det}" type="text" value="0" class="userinput" onkeypress="return onlyNumbers(event)" onchange="calculaCant(this)" maxlength="4" style="width:40; height:20; text-align: right; background-color: #eef;" disabled=true></input>
+		  </td>            
+		</tr>
+		<!-- END Productos -->
+		<tr>
+			<th style="width:50; height:20;" align="left">
+			<input type="checkbox" id="SLT_ALL" name="SLT_ALL" value="Check All" onClick="this.value=check(this.form.lista)">
+			</th>
+			<th colspan="2"><div align="left">{TEXT_CAMPO_7}</div><div align="right">{TEXT_CAMPO_6}</div></th>
+			<th colspan="3" align="left">
+				<input name="invitado" type="text" class="userinput" onblur="Upper(this);" maxlength="30" style="width:176; height:20;"></input>
+			</th>
+		</tr>
+	  </table>
+	  	<input type="hidden" name="cadenaLista">
+		<input type="hidden" name="accion">
+		<input type="hidden" name="idLista" value="{idLista}">
+		<input type="hidden" name="clie_rut" value="{clie_rut}">
+	  </FORM>
+	</td>
+  </tr>
+</table>
+
+
+
+<table style="width=219; height=23; margin-top: 20;" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+     <tr>
+         <td width="33">
+		 <a href="#"  onClick="Accion_flecha_ant();"><img src="../img/anterior.gif"  alt="prueba" width="23" height="23" border="0" title="Anterior" ></a></td>
+         <td width="59">{TEXT_CAMPO_9}</td>
+         <td width="70">
+         <div align="right">{TEXT_CAMPO_10}</div></td>
+         <td width="31">
+		 <a href="#" onclick="valida()"><img src="../img/siguiente.gif" alt="prueba" width="23" height="23" border="0" title="Siguiente" ></td>
+     </tr>
+</table>
+
+</body>
+<script LANGUAGE="javascript">
+	window.document.monitorRegalos.invitado.onkeypress = LetraIsKey;
+</script>
+</html>

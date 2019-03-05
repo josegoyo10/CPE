@@ -1,0 +1,130 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" src="../checkfield.js"></script>
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+<table width="530" height="30" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="300" class="titulonormal">Lote  de Facturaci&oacute;n Instalador N&deg;{id_lote}</td>
+    <td width="200" class="titulonormal">&nbsp;</td>
+  </tr>
+</table>
+<table width="700" height="300" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top">
+              <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                <tr>
+                  <td><fieldset>
+                  <legend>Datos Instalador </legend>
+                  <table width="90%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                    <tr>
+                      <td width="53">C&eacute;dula:</td>
+                      <td width="79" class="userinput">{rut}</td>
+                      <td width="53">Nombre: </td>
+                      <td width="236" class="userinput">{nombre} </td>
+                      <td width="46">Tel&eacute;fono:</td>
+                      <td width="222" class="userinput">{telefono}</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td class="userinput">&nbsp;</td>
+                      <td>Direcci&oacute;n:</td>
+                      <td class="userinput">{direccion}</td>
+                      <td>Mail:</td>
+                      <td class="userinput">{email}</td>
+                    </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <td><fieldset>
+                  <legend>Datos Lote </legend>
+                  <table width="90%" border="0" align="center" cellpadding="2" cellspacing="1" class="textonormal">
+                    <tr>
+                      <td width="90">N&ordm; Lote:</td>
+                      <td width="56" class="userinput">{id_lote}</td>
+                      <td width="52" class="textonormal">Estado:</td>
+                      <td width="100" class="userinput">{estadofac}</td>
+                      <td width="135">Fecha de Generaci&oacute;n Lote: </td>
+                      <td width="132" class="userinput">{fechageneracion} </td>
+                    </tr>
+                    <tr>
+                      <td>N&deg; Factura:</td>
+                      <td class="userinput">&nbsp;{num_factura}</td>
+                      <td class="textonormal">&nbsp;</td>
+                      <td class="userinput">&nbsp;</td>
+                      <td>Usuario genera: </td>
+                      <td class="userinput">{usuarioingreso}</td>
+                    </tr>
+                    <tr>
+                      <td>Número 1 O/C: </td>
+                      <td class="userinput">{numero1}</td>
+                      <td class="textonormal">&nbsp;</td>
+                      <td class="userinput">&nbsp;</td>
+                      <td>Número 2 O/C: </td>
+                      <td class="userinput">{numero2}</td>
+                    </tr>
+                  </table>
+                  </fieldset></td>
+                </tr>
+              </table>
+				<table width="98%" border="0" align="center" cellpadding="2" cellspacing="0" class="tabla2">
+                <tr>
+                  <th width="40"><div align="left">N&ordm; OT</div></th>
+                  <th width="40"><div align="left">Tipo OT </div></th>
+                  <th width="150"><div align="left">Detalle</div></th>
+                  <th width="110"><div align="right">Costo Servicio </div></th>
+                  <th width="110"><div align="right">Porcentaje a Pagar</div></th>
+                  <th width="94"><div align="right">Sub Total  </div></th>
+                </tr>
+				<!-- BEGIN detallelote -->
+				<tr>
+                  <td><div align="left">{ot_id}</div></td>
+                  <td><div align="left">{ot_tipo}</div></td>
+                  <td><div align="left">{osde_descripcion}</div> </td>
+                  <td><div align="right">{osde_precio_round}</div></td>
+                  <td><div align="center">{margenapagar}&nbsp;%</div></td>
+                  <td><div align="right">{subtotalapagar}</div></td>
+                </tr>
+				<!-- END detallelote -->
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td><strong>SUB TOTAL</strong></td>
+                  <td>&nbsp;</td>
+	              <td><div align="right">&nbsp;</div></td>
+                  <td><div align="right"><strong>{subtotal}</strong></div></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>RETENCIÓN FONDO GARANTÍA</td>
+                  <td>&nbsp;</td>
+                  <td><div align="right">&nbsp;</div></td>               
+		          <td><div align="right">{retencion_lote}</div></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td><strong>TOTAL A PAGAR </strong></td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                 <td><div align="right"><strong>{monto_factura}</strong></div></td>
+                </tr>
+              </table>
+              <br>
+            </td>
+        </tr>
+        <tr>
+          <td><div align="center">          </div></td>
+      </table>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>

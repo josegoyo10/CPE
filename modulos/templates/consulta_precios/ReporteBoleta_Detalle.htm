@@ -1,0 +1,80 @@
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+<script language="javascript" src="../../includes/funciones.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../nueva_cotizacion/popup.js"></script>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+	function imprimir() {
+		this.focus();
+		this.print();
+	}
+</SCRIPT>
+<table width="{tamano1}" align="{alinear}" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+{inicio}
+	<table width="{tamano1}" height="30" border="0" cellpadding="0" cellspacing="0">
+	  <tr>
+		<td class="titulonormal">Resumen Ventas Por Tirilla </td>
+		<td class="titulonormal"></td>
+	  </tr>
+	</table>
+{fin}
+</td>
+</tr>
+
+<tr>
+<td>
+	<table width="{tamano2}" border="0" cellpadding="2" cellspacing="2" class="tabla1">
+				<tr>
+				  <th colspan=7>Ventas por Tirilla en {nom_local_titulo} &nbsp;{fecha_inicio_msg}&nbsp;{fecha_termino_msg}</th>
+				</tr>
+				<tr>
+				  <th colspan=1>Tienda</th>
+				  <th colspan=1>Dise&ntilde;ador</th>
+				  <th colspan=1>&nbsp;OS&nbsp;</th>
+				  <th colspan=1>Descripcion</th>
+				  <th colspan=1>Nº Tirilla</th>
+				  <th colspan=1>Fecha</th>
+				  <th colspan=1>Monto</th>
+				</tr>
+
+<!-- BEGIN detalle_dis -->            
+			{resumen_local}
+			<tr>
+              <td bgcolor="#F3F3F2" colspan=2>TOTAL &nbsp;&nbsp;{nom_local}</td>
+              <td bgcolor="#F3F3F2" align=right>&nbsp;</td>
+              <td bgcolor="#F3F3F2" align=right>&nbsp;</td>
+              <td bgcolor="#F3F3F2" align=right>&nbsp;</td>
+              <td bgcolor="#F3F3F2" align=right>&nbsp;</td>
+              <td bgcolor="#F3F3F2" align=right>{r_MontoCotizacion}</td>
+            </tr>
+			<tr>
+				<td height=5 colspan = 15>
+			
+				</td>
+			</tr>
+			{fin_resumen}
+		{ini_normal}
+			<tr>
+              <td>{local}</td>
+              <td>{disenador}</td>
+              <td align=right>{NumCotizacion}</td>
+              <td align=left>{Descripcion}</td>
+              <td align=right>{NumeroBoleta}&nbsp;</td>
+              <td align=right>{FechaBoleta}&nbsp;</td>
+              <td align=right>&nbsp;{MontoCotizacion}</td>
+            </tr>
+		{fin_normal}
+<!-- END detalle_dis --> 
+           <tr>
+              <th colspan=2>TOTALES</th>
+              <th>&nbsp;</th>
+              <th>&nbsp; </th>
+              <th>&nbsp;</th>
+			  <th>&nbsp; </th>
+              <th rowspan=2>{t_MontoCotizacion}</th>
+            </tr>
+	</table>
+  </td>
+  </tr>	
+  </table>

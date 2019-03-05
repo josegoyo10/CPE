@@ -1,0 +1,225 @@
+<script language="javascript" src="../../includes/funciones.js"></script>
+<link rel="stylesheet" type="text/css" href="../estilos.css">
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	window.name="empresa";
+	function validar_form(){
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_razonsocial, "Razón social es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_giro, "Giro de la empresa es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_rutcontacto, "Cédula de Contacto es obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_nombre, "Nombre del contacto es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_paterno, "Apellido Paterno del contacto es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_materno, "Apellido Materno del contacto es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.dire_direccion, "Direccion de Facturación  es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_telefonocasa, "Teléfono es un Campo obligatorio" ))
+			return false;
+		if( validar_obligatorio( nueva_cotizacion_empresa_01.clie_telcontacto1, "Teléfono contacto es un Campo obligatorio" ))
+			return false;
+		clierutcontacto= checkDV(nueva_cotizacion_empresa_01.clie_rutcontacto);	
+		if (clierutcontacto)
+			document.nueva_cotizacion_empresa_01.submit();
+		
+	}
+
+	function checkDV( ){
+		  crut = '';
+		  mcrut= nueva_cotizacion_empresa_01.clie_rutcontacto.value;
+		  for(i=0; i<mcrut.length; ++i)
+			if (mcrut.charAt(i) != '.' && mcrut.charAt(i) != '-'){
+			 crut = crut + mcrut.charAt(i);
+			}
+		  largo = crut.length;
+		  if ( largo < 2 ){
+			alert("Debe ingresar la Cédula completa.");
+			document.nueva_cotizacion_empresa_01.clie_rutcontacto.focus();
+			document.nueva_cotizacion_empresa_01.clie_rutcontacto.select();
+			return false;
+		  }
+
+		  if ( largo > 2 )
+			rut = crut.substring(0, largo - 1);
+		  else
+			rut = crut.charAt(0);
+
+			dv = crut.charAt(largo-1);
+
+		  //checkCDV( dv );
+		  if ( rut == null || dv == null )
+		   return 0;
+		   var dvr = '0';
+		   suma = 0;
+		   mul  = 2;
+
+		  for (i= rut.length -1 ; i >= 0; i--){
+		   suma = suma + rut.charAt(i) * mul;
+			if (mul == 7)
+				mul = 2;
+			else
+				mul++;
+		  }
+		  res = suma % 11;
+		  if (res==1)
+			dvr = 'k';
+		  else if (res==0)
+			dvr = '0';
+		  else{
+			dvi = 11-res;
+			dvr = dvi + "";
+		  }
+		  
+		  /* Validación Digito de verificación
+		  if ( dvr != dv.toLowerCase() ){
+			alert("Cédula Contacto es incorrecta.");
+			document.nueva_cotizacion_empresa_01.clie_rutcontacto.focus();
+			document.nueva_cotizacion_empresa_01.clie_rutcontacto.select();
+			return false;
+		  }
+		  */
+		  
+		  document.nueva_cotizacion_empresa_01.clie_rutcontacto.value = crut.substr(0, crut.length-1); 
+		  digito=crut.substr(crut.length-1, 1).toUpperCase();
+		  document.nueva_cotizacion_empresa_01.submit();
+		  return true;
+	 
+	}
+//-->
+	</SCRIPT>
+
+
+
+<script language="JavaScript" src="../checkfield.js"></script>
+
+
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<!--menu--->
+<!---template titulo--->
+    <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<!--div style="width:780; height:500; overflow:auto;"-->
+<FORM NAME="nueva_cotizacion_empresa_01" METHOD="POST" ACTION="nueva_cotizacion_empresa_01.php" onSubmit="" TARGET="empresa">
+<input type="hidden" name="accion" value="update">
+<input type="hidden" name="clie_rut" value="{clie_rut}">
+<input type="hidden" name="clie_tipo" value="{clie_tipo}">
+<input type="hidden" name="donde" value="{donde}">
+<table width="780" height="76%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><!-- InstanceBeginEditable name="Cuerpo" -->
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="31%" valign="top" class="titulonormal">{leyenda}
+		  {espacio}
+         	  <table width="512" border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+				<tr>
+                  <td>{TEXT_CAMPOE_1}</td>
+                  <td>{TEXT_CAMPOE_2}&nbsp;(*) </td>
+                  <td>&nbsp;</td>
+                  <td>{TEXT_CAMPOE_3}&nbsp;(*)</td>
+                </tr>
+                <tr>
+                  <td><input name="clie_rut" type="text" value="{clie_rut}" disabled></td>
+                  <td colspan="2"><input name="clie_razonsocial" type="text" size="60"  value="{clie_razonsocial}" maxlength="100" onBlur="Upper(this);"></td>
+                  <td><input type="text" name="clie_giro" value="{clie_giro}" maxlength="100" onBlur="Upper(this);"></td>
+                </tr>
+                <tr>
+                  <td>{TEXT_CAMPOE_4}&nbsp;(*)</td>
+                  <td>{TEXT_CAMPOE_5}&nbsp;(*)</td>
+                  <td>{TEXT_CAMPOE_6}&nbsp;(*)</td>
+                  <td>{TEXT_CAMPOE_7}&nbsp;(*) </td>
+                </tr>
+                <tr>
+             <td width="98"><input type="text" name="clie_rutcontacto" value="{clie_rutcontacto}{digicontac}"></td>
+                  <td width="96"><input type="text" name="clie_nombre" value="{clie_nombre}" maxlength="20" onBlur="Upper(this);"></td>
+                  <td width="96"><input type="text" name="clie_paterno" value="{clie_paterno}" maxlength="20" onBlur="Upper(this);"></td>
+                  <td width="96"><input type="text" name="clie_materno" value="{clie_materno}" maxlength="20" onBlur="Upper(this);"></td>
+                </tr>
+             <td width="98">ej :10.906.867-5</td>
+                  <td width="96"></td>
+                  <td width="96"></td>
+                  <td width="96"></td>
+                </tr>
+              </table>
+              <br>
+              <table border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal">
+            <tr>
+              <td>{TEXT_CAMPOE_11}&nbsp;(*) </td>
+              <td colspan="2"><input name="dire_direccion"  value="{dire_direccion}" type="text" size="60" maxlength="100" onBlur="Upper(this);"></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>{TEXT_CAMPOE_9}&nbsp;(*)</td>
+              <td><select name="select2">
+				<!-- BEGIN Comunas -->
+				<option value="{id_comuna}" {selected}>{comu_nombre}</option>
+				<!-- END Comunas -->
+              </select></td>
+            </tr>
+            <tr>
+              <td>Teléfono Empresa&nbsp;(*) </td>
+              <td><input type="text" name="clie_telefonocasa" value="{clie_telefonocasa}" maxlength="22"></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>Teléfono Contacto 1 (*)</td>
+              <td><input type="text" name="clie_telcontacto1" value="{clie_telcontacto1}" maxlength="22"></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>Teléfono Contacto 2 </td>
+              <td><input type="text" name="clie_telcontacto2" value="{clie_telcontacto2}" maxlength="22"></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>{TEXT_CAMPOE_15}</td>
+              <td colspan="3"><textarea name="dire_observacion" cols="60" wrap="VIRTUAL" onBlur="Upper(this);">{dire_observacion}</textarea></td>
+              </tr>
+            <tr>
+             <td><div align="right"></div></td>
+              <td width="31"></td>       
+
+
+              <td><div align="right"></div></td>
+              <td width="31"></td>
+              <td>&nbsp; </td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+        </tr>
+				</FORM>
+<script LANGUAGE="javascript">
+	window.document.nueva_cotizacion_empresa_01.clie_rutcontacto.onkeypress = KeyIsRut;
+	window.document.nueva_cotizacion_empresa_01.clie_razonsocial.onkeypress = KeyIsTexto ;
+	window.document.nueva_cotizacion_empresa_01.clie_giro.onkeypress = KeyIsTexto ;
+	window.document.nueva_cotizacion_empresa_01.clie_nombre.onkeypress = KeyIsLetra ;
+	window.document.nueva_cotizacion_empresa_01.clie_paterno.onkeypress = KeyIsLetra ;
+	window.document.nueva_cotizacion_empresa_01.clie_materno.onkeypress = KeyIsLetra ;
+	window.document.nueva_cotizacion_empresa_01.clie_telefonocasa.onkeypress = KeyIsTelefono;
+	window.document.nueva_cotizacion_empresa_01.clie_telcontacto1.onkeypress = KeyIsTelefono;
+	window.document.nueva_cotizacion_empresa_01.clie_telcontacto2.onkeypress = KeyIsTelefono;
+	window.document.nueva_cotizacion_empresa_01.dire_observacion.onkeypress = KeyIsTexto;
+</script>
+    </td>
+  </tr>
+</table>
+<table width="650"  border="0" align="center" cellpadding="2" cellspacing="2" class="textonormal"><tr>
+<td width="219">  (*) Datos obligatorios.  </td>
+</tr>
+</table>

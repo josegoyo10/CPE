@@ -1,0 +1,3 @@
+SELECT O.id_local, L.id_localizacion, L.cod_local_pos   FROM os O
+                    LEFT JOIN locales L ON L.id_local = O.id_local
+                    WHERE id_os = 1436016 

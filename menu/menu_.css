@@ -1,0 +1,85 @@
+/* --- menu styles ---
+note:
+	not all browsers render styles the same way so try out your style sheet
+	on different browsers before publishing;
+*/
+
+/* level 0 outer */
+.m0l0oout {/*PRIMERO fondo rojo marco rojo*/
+	text-decoration : none;
+	border : 1px solid #fff00b; /*#ffe019; ee1b24*/
+	background: #fff00b; /*#ffe019;*/
+}
+.m0l0oover { /*segunndo over del primero*/
+	text-decoration : none;
+	border : 1px solid #ffc107; /*#4D4F86; #fed31a*/
+	background: #ffc107; /* EFB505 #FFCC00;*/
+} 
+
+/* level 0 inner */
+.m0l0iout {/*tercero color de la letra*/
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-decoration: none;
+	text-align:center;
+	FONT-WEIGHT: normal; 
+	padding: 0px;
+	color: #000000;/* 0f3290 #FFFFFF;*/
+}
+.m0l0iover {/*cuarto color del over de la latra*/
+	font: 10px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	text-align:center;
+	FONT-WEIGHT: normal; 
+	padding: 0px;
+	color: #000000; /* 0f3290 */
+}
+/* level 2 outer */
+.m0l2oout { /*QUINTO*/
+	text-decoration : none;
+	border : 1px solid #FFFFFF;
+	background: #B44646;
+}
+.m0l2oover {/*sexto*/
+	text-decoration : none;
+	border : 1px solid #FFFFFF;
+	background: #E55A5A;
+}
+/* level 2 inner */
+.m0l2iover { /*septimo*/
+	font: 10px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-decoration : none;
+	padding: 0px;
+	color: #000000;
+}
+
+/* level 1 inner */
+.m0l1iout {
+	font: 10px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-indent:4px;
+	text-decoration: none;
+	FONT-WEIGHT: normal; 
+	padding: 0px;
+	color: #000000; /* 0f3290 #FFFFFF;*/
+}
+.m0l1iover {
+	font: 10px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-indent:4px;
+	text-decoration : none;
+	FONT-WEIGHT: normal; 
+	padding: 0px;
+	color: #000000; /* 0f3290 #FFFFFF;*/
+}
+
+/* level 1 outer */
+.m0l1oout {/*color menu que baja*/
+	text-decoration : none;
+	border : 1px solid  #fff00b; /*#f45c62 #4D4F86;*/
+	background: #fff00b;
+	filter: alpha(opacity=90);
+}
+.m0l1oover {/* color menu que baja over*/
+	text-decoration : none;
+	border : 1px solid #fed31a; /* 677686 #4D4F86;*/
+	background: #fed31a; /*#FFCC00;*/
+}
