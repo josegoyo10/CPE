@@ -1,0 +1,9 @@
+SELECT  DISTINCT N.LOCATION  AS id_comuna,  CONCAT( N.DESCRIPTION , ' - ',  L.DESCRIPTION) AS comu_nombre FROM cu_neighborhood N
+                  LEFT JOIN cu_locality L ON L.ID = N.ID_LOCALITY 
+                  AND L.ID_DEPARTMENT = 91 AND L.ID_CITY = 5  
+                  AND L.ID_PROVINCE = 1           
+                  LEFT JOIN cu_province PR ON PR.ID = N.ID_PROVINCE 
+                  WHERE N.ID_DEPARTMENT = 91 
+                  AND N.ID_CITY = 5 
+                  AND N.ID_PROVINCE = 1  
+                  ORDER BY  N.DESCRIPTION 

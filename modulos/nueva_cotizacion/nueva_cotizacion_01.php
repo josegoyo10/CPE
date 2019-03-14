@@ -694,6 +694,8 @@ $MiTemplate->set_file("main4","nueva_cotizacion_botones.html");
                       FROM cu_city C
                       WHERE C.ID_DEPARTMENT = $id_departamen
                       ORDER BY C.DESCRIPTION ";
+
+
         }
         else{
         $query="SELECT DISTINCT C.DESCRIPTION AS nombre_ciudad, CONCAT(C.ID, ',', C.ID_PROVINCE ) AS id_ciudad, case WHEN CLI.clie_rut is null then '' else 'selected' end selected
@@ -706,6 +708,7 @@ $MiTemplate->set_file("main4","nueva_cotizacion_botones.html");
                 AND C.ID = (SELECT clie_ciudad FROM clientes WHERE clie_rut = " . $eclient['clie_rut'] . ")
                 WHERE C.ID_DEPARTMENT = (SELECT clie_departamento FROM clientes WHERE clie_rut = " . $eclient['clie_rut'] . " )
                 ORDER BY C.DESCRIPTION ";
+        file_put_contents("querybarrios01.txt", $query);
         }
     }    
     query_to_set_var($query, $MiTemplate, 1, 'BLO_ciudad', 'Ciudad');
@@ -723,6 +726,7 @@ $MiTemplate->set_file("main4","nueva_cotizacion_botones.html");
                   AND N.ID_CITY = 5 
                   AND N.ID_PROVINCE = 1  
                   ORDER BY  N.DESCRIPTION "; 
+        file_put_contents("querybarrios02.txt", $query);
                 
         if($datosCliente['IdCustomer'] != 0){           
             $num = strlen($datosCliente['Location']);
@@ -742,7 +746,7 @@ $MiTemplate->set_file("main4","nueva_cotizacion_botones.html");
                     LEFT JOIN cu_locality L ON L.ID = N.ID_LOCALITY AND  L.ID_DEPARTMENT = $id_departamen AND L.ID_PROVINCE = $id_provinc AND L.ID_CITY = $id_ciud 
                     WHERE N.ID_DEPARTMENT = $id_departamen AND N.ID_PROVINCE = $id_provinc AND N.ID_CITY = $id_ciud                     
                     ORDER BY N.DESCRIPTION ";
-
+             file_put_contents("querybarrios03.txt", $query);
         }
                 
     }
@@ -765,6 +769,7 @@ $MiTemplate->set_file("main4","nueva_cotizacion_botones.html");
                     LEFT JOIN cu_locality L ON L.ID = N.ID_LOCALITY AND  L.ID_DEPARTMENT = $id_departamen AND L.ID_PROVINCE = $id_provinc AND L.ID_CITY = $id_ciud
                     WHERE N.ID_DEPARTMENT = $id_departamen AND N.ID_PROVINCE = $id_provinc AND N.ID_CITY = $id_ciud
                     ORDER BY N.DESCRIPTION ";
+            file_put_contents("querybarrios04.txt", $query);
 
         }
         else{
@@ -783,6 +788,9 @@ $MiTemplate->set_file("main4","nueva_cotizacion_botones.html");
                     AND N.ID_PROVINCE = (SELECT clie_provincia FROM clientes WHERE clie_rut = " . $eclient['clie_rut'] . " )
                     AND N.ID_CITY = (SELECT clie_ciudad FROM clientes WHERE clie_rut = " . $eclient['clie_rut'] . " )
                     ORDER BY N.DESCRIPTION  ";
+
+            file_put_contents("querybarrios05.txt", $query);
+
         }
 
     }    

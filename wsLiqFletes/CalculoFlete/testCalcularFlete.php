@@ -1,8 +1,34 @@
 <?php
 require_once('Fletes.php');
 
-/*
+
+
 $xml="<despacho>
+<direccion>KR 4 6 # 7 - 5 9</direccion>
+<idDepartamento>05</idDepartamento>
+<idMunicipio>001</idMunicipio>
+<idCentroPoblado>000</idCentroPoblado>
+<idLocalidad>000</idLocalidad>
+<idBarrio>000</idBarrio>
+</despacho>
+<centroSuministro>
+<idLocal>9</idLocal>
+<idDepartamento>05</idDepartamento>
+<idMunicipio>001</idMunicipio>
+<idCentroPoblado>000</idCentroPoblado>
+<idLocalidad>000</idLocalidad>
+<idBarrio>000</idBarrio>
+</centroSuministro>
+<entregaProductos>
+<lstTipoDespacho>
+<codigoTipo>2</codigoTipo>
+<peso>0.03</peso>
+</lstTipoDespacho>
+</entregaProductos>
+<codEmpresaTransportadora>0</codEmpresaTransportadora>";
+
+
+/*$xml="<despacho>
       <direccion>Cra 127</direccion>
       <idDepartamento>11</idDepartamento>
       <idMunicipio>001</idMunicipio>
@@ -25,33 +51,11 @@ $xml="<despacho>
       </lstTipoDespacho>
     </entregaProductos>
     <codEmpresaTransportadora>1</codEmpresaTransportadora>";
-*/
 
-/*$xml="<despacho>
-                    <direccion>CLL 25 SUR # 68 - 19 APTO 102</direccion>
-                    <idDepartamento>91</idDepartamento>
-                    <idMunicipio>1</idMunicipio>
-                    <idCentroPoblado>5</idCentroPoblado>
-                    <idLocalidad>0</idLocalidad>
-                    <idBarrio>0</idBarrio>
-                </despacho>
-          <centroSuministro>
-                    <idLocal>22</idLocal>
-                    <idDepartamento>05</idDepartamento>
-                    <idMunicipio>001</idMunicipio>
-                    <idCentroPoblado>000</idCentroPoblado>
-                    <idLocalidad>015</idLocalidad>
-                    <idBarrio>000</idBarrio>
-                </centroSuministro>
-          <entregaProductos>
-                    <lstTipoDespacho>
-                            <codigoTipo>2</codigoTipo>
-                            <peso>0.0080000</peso>
-                    </lstTipoDespacho>
-          </entregaProductos>
-                <codEmpresaTransportadora>0</codEmpresaTransportadora>";*/
+
+
    //funciona flete
-   /*  $xml="<despacho>
+   /* $xml="<despacho>
                     <direccion>CALLE 70#28 71</direccion>
                     <idDepartamento>5</idDepartamento>
                     <idMunicipio>1</idMunicipio>
@@ -77,8 +81,8 @@ $xml="<despacho>
 
 
 
-
-  /*$xml = "<despacho>
+//funciona
+/*$xml = "<despacho>
                     <direccion>cll 65 a # 71 f 16</direccion>
                     <idDepartamento>11</idDepartamento>
                     <idMunicipio>1</idMunicipio>
@@ -179,7 +183,7 @@ $xml="<despacho>
 
   //EASY 4 SUR CODLOCAL 22..NO FUNCIONA
 
-    $xml="<despacho>
+    /*$xml="<despacho>
       <direccion>CL 9 3 # 1 4 - 5 5</direccion>
       <idDepartamento>11</idDepartamento>
       <idMunicipio>001</idMunicipio>
@@ -201,20 +205,16 @@ $xml="<despacho>
       <peso>0.05</peso>
       </lstTipoDespacho>
       </entregaProductos>
-      <codEmpresaTransportadora>0</codEmpresaTransportadora>";
-
-
-
-
-
-
+      <codEmpresaTransportadora>0</codEmpresaTransportadora>";*/
 
 
 
 $service = new Fletes();
 $response = $service->calcular($xml);
 if ($response) {
-	print_r ($response);
+	echo '<pre>';
+     print_r($response);
+  echo '</pre>';
 }
 else {
 	print "Error.";

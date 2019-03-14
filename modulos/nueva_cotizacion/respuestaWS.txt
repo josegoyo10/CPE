@@ -1,28 +1,28 @@
 Array
 (
     [IdGroup] => 1
-    [Address] => Calle 175 No 22-13 piso 2do
+    [Address] => KR 6 7 # 9 7 - 9 6 IN 2 AP 6 0 4
     [AgeRange] => 0
     [Contact] => 
-    [Email] => 
+    [Email] => drstellagarcia@gmail.com
     [Fax] => 
-    [FirstName] => CLIENTE .
+    [FirstName] => GLORIA STELLA
     [Gender] => M
     [IdCategory] => 0
-    [IdCustomer] => 1036668773
+    [IdCustomer] => 41794855
     [IdDoc] => 13
     [IdTypeContribuyente] => 0
-    [Location] => 11001000000000
+    [Location] => 11001000011101
     [Occupation] => 1
-    [Phone] => 7429800
-    [Phone2] => 
+    [Phone] => 0000000
+    [Phone2] => 3219102049
     [Quota] => 0
     [ReteFuente] => false
     [ReteIca] => false
     [ReteIva] => false
     [State] => 1
-    [Surname1] => COMFAMA
-    [Surname2] => .
+    [Surname1] => GARCIA
+    [Surname2] => ORREGO
     [desc] => Cliente consultado exitósamente
     [Department] => BOGOTA
     [Province] => BOGOTA
@@ -32,17 +32,17 @@ Array
     [Profession] => 1
     [RewardPoints] => 0
     [TypeCustomer] => 
-      <IdTypeCustomer>49</IdTypeCustomer>
-      <IdTypeCustomer>4</IdTypeCustomer>
+      <IdTypeCustomer>26</IdTypeCustomer>
+      <IdTypeCustomer>1</IdTypeCustomer>
     
     [0] => Array
         (
-            [IdTypeCustomer] => 49
+            [IdTypeCustomer] => 26
         )
 
     [1] => Array
         (
-            [IdTypeCustomer] => 4
+            [IdTypeCustomer] => 1
         )
 
 )

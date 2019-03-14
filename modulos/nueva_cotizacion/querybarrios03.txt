@@ -1,0 +1,6 @@
+SELECT DISTINCT N.LOCATION AS id_comuna, CONCAT( N.DESCRIPTION , ' - ',  L.DESCRIPTION) AS comu_nombre, 
+                    case WHEN  N.LOCATION = 11001000011101 then 'selected' else '' end selected 
+                    FROM cu_neighborhood N 
+                    LEFT JOIN cu_locality L ON L.ID = N.ID_LOCALITY AND  L.ID_DEPARTMENT = 11 AND L.ID_PROVINCE = 001 AND L.ID_CITY = 000 
+                    WHERE N.ID_DEPARTMENT = 11 AND N.ID_PROVINCE = 001 AND N.ID_CITY = 000                     
+                    ORDER BY N.DESCRIPTION 
