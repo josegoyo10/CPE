@@ -17,17 +17,17 @@ $USR_LOGIN = get_login_usr( $ses_usr_id );
 
 $locationUsuario = $_GET['locationUser'];
 $acceso          = $_GET['clie_tipo'];
+$fecha_creacion  = date("Y-m-d H:i:s");
 
-
- file_put_contents("DireccionLocalWS.txt",$locationUsuario);
- file_put_contents("permiso1.txt",$acceso);
+ // file_put_contents("DireccionLocalWS.txt",$locationUsuario);
+ // file_put_contents("permiso1.txt",$acceso);
 
 $datosCliente = ClientUnique::searchById($clie_rut);
-file_put_contents("responce.txt", print_r($response,true));
+// file_put_contents("responce.txt", print_r($response,true));
  if($datosCliente['IdCustomer']!=0){
     $existe_en_CU = 1;
     $clie_rut=$datosCliente['IdCustomer'];
-    file_put_contents("rut_2.txt", print_r($clie_rut,true));
+    // file_put_contents("rut_2.txt", print_r($clie_rut,true));
     $clie_nombre=$datosCliente['FirstName'];
     $clie_paterno=$datosCliente['Surname1'];
     $clie_materno=$datosCliente['Surname2'];        
@@ -58,7 +58,7 @@ file_put_contents("responce.txt", print_r($response,true));
  }
 
 
- file_put_contents("localizacionSiguienteAnt.txt",$localizacion_cli);
+ // file_put_contents("localizacionSiguienteAnt.txt",$localizacion_cli);
 
 if ($id_os){
     $queryclos ="SELECT CL.clie_rut, CL.clie_nombre, CL.clie_paterno,CL.clie_tipo, CL.clie_materno,CL.clie_telefonocasa,CL.clie_telcontacto1,CL.clie_telcontacto2 FROM clientes CL inner join os OS on (CL.clie_rut=OS.clie_rut) where OS.id_os=".($id_os+0)."";
@@ -86,11 +86,8 @@ if ($accion=="update"){
    $neighborhod      =   $_POST['barrios'];
    $direccion_activa =   $_POST['dire_direccion'];
 
-   file_put_contents("localizacionWs.txt", print_r($localizacion_cli,true));
-   file_put_contents("neighborhodBarrio.txt", print_r($neighborhod,true));
-
-
-
+   // file_put_contents("localizacionWs.txt", print_r($localizacion_cli,true));
+   // file_put_contents("neighborhodBarrio.txt", print_r($neighborhod,true));
 
 /* Toma la cedula verifica si y EXISTE EL CLIENTE  en la tabla cliente y direccion*/
     if ($clie_rut){
@@ -132,7 +129,7 @@ if ($accion=="update"){
                       where clie_rut=".($clie_rut+0)." 
                       and dire_activo=1 and dire_defecto='p' or dire_defecto=null";
 
-    file_put_contents("queryDirEdit.txt", print_r($queryDir,true));
+    // file_put_contents("queryDirEdit.txt", print_r($queryDir,true));
 
        
         $edirec             = tep_db_query($queryDir);
@@ -145,8 +142,8 @@ if ($accion=="update"){
         // $id_localidad       = $edirec ['id_localidad'];
         // $id_comuna          = $edirec ['id_comuna'];
 
-         file_put_contents("accionweb.txt", $dire_observacion);
-          file_put_contents("dire_localizacion.txt", $dire_localizacion);
+         // file_put_contents("accionweb.txt", $dire_observacion);
+         //  file_put_contents("dire_localizacion.txt", $dire_localizacion);
     }    
     
     
@@ -155,14 +152,14 @@ if ($accion=="update"){
     $exis = tep_db_query($qexiste);
     $exis = tep_db_fetch_array( $exis );
     
-     file_put_contents("existe_CU.txt", $existe_en_CU);
-     file_put_contents("neighborhodCotizacionif.txt", $neighborhod);
+     // file_put_contents("existe_CU.txt", $existe_en_CU);
+     // file_put_contents("neighborhodCotizacionif.txt", $neighborhod);
 
     if (($existe_en_CU==1) AND ($neighborhod == '')){
         $num = strlen($localizacion_cli);
         $localizacion = $localizacion_cli;
 
-        file_put_contents("LocationCotizacionif.txt", $localizacion);
+        //file_put_contents("LocationCotizacionif.txt", $localizacion);
     } elseif ($existe_en_CU==0) {
         $num = strlen($barrios);
         $localizacion = $barrios;
@@ -178,14 +175,14 @@ if ($accion=="update"){
 
     // $num = strlen($barrios);
     // $localizacion = $barrios;
-    file_put_contents("LocationCotizacion.txt", $localizacion);
+    //file_put_contents("LocationCotizacion.txt", $localizacion);
 
     $departamento=substr($localizacion, 0, -12);
-     file_put_contents("dptoCliente.txt",$departamento);
+     //file_put_contents("dptoCliente.txt",$departamento);
 
     $clie_provincia=substr($localizacion, 2, -9);
 
-     file_put_contents("clie_provinciaCl.txt",$clie_provincia);
+     //file_put_contents("clie_provinciaCl.txt",$clie_provincia);
     $ciudad=substr($localizacion, 5, -6);
     $clie_localidad=substr($localizacion, 8, -3);
     $barrios=substr($localizacion, 11); 
@@ -201,60 +198,48 @@ if ($accion=="update"){
     $valor_sexo = 'M';
     /*Si existe en la tabla modifica, sino lo inserta*/
 
-      file_put_contents("rutExist.txt",$rutE);
+      //file_put_contents("rutExist.txt",$rutE);
     if($rutE)
     {
        
-    
 
 
-       // $dpto            = ($departamento == '' ? 0 : $departamento);
-       // $city            = ($ciudad == '' ? 0 : $ciudad);
-       // $clie_locality   = ($clie_localidad == '' ? 0 : $clie_localidad);
-       // $neighborhod     = ($barrios == '' ? 0 : $barrios);
-       // $address_local   = ($localizacion == '' ? 0 : $localizacion);
-       // $province_ID     = ($clie_provincia == '' ? 0 : $clie_provincia);
+        $querycliente = "UPDATE clientes 
+             SET clie_nombre                  = '$clie_nombre', 
+                 clie_paterno                 = '$clie_paterno', 
+                 clie_materno                 = '$clie_materno',
+                 clie_telefonocasa            = '$clie_telefonocasa',
+                 clie_telcontacto1            = '$clie_telcontacto1',
+                 clie_telcontacto2            = '$clie_telcontacto2',
+                 clie_activo                  = 1,
+                 clie_tipo                    = 'p', 
+                 clie_email                   = '$clie_email', 
+                 clie_ciudad                  =  $ciudad, 
+                 clie_barrio                  =  $barrios, 
+                 clie_sexo                    = '$sexo', 
+                 clie_tipo_cliente            =  $tipo_cliente, 
+                 clie_categoria_cliente       =  $categoria_cliente, 
+                 clie_tipo_contribuyente      = '$tipo_contribuyente', 
+                 clie_departamento            =  $departamento, 
+                 clie_localidad               =  $clie_localidad,  
+                 clie_provincia               =  $clie_provincia , 
+                 clie_localizacion            =  $localizacion, 
+                 id_tipo_doc                  =  $id_tipo_doc,
+                 clie_fecha_creacion          = '$fecha_creacion'
 
+            WHERE clie_rut = ".($clie_rut+0)."";                
 
-        $querycliente ="UPDATE clientes 
-             SET clie_nombre='$clie_nombre', 
-                 clie_paterno='$clie_paterno', 
-                 clie_materno='$clie_materno',
-                 clie_telefonocasa='$clie_telefonocasa',
-                 clie_telcontacto1='$clie_telcontacto1',
-                 clie_telcontacto2='$clie_telcontacto2',
-                 clie_activo=1,
-                 clie_tipo='p', 
-                 clie_email='$clie_email', 
-                 clie_ciudad =  $ciudad, 
-                 clie_barrio =  $barrios, 
-                 clie_sexo = '$sexo', 
-                 clie_tipo_cliente = $tipo_cliente, 
-                 clie_categoria_cliente = $categoria_cliente, 
-                 clie_tipo_contribuyente = '$tipo_contribuyente', 
-                 clie_departamento =  $departamento, 
-                 clie_localidad =  $clie_localidad,  
-                 clie_provincia =  $clie_provincia , 
-                 clie_localizacion = $localizacion, 
-                 id_tipo_doc = $id_tipo_doc 
-            WHERE clie_rut=".($clie_rut+0)."";                
-       
-
- $queryUpC ="UPDATE clientes SET clie_nombre='$clie_nombre', clie_paterno='$clie_paterno', clie_materno='$clie_materno',clie_telefonocasa='$clie_telefonocasa',clie_telcontacto1='$clie_telcontacto1',clie_telcontacto2='$clie_telcontacto2',clie_activo=1,clie_tipo='p', clie_email='$clie_email', clie_ciudad = $ciudad, clie_barrio = $barrios, clie_sexo = '$sexo', clie_tipo_cliente = $tipo_cliente, clie_categoria_cliente = $categoria_cliente, clie_tipo_contribuyente = '$tipo_contribuyente', clie_departamento = $departamento, clie_localidad = $clie_localidad,  clie_provincia = $clie_provincia, clie_localizacion = $localizacion, id_tipo_doc = $id_tipo_doc WHERE clie_rut=".($clie_rut+0)."";               
-
-       file_put_contents("querycliente_up.txt", print_r($querycliente,true));
+       // file_put_contents("querycliente_up.txt", print_r($querycliente,true));
        
         tep_db_query($querycliente);
-    }
-    else
-    {
+    } else {
        
-    file_put_contents("querycliente_inSert.txt",$localizacion);
+    // file_put_contents("querycliente_inSert.txt",$localizacion);
 
         $querycliente = "INSERT INTO clientes";
-        $querycliente .= "(clie_rut, clie_tipo, clie_nombre, clie_paterno, clie_materno, clie_telefonocasa, clie_telcontacto1, clie_telcontacto2,  clie_activo, clie_email, clie_localizacion, clie_departamento, clie_provincia, clie_ciudad, clie_localidad, clie_barrio, clie_sexo, clie_tipo_cliente, clie_categoria_cliente, clie_tipo_contribuyente,  id_tipo_doc,clie_usr_create)";
+        $querycliente .= "(clie_rut, clie_tipo, clie_nombre, clie_paterno, clie_materno, clie_telefonocasa, clie_telcontacto1, clie_telcontacto2,  clie_activo, clie_email, clie_localizacion, clie_departamento, clie_provincia, clie_ciudad, clie_localidad, clie_barrio, clie_sexo, clie_tipo_cliente, clie_categoria_cliente, clie_tipo_contribuyente,  id_tipo_doc,clie_usr_create,clie_fecha_creacion)";
          
-         $querycliente .=" VALUES (".($clie_rut+0).",'p','$clie_nombre','$clie_paterno','$clie_materno','$clie_telefonocasa','$clie_telcontacto1','$clie_telcontacto2','1','$clie_email','$localizacion','$departamento','$clie_provincia','$ciudad','$clie_localidad','$barrios','$sexo','$tipo_cliente','$categoria_cliente','$tipo_contribuyente','$id_tipo_doc','$USR_LOGIN')";
+         $querycliente .=" VALUES (".($clie_rut+0).",'p','$clie_nombre','$clie_paterno','$clie_materno','$clie_telefonocasa','$clie_telcontacto1','$clie_telcontacto2','1','$clie_email','$localizacion','$departamento','$clie_provincia','$ciudad','$clie_localidad','$barrios','$sexo','$tipo_cliente','$categoria_cliente','$tipo_contribuyente','$id_tipo_doc','$USR_LOGIN','$fecha_creacion')";
          
          //file_put_contents("querycliente_in.txt", print_r($querycliente,true));
         
@@ -271,9 +256,11 @@ if ($accion=="update"){
 
        //Agregado por J.G 14/01/2019.
 
+      $direccion_cliente = str_replace(',', '.',$dire_direccion);
+
 
        $queryUpD ="UPDATE direcciones 
-            SET dire_direccion     = '$dire_direccion',
+            SET dire_direccion     = '$direccion_cliente',
                 dire_telefono      = '$clie_telefonocasa',
                 dire_observacion   = '$dire_observacion',
                 id_departamento    =  $departamento, 
@@ -287,19 +274,10 @@ if ($accion=="update"){
 
       // file_put_contents("queryUpC_up.txt", print_r($queryUpD,true));
    } else {
-
-       // $dpto            = ($departamento == '' ? 0 : $departamento);
-       // $city            = ($ciudad == '' ? 0 : $ciudad);
-       // $clie_locality   = ($clie_localidad == '' ? 0 : $clie_localidad);
-       // $neighborhod     = ($barrios == '' ? 0 : $barrios);
-       // $address_local   = ($localizacion == '' ? 0 : $localizacion);
-       // $province_ID     = ($clie_provincia == '' ? 0 : $clie_provincia);
-      
-        
-
-
+       $direccion_cliente = str_replace(',', '.',$dire_direccion);
+ 
        $queryUpD =  "INSERT INTO direcciones (dire_direccion,clie_rut,dire_telefono,dire_observacion, id_departamento, id_ciudad, id_localidad, id_comuna, dire_activo,dire_defecto,dire_nombre, id_provincia, dire_localizacion )";
-        $queryUpD .=" VALUES('$dire_direccion',".($clie_rut+0).",'$clie_telefonocasa','$dire_observacion',$departamento, $ciudad, $clie_localidad, $barrios, 1,'p','Principal',
+        $queryUpD .=" VALUES('$direccion_cliente',".($clie_rut+0).",'$clie_telefonocasa','$dire_observacion',$departamento, $ciudad, $clie_localidad, $barrios, 1,'p','Principal',
             $clie_provincia, $localizacion)";
 
 
@@ -307,7 +285,7 @@ if ($accion=="update"){
    }
     tep_db_query($queryUpD);
     
-/* MODO INSERCI�N PARA CLIENTE UNICO*/    
+/* MODO INSERCION PARA CLIENTE UNICO*/    
 
     if($datosCliente['IdCustomer'] == 0 )
     {
@@ -327,7 +305,7 @@ if ($accion=="update"){
             <FirstName>$clie_nombre</FirstName>
             <Surname1>$clie_paterno</Surname1>
         <Surname2>$clie_materno</Surname2>
-        <Address>$dire_direccion</Address>
+        <Address>$direccion_cliente</Address>
             <Phone>$clie_telefonocasa</Phone>
         <Phone2>$clie_telcontacto2</Phone2>
         <Fax>$clie_telcontacto1</Fax>
@@ -367,11 +345,6 @@ if ($accion=="update"){
 
         
 
-/* CUANDO ES UN CLIENTE INGRESADO DESDE POS */
-    if($datosCliente['TypeCustomer'] == '')
-    {
-             //$response[0]['IdTypeCustomer'] = 1;
-    }
 
     /* MODO ACTUALIZACION PARA CLIENTE UNICO*/
     if($datosCliente['IdCustomer'] != 0 )
@@ -392,7 +365,7 @@ if ($accion=="update"){
             <FirstName>$clie_nombre</FirstName>
             <Surname1>$clie_paterno</Surname1>
         <Surname2>$clie_materno</Surname2>
-        <Address>$dire_direccion</Address>
+        <Address>$direccion_cliente</Address>
             <Phone>$clie_telefonocasa</Phone>
         <Phone2>$clie_telcontacto2</Phone2>
         <Fax>$clie_telcontacto1</Fax>

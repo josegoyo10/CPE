@@ -1,0 +1,33 @@
+<request>
+      <customer>
+      <Source>20</Source>
+        <IdCustomer>80409015</IdCustomer>
+        <IdCategory>0</IdCategory>
+         <IdTypeContribuyente>2</IdTypeContribuyente>
+          <TypeCustomer>
+        <IdTypeCustomer></IdTypeCustomer>
+        </TypeCustomer>
+        <Location>11001000000000</Location>
+        <IdDoc>13</IdDoc>
+        <FirstName>JAIME</FirstName>
+        <Surname1>JIMENEZ</Surname1>
+        <Surname2>CUERVO </Surname2>
+        <Address>DG 8 1 D # 7 2 C - 7 0</Address>
+        <Phone>4963421</Phone>
+        <Phone2>3176801395</Phone2>
+        <Fax></Fax>
+        <Email></Email>
+        <AgeRange>0</AgeRange>
+        <Contact></Contact>
+        <Gender>M</Gender>
+        <Occupation></Occupation>
+        <Profession></Profession>
+        <ReteIca>0</ReteIca>
+        <ReteFuente>0</ReteFuente>
+        <ReteIva>0</ReteIva>
+        <OtrIva>0</OtrIva>
+        <ExenIva>0</ExenIva>
+        <Status>A</Status>
+        <CustomerLoyality></CustomerLoyality>
+      </customer>
+    </request>

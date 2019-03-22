@@ -1,46 +1,40 @@
 Array
 (
     [IdGroup] => 1
-    [Address] => KR 6 7 # 9 7 - 9 6 IN 2 AP 6 0 4
+    [Address] => SIN DIRECCIÓN
     [AgeRange] => 0
     [Contact] => 
-    [Email] => drstellagarcia@gmail.com
+    [Email] => 
     [Fax] => 
-    [FirstName] => GLORIA STELLA
+    [FirstName] => FELIX ALBERTO
     [Gender] => M
     [IdCategory] => 0
-    [IdCustomer] => 41794855
+    [IdCustomer] => 19095367
     [IdDoc] => 13
     [IdTypeContribuyente] => 0
-    [Location] => 11001000011101
-    [Occupation] => 1
-    [Phone] => 0000000
-    [Phone2] => 3219102049
+    [Location] => 0
+    [Occupation] => 
+    [Phone] => 0
+    [Phone2] => 
     [Quota] => 0
     [ReteFuente] => false
     [ReteIca] => false
     [ReteIva] => false
     [State] => 1
-    [Surname1] => GARCIA
-    [Surname2] => ORREGO
+    [Surname1] => ALVAREZ
+    [Surname2] => GIRALDO
     [desc] => Cliente consultado exitósamente
-    [Department] => BOGOTA
-    [Province] => BOGOTA
+    [Department] => NO DEFINIDO
+    [Province] => NO DEFINIDO
     [ExenIva] => false
     [OtrIva] => false
     [Status] => A
     [Profession] => 1
     [RewardPoints] => 0
     [TypeCustomer] => 
-      <IdTypeCustomer>26</IdTypeCustomer>
       <IdTypeCustomer>1</IdTypeCustomer>
     
     [0] => Array
-        (
-            [IdTypeCustomer] => 26
-        )
-
-    [1] => Array
         (
             [IdTypeCustomer] => 1
         )

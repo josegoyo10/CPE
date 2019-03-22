@@ -1,0 +1,9 @@
+Array
+(
+    [output] => <response>
+ 
+  <desc>No se puede actualizar el cliente, datos vacíos.</desc>
+  <state>0</state>
+
+</response>
+)

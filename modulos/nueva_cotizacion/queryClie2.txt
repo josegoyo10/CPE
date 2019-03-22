@@ -1,1 +1,1 @@
-SELECT clie_rut, clie_nombre, clie_paterno, clie_materno,clie_telefonocasa,clie_telcontacto1,clie_telcontacto2,clie_rutcontacto,clie_razonsocial,clie_giro,clie_tipo  FROM clientes where clie_rut=1036668773 and clie_activo=1
+SELECT clie_rut, clie_nombre, clie_paterno, clie_materno,clie_telefonocasa,clie_telcontacto1,clie_telcontacto2,clie_rutcontacto,clie_razonsocial,clie_giro,clie_tipo  FROM clientes where clie_rut=19095367 and clie_activo=1
